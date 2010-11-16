@@ -1,0 +1,20 @@
+usuario:
+  tableName: USUARIO
+  columns:
+    id:
+      name: id
+      type: integer(4)
+      primary: true
+      sequence: squsuario
+    login:
+      name: login
+      type: string
+    email:
+      name: email
+      type: string
+
+estudante:
+  tableName: ESTUDANTE
+  columns:
+    usuario_id: usuario_id
+    type: integer(4)
