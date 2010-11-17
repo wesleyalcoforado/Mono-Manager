@@ -1,27 +1,102 @@
 Usuario:
-  tableName: USUARIOS
-  columns:
-    id:
-      name: id
-      type: integer(4)
-      primary: true
-      sequence: squsuario
-    login:
-      name: login
-      type: string
-    email:
-      name: email
-      type: string
+  inheritance:
+    extends: sfGuardUser
+    type: simple
 
 Estudante:
-  tableName: ESTUDANTES
   columns:
-    usuario_id: usuario_id
-    type: integer(4)
+    usuario_id:
+      name: usuario_id
+      primary: true
+      type: integer
+    matricula:
+      name: matricula
+      type: string(20)
+      notnull: true
+    telefone:
+      name: telefone
+      type: string(14)
   relations:
-    usuario:
-
+    Usuario:
+      local: usuario_id
+      type: one
+      foreignType: one
+      cascade: [delete]
 
 Professor:
-  tableName: PROFESSORES
   columns:
+    usuario_id:
+      name: usuario_id
+      primary: true
+      type: integer
+    instituicao:
+      name: instituicao
+      type: string(255)
+      notnull: true
+    titulacao:
+      name: titulacao
+      type: string(30)
+      notnull: true
+    experiencia:
+      name: experiencia
+      type: integer
+    substituto:
+      name: substituto
+      type: boolean
+    comissao:
+      name: comissao
+      type: boolean
+  relations:
+    Usuario:
+      local: usuario_id
+      type: one
+      foreignType: one
+      cascade: [delete]
+
+Projeto:
+  columns:
+    titulo:
+      name: titulo
+      type: string(255)
+      notnull: true
+    estudante_id:
+      name: estudante_id
+      type: integer
+      notnull: true
+    professor_id:
+      name: professor_id
+      type: integer
+      notnull: true
+    coorientadores:
+      name: coorientadores
+      type: string(255)
+    data_requisicao:
+      name: data_requisicao
+      type: date
+    data_sugestao:
+      name: data_sugestao
+      type: date
+    data_aprovacao:
+      name: data_aprovacao
+      type: date
+    data_autorizacao:
+      name: data_autorizacao
+      type: date
+    documento:
+      name: documento
+      type: string(255)
+    documento_final:
+      name: documento_final
+      type: string(255)
+    qtde_linhas:
+      name: qtde_linhas
+      type: integer
+  relations:
+    Estudante:
+      local: estudante_id
+      type: one
+      foreignType: many
+    Professor:
+      local: professor_id
+      type: one
+      foreignType: many
