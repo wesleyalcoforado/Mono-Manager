@@ -6,15 +6,12 @@ Usuario:
 Estudante:
   columns:
     usuario_id:
-      name: usuario_id
       primary: true
       type: integer
     matricula:
-      name: matricula
       type: string(20)
       notnull: true
     telefone:
-      name: telefone
       type: string(14)
   relations:
     Usuario:
@@ -26,25 +23,19 @@ Estudante:
 Professor:
   columns:
     usuario_id:
-      name: usuario_id
       primary: true
       type: integer
     instituicao:
-      name: instituicao
       type: string(255)
       notnull: true
     titulacao:
-      name: titulacao
       type: string(30)
       notnull: true
     experiencia:
-      name: experiencia
       type: integer
     substituto:
-      name: substituto
       type: boolean
     comissao:
-      name: comissao
       type: boolean
   relations:
     Usuario:
@@ -56,40 +47,29 @@ Professor:
 Projeto:
   columns:
     titulo:
-      name: titulo
       type: string(255)
       notnull: true
     estudante_id:
-      name: estudante_id
       type: integer
       notnull: true
     professor_id:
-      name: professor_id
       type: integer
       notnull: true
     coorientadores:
-      name: coorientadores
       type: string(255)
     data_requisicao:
-      name: data_requisicao
       type: date
     data_sugestao:
-      name: data_sugestao
       type: date
     data_aprovacao:
-      name: data_aprovacao
       type: date
     data_autorizacao:
-      name: data_autorizacao
       type: date
     documento:
-      name: documento
       type: string(255)
     documento_final:
-      name: documento_final
       type: string(255)
     qtde_linhas:
-      name: qtde_linhas
       type: integer
   relations:
     Estudante:
@@ -100,3 +80,39 @@ Projeto:
       local: professor_id
       type: one
       foreignType: many
+    Proposta:
+      local: id
+      foreign: projeto_id
+      type: one
+      cascade: [delete]
+
+Proposta:
+  columns:
+    projeto_id:
+      type: integer
+      notnull: true
+    status:
+      type: integer(1)
+    comentarios:
+      type: string
+    data_submissao:
+      type: date
+    data_feedback:
+      type: date
+    documento:
+      type: string(255)
+  relations:
+    Projeto:
+      local: projeto_id
+      type: one
+
+Semestre:
+  columns:
+    nome:
+      type: string(30)
+    data_inicio:
+      type: date
+    data_proposta:
+      type: date
+    data_apresentacao:
+      type: date

@@ -18,6 +18,7 @@
  * @property integer $qtde_linhas
  * @property Estudante $Estudante
  * @property Professor $Professor
+ * @property Proposta $Proposta
  * 
  * @method string    getTitulo()           Returns the current record's "titulo" value
  * @method integer   getEstudanteId()      Returns the current record's "estudante_id" value
@@ -32,6 +33,7 @@
  * @method integer   getQtdeLinhas()       Returns the current record's "qtde_linhas" value
  * @method Estudante getEstudante()        Returns the current record's "Estudante" value
  * @method Professor getProfessor()        Returns the current record's "Professor" value
+ * @method Proposta  getProposta()         Returns the current record's "Proposta" value
  * @method Projeto   setTitulo()           Sets the current record's "titulo" value
  * @method Projeto   setEstudanteId()      Sets the current record's "estudante_id" value
  * @method Projeto   setProfessorId()      Sets the current record's "professor_id" value
@@ -45,6 +47,7 @@
  * @method Projeto   setQtdeLinhas()       Sets the current record's "qtde_linhas" value
  * @method Projeto   setEstudante()        Sets the current record's "Estudante" value
  * @method Projeto   setProfessor()        Sets the current record's "Professor" value
+ * @method Projeto   setProposta()         Sets the current record's "Proposta" value
  * 
  * @package    monomanager
  * @subpackage model
@@ -108,5 +111,12 @@ abstract class BaseProjeto extends sfDoctrineRecord
         $this->hasOne('Professor', array(
              'local' => 'professor_id',
              'foreign' => 'id'));
+
+        $this->hasOne('Proposta', array(
+             'local' => 'id',
+             'foreign' => 'projeto_id',
+             'cascade' => array(
+             0 => 'delete',
+             )));
     }
 }
