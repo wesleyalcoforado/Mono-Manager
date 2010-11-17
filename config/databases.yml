@@ -5,6 +5,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=monomanager
-      username: root
-      password: 
+      dsn:      pgsql:host=localhost;dbname=monomanager
+      username: monomanager
+      password: 123

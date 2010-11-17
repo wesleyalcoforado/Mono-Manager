@@ -1,5 +1,5 @@
-usuario:
-  tableName: USUARIO
+Usuario:
+  tableName: USUARIOS
   columns:
     id:
       name: id
@@ -13,8 +13,15 @@ usuario:
       name: email
       type: string
 
-estudante:
-  tableName: ESTUDANTE
+Estudante:
+  tableName: ESTUDANTES
   columns:
     usuario_id: usuario_id
     type: integer(4)
+  relations:
+    usuario:
+
+
+Professor:
+  tableName: PROFESSORES
+  columns:
