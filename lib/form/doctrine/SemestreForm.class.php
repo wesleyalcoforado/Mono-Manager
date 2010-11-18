@@ -12,5 +12,6 @@ class SemestreForm extends BaseSemestreForm
 {
   public function configure()
   {
+      $this->widgetSchema->setFormFormatterName('deflist');
   }
 }
