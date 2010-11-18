@@ -1,3 +1,4 @@
-<?php
-echo $form->renderFormTag(url_for('semestre/salvar'));
-echo $form->render();
+<form method="POST">
+    <?php echo $form; ?>
+    <dt><input type="submit" value="Salvar"></dt>
+</form>

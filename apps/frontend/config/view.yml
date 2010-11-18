@@ -6,15 +6,15 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
+    title:        Mono Manager
     #description:  symfony project
     #keywords:     symfony, project
-    #language:     en
-    #robots:       index, follow
+    language:     pt-BR
+    robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:    [main.css, ../js/ext/resources/css/ext-all.css, ../js/ext/resources/xtheme-gray.css]
 
-  javascripts:    []
+  javascripts:    [ext/adapter/ext/ext-base.js, ext/ext-all-debug.js, ext/src/locale/ext-lang-pt_BR.js,ext/examples/ux/TableGrid.js]
 
   has_layout:     true
   layout:         layout
