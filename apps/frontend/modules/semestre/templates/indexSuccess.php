@@ -4,6 +4,15 @@ Ext.onReady(function(){
         stripeRows: true
     });
     grid.render();
+
+    var opts = {
+        formElements:{
+            "semestre_data_inicio_year":"Y",
+            "semestre_data_inicio_month":"n",
+            "semestre_data_inicio_day":"j"
+        }
+    };
+    datePickerController.createDatePicker(opts);
 });
 </script>
 

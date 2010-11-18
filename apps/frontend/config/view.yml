@@ -12,9 +12,9 @@ default:
     language:     pt-BR
     robots:       index, follow
 
-  stylesheets:    [main.css, ../js/ext/resources/css/ext-all.css, ../js/ext/resources/xtheme-gray.css]
+  stylesheets:    [main.css, ../js/ext/resources/css/ext-all.css, ../js/ext/resources/xtheme-gray.css, datepicker.css]
 
-  javascripts:    [ext/adapter/ext/ext-base.js, ext/ext-all-debug.js, ext/src/locale/ext-lang-pt_BR.js,ext/examples/ux/TableGrid.js]
+  javascripts:    [ext/adapter/ext/ext-base.js, ext/ext-all-debug.js, ext/src/locale/ext-lang-pt_BR.js,ext/examples/ux/TableGrid.js, datepicker/datepicker.packed.js]
 
   has_layout:     true
   layout:         layout
