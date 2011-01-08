@@ -17,10 +17,10 @@ class estudanteActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-      $this->form = new EstudanteForm();
+      $this->form = new UsuarioEstudanteForm();
 
       if($request->isMethod('post')){
-          $this->form->bind($request->getParameter('estudante'));
+          $this->form->bind($request->getParameter('usuario'));
           if($this->form->isValid()){
               $this->form->save();
               $this->form->resetFormFields();
