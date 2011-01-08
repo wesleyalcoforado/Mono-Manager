@@ -16,13 +16,11 @@ abstract class BaseEstudanteForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'usuario_id' => new sfWidgetFormInputHidden(),
-      'matricula'  => new sfWidgetFormInputText(),
       'telefone'   => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
       'usuario_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('usuario_id')), 'empty_value' => $this->getObject()->get('usuario_id'), 'required' => false)),
-      'matricula'  => new sfValidatorString(array('max_length' => 20)),
       'telefone'   => new sfValidatorString(array('max_length' => 14, 'required' => false)),
     ));
 

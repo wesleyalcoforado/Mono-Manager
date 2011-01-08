@@ -1,4 +1,4 @@
-CREATE TABLE estudante (usuario_id BIGINT, matricula VARCHAR(20) NOT NULL, telefone VARCHAR(14), PRIMARY KEY(usuario_id));
+CREATE TABLE estudante (usuario_id BIGINT, telefone VARCHAR(14), PRIMARY KEY(usuario_id));
 CREATE TABLE professor (usuario_id BIGINT, instituicao VARCHAR(255) NOT NULL, titulacao VARCHAR(30) NOT NULL, experiencia BIGINT, substituto BOOLEAN, comissao BOOLEAN, PRIMARY KEY(usuario_id));
 CREATE TABLE projeto (id BIGSERIAL, titulo VARCHAR(255) NOT NULL, estudante_id BIGINT NOT NULL, professor_id BIGINT NOT NULL, coorientadores VARCHAR(255), data_requisicao DATE, data_sugestao DATE, data_aprovacao DATE, data_autorizacao DATE, documento VARCHAR(255), documento_final VARCHAR(255), qtde_linhas BIGINT, PRIMARY KEY(id));
 CREATE TABLE proposta (id BIGSERIAL, projeto_id BIGINT NOT NULL, status SMALLINT, comentarios TEXT, data_submissao DATE, data_feedback DATE, documento VARCHAR(255), PRIMARY KEY(id));

@@ -8,9 +8,6 @@ Estudante:
     usuario_id:
       primary: true
       type: integer
-    matricula:
-      type: string(20)
-      notnull: true
     telefone:
       type: string(14)
   relations:
