@@ -17,6 +17,16 @@ class professorActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+      $this->form = new UsuarioProfessorForm();
+
+      if($request->isMethod('post')){
+          $this->form->bind($request->getParameter('usuario'));
+          if($this->form->isValid()){
+              $this->form->save();
+              $this->form->resetFormFields();
+          }
+      }
+
+      $this->professores = ProfessorTable::getInstance()->findAll();
   }
 }

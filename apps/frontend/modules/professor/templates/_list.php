@@ -1,23 +1,27 @@
+<?php if(count($professores) > 0):  ?>
 <table id="listagem">
     <thead>
         <tr>
-            <th>Semestre</th>
-            <th>Início</th>
-            <th>Proposta</th>
-            <th>Apresentação</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Nome de usuário</th>
+            <th>Telefone</th>
+            <th>Email</th>
         </tr>
     </thead>
-    <tbody>
+
 <?php
-foreach($semestres as $semestre): ?>
+foreach($professores as $professor): ?>
         <tr>
-            <td><?php echo $semestre->getNome(); ?></td>
-            <td><?php echo $semestre->getDataInicio(); ?></td>
-            <td><?php echo $semestre->getDataProposta(); ?></td>
-            <td><?php echo $semestre->getDataApresentacao(); ?></td>
+            <td><?php echo $professor->getUsuario()->getFirstName(); ?></td>
+            <td><?php echo $professor->getUsuario()->getLastName(); ?></td>
+            <td><?php echo $professor->getUsuario()->getUsername(); ?></td>
+            <td><?php echo $professor->getTelefone(); ?></td>
+            <td><?php echo $professor->getUsuario()->getEmailAddress(); ?></td>
         </tr>
 <?php
 endforeach;
 ?>
     </tbody>
 </table>
+<?php endif;
