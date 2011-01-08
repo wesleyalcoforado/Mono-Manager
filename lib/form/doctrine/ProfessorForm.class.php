@@ -12,5 +12,6 @@ class ProfessorForm extends BaseProfessorForm
 {
   public function configure()
   {
+    $this->widgetSchema->setFormFormatterName('deflist');
   }
 }

@@ -12,6 +12,6 @@ class EstudanteForm extends BaseEstudanteForm
 {
   public function configure()
   {
-      $this->widgetSchema->setFormFormatterName('deflist');
+    $this->widgetSchema->setFormFormatterName('deflist');
   }
 }
