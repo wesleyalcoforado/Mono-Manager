@@ -1,15 +1,10 @@
 <script type="text/javascript" >
-Ext.onReady(function(){
+/*Ext.onReady(function(){
     app.init();
-});
+});*/
 
 var app = {
     init: function(){
-        var grid = new Ext.ux.grid.TableGrid("listagem", {
-            stripeRows: true
-        });
-        grid.render();
-        
         app.createDatePicker("semestre_data_inicio_day", "semestre_data_inicio_month", "semestre_data_inicio_year");
         app.createDatePicker("semestre_data_proposta_day", "semestre_data_proposta_month", "semestre_data_proposta_year");
         app.createDatePicker("semestre_data_apresentacao_day", "semestre_data_apresentacao_month", "semestre_data_apresentacao_year");
@@ -28,8 +23,6 @@ var app = {
         datePickerController.createDatePicker(opts);    
     }
 }
-
-
 </script>
 
 <?php
