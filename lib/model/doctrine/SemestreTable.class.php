@@ -7,13 +7,24 @@
  */
 class SemestreTable extends Doctrine_Table
 {
-    /**
-     * Returns an instance of this class.
-     *
-     * @return object SemestreTable
-     */
-    public static function getInstance()
-    {
-        return Doctrine_Core::getTable('Semestre');
+  /**
+   * Returns an instance of this class.
+   *
+   * @return object SemestreTable
+   */
+  public static function getInstance()
+  {
+    return Doctrine_Core::getTable('Semestre');
+  }
+
+  public function findEarliestYearOrDefault($default){
+    $query = $this->createQuery()->select("min(to_char(data_inicio, 'YYYY')) as minYear")->fetchOne();
+    $minYear = $query['minYear'];
+
+    if(empty($minYear)){
+      $minYear = $default;
     }
+
+    return $minYear;
+  }
 }

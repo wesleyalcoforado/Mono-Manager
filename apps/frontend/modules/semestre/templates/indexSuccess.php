@@ -1,7 +1,5 @@
 <script type="text/javascript" >
-/*Ext.onReady(function(){
-    app.init();
-});*/
+app.init();
 
 var app = {
     init: function(){
@@ -27,4 +25,4 @@ var app = {
 
 <?php
 include_partial('form', array('form' => $form));
-include_partial('list', array('semestres' => $semestres));
+include_partial('list', array('list' => $list));
