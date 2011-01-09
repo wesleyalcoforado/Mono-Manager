@@ -12,4 +12,7 @@
  */
 class Usuario extends BaseUsuario
 {
+  public function getFullname(){
+    return $this->getFirstName() . " " . $this->getLastName();
+  }
 }

@@ -12,4 +12,7 @@
  */
 class Professor extends BaseProfessor
 {
+  public function __toString(){
+    return $this->getUsuario()->getFullname();
+  }
 }

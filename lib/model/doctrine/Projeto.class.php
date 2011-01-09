@@ -12,4 +12,8 @@
  */
 class Projeto extends BaseProjeto
 {
+  public function hasAttachedProposta(){
+    $proposta = $this->getProposta();
+    return ($proposta != null);
+  }
 }

@@ -12,5 +12,8 @@ class ProjetoForm extends BaseProjetoForm
 {
   public function configure()
   {
+    $this->widgetSchema['titulo']->setLabel('Título');
+    $this->widgetSchema['professor_id']->setLabel('Orientador');
+    $this->widgetSchema->setFormFormatterName('deflist');
   }
 }
