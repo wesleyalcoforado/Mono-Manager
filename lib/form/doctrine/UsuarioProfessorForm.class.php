@@ -6,6 +6,6 @@ class UsuarioProfessorForm extends UsuarioForm
   {
     parent::configure();
     $this->embedRelation('Professor');
-    $this->widgetSchema->setNameFormat('usuario[%s]');
+    $this->widgetSchema->setNameFormat('professor[%s]');
   }
 }

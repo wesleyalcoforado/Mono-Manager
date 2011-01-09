@@ -13,5 +13,10 @@ class ProfessorForm extends BaseProfessorForm
   public function configure()
   {
     $this->widgetSchema->setFormFormatterName('deflist');
+    $this->widgetSchema['instituicao']->setLabel('Instituição');
+    $this->widgetSchema['titulacao']->setLabel('Titulação');
+    $this->widgetSchema['experiencia']->setLabel('Experiência');
+    $this->widgetSchema['is_comissao']->setLabel('Comissão?');
+    $this->widgetSchema['is_substituto']->setLabel('Substituto?');
   }
 }
