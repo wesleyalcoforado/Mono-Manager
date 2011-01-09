@@ -1,23 +1,24 @@
-<?php if(count($professores) > 0):  ?>
+<?php if(count($list) > 0):  ?>
 <table id="listagem">
     <thead>
         <tr>
             <th>Nome</th>
             <th>Sobrenome</th>
             <th>Nome de usuário</th>
-            <th>Telefone</th>
             <th>Email</th>
+            <th colspan="2">Ações</th>
         </tr>
     </thead>
 
 <?php
-foreach($professores as $professor): ?>
+foreach($list as $professor): ?>
         <tr>
             <td><?php echo $professor->getUsuario()->getFirstName(); ?></td>
             <td><?php echo $professor->getUsuario()->getLastName(); ?></td>
             <td><?php echo $professor->getUsuario()->getUsername(); ?></td>
-            <td><?php echo $professor->getTelefone(); ?></td>
             <td><?php echo $professor->getUsuario()->getEmailAddress(); ?></td>
+            <td><?php echo link_to('Editar', "professor/index?id={$professor->getId()}"); ?></td>
+            <td><?php echo link_to('Exluir', "professor/excluir?id={$professor->getId()}"); ?></td>
         </tr>
 <?php
 endforeach;

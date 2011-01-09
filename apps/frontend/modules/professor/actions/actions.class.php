@@ -8,25 +8,11 @@
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class professorActions extends sfActions
+class professorActions extends monomActions
 {
- /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
-  public function executeIndex(sfWebRequest $request)
-  {
-      $this->form = new UsuarioProfessorForm();
 
-      if($request->isMethod('post')){
-          $this->form->bind($request->getParameter('usuario'));
-          if($this->form->isValid()){
-              $this->form->save();
-              $this->form->resetFormFields();
-          }
-      }
-
-      $this->professores = ProfessorTable::getInstance()->findAll();
+  protected function getFormClassName() {
+    return "UsuarioProfessorForm";
   }
+
 }
