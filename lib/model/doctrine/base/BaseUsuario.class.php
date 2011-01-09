@@ -25,10 +25,10 @@ abstract class BaseUsuario extends sfGuardUser
         parent::setUp();
         $this->hasOne('Estudante', array(
              'local' => 'id',
-             'foreign' => 'usuario_id'));
+             'foreign' => 'id'));
 
         $this->hasOne('Professor', array(
              'local' => 'id',
-             'foreign' => 'usuario_id'));
+             'foreign' => 'id'));
     }
 }

@@ -5,38 +5,38 @@ Usuario:
 
 Estudante:
   columns:
-    usuario_id:
+    id:
       primary: true
       type: integer
     telefone:
       type: string(14)
   relations:
     Usuario:
-      local: usuario_id
+      local: id
       type: one
       foreignType: one
       cascade: [delete]
 
 Professor:
   columns:
-    usuario_id:
+    id:
       primary: true
       type: integer
     instituicao:
       type: string(255)
       notnull: true
     titulacao:
-      type: string(30)
+      type: string(255)
       notnull: true
     experiencia:
-      type: integer
-    substituto:
+      type: string(30)
+    is_substituto:
       type: boolean
-    comissao:
+    is_comissao:
       type: boolean
   relations:
     Usuario:
-      local: usuario_id
+      local: id
       type: one
       foreignType: one
       cascade: [delete]

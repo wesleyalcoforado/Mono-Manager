@@ -15,21 +15,21 @@ abstract class BaseProfessorForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'usuario_id'  => new sfWidgetFormInputHidden(),
-      'instituicao' => new sfWidgetFormInputText(),
-      'titulacao'   => new sfWidgetFormInputText(),
-      'experiencia' => new sfWidgetFormInputText(),
-      'substituto'  => new sfWidgetFormInputCheckbox(),
-      'comissao'    => new sfWidgetFormInputCheckbox(),
+      'id'            => new sfWidgetFormInputHidden(),
+      'instituicao'   => new sfWidgetFormInputText(),
+      'titulacao'     => new sfWidgetFormInputText(),
+      'experiencia'   => new sfWidgetFormInputText(),
+      'is_substituto' => new sfWidgetFormInputCheckbox(),
+      'is_comissao'   => new sfWidgetFormInputCheckbox(),
     ));
 
     $this->setValidators(array(
-      'usuario_id'  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('usuario_id')), 'empty_value' => $this->getObject()->get('usuario_id'), 'required' => false)),
-      'instituicao' => new sfValidatorString(array('max_length' => 255)),
-      'titulacao'   => new sfValidatorString(array('max_length' => 30)),
-      'experiencia' => new sfValidatorInteger(array('required' => false)),
-      'substituto'  => new sfValidatorBoolean(array('required' => false)),
-      'comissao'    => new sfValidatorBoolean(array('required' => false)),
+      'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'instituicao'   => new sfValidatorString(array('max_length' => 255)),
+      'titulacao'     => new sfValidatorString(array('max_length' => 255)),
+      'experiencia'   => new sfValidatorString(array('max_length' => 30, 'required' => false)),
+      'is_substituto' => new sfValidatorBoolean(array('required' => false)),
+      'is_comissao'   => new sfValidatorBoolean(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('professor[%s]');
