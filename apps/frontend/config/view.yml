@@ -12,7 +12,7 @@ default:
     language:     pt-BR
     robots:       index, follow
 
-  stylesheets:    [main.css, datepicker.css]
+  stylesheets:    [reset.css, text.css, 960_24_col.css, main.css, datepicker.css]
 
   javascripts:    [datepicker/datepicker.packed.js]
 
