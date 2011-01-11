@@ -14,17 +14,17 @@
 foreach($list as $projeto): ?>
         <tr>
             <td><?php echo $projeto->getProfessor()->getUsuario()->getFullname(); ?></td>
-            <td><?php echo $projeto->getTitulo(); ?></td>
+            <td><?php echo truncate_text($projeto->getTitulo(), 50); ?></td>
             <td><?php if($projeto->hasAttachedProposta()){
-                        echo link_to('Anexar proposta', 'default/index');
+                        echo link_to(attachButton(), 'default/index');
                       }else{
-                        echo link_to('Visualizar proposta', 'default/index');
+                        echo link_to(viewButton(), 'default/index');
                       }
                 ?>
             </td>
-            <td><?php echo link_to('Solicitar defesa', 'projeto/index'); ?></td>
-            <td><?php echo link_to('Editar', "projeto/index?id={$projeto->getId()}"); ?></td>
-            <td><?php echo link_to('Exluir', "projeto/excluir?id={$projeto->getId()}"); ?></td>
+            <td><?php echo link_to(presentationButton(), 'projeto/index'); ?></td>
+            <td><?php echo link_to(editButton(), "projeto/index?id={$projeto->getId()}"); ?></td>
+            <td><?php echo link_to(deleteButton(), "projeto/excluir?id={$projeto->getId()}"); ?></td>
         </tr>
 <?php
 endforeach;

@@ -19,8 +19,8 @@ foreach($list as $estudante): ?>
             <td><?php echo $estudante->getUsuario()->getUsername(); ?></td>
             <td><?php echo $estudante->getTelefone(); ?></td>
             <td><?php echo $estudante->getUsuario()->getEmailAddress(); ?></td>
-            <td><?php echo link_to('Editar', "estudante/index?id={$estudante->getId()}"); ?></td>
-            <td><?php echo link_to('Exluir', "estudante/excluir?id={$estudante->getId()}"); ?></td>
+            <td><?php echo link_to(editButton(), "estudante/index?id={$estudante->getId()}"); ?></td>
+            <td><?php echo link_to(deleteButton(), "estudante/excluir?id={$estudante->getId()}"); ?></td>
         </tr>
 <?php
 endforeach;

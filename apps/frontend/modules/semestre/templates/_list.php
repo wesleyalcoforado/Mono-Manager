@@ -14,11 +14,11 @@
 foreach($list as $semestre): ?>
         <tr>
             <td><?php echo $semestre->getNome(); ?></td>
-            <td><?php echo $semestre->getDataInicio(); ?></td>
-            <td><?php echo $semestre->getDataProposta(); ?></td>
-            <td><?php echo $semestre->getDataApresentacao(); ?></td>
-            <td><?php echo link_to('Editar', "semestre/index?id={$semestre->getId()}"); ?></td>
-            <td><?php echo link_to('Exluir', "semestre/excluir?id={$semestre->getId()}"); ?></td>
+            <td><?php echo formatDate($semestre->getDataInicio()); ?></td>
+            <td><?php echo formatDate($semestre->getDataProposta()); ?></td>
+            <td><?php echo formatDate($semestre->getDataApresentacao()); ?></td>
+            <td><?php echo link_to(editButton(), "semestre/index?id={$semestre->getId()}"); ?></td>
+            <td><?php echo link_to(deleteButton(), "semestre/excluir?id={$semestre->getId()}"); ?></td>
         </tr>
 <?php
 endforeach;

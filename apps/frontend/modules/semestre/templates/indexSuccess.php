@@ -1,3 +1,4 @@
+<?php use_helper('App'); ?>
 <script type="text/javascript" >
 app.init();
 

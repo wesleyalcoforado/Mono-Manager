@@ -17,8 +17,8 @@ foreach($list as $professor): ?>
             <td><?php echo $professor->getUsuario()->getLastName(); ?></td>
             <td><?php echo $professor->getUsuario()->getUsername(); ?></td>
             <td><?php echo $professor->getUsuario()->getEmailAddress(); ?></td>
-            <td><?php echo link_to('Editar', "professor/index?id={$professor->getId()}"); ?></td>
-            <td><?php echo link_to('Exluir', "professor/excluir?id={$professor->getId()}"); ?></td>
+            <td><?php echo link_to(editButton(), "professor/index?id={$professor->getId()}"); ?></td>
+            <td><?php echo link_to(deleteButton(), "professor/excluir?id={$professor->getId()}"); ?></td>
         </tr>
 <?php
 endforeach;
