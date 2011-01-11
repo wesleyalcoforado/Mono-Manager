@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Copse';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Copse'), url('http://themes.googleusercontent.com/font?kit=edYpk-Td-Lz5tVC6CefvWQ') format('truetype');
+}
+
+body{
+  background-color: #111;
+  font-family: 'Copse', arial, serif;
+}
+
+#menu {
+  padding-top: 100px;
+  background-color: #333;
+  font-size: 20pt;
+  text-align: right;
+}
+
+#menu ul {
+  padding-right: 10px;
+  list-style-type: none;
+}
+
+#menu ul a {
+  color: #dcf8ce;
+  text-decoration: none;
+}
+
+#menu ul a:hover {
+  color: #80D453;
+}
+
+#content {
+  background-color: #eee;
+  width: 650px;
+  padding: 0 10px;
+}
+
+
+
+
+#listagem {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+
+#listagem th, #listagem td{
+  border: 1px solid #AECAD1;
+  vertical-align: middle;
+  padding: 0 3px;
+}
+
+#listagem th {
+  background-color: #CDDDE1;
+}
+
+a {
+  color: #3B6975;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4AB7D4;
+}
