@@ -9,6 +9,19 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+    <div class="container_24">
+      <div class="grid_7" id="menu">
+        <ul>
+          <li><?php echo link_to1("Professores", "professor/index"); ?></li>
+          <li><?php echo link_to1("Estudantes", "estudante/index"); ?></li>
+          <li><?php echo link_to1("Projetos", "projeto/index"); ?></li>
+          <li><?php echo link_to1("Semestres", "semestre/index"); ?></li>
+          <li><?php echo link_to1("Sair", "default/index"); ?></li>
+        </ul>
+      </div>
+      <div class="grid_16" id="content">
+        <?php echo $sf_content ?>
+      </div>
+    </div>
   </body>
 </html>
