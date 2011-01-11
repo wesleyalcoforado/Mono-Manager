@@ -12,7 +12,7 @@ class ProfessorForm extends BaseProfessorForm
 {
   public function configure()
   {
-    $this->widgetSchema->setFormFormatterName('deflist');
+    $this->widgetSchema->setFormFormatterName('divform');
     $this->widgetSchema['instituicao']->setLabel('Instituição');
     $this->widgetSchema['titulacao']->setLabel('Titulação');
     $this->widgetSchema['experiencia']->setLabel('Experiência');

@@ -1,3 +1,13 @@
+<?php
+    // Obtém a url base
+    $baseUrl = _compute_public_path('', '', '', true);
+    $baseUrl = substr($baseUrl, 0, -2);
+    $imageDir = $baseUrl . 'images/';
+    $jsDir = $baseUrl . 'js/';
+    $environment = sfContext::getInstance()->getConfiguration()->getEnvironment();
+    $app = sfContext::getInstance()->getConfiguration()->getApplication();
+    $baseUrl .= (strcasecmp($environment, 'dev')==0)?$app . '_dev.php/':'';
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
@@ -7,6 +17,15 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
+    <script type="text/javascript">
+      App = {
+         images_dir: '<?php echo $imageDir; ?>'
+      }
+      
+      $(function() {
+          $("form.jqtransform").jqTransform();
+      });      
+    </script>
   </head>
   <body>
     <div class="container_24">

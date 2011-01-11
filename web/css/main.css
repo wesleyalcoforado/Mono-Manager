@@ -37,7 +37,10 @@ body{
   padding: 0 10px;
 }
 
-
+form label {
+   width: 200px;
+   font-size: 12pt;
+}
 
 
 #listagem {

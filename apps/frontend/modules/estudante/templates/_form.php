@@ -1,4 +1,4 @@
-<form method="POST">
+<form method="POST" class="jqtransform">
   <dl id="formContainer">
     <?php
     echo $form->renderHiddenFields();
@@ -12,6 +12,6 @@
        . $form['Estudante']['telefone']->renderRow()
        . $form['is_active']->renderRow();
     ?>
-    <dt><input type="submit" value="Salvar"></dt>
+    <div class="rowElem"><input type="submit" value="Salvar"></div>
   </dl>
 </form>

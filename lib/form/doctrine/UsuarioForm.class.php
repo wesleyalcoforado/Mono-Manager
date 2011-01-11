@@ -77,7 +77,7 @@ class UsuarioForm extends BaseUsuarioForm
     $this->widgetSchema['is_active']->setLabel('Ativo?');
     $this->widgetSchema['is_super_admin']->setLabel('Superusuário?');
 
-    $this->widgetSchema->setFormFormatterName('deflist');
+    $this->widgetSchema->setFormFormatterName('divform');
     $this->widgetSchema->setNameFormat('usuario[%s]');
     
     parent::configure();
