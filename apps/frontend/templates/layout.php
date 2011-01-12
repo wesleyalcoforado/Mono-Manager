@@ -18,10 +18,6 @@
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
     <script type="text/javascript">
-      App = {
-         images_dir: '<?php echo $imageDir; ?>'
-      }
-      
       $(function() {
           $("form.jqtransform").jqTransform();
       });      

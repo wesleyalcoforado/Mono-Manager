@@ -12,16 +12,16 @@ class SemestreForm extends BaseSemestreForm
 {
   public function configure()
   {
-    $this->widgetSchema->setFormFormatterName('deflist');
+    $this->widgetSchema->setFormFormatterName('divform');
 
     $minYear = SemestreTable::getInstance()->findEarliestYearOrDefault(date('Y'));
 
     $rangeYears = range($minYear, date('Y') + 10);
     $years = array_combine($rangeYears, $rangeYears);
 
-    $this->getWidget('data_inicio')->setOption('format', '%day%/%month%/%year%');
-    $this->getWidget('data_proposta')->setOption('format', '%day%/%month%/%year%');
-    $this->getWidget('data_apresentacao')->setOption('format', '%day%/%month%/%year%');
+    $this->getWidget('data_inicio')->setOption('format', '%day%%month%%year%');
+    $this->getWidget('data_proposta')->setOption('format', '%day%%month%%year%');
+    $this->getWidget('data_apresentacao')->setOption('format', '%day%%month%%year%');
 
     $this->getWidget('data_inicio')->setOption('years', $years);
     $this->getWidget('data_proposta')->setOption('years', $years);
