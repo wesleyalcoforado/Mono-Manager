@@ -12,5 +12,10 @@ class PropostaForm extends BasePropostaForm
 {
   public function configure()
   {
+    $this->setWidgets(array(
+      'documento'      => new sfWidgetFormInputFile()
+    ));
+    
+    $this->widgetSchema->setFormFormatterName('divform');
   }
 }
