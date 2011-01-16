@@ -14,7 +14,7 @@ default:
 
   stylesheets:    [reset.css, text.css, 960_24_col.css, main.css, datepicker.css, jqtransform.css]
 
-  javascripts:    [datepicker/datepicker.packed.js, jquery/jquery-1.4.4.min.js, jquery/jqtransform/jquery.jqtransform.js]
+  javascripts:    [jquery/jquery-1.4.4.min.js, datepicker/datepicker.packed.js, app.js]
 
   has_layout:     true
   layout:         layout

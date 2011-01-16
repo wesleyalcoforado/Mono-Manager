@@ -17,11 +17,6 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
-    <script type="text/javascript">
-      $(function() {
-          $("form.jqtransform").jqTransform();
-      });      
-    </script>
   </head>
   <body>
     <div class="container_24">
