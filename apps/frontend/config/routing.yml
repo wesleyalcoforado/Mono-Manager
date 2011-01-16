@@ -6,6 +6,10 @@ homepage:
   url:   /
   param: { module: default, action: index }
 
+proposta:
+  url: /projeto/:projeto_id/proposta
+  param: {module: proposta, action: index}
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
