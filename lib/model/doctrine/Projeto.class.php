@@ -19,8 +19,16 @@ class Projeto extends BaseProjeto
 
   public function hasPropostaWithAttachedFile(){
     if($this->hasProposta()){
-      return file_exists($this->getProposta()->getDocumento());
+      $proposta = $this->getProposta();
+      return file_exists($proposta->getDocumento());
     }
     return false;
+  }
+
+  public function delete(Doctrine_Connection $conn = null){
+    if($this->hasPropostaWithAttachedFile()){
+      unlink($this->getProposta()->getDocumento());
+    }
+    parent::delete($conn);
   }
 }

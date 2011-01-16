@@ -39,9 +39,11 @@ class propostaActions extends monomActions
       $file = $files['documento'];
       $this->saveFile($file);
       $filename = $this->createFullFilename($file);
-      $this->form->getObject()->setDocumento($filename);
-      $this->form->save();
+      $proposta = $this->form->getObject();
+      $proposta->setDocumento($filename);
+      $proposta->save();
       $this->setMessage('notice', 'Proposta anexada com sucesso.');
+      $this->redirect('projeto/index');
     }
   }
 

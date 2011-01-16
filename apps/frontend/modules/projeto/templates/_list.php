@@ -16,9 +16,9 @@ foreach($list as $projeto): ?>
             <td><?php echo $projeto->getProfessor()->getUsuario()->getFullname(); ?></td>
             <td><?php echo truncate_text($projeto->getTitulo(), 50); ?></td>
             <td><?php if($projeto->hasPropostaWithAttachedFile()){
-                        echo link_to(attachButton(), "@proposta?projeto_id={$projeto->getId()}");
-                      }else{
                         echo link_to(viewButton(), 'default/index');
+                      }else{
+                        echo link_to(attachButton(), "@proposta?projeto_id={$projeto->getId()}");
                       }
                 ?>
             </td>
