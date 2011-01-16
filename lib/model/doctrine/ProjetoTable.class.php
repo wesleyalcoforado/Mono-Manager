@@ -16,4 +16,8 @@ class ProjetoTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Projeto');
     }
+
+    public function exists($id){
+      return $this->find($id) != null;
+    }
 }

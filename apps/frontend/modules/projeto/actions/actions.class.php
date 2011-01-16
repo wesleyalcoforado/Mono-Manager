@@ -10,9 +10,7 @@
  */
 class projetoActions extends monomActions
 {
-  protected function saveForm($formData){
-    $this->loadForm($formData['id']);
-
+  protected function saveForm($formData, $formFiles){
     //TODO: estudante fake, trocar pelo verdadeiro qdo aplicação estiver pronta para isso
     $user = EstudanteTable::getInstance()->findAll()->getFirst();
 

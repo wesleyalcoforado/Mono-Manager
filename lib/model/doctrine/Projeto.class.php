@@ -12,8 +12,15 @@
  */
 class Projeto extends BaseProjeto
 {
-  public function hasAttachedProposta(){
+  public function hasProposta(){
     $proposta = $this->getProposta();
-    return ($proposta != null);
+    return ($proposta != null && $proposta->exists());
+  }
+
+  public function hasPropostaWithAttachedFile(){
+    if($this->hasProposta()){
+      return file_exists($this->getProposta()->getDocumento());
+    }
+    return false;
   }
 }
