@@ -1,4 +1,4 @@
-<form method="post" action="<?php echo url_for('professor/index');  ?>" class="jqtransform">
+<form method="post" action="<?php echo url_for('professor/index');  ?>">
   <?php
   echo $form->renderHiddenFields();
 
