@@ -56,6 +56,18 @@ abstract class monomActions extends sfActions{
     $this->redirect($this->getModuleName() . "/index");
   }
 
+  public function prepareDownload($outFilename)
+  {
+    $response = $this->getResponse();
+    
+    $response->clearHttpHeaders();
+    $response->setHttpHeader('Pragma: public', true);
+    $response->setContentType('application/pdf');
+    $response->setHttpHeader('Content-Disposition', 'attachment; filename="'. basename($outFilename).'"');
+    $response->setHttpHeader('Content-Length', filesize($outFilename));
+    $response->sendHttpHeaders();
+  }
+
   protected function getWorkingEntity($id){
     if($this->workingEntity == null || $this->workingEntity->getId() != $id){
       $this->workingEntity = $this->getTable()->findOneById($id);

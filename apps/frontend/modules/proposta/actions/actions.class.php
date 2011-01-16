@@ -1,5 +1,4 @@
 <?php
-
 /**
  * proposta actions.
  *
@@ -29,6 +28,26 @@ class propostaActions extends monomActions
 
     $this->projetoId = $projeto_id;
     $this->maxFileSize = PropostaForm::getMaxFilesize();
+  }
+
+  public function executeDownload(sfWebRequest $request)
+  {
+    $projeto_id = $request->getParameter('projeto_id');
+    if(!is_numeric($projeto_id) || !ProjetoTable::getInstance()->exists($projeto_id)){
+      $this->forward404("Projeto inexistente");
+    }
+
+    $proposta = $this->getWorkingEntity($projeto_id);
+    if(!file_exists($proposta->getDocumento())){
+      $this->forward404("Documento inexistente");
+    }
+
+    $file = $proposta->getDocumento();
+
+    $this->prepareDownload($file);
+    readfile($file);
+
+    return sfView::NONE;
   }
 
   protected function saveForm($formData, $formFiles){

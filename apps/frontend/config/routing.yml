@@ -10,6 +10,10 @@ proposta:
   url: /projeto/:projeto_id/proposta
   param: {module: proposta, action: index}
 
+download_documento:
+  url: /projeto/:projeto_id/proposta/download
+  param: {module: proposta, action: download}
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
