@@ -37,11 +37,33 @@ body{
   padding: 0 10px;
 }
 
-form label {
+label {
    width: 200px;
+   display: block;
    font-size: 12pt;
+   float: left;
 }
 
+input, select, textarea{
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.width400 {
+  width: 400px;
+}
+
+.activeField
+{
+  background-color: #ffffff;
+  border: solid 1px #33677F;
+}
+
+.idle
+{
+  border: solid 1px #AECAD1;
+  background-color: #CDDDE1;
+}
 
 #listagem {
   width: 100%;
@@ -67,3 +89,4 @@ a {
 a:hover {
   color: #4AB7D4;
 }
+
