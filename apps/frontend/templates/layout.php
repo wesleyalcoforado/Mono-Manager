@@ -26,7 +26,7 @@
           <li><?php echo link_to1("Estudantes", "estudante/index"); ?></li>
           <li><?php echo link_to1("Projetos", "projeto/index"); ?></li>
           <li><?php echo link_to1("Semestres", "semestre/index"); ?></li>
-          <li><?php echo link_to1("Sair", "default/index"); ?></li>
+          <li><?php echo link_to1("Sair", "sfGuardAuth/signout"); ?></li>
         </ul>
       </div>
       <div class="grid_16" id="content">

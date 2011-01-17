@@ -1,3 +1,4 @@
+<h1>Professores</h1>
 <?php
 use_helper('App');
 
