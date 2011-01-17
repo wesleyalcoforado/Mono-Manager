@@ -90,3 +90,8 @@ a:hover {
   color: #4AB7D4;
 }
 
+#loginForm {
+  background-color: #ffffff;
+  width: 700px;
+  margin: 0 auto;
+}
