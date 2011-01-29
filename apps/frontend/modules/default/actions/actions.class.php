@@ -17,6 +17,6 @@ class defaultActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    //$this->forward('default', 'module');
+    $this->nome = sfContext::getInstance()->getUser()->getUsuario()->getFirstName();
   }
 }
