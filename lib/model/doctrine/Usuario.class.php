@@ -15,4 +15,32 @@ class Usuario extends BaseUsuario
   public function getFullname(){
     return $this->getFirstName() . " " . $this->getLastName();
   }
+
+  public static function parseUser(sfGuardUser $user){
+    $usuario = UsuarioTable::getInstance()->find($user->getId());
+    return $usuario;
+  }
+
+  public function isEstudante(){
+    return (boolean)$this->getEstudante()->exists();
+  }
+
+  public function isProfessor(){
+    return (boolean)$this->getProfessor()->exists();
+  }
+
+  public function isComissao(){
+    if($this->isProfessor()){
+      return $this->getProfessor()->isComissao();
+    }
+    return false;
+  }
+
+  public function isSubstituto(){
+    if($this->isProfessor()){
+      return $this->getProfessor()->isSubstituto();
+    }
+    return false;
+  }
+
 }

@@ -15,4 +15,12 @@ class Professor extends BaseProfessor
   public function __toString(){
     return $this->getUsuario()->getFullname();
   }
+
+  public function isComissao(){
+    return $this->getIsComissao();
+  }
+
+  public function isSubstituto(){
+    return $this->getIsSubstituto();
+  }
 }
