@@ -90,8 +90,37 @@ a:hover {
   color: #4AB7D4;
 }
 
-#loginForm {
-  background-color: #ffffff;
-  width: 700px;
-  margin: 0 auto;
+/* Bordas arredondadas */
+
+.bordaBox {background: transparent; width:600px; margin: 100px auto;}
+.bordaBox .b1, .bordaBox .b2, .bordaBox .b3, .bordaBox .b4, .bordaBox .b1b, .bordaBox .b2b, .bordaBox .b3b, .bordaBox .b4b {display:block; overflow:hidden; font-size:1px;}
+.bordaBox .b1, .bordaBox .b2, .bordaBox .b3, .bordaBox .b1b, .bordaBox .b2b, .bordaBox .b3b {height:1px;}
+.bordaBox .b2, .bordaBox .b3, .bordaBox .b4 {background:#FFF; border-left:1px solid #DDD; border-right:1px solid #DDD;}
+.bordaBox .b1 {margin:0 5px; background:#DDD;}
+.bordaBox .b2 {margin:0 3px; border-width:0 2px;}
+.bordaBox .b3 {margin:0 2px;}
+.bordaBox .b4 {height:2px; margin:0 1px;}
+.bordaBox .bordaConteudo {padding:5px;display:block; background:#FFF; border-left:1px solid #DDD; border-right:1px solid #DDD;}
+
+p.alert_access_denied {
+  font-size: 20pt;
+  background: url(../images/icons/warning.png) center left no-repeat;
+  padding-left: 128px;
+  height: 128px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.bordaBox .width400 {
+  width: 300px;
+}
+
+.bordaBox form {
+  padding: 20px;
+}
+
+.bordaBox h1 {
+  background: url(../images/icons/login.png) center left no-repeat;
+  padding-left: 40px;
+  margin-left: 20px
 }

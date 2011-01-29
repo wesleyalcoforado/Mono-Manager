@@ -6,4 +6,10 @@ class sfGuardAuthActions extends BasesfGuardAuthActions{
     $this->setLayout('cleanLayout');
     return parent::executeSignin($request);
   }
+
+  public function executeSecure($request)
+  {
+    $this->setLayout('cleanLayout');
+    $this->getResponse()->setStatusCode(403);
+  }
 }

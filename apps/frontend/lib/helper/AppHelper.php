@@ -8,8 +8,8 @@ function deleteButton(){
   return image_tag('icons/delete.png', array('alt' => 'Excluir', 'title' => 'Excluir'));
 }
 
-function attachButton(){
-  return image_tag('icons/attach.png', array('alt' => 'Anexar proposta', 'title' => 'Anexar proposta'));
+function attachButton($titulo = 'Anexar proposta'){
+  return image_tag('icons/attach.png', array('alt' => $titulo, 'title' => $titulo));
 }
 
 function viewButton(){
@@ -22,4 +22,20 @@ function presentationButton(){
 
 function formatDate($date){
   return date('d/m/Y', strtotime($date));
+}
+
+function roundedBox($begin = true){
+  $b1 = content_tag('b', '', array('class' => 'b1'));
+  $b2 = content_tag('b', '', array('class' => 'b2'));
+  $b3 = content_tag('b', '', array('class' => 'b3'));
+  $b4 = content_tag('b', '', array('class' => 'b4'));
+
+  $roundedTop = $b1 . $b2 . $b3 . $b4;
+  $roundedBottom = $b4 . $b3 . $b3 . $b1;
+
+  if($begin){
+    return "<div class='bordaBox'>" . $roundedTop . "<div class='bordaConteudo'>";
+  }else{
+    return "</div>" . $roundedBottom . "</div>";
+  }
 }

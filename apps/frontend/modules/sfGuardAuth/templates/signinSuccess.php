@@ -1,5 +1,7 @@
-<div id="loginForm">
-  <h1>Entrar</h1>
+<?php 
+  use_helper('App');
 
-  <?php echo include_partial('signin_form', array('form' => $form)) ?>
-</div>
+  echo roundedBox(true);
+  echo "<h1>Entrar</h1>";
+  include_partial('signin_form', array('form' => $form));
+  echo roundedBox(false);
