@@ -20,7 +20,7 @@
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
   </head>
-  <body>
+  <body class="mainLayout">
     <div class="container_24">
       <div class="grid_7" id="menu">
         <?php echo generateMenu(); ?>

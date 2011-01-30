@@ -6,8 +6,12 @@
 }
 
 body{
-  background-color: #111;
   font-family: 'Copse', arial, serif;
+  background-color: #111;
+}
+
+body.mainLayout {
+  background: url(../images/back.png) top center repeat-y #111;
 }
 
 #menu {
