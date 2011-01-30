@@ -12,13 +12,17 @@ abstract class monomActions extends sfActions{
   */
   public function executeIndex(sfWebRequest $request)
   {
+    $entityName = $this->getEntityClassName();
+    $formData = $request->getParameter($entityName);
+    $formFiles = $request->getFiles();
+
     $id = $request->getParameter('id');
+    if(!$id){
+      $id = $formData['id'];
+    }
     $this->loadForm($id);
 
     if($request->isMethod('post')){
-      $entityName = $this->getEntityClassName();
-      $formData = $request->getParameter($entityName);
-      $formFiles = $request->getFiles();
       $this->saveForm($formData, $formFiles);
     }
 
