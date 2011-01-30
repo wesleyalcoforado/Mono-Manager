@@ -25,7 +25,7 @@ foreach($list as $projeto): ?>
             </td>
             <td><?php echo link_to(presentationButton(), 'projeto/index'); ?></td>
             <td><?php echo link_to(editButton(), "projeto/index?id={$projeto->getId()}"); ?></td>
-            <td><?php echo link_to(deleteButton(), "projeto/excluir?id={$projeto->getId()}"); ?></td>
+            <td><?php echo link_to(deleteButton(), "projeto/excluir?id={$projeto->getId()}", array('confirm' => 'Você tem certeza de que deseja excluir este registro?')); ?></td>
         </tr>
 <?php
 endforeach;

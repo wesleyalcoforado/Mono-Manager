@@ -18,7 +18,7 @@ foreach($list as $semestre): ?>
             <td><?php echo formatDate($semestre->getDataProposta()); ?></td>
             <td><?php echo formatDate($semestre->getDataApresentacao()); ?></td>
             <td><?php echo link_to(editButton(), "semestre/index?id={$semestre->getId()}"); ?></td>
-            <td><?php echo link_to(deleteButton(), "semestre/excluir?id={$semestre->getId()}"); ?></td>
+            <td><?php echo link_to(deleteButton(), "semestre/excluir?id={$semestre->getId()}", array('confirm' => 'Você tem certeza de que deseja excluir este registro?')); ?></td>
         </tr>
 <?php
 endforeach;

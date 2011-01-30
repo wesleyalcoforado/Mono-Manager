@@ -18,7 +18,7 @@ foreach($list as $professor): ?>
             <td><?php echo $professor->getUsuario()->getUsername(); ?></td>
             <td><?php echo $professor->getUsuario()->getEmailAddress(); ?></td>
             <td><?php echo link_to(editButton(), "professor/index?id={$professor->getId()}"); ?></td>
-            <td><?php echo link_to(deleteButton(), "professor/excluir?id={$professor->getId()}"); ?></td>
+            <td><?php echo link_to(deleteButton(), "professor/excluir?id={$professor->getId()}", array('confirm' => 'Você tem certeza de que deseja excluir este registro?')); ?></td>
         </tr>
 <?php
 endforeach;
