@@ -16,7 +16,6 @@ body.mainLayout {
 
 #menu {
   padding-top: 100px;
-  background-color: #333;
   font-size: 20pt;
   text-align: right;
 }
@@ -36,7 +35,6 @@ body.mainLayout {
 }
 
 #content {
-  background-color: #eee;
   width: 650px;
   padding: 0 10px;
 }
