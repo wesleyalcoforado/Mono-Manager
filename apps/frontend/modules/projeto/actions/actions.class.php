@@ -11,8 +11,7 @@
 class projetoActions extends monomActions
 {
   protected function saveForm($formData, $formFiles){
-    //TODO: estudante fake, trocar pelo verdadeiro qdo aplicação estiver pronta para isso
-    $user = EstudanteTable::getInstance()->findAll()->getFirst();
+    $user = $this->getUser()->getUsuario()->getEstudante();
 
     $formIsNew = !$this->form->getObject()->exists();
     if($formIsNew){

@@ -10,6 +10,12 @@ proposta:
   url: /projeto/:projeto_id/proposta
   param: {module: proposta, action: index}
 
+proposta_avaliar:
+  url: /projeto/:projeto_id/proposta/aprovar/:aprovado
+  param: {module: proposta, action: aprovar}
+  requirements:
+    aprovado: (true|false)
+
 download_documento:
   url: /projeto/:projeto_id/proposta/download
   param: {module: proposta, action: download}

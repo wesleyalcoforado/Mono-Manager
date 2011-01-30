@@ -20,6 +20,24 @@ function presentationButton(){
   return image_tag('icons/comments.png', array('alt' => 'Solicitar defesa', 'title' => 'Solicitar defesa'));
 }
 
+function approveButton($enabled = true, $titulo = 'Aprovar proposta'){
+  $img = "icons/thumb_up.png";
+  if(!$enabled){
+    $img = "icons/thumb_up_grey.png";
+  }
+
+  return image_tag($img, array('alt' => $titulo, 'title' => $titulo));
+}
+
+function disapproveButton($enabled = true, $titulo = 'Desaprovar proposta'){
+  $img = "icons/thumb_down.png";
+  if(!$enabled){
+    $img = "icons/thumb_down_grey.png";
+  }
+
+  return image_tag($img, array('alt' => $titulo, 'title' => $titulo));
+}
+
 function formatDate($date){
   return date('d/m/Y', strtotime($date));
 }

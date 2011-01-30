@@ -17,4 +17,19 @@ class ProfessorTable extends Doctrine_Table
         return Doctrine_Core::getTable('Professor');
     }
 
+    public function findEmailsComissao(){
+      $query = $this->createQuery('p')
+              ->select('u.email_address as email_address')
+              ->innerJoin('p.Usuario u')
+              ->where('p.is_comissao = ?', true);
+
+      $emails = $query->execute(array(), Doctrine_Core::HYDRATE_SCALAR);
+      $arrEmails = array();
+      foreach($emails as $email){
+        $arrEmails[] = $email['u_email_address'];
+      }
+
+      return $arrEmails;
+    }
+
  }

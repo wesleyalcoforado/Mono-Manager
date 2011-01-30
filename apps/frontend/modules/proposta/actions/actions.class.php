@@ -28,7 +28,6 @@ class propostaActions extends monomActions
       $formFiles = $request->getFiles();
       $this->saveForm($formData, $formFiles);
     }
-
   }
 
   public function executeDownload(sfWebRequest $request)
@@ -51,6 +50,37 @@ class propostaActions extends monomActions
     return sfView::NONE;
   }
 
+  public function executeList(sfWebRequest $request)
+  {
+    $this->list = $this->getTable()->findAll();
+    $this->user = $this->getUser();
+  }
+
+  public function executeAprovar(sfWebRequest $request)
+  {
+    $projeto_id = $request->getParameter('projeto_id');
+    $this->projetoId = $projeto_id;
+    if(!is_numeric($projeto_id) || !ProjetoTable::getInstance()->exists($projeto_id)){
+      $this->forward404("Projeto inexistente");
+    }
+
+    $aprovado = $request->getParameter('aprovado');
+    $proposta = $this->getWorkingEntity($projeto_id);
+    if($proposta->getStatus() == Proposta::NAO_ANALISADO){
+      if($aprovado == 'true'){
+        $proposta->setStatus(Proposta::APROVADO);
+        $this->notifyComissao();
+      }else{
+        $proposta->setStatus(Proposta::REPROVADO);
+        $this->notifyEstudante();
+      }
+      $proposta->save();
+    }else{
+      $this->setMessage('error', 'A proposta já foi analisada.');
+    }
+    $this->redirect($this->getModuleName() . "/list");
+  }
+
   protected function saveForm($formData, $formFiles){
     $files = $formFiles['proposta'];
 
@@ -61,6 +91,8 @@ class propostaActions extends monomActions
       $filename = $this->createFullFilename($file);
       $proposta = $this->form->getObject();
       $proposta->setDocumento($filename);
+      $proposta->setDataSubmissao(date('Y-m-d H:i:s'));
+      $proposta->setStatus(Proposta::NAO_ANALISADO);
       $proposta->save();
       $this->setMessage('notice', 'Proposta anexada com sucesso.');
       $this->notifyOrientador();
@@ -111,6 +143,24 @@ class propostaActions extends monomActions
 
     $mail = new MailFactory($this);
     $message = $mail->createMessagePropostaEnviada($projeto);
+
+    $this->getMailer()->send($message);
+  }
+
+  protected function notifyComissao(){
+    $projeto = ProjetoTable::getInstance()->find($this->projetoId);
+
+    $mail = new MailFactory($this);
+    $message = $mail->createMessagePropostaAprovada($projeto);
+
+    $this->getMailer()->send($message);
+  }
+
+  protected function notifyEstudante(){
+    $projeto = ProjetoTable::getInstance()->find($this->projetoId);
+
+    $mail = new MailFactory($this);
+    $message = $mail->createMessagePropostaReprovada($projeto);
 
     $this->getMailer()->send($message);
   }
