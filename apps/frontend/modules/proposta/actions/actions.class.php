@@ -13,6 +13,9 @@ class propostaActions extends monomActions
   public function executeIndex(sfWebRequest $request)
   {
     $projeto_id = $request->getParameter('projeto_id');
+    $this->projetoId = $projeto_id;
+    $this->maxFileSize = PropostaForm::getMaxFilesize();
+
     if(!is_numeric($projeto_id) || !ProjetoTable::getInstance()->exists($projeto_id)){
       $this->forward404("Projeto inexistente");
     }
@@ -26,8 +29,6 @@ class propostaActions extends monomActions
       $this->saveForm($formData, $formFiles);
     }
 
-    $this->projetoId = $projeto_id;
-    $this->maxFileSize = PropostaForm::getMaxFilesize();
   }
 
   public function executeDownload(sfWebRequest $request)
@@ -62,6 +63,7 @@ class propostaActions extends monomActions
       $proposta->setDocumento($filename);
       $proposta->save();
       $this->setMessage('notice', 'Proposta anexada com sucesso.');
+      $this->notifyOrientador();
       $this->redirect('projeto/index');
     }
   }
@@ -102,6 +104,15 @@ class propostaActions extends monomActions
 
     $nomeArquivo = $uploadDir . '/' . $name . '.' . $extension;
     return $nomeArquivo;
+  }
+
+  protected function notifyOrientador(){
+    $projeto = ProjetoTable::getInstance()->find($this->projetoId);
+
+    $mail = new MailFactory($this);
+    $message = $mail->createMessagePropostaEnviada($projeto);
+
+    $this->getMailer()->send($message);
   }
 
 }
