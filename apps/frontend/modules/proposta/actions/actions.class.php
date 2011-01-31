@@ -52,8 +52,16 @@ class propostaActions extends monomActions
 
   public function executeList(sfWebRequest $request)
   {
-    $this->list = $this->getTable()->findAll();
     $this->user = $this->getUser();
+    if($this->user->isSuperAdmin()){
+      $this->list = $this->getTable()->findAll();
+    }elseif($this->user->isComissao()){
+      $this->list = $this->getTable()->createNamedQuery('find.all.visible.by.comission')->execute();
+    }elseif($this->user->isProfessor()){
+      $this->list = $this->getTable()->createNamedQuery('find.all.with.attached.documents')->execute();
+    }else{
+      $this->forward404('Você não tem permissão para visualizar esta página');
+    }
   }
 
   public function executeAprovar(sfWebRequest $request)
@@ -77,6 +85,30 @@ class propostaActions extends monomActions
       $proposta->save();
     }else{
       $this->setMessage('error', 'A proposta já foi analisada.');
+    }
+    $this->redirect($this->getModuleName() . "/list");
+  }
+
+  public function executeLiberar(sfWebRequest $request)
+  {
+    $projeto_id = $request->getParameter('projeto_id');
+    $this->projetoId = $projeto_id;
+    if(!is_numeric($projeto_id) || !ProjetoTable::getInstance()->exists($projeto_id)){
+      $this->forward404("Projeto inexistente");
+    }
+
+    $liberado = $request->getParameter('liberado');
+    $proposta = $this->getWorkingEntity($projeto_id);
+    if($proposta->getStatus() == Proposta::APROVADO){
+      if($liberado == 'true'){
+        $proposta->setStatus(Proposta::LIBERADO);
+      }else{
+        $proposta->setStatus(Proposta::NAO_LIBERADO);
+      }
+      $this->notifyEstudanteOrientador($liberado == 'true');
+      $proposta->save();
+    }else{
+      $this->setMessage('error', 'A proposta já foi analisada ou ainda não foi aprovada pelo orientador.');
     }
     $this->redirect($this->getModuleName() . "/list");
   }
@@ -164,5 +196,20 @@ class propostaActions extends monomActions
 
     $this->getMailer()->send($message);
   }
+
+  protected function notifyEstudanteOrientador($approved = true){
+    $projeto = ProjetoTable::getInstance()->find($this->projetoId);
+
+    $mail = new MailFactory($this);
+
+    if($approved){
+      $message = $mail->createMessagePropostaLiberada($projeto);
+    }else{
+      $message = $mail->createMessagePropostaNaoLiberada($projeto);
+    }
+
+    $this->getMailer()->send($message);
+  }
+
 
 }

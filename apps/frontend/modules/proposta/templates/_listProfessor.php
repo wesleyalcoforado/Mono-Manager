@@ -28,7 +28,7 @@ if(count($list) > 0): ?>
           echo link_to(disapproveButton(), "@proposta_avaliar?projeto_id={$proposta->getProjetoId()}&aprovado=false", array('confirm' => 'Você tem certeza que deseja reprovar esta proposta?'));
         elseif($proposta->getStatus() == Proposta::APROVADO || $proposta->getStatus() == Proposta::LIBERADO):
           echo approveButton(false, "Proposta aprovada");
-        elseif($proposta->getStatus() == Proposta::REPROVADO):
+        elseif($proposta->getStatus() == Proposta::REPROVADO || $proposta->getStatus() == Proposta::NAO_LIBERADO):
           echo disapproveButton(false, "Proposta reprovada");
         endif;
       ?>

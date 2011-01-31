@@ -66,4 +66,50 @@ class MailFactory {
     return $message;
   }
 
+
+  public function createMessagePropostaLiberada(Projeto $projeto){
+    $params = array(
+        'nomeEstudante' => $projeto->getEstudante()->getUsuario()->getFullname(),
+        'tituloProjeto'  => $projeto->getTitulo()
+    );
+
+    $mailEstudante = $projeto->getEstudante()->getUsuario()->getEmailAddress();
+    $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
+    $emails = array($mailEstudante, $mailOrientador);
+
+    $subject = 'Mono-Manager - Proposta aprovada pela comissão';
+    $body = $this->action->getPartial('mail/propostaLiberada', $params);
+
+    $message = $this->createMessage($subject, $body, $emails);
+    return $message;
+
+  }
+
+  public function createMessagePropostaNaoLiberada(Projeto $projeto){
+    $params = array(
+        'nomeEstudante' => $projeto->getEstudante()->getUsuario()->getFullname(),
+        'tituloProjeto'  => $projeto->getTitulo()
+    );
+
+    $mailEstudante = $projeto->getEstudante()->getUsuario()->getEmailAddress();
+    $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
+    $emails = array($mailEstudante, $mailOrientador);
+
+    $subject = 'Mono-Manager - Proposta reprovada pela comissão';
+    $body = $this->action->getPartial('mail/propostaNaoLiberada', $params);
+
+    $message = $this->createMessage($subject, $body, $emails);
+    return $message;
+  }
+
+  protected function createMessage($subject, $body, $to){
+    $mailSender = sfConfig::get('app_mail_sender');
+
+    $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
+    $message->setTo($to);
+    $message->setSender($mailSender);
+
+    return $message;
+  }
+
 }

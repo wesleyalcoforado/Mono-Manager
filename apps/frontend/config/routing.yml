@@ -16,6 +16,12 @@ proposta_avaliar:
   requirements:
     aprovado: (true|false)
 
+proposta_liberar:
+  url: /projeto/:projeto_id/proposta/liberar/:liberado
+  param: {module: proposta, action: liberar}
+  requirements:
+    liberado: (true|false)
+
 download_documento:
   url: /projeto/:projeto_id/proposta/download
   param: {module: proposta, action: download}

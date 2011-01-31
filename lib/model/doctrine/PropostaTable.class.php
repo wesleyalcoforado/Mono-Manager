@@ -7,6 +7,22 @@
  */
 class PropostaTable extends Doctrine_Table
 {
+  public function __contruct(){
+    $this->addNamedQuery('find.all.with.attached.documents',
+      $this->createQuery('p')
+           ->select('p.*')
+           ->where('p.documento is not null')
+           ->andWhere("p.documento != ''")
+    );
+
+    $this->addNamedQuery('find.all.visible.by.comission',
+      $this->createQuery('p')
+           ->select('p.*')
+           ->where('p.status in ?', array(Proposta::LIBERADO, Proposta::APROVADO, Proposta::NAO_LIBERADO))
+    );
+
+  }
+
     /**
      * Returns an instance of this class.
      *
