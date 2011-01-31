@@ -16,8 +16,12 @@ function viewButton(){
   return image_tag('icons/zoom.png', array('alt' => 'Visualizar proposta', 'title' => 'Visualizar proposta'));
 }
 
-function presentationButton(){
-  return image_tag('icons/comments.png', array('alt' => 'Solicitar defesa', 'title' => 'Solicitar defesa'));
+function presentationButton($enabled = true){
+  $img = 'icons/presentation.png';
+  if(!$enabled)
+    $img = 'icons/presentation_grey.png';
+
+  return image_tag($img, array('alt' => 'Solicitar defesa', 'title' => 'Solicitar defesa'));
 }
 
 function approveButton($enabled = true, $titulo = 'Aprovar proposta'){

@@ -31,4 +31,21 @@ class Projeto extends BaseProjeto
     }
     parent::delete($conn);
   }
+
+  public function getStatus(){
+    if($this->hasPropostaWithAttachedFile()){
+      return Proposta::$status[$this->getProposta()->getStatus()];
+    }else{
+      return "Proposta pendente";
+    }
+  }
+
+  public function mayRequestPresentation(){
+    if($this->hasPropostaWithAttachedFile()){
+      return $this->getProposta()->getStatus() == Proposta::LIBERADO;
+    }
+
+    return false;
+  }
+
 }

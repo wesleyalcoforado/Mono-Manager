@@ -13,14 +13,16 @@
 class Proposta extends BaseProposta
 {
     const NAO_ANALISADO = 0;
-    const LIBERADO = 1;
-    const APROVADO = 2;
-    const REPROVADO = 3;
+    const APROVADO = 1;
+    const REPROVADO = 2;
+    const LIBERADO = 3;
+    const NAO_LIBERADO = 4;
 
     static $status = array(
-        self::NAO_ANALISADO => "Não analisado",
-        self::LIBERADO => "Liberado",
-        self::APROVADO => "Aprovado",
-        self::REPROVADO => "Reprovado"
+        self::NAO_ANALISADO => "Não analisada",
+        self::APROVADO => "Aprovado pelo orientador",
+        self::REPROVADO => "Reprovado pelo orientador",
+        self::LIBERADO => "Aprovado pela comissão",
+        self::NAO_LIBERADO => "Reprovado pela comissão"
     );
 }
