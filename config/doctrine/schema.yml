@@ -115,3 +115,25 @@ Semestre:
       type: date
     data_apresentacao:
       type: date
+
+Comentarios:
+  columns:
+    comentario:
+      type: string
+    professor_id:
+      type: integer
+      notnull: true
+    proposta_id:
+      type: integer
+    defesa_id:
+      type: integer
+  relations:
+    Professor:
+      local: professor_id
+      type: one
+      foreignType: many
+    Proposta:
+      local: proposta_id
+      type: one
+      foreignType: many
+    

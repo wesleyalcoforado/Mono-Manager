@@ -1,6 +1,20 @@
 <?php
 use_helper('App', 'Text');
 if(count($list) > 0): ?>
+
+<div id="divForm" style="display: block">
+  <form method="post" id="frmLiberar">
+    <input type="hidden" name="proposta_id">
+    <label for="comentario">Comentário:</label>
+    <textarea name="comentario"></textarea><br/>
+    <div align="center">
+      <button type="submit"><?php echo approveButton(true, ''); ?> Aprovar</button>
+      <button type="submit"><?php echo disapproveButton(true, ''); ?> Reprovar</button>
+    </div>
+  </form>
+  <br/><br/>
+</div>
+
 <table id="listagem">
   <thead>
     <tr>
