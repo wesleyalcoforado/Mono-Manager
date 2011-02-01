@@ -82,6 +82,7 @@ class propostaActions extends monomActions
         $proposta->setStatus(Proposta::REPROVADO);
         $this->notifyEstudante();
       }
+      $proposta->setDataFeedbackOrientador(Util::currentDateInDBFormat());
       $proposta->save();
     }else{
       $this->setMessage('error', 'A proposta já foi analisada.');
@@ -106,6 +107,7 @@ class propostaActions extends monomActions
         $proposta->setStatus(Proposta::NAO_LIBERADO);
       }
       $this->notifyEstudanteOrientador($liberado == 'true');
+      $proposta->setDataFeedbackComissao(Util::currentDateInDBFormat());
       $proposta->save();
     }else{
       $this->setMessage('error', 'A proposta já foi analisada ou ainda não foi aprovada pelo orientador.');
