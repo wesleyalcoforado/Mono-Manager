@@ -1,0 +1,18 @@
+No cadastro de professores, restringir a lista das possíveis titulações.
+Na listagem de professores, colocar um ícone de 'check' na coluna comissão
+No Manter Propostas, implementar o envio de email para os usuários
+
+Na listagem de propostas, exibir apenas propostas não avaliadas
+
+No veredito da proposta, adicionar campo de data para o feedback do orientador
+
+Descobrir uma forma mais eficiente de exibir o calendário, com menos repetição de código
+
+avaliar a utilização deste plugin para gerar mensagens de erro customizaveis:
+http://github.com/gumayunov/custom-err-msg
+
+validar preenchimento de datas
+
+adicionar datas de autorização da defesa
+
+verificar como fazer para aprovar apenas após a maioria da comissao ter aceitado

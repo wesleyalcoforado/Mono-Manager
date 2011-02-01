@@ -1,0 +1,37 @@
+Caso de uso Manter Propostas
+
+Atores: Estudante, Orientador, Comissão
+
+Pré-condições: 
+- O estudante deve estar logado no sistema e ter selecionado um projeto
+- O orientador deve estar logado no sistema
+- A comissão deve estar logada no sistema
+
+1. Fluxo básico
+1.1 - O caso de uso se inicia quando o estudante seleciona a opção Anexar Proposta para o projeto selecionado.
+1.2 - O sistema exibe o campo Documento
+1.3 - O estudante escolhe um arquivo PDF e seleciona a opção Salvar.
+1.4 - O sistema valida o formato e tamanho do arquivo (2.1).
+1.5 - O sistema anexa o documento ao projeto, exibe uma mensagem de sucesso e redireciona o estudante à listagem de projetos.
+1.6 - O sistema envia um email ao orientador, informando do envio de uma nova proposta por um de seus orientandos. 
+1.7 - O orientador seleciona a opção Visualiza Proposta, do projeto em questão.
+1.8 - O sistema exibe a proposta e solicita ao orientador para que ele seleciona uma das opções disponíveis (Aprovar/desaprovar)
+1.9 - O orientador seleciona a opção aprovar. (2.2)
+1.10 - O sistema envia um email à comissão, informando do envio de uma nova proposta e atualiza o status da proposta para "Aprovada pelo orientador".
+1.11 - A comissão seleciona a opção Visualizar Proposta, do projeto em questão.
+1.12 - O sistema exibe a proposta e um campo de comentários e solicita à comissão para que ela selecione uma das opções disponíveis (Aprovar/desaprovar)
+1.13 - A comissão comenta (opcionalmente) na proposta e a aprova. (2.2)
+1.14 - O sistema envia um email ao orientador e ao estudante, informando de que a proposta foi aprovada e atualiza o status da proposta para "Aprovada pela comissão".
+1.15 - O caso de uso se encerra. 
+
+2. Fluxos alternativos
+2.1 Formato e/ou tamanho inválidos
+2.1.1 - O subfluxo se inicia no passo 4 do fluxo básico, quando o sistema detecta que o formato e/ou o tamanho do arquivo são inválidos.
+2.1.2 - O sistema informa ao usuário dos dados inválidos e solicita-o que os corrija.
+2.1.3 - O subfluxo segue para o passo 2 do fluxo básico.
+
+2.2 Desaprovação da proposta
+2.1.1 - O subfluxo se inicia no passo 9 do fluxo básico, quando o usuário for o orientador, ou no passo 13 do fluxo básico, quando o usuário for da comissão. O usuário selecionou a reprovar.
+2.1.2 - O sistema envia um email ao estudante (e ao orientador, caso a proposta tenha sido reprovada pela comissão), informando que sua proposta foi reprovada.
+2.1.3 - O sistema atualiza o status da proposta para "Reprovada pelo orientador" ou "Reprovada pela comissão", dependendo de qual usuário tenha reprovado a proposta.
+2.1.3 - O caso de uso se encerra.
