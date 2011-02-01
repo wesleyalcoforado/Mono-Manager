@@ -7,7 +7,8 @@
  */
 class PropostaTable extends Doctrine_Table
 {
-  public function __contruct(){
+
+  public function construct(){
     $this->addNamedQuery('find.all.with.attached.documents',
       $this->createQuery('p')
            ->select('p.*')
@@ -18,7 +19,7 @@ class PropostaTable extends Doctrine_Table
     $this->addNamedQuery('find.all.visible.by.comission',
       $this->createQuery('p')
            ->select('p.*')
-           ->where('p.status in ?', array(Proposta::LIBERADO, Proposta::APROVADO, Proposta::NAO_LIBERADO))
+           ->whereIn('p.status', array(Proposta::LIBERADO, Proposta::APROVADO, Proposta::NAO_LIBERADO))
     );
 
   }

@@ -15,7 +15,7 @@
  * @property date $data_autorizacao
  * @property string $documento
  * @property string $documento_final
- * @property integer $qtde_linhas
+ * @property integer $qtde_paginas
  * @property Estudante $Estudante
  * @property Professor $Professor
  * @property Proposta $Proposta
@@ -30,7 +30,7 @@
  * @method date      getDataAutorizacao()  Returns the current record's "data_autorizacao" value
  * @method string    getDocumento()        Returns the current record's "documento" value
  * @method string    getDocumentoFinal()   Returns the current record's "documento_final" value
- * @method integer   getQtdeLinhas()       Returns the current record's "qtde_linhas" value
+ * @method integer   getQtdePaginas()      Returns the current record's "qtde_paginas" value
  * @method Estudante getEstudante()        Returns the current record's "Estudante" value
  * @method Professor getProfessor()        Returns the current record's "Professor" value
  * @method Proposta  getProposta()         Returns the current record's "Proposta" value
@@ -44,7 +44,7 @@
  * @method Projeto   setDataAutorizacao()  Sets the current record's "data_autorizacao" value
  * @method Projeto   setDocumento()        Sets the current record's "documento" value
  * @method Projeto   setDocumentoFinal()   Sets the current record's "documento_final" value
- * @method Projeto   setQtdeLinhas()       Sets the current record's "qtde_linhas" value
+ * @method Projeto   setQtdePaginas()      Sets the current record's "qtde_paginas" value
  * @method Projeto   setEstudante()        Sets the current record's "Estudante" value
  * @method Projeto   setProfessor()        Sets the current record's "Professor" value
  * @method Projeto   setProposta()         Sets the current record's "Proposta" value
@@ -96,7 +96,7 @@ abstract class BaseProjeto extends sfDoctrineRecord
              'type' => 'string',
              'length' => 255,
              ));
-        $this->hasColumn('qtde_linhas', 'integer', null, array(
+        $this->hasColumn('qtde_paginas', 'integer', null, array(
              'type' => 'integer',
              ));
     }

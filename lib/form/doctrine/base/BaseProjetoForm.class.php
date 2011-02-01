@@ -26,7 +26,7 @@ abstract class BaseProjetoForm extends BaseFormDoctrine
       'data_autorizacao' => new sfWidgetFormDate(),
       'documento'        => new sfWidgetFormInputText(),
       'documento_final'  => new sfWidgetFormInputText(),
-      'qtde_linhas'      => new sfWidgetFormInputText(),
+      'qtde_paginas'     => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -41,7 +41,7 @@ abstract class BaseProjetoForm extends BaseFormDoctrine
       'data_autorizacao' => new sfValidatorDate(array('required' => false)),
       'documento'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'documento_final'  => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'qtde_linhas'      => new sfValidatorInteger(array('required' => false)),
+      'qtde_paginas'     => new sfValidatorInteger(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('projeto[%s]');

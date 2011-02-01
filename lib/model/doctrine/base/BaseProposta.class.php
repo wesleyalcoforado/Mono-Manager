@@ -9,24 +9,27 @@
  * @property integer $status
  * @property string $comentarios
  * @property date $data_submissao
- * @property date $data_feedback
+ * @property date $data_feedback_orientador
+ * @property date $data_feedback_comissao
  * @property string $documento
  * @property Projeto $Projeto
  * 
- * @method integer  getProjetoId()      Returns the current record's "projeto_id" value
- * @method integer  getStatus()         Returns the current record's "status" value
- * @method string   getComentarios()    Returns the current record's "comentarios" value
- * @method date     getDataSubmissao()  Returns the current record's "data_submissao" value
- * @method date     getDataFeedback()   Returns the current record's "data_feedback" value
- * @method string   getDocumento()      Returns the current record's "documento" value
- * @method Projeto  getProjeto()        Returns the current record's "Projeto" value
- * @method Proposta setProjetoId()      Sets the current record's "projeto_id" value
- * @method Proposta setStatus()         Sets the current record's "status" value
- * @method Proposta setComentarios()    Sets the current record's "comentarios" value
- * @method Proposta setDataSubmissao()  Sets the current record's "data_submissao" value
- * @method Proposta setDataFeedback()   Sets the current record's "data_feedback" value
- * @method Proposta setDocumento()      Sets the current record's "documento" value
- * @method Proposta setProjeto()        Sets the current record's "Projeto" value
+ * @method integer  getProjetoId()                Returns the current record's "projeto_id" value
+ * @method integer  getStatus()                   Returns the current record's "status" value
+ * @method string   getComentarios()              Returns the current record's "comentarios" value
+ * @method date     getDataSubmissao()            Returns the current record's "data_submissao" value
+ * @method date     getDataFeedbackOrientador()   Returns the current record's "data_feedback_orientador" value
+ * @method date     getDataFeedbackComissao()     Returns the current record's "data_feedback_comissao" value
+ * @method string   getDocumento()                Returns the current record's "documento" value
+ * @method Projeto  getProjeto()                  Returns the current record's "Projeto" value
+ * @method Proposta setProjetoId()                Sets the current record's "projeto_id" value
+ * @method Proposta setStatus()                   Sets the current record's "status" value
+ * @method Proposta setComentarios()              Sets the current record's "comentarios" value
+ * @method Proposta setDataSubmissao()            Sets the current record's "data_submissao" value
+ * @method Proposta setDataFeedbackOrientador()   Sets the current record's "data_feedback_orientador" value
+ * @method Proposta setDataFeedbackComissao()     Sets the current record's "data_feedback_comissao" value
+ * @method Proposta setDocumento()                Sets the current record's "documento" value
+ * @method Proposta setProjeto()                  Sets the current record's "Projeto" value
  * 
  * @package    monomanager
  * @subpackage model
@@ -52,7 +55,10 @@ abstract class BaseProposta extends sfDoctrineRecord
         $this->hasColumn('data_submissao', 'date', null, array(
              'type' => 'date',
              ));
-        $this->hasColumn('data_feedback', 'date', null, array(
+        $this->hasColumn('data_feedback_orientador', 'date', null, array(
+             'type' => 'date',
+             ));
+        $this->hasColumn('data_feedback_comissao', 'date', null, array(
              'type' => 'date',
              ));
         $this->hasColumn('documento', 'string', 255, array(
