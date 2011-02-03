@@ -33,6 +33,10 @@ function approveButton($enabled = true, $titulo = 'Aprovar proposta'){
   return image_tag($img, array('alt' => $titulo, 'title' => $titulo));
 }
 
+function hammerButton(){
+  return image_tag('icons/judge.png', array('alt' => "Avaliar proposta", 'title' => "Avaliar proposta"));
+}
+
 function disapproveButton($enabled = true, $titulo = 'Desaprovar proposta'){
   $img = "icons/thumb_down.png";
   if(!$enabled){
@@ -40,6 +44,10 @@ function disapproveButton($enabled = true, $titulo = 'Desaprovar proposta'){
   }
 
   return image_tag($img, array('alt' => $titulo, 'title' => $titulo));
+}
+
+function cancelButton(){
+  return image_tag('icons/cancel.png');
 }
 
 function formatDate($date){
