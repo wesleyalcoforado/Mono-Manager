@@ -98,20 +98,12 @@ class propostaActions extends monomActions
       $this->forward404("Projeto inexistente");
     }
 
-    $liberado = $request->getParameter('liberado');
+    $approved = $request->getParameter('liberado') == 'true'? true : false;
+    $comment = $request->getParameter('comentario');
     $proposta = $this->getWorkingEntity($projeto_id);
-    if($proposta->getStatus() == Proposta::APROVADO){
-      if($liberado == 'true'){
-        $proposta->setStatus(Proposta::LIBERADO);
-      }else{
-        $proposta->setStatus(Proposta::NAO_LIBERADO);
-      }
-      $this->notifyEstudanteOrientador($liberado == 'true');
-      $proposta->setDataFeedbackComissao(Util::currentDateInDBFormat());
-      $proposta->save();
-    }else{
-      $this->setMessage('error', 'A proposta já foi analisada ou ainda não foi aprovada pelo orientador.');
-    }
+    $proposta->audit($approved, $comment);
+    
+    $this->notifyEstudanteOrientador($proposta->getStatus() == Proposta::LIBERADO);
     $this->redirect($this->getModuleName() . "/list");
   }
 

@@ -25,4 +25,65 @@ class Proposta extends BaseProposta
         self::LIBERADO => "Aprovado pela comissão",
         self::NAO_LIBERADO => "Reprovado pela comissão"
     );
+
+    protected $positiveComments;
+    protected $negativeComments;
+    protected $positivePercentage;
+    protected $negativePercentage;
+    protected $countComissao;
+
+    public function audit(Professor $professor, $approved, $comment){
+      $this->addComment($professor, $approved, $comment);
+
+      if($this->canBeAudited()){
+        $positiveDecision = $this->positivePercentage >= $this->negativePercentage;
+
+        $status = $positiveDecision ? Proposta::LIBERADO : Proposta::NAO_LIBERADO;
+        $this->setStatus($status);
+        $this->save();
+      }
+    }
+
+    protected function addComment(Professor $professor, $approved, $comment){
+      $alreadyAuditedByThisProfessor = ComentarioTable::getInstance()->alreadExists($this, $professor);
+      if(!$alreadyAuditedByThisProfessor){
+        $comment = new Comentario();
+        $comment->setProfessor($professor);
+        $comment->setProposta($proposta);
+        $comment->setComentario($comment);
+        $comment->setLiberado($approved);
+        $comment->save();
+      }
+    }
+
+    protected function canBeAudited(){
+      $this->calculatePercentages();
+      $quorum = $this->countComissao / 2;
+      $qtyComments = $this->positiveComments + $this->negativeComments;
+
+      return ($qtyComments == $this->countComissao) || ($this->positivePercentage >= $quorum) || ($this->negativePercentage > $quorum);
+    }
+
+    protected function calculatePercentages(){
+      $this->loadComments();
+      $this->countComissao = ProfessorTable::getInstance()->countComissao();
+
+      $this->positivePercentage = $this->positiveComments / $this->countComissao;
+      $this->negativePercentage = $this->negativeComments / $this->countComissao;
+    }
+
+    protected function loadComments(){
+      $comments = $this->getComentario();  //ComentarioTable::getInstance()->findByProposta($this);
+      $this->positiveComments = 0;
+      $this->negativeComments = 0;
+      foreach($comments as $c){
+        if($c->getLiberado()){
+          $this->positiveComment++;
+        }else{
+          $this->negativeComments++;
+        }
+      }
+    }
+
+
 }
