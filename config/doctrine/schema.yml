@@ -116,10 +116,13 @@ Semestre:
     data_apresentacao:
       type: date
 
-Comentarios:
+Comentario:
   columns:
     comentario:
       type: string
+    liberado:
+      type: boolean
+      notnull: true
     professor_id:
       type: integer
       notnull: true

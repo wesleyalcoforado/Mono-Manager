@@ -13,6 +13,7 @@
  * @property boolean $is_comissao
  * @property Usuario $Usuario
  * @property Doctrine_Collection $Projeto
+ * @property Doctrine_Collection $Comentario
  * 
  * @method integer             getId()            Returns the current record's "id" value
  * @method string              getInstituicao()   Returns the current record's "instituicao" value
@@ -22,6 +23,7 @@
  * @method boolean             getIsComissao()    Returns the current record's "is_comissao" value
  * @method Usuario             getUsuario()       Returns the current record's "Usuario" value
  * @method Doctrine_Collection getProjeto()       Returns the current record's "Projeto" collection
+ * @method Doctrine_Collection getComentario()    Returns the current record's "Comentario" collection
  * @method Professor           setId()            Sets the current record's "id" value
  * @method Professor           setInstituicao()   Sets the current record's "instituicao" value
  * @method Professor           setTitulacao()     Sets the current record's "titulacao" value
@@ -30,6 +32,7 @@
  * @method Professor           setIsComissao()    Sets the current record's "is_comissao" value
  * @method Professor           setUsuario()       Sets the current record's "Usuario" value
  * @method Professor           setProjeto()       Sets the current record's "Projeto" collection
+ * @method Professor           setComentario()    Sets the current record's "Comentario" collection
  * 
  * @package    monomanager
  * @subpackage model
@@ -78,6 +81,10 @@ abstract class BaseProfessor extends sfDoctrineRecord
              )));
 
         $this->hasMany('Projeto', array(
+             'local' => 'id',
+             'foreign' => 'professor_id'));
+
+        $this->hasMany('Comentario', array(
              'local' => 'id',
              'foreign' => 'professor_id'));
     }

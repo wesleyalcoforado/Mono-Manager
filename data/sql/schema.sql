@@ -1,3 +1,4 @@
+CREATE TABLE comentario (id BIGSERIAL, comentario TEXT, liberado BOOLEAN NOT NULL, professor_id BIGINT NOT NULL, proposta_id BIGINT, defesa_id BIGINT, PRIMARY KEY(id));
 CREATE TABLE estudante (id BIGINT, telefone VARCHAR(14), PRIMARY KEY(id));
 CREATE TABLE professor (id BIGINT, instituicao VARCHAR(255) NOT NULL, titulacao VARCHAR(255) NOT NULL, experiencia VARCHAR(30), is_substituto BOOLEAN, is_comissao BOOLEAN, PRIMARY KEY(id));
 CREATE TABLE projeto (id BIGSERIAL, titulo VARCHAR(255) NOT NULL, estudante_id BIGINT NOT NULL, professor_id BIGINT NOT NULL, coorientadores VARCHAR(255), data_requisicao DATE, data_sugestao DATE, data_aprovacao DATE, data_autorizacao DATE, documento VARCHAR(255), documento_final VARCHAR(255), qtde_paginas BIGINT, PRIMARY KEY(id));
@@ -12,6 +13,8 @@ CREATE TABLE sf_guard_remember_key (id BIGSERIAL, user_id BIGINT, remember_key V
 CREATE TABLE sf_guard_user_group (user_id BIGINT, group_id BIGINT, created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, PRIMARY KEY(user_id, group_id));
 CREATE TABLE sf_guard_user_permission (user_id BIGINT, permission_id BIGINT, created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, PRIMARY KEY(user_id, permission_id));
 CREATE INDEX is_active_idx ON sf_guard_user (is_active);
+ALTER TABLE comentario ADD CONSTRAINT comentario_proposta_id_proposta_id FOREIGN KEY (proposta_id) REFERENCES proposta(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
+ALTER TABLE comentario ADD CONSTRAINT comentario_professor_id_professor_id FOREIGN KEY (professor_id) REFERENCES professor(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE projeto ADD CONSTRAINT projeto_professor_id_professor_id FOREIGN KEY (professor_id) REFERENCES professor(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE projeto ADD CONSTRAINT projeto_estudante_id_estudante_id FOREIGN KEY (estudante_id) REFERENCES estudante(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE proposta ADD CONSTRAINT proposta_projeto_id_projeto_id FOREIGN KEY (projeto_id) REFERENCES projeto(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
