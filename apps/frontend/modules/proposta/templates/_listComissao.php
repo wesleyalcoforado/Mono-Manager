@@ -12,11 +12,15 @@ if(count($list) > 0): ?>
       $("#proposta_titulo").val(projectTitle);
 
       $("#approve_button").click(function(){
-        $("#frmLiberar").attr("action", urlApprove).submit();
+        if(confirm("Você tem certeza que deseja aprovar esta proposta?")){
+          $("#frmLiberar").attr("action", urlApprove).submit();
+        }
       });
 
       $("#disapprove_button").click(function(){
-        $("#frmLiberar").attr("action", urlDisapprove).submit();
+        if(confirm("Você tem certeza que deseja reprovar esta proposta?")){
+          $("#frmLiberar").attr("action", urlDisapprove).submit();
+        }
       });
 
       $("#divForm").slideDown();
@@ -36,8 +40,8 @@ if(count($list) > 0): ?>
     <label for="comentario">Comentário:</label>
     <textarea name="comentario"></textarea><br/>
     <div align="center">
-      <button type="submit" id="approve_button"><?php echo approveButton(true, ''); ?> Aprovar</button>
-      <button type="submit" id="disapprove_button"><?php echo disapproveButton(true, ''); ?> Reprovar</button>
+      <button type="button" id="approve_button"><?php echo approveButton(true, ''); ?> Aprovar</button>
+      <button type="button" id="disapprove_button"><?php echo disapproveButton(true, ''); ?> Reprovar</button>
       <button type="button" id="cancel_audition"><?php echo cancelButton(); ?> Cancelar</button>
     </div>
   </form>
