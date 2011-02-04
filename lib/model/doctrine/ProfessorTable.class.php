@@ -32,4 +32,11 @@ class ProfessorTable extends Doctrine_Table
       return $arrEmails;
     }
 
+    public function countComissao(){
+      $count = $this->createQuery('p')
+              ->where('p.is_comissao = ?', true)
+              ->count();
+      return count;
+    }
+
  }
