@@ -7,32 +7,29 @@
  * 
  * @property integer $projeto_id
  * @property integer $status
- * @property string $comentarios
  * @property date $data_submissao
  * @property date $data_feedback_orientador
  * @property date $data_feedback_comissao
  * @property string $documento
  * @property Projeto $Projeto
- * @property Doctrine_Collection $Comentario
+ * @property Doctrine_Collection $Comentarios
  * 
  * @method integer             getProjetoId()                Returns the current record's "projeto_id" value
  * @method integer             getStatus()                   Returns the current record's "status" value
- * @method string              getComentarios()              Returns the current record's "comentarios" value
  * @method date                getDataSubmissao()            Returns the current record's "data_submissao" value
  * @method date                getDataFeedbackOrientador()   Returns the current record's "data_feedback_orientador" value
  * @method date                getDataFeedbackComissao()     Returns the current record's "data_feedback_comissao" value
  * @method string              getDocumento()                Returns the current record's "documento" value
  * @method Projeto             getProjeto()                  Returns the current record's "Projeto" value
- * @method Doctrine_Collection getComentario()               Returns the current record's "Comentario" collection
+ * @method Doctrine_Collection getComentarios()              Returns the current record's "Comentarios" collection
  * @method Proposta            setProjetoId()                Sets the current record's "projeto_id" value
  * @method Proposta            setStatus()                   Sets the current record's "status" value
- * @method Proposta            setComentarios()              Sets the current record's "comentarios" value
  * @method Proposta            setDataSubmissao()            Sets the current record's "data_submissao" value
  * @method Proposta            setDataFeedbackOrientador()   Sets the current record's "data_feedback_orientador" value
  * @method Proposta            setDataFeedbackComissao()     Sets the current record's "data_feedback_comissao" value
  * @method Proposta            setDocumento()                Sets the current record's "documento" value
  * @method Proposta            setProjeto()                  Sets the current record's "Projeto" value
- * @method Proposta            setComentario()               Sets the current record's "Comentario" collection
+ * @method Proposta            setComentarios()              Sets the current record's "Comentarios" collection
  * 
  * @package    monomanager
  * @subpackage model
@@ -51,9 +48,6 @@ abstract class BaseProposta extends sfDoctrineRecord
         $this->hasColumn('status', 'integer', 1, array(
              'type' => 'integer',
              'length' => 1,
-             ));
-        $this->hasColumn('comentarios', 'string', null, array(
-             'type' => 'string',
              ));
         $this->hasColumn('data_submissao', 'date', null, array(
              'type' => 'date',
@@ -77,8 +71,11 @@ abstract class BaseProposta extends sfDoctrineRecord
              'local' => 'projeto_id',
              'foreign' => 'id'));
 
-        $this->hasMany('Comentario', array(
+        $this->hasMany('Comentario as Comentarios', array(
              'local' => 'id',
-             'foreign' => 'proposta_id'));
+             'foreign' => 'proposta_id',
+             'cascade' => array(
+             0 => 'delete',
+             )));
     }
 }

@@ -1,10 +1,12 @@
 Casos de uso
 
-*   Manter usuários (ator: administrador)
+*   Manter estudantes (ator: administrador)
+*   Manter professores (ator: administrador)
 *   Manter datas (ator: administrador)
-X   Manter propostas (atores: estudante, orientador, comissao)
+#   Manter propostas (atores: estudante, orientador, comissao)
 *   Manter projetos (ator: estudante)
 X   Manter solicitações de defesa (atores: estudante, orientador, comissao)
 
 * Implementação OK, caso de uso pendente
 X Caso de uso OK, implementação pendente
+# Implementação e casos de uso OK

@@ -54,20 +54,6 @@ Projeto:
       notnull: true
     coorientadores:
       type: string(255)
-    data_requisicao:
-      type: date
-    data_sugestao:
-      type: date
-    data_aprovacao:
-      type: date
-    data_autorizacao:
-      type: date
-    documento:
-      type: string(255)
-    documento_final:
-      type: string(255)
-    qtde_paginas:
-      type: integer
   relations:
     Estudante:
       local: estudante_id
@@ -90,8 +76,6 @@ Proposta:
       notnull: true
     status:
       type: integer(1)
-    comentarios:
-      type: string
     data_submissao:
       type: date
     data_feedback_orientador:
@@ -104,6 +88,12 @@ Proposta:
     Projeto:
       local: projeto_id
       type: one
+    Comentarios:
+      class: Comentario
+      local: id
+      foreign: proposta_id
+      type: many
+      cascade: [delete]
 
 Semestre:
   columns:
@@ -139,4 +129,41 @@ Comentario:
       local: proposta_id
       type: one
       foreignType: many
-    
+    Defesa:
+      local: defesa_id
+      type: one
+      foreignType: many
+
+Defesa:
+  columns:
+    projeto_id:
+      type: integer
+      notnull: true
+    status:
+      type: integer(1)
+    data_requisicao:
+      type: date
+    data_feedback_orientador:
+      type: date
+    data_feedback_comissao:
+      type: date
+    data_sugestao:
+      type: date
+    data_autorizacao:
+      type: date
+    documento:
+      type: string(255)
+    documento_final:
+      type: string(255)
+    qtde_paginas:
+      type: integer
+  relations:
+    Projeto:
+      local: projeto_id
+      type: one
+    Comentarios:
+      class: Comentario
+      local: id
+      foreign: defesa_id
+      type: many
+      cascade: [delete]

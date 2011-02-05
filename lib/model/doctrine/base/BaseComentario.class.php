@@ -12,6 +12,7 @@
  * @property integer $defesa_id
  * @property Professor $Professor
  * @property Proposta $Proposta
+ * @property Defesa $Defesa
  * 
  * @method string     getComentario()   Returns the current record's "comentario" value
  * @method boolean    getLiberado()     Returns the current record's "liberado" value
@@ -20,6 +21,7 @@
  * @method integer    getDefesaId()     Returns the current record's "defesa_id" value
  * @method Professor  getProfessor()    Returns the current record's "Professor" value
  * @method Proposta   getProposta()     Returns the current record's "Proposta" value
+ * @method Defesa     getDefesa()       Returns the current record's "Defesa" value
  * @method Comentario setComentario()   Sets the current record's "comentario" value
  * @method Comentario setLiberado()     Sets the current record's "liberado" value
  * @method Comentario setProfessorId()  Sets the current record's "professor_id" value
@@ -27,6 +29,7 @@
  * @method Comentario setDefesaId()     Sets the current record's "defesa_id" value
  * @method Comentario setProfessor()    Sets the current record's "Professor" value
  * @method Comentario setProposta()     Sets the current record's "Proposta" value
+ * @method Comentario setDefesa()       Sets the current record's "Defesa" value
  * 
  * @package    monomanager
  * @subpackage model
@@ -66,6 +69,10 @@ abstract class BaseComentario extends sfDoctrineRecord
 
         $this->hasOne('Proposta', array(
              'local' => 'proposta_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('Defesa', array(
+             'local' => 'defesa_id',
              'foreign' => 'id'));
     }
 }

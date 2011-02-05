@@ -9,45 +9,27 @@
  * @property integer $estudante_id
  * @property integer $professor_id
  * @property string $coorientadores
- * @property date $data_requisicao
- * @property date $data_sugestao
- * @property date $data_aprovacao
- * @property date $data_autorizacao
- * @property string $documento
- * @property string $documento_final
- * @property integer $qtde_paginas
  * @property Estudante $Estudante
  * @property Professor $Professor
  * @property Proposta $Proposta
+ * @property Doctrine_Collection $Defesa
  * 
- * @method string    getTitulo()           Returns the current record's "titulo" value
- * @method integer   getEstudanteId()      Returns the current record's "estudante_id" value
- * @method integer   getProfessorId()      Returns the current record's "professor_id" value
- * @method string    getCoorientadores()   Returns the current record's "coorientadores" value
- * @method date      getDataRequisicao()   Returns the current record's "data_requisicao" value
- * @method date      getDataSugestao()     Returns the current record's "data_sugestao" value
- * @method date      getDataAprovacao()    Returns the current record's "data_aprovacao" value
- * @method date      getDataAutorizacao()  Returns the current record's "data_autorizacao" value
- * @method string    getDocumento()        Returns the current record's "documento" value
- * @method string    getDocumentoFinal()   Returns the current record's "documento_final" value
- * @method integer   getQtdePaginas()      Returns the current record's "qtde_paginas" value
- * @method Estudante getEstudante()        Returns the current record's "Estudante" value
- * @method Professor getProfessor()        Returns the current record's "Professor" value
- * @method Proposta  getProposta()         Returns the current record's "Proposta" value
- * @method Projeto   setTitulo()           Sets the current record's "titulo" value
- * @method Projeto   setEstudanteId()      Sets the current record's "estudante_id" value
- * @method Projeto   setProfessorId()      Sets the current record's "professor_id" value
- * @method Projeto   setCoorientadores()   Sets the current record's "coorientadores" value
- * @method Projeto   setDataRequisicao()   Sets the current record's "data_requisicao" value
- * @method Projeto   setDataSugestao()     Sets the current record's "data_sugestao" value
- * @method Projeto   setDataAprovacao()    Sets the current record's "data_aprovacao" value
- * @method Projeto   setDataAutorizacao()  Sets the current record's "data_autorizacao" value
- * @method Projeto   setDocumento()        Sets the current record's "documento" value
- * @method Projeto   setDocumentoFinal()   Sets the current record's "documento_final" value
- * @method Projeto   setQtdePaginas()      Sets the current record's "qtde_paginas" value
- * @method Projeto   setEstudante()        Sets the current record's "Estudante" value
- * @method Projeto   setProfessor()        Sets the current record's "Professor" value
- * @method Projeto   setProposta()         Sets the current record's "Proposta" value
+ * @method string              getTitulo()         Returns the current record's "titulo" value
+ * @method integer             getEstudanteId()    Returns the current record's "estudante_id" value
+ * @method integer             getProfessorId()    Returns the current record's "professor_id" value
+ * @method string              getCoorientadores() Returns the current record's "coorientadores" value
+ * @method Estudante           getEstudante()      Returns the current record's "Estudante" value
+ * @method Professor           getProfessor()      Returns the current record's "Professor" value
+ * @method Proposta            getProposta()       Returns the current record's "Proposta" value
+ * @method Doctrine_Collection getDefesa()         Returns the current record's "Defesa" collection
+ * @method Projeto             setTitulo()         Sets the current record's "titulo" value
+ * @method Projeto             setEstudanteId()    Sets the current record's "estudante_id" value
+ * @method Projeto             setProfessorId()    Sets the current record's "professor_id" value
+ * @method Projeto             setCoorientadores() Sets the current record's "coorientadores" value
+ * @method Projeto             setEstudante()      Sets the current record's "Estudante" value
+ * @method Projeto             setProfessor()      Sets the current record's "Professor" value
+ * @method Projeto             setProposta()       Sets the current record's "Proposta" value
+ * @method Projeto             setDefesa()         Sets the current record's "Defesa" collection
  * 
  * @package    monomanager
  * @subpackage model
@@ -76,29 +58,6 @@ abstract class BaseProjeto extends sfDoctrineRecord
              'type' => 'string',
              'length' => 255,
              ));
-        $this->hasColumn('data_requisicao', 'date', null, array(
-             'type' => 'date',
-             ));
-        $this->hasColumn('data_sugestao', 'date', null, array(
-             'type' => 'date',
-             ));
-        $this->hasColumn('data_aprovacao', 'date', null, array(
-             'type' => 'date',
-             ));
-        $this->hasColumn('data_autorizacao', 'date', null, array(
-             'type' => 'date',
-             ));
-        $this->hasColumn('documento', 'string', 255, array(
-             'type' => 'string',
-             'length' => 255,
-             ));
-        $this->hasColumn('documento_final', 'string', 255, array(
-             'type' => 'string',
-             'length' => 255,
-             ));
-        $this->hasColumn('qtde_paginas', 'integer', null, array(
-             'type' => 'integer',
-             ));
     }
 
     public function setUp()
@@ -118,5 +77,9 @@ abstract class BaseProjeto extends sfDoctrineRecord
              'cascade' => array(
              0 => 'delete',
              )));
+
+        $this->hasMany('Defesa', array(
+             'local' => 'id',
+             'foreign' => 'projeto_id'));
     }
 }

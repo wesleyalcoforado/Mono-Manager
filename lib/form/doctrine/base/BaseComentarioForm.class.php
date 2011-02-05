@@ -20,7 +20,7 @@ abstract class BaseComentarioForm extends BaseFormDoctrine
       'liberado'     => new sfWidgetFormInputCheckbox(),
       'professor_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Professor'), 'add_empty' => false)),
       'proposta_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proposta'), 'add_empty' => true)),
-      'defesa_id'    => new sfWidgetFormInputText(),
+      'defesa_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Defesa'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
@@ -29,7 +29,7 @@ abstract class BaseComentarioForm extends BaseFormDoctrine
       'liberado'     => new sfValidatorBoolean(),
       'professor_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Professor'))),
       'proposta_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proposta'), 'required' => false)),
-      'defesa_id'    => new sfValidatorInteger(array('required' => false)),
+      'defesa_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Defesa'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('comentario[%s]');

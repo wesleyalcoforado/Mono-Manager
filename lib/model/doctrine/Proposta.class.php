@@ -78,7 +78,7 @@ class Proposta extends BaseProposta
     }
 
     protected function loadComments(){
-      $comments = $this->getComentario();  //ComentarioTable::getInstance()->findByProposta($this);
+      $comments = $this->getComentarios();
       $this->positiveComments = 0;
       $this->negativeComments = 0;
       foreach($comments as $c){
