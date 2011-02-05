@@ -36,7 +36,7 @@ class ProfessorTable extends Doctrine_Table
       $count = $this->createQuery('p')
               ->where('p.is_comissao = ?', true)
               ->count();
-      return count;
+      return $count;
     }
 
  }

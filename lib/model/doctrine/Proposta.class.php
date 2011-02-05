@@ -44,13 +44,13 @@ class Proposta extends BaseProposta
       }
     }
 
-    protected function addComment(Professor $professor, $approved, $comment){
-      $alreadyAuditedByThisProfessor = ComentarioTable::getInstance()->alreadExists($this, $professor);
+    protected function addComment(Professor $professor, $approved, $text){
+      $alreadyAuditedByThisProfessor = ComentarioTable::getInstance()->alreadyExists($this, $professor);
       if(!$alreadyAuditedByThisProfessor){
         $comment = new Comentario();
         $comment->setProfessor($professor);
-        $comment->setProposta($proposta);
-        $comment->setComentario($comment);
+        $comment->setProposta($this);
+        $comment->setComentario($text);
         $comment->setLiberado($approved);
         $comment->save();
       }
@@ -68,8 +68,13 @@ class Proposta extends BaseProposta
       $this->loadComments();
       $this->countComissao = ProfessorTable::getInstance()->countComissao();
 
-      $this->positivePercentage = $this->positiveComments / $this->countComissao;
-      $this->negativePercentage = $this->negativeComments / $this->countComissao;
+      $this->positivePercentage = 0;
+      $this->negativePercentage = 0;
+
+      if($this->countComissao > 0){
+        $this->positivePercentage = $this->positiveComments / $this->countComissao;
+        $this->negativePercentage = $this->negativeComments / $this->countComissao;
+      }
     }
 
     protected function loadComments(){
@@ -78,7 +83,7 @@ class Proposta extends BaseProposta
       $this->negativeComments = 0;
       foreach($comments as $c){
         if($c->getLiberado()){
-          $this->positiveComment++;
+          $this->positiveComments++;
         }else{
           $this->negativeComments++;
         }
