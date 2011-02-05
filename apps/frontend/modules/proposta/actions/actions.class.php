@@ -115,10 +115,14 @@ class propostaActions extends monomActions
     $comments = ComentarioTable::getInstance()->findByPropostaId($this->projetoId);
     $arrComments = array();
     foreach($comments as $com){
-      $arrComments[] = array(
-          'positive' => $com->getLiberado(),
-          'text' => $com->getComentario()
-      );
+      $text = trim($com->getComentario());
+
+      if($text){
+        $arrComments[] = array(
+            'positive' => $com->getLiberado(),
+            'text' => $text
+        );
+      }
     }
 
     return $this->renderText(json_encode($arrComments));
