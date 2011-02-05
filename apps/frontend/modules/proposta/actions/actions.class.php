@@ -12,15 +12,9 @@ class propostaActions extends monomActions
 
   public function executeIndex(sfWebRequest $request)
   {
-    $projeto_id = $request->getParameter('projeto_id');
-    $this->projetoId = $projeto_id;
     $this->maxFileSize = PropostaForm::getMaxFilesize();
-
-    if(!is_numeric($projeto_id) || !ProjetoTable::getInstance()->exists($projeto_id)){
-      $this->forward404("Projeto inexistente");
-    }
-
-    $this->loadForm($projeto_id);
+    $this->validateProject($request);
+    $this->loadForm($this->projetoId);
 
     if($request->isMethod('post')){
       $entityName = $this->getEntityClassName();
@@ -32,12 +26,9 @@ class propostaActions extends monomActions
 
   public function executeDownload(sfWebRequest $request)
   {
-    $projeto_id = $request->getParameter('projeto_id');
-    if(!is_numeric($projeto_id) || !ProjetoTable::getInstance()->exists($projeto_id)){
-      $this->forward404("Projeto inexistente");
-    }
+    $this->validateProject($request);
 
-    $proposta = $this->getWorkingEntity($projeto_id);
+    $proposta = $this->getWorkingEntity($this->projetoId);
     if(!file_exists($proposta->getDocumento())){
       $this->forward404("Documento inexistente");
     }
@@ -66,14 +57,10 @@ class propostaActions extends monomActions
 
   public function executeAprovar(sfWebRequest $request)
   {
-    $projeto_id = $request->getParameter('projeto_id');
-    $this->projetoId = $projeto_id;
-    if(!is_numeric($projeto_id) || !ProjetoTable::getInstance()->exists($projeto_id)){
-      $this->forward404("Projeto inexistente");
-    }
+    $this->validateProject($request);
 
     $aprovado = $request->getParameter('aprovado');
-    $proposta = $this->getWorkingEntity($projeto_id);
+    $proposta = $this->getWorkingEntity($this->projetoId);
     if($proposta->getStatus() == Proposta::NAO_ANALISADO){
       if($aprovado == 'true'){
         $proposta->setStatus(Proposta::APROVADO);
@@ -92,19 +79,56 @@ class propostaActions extends monomActions
 
   public function executeLiberar(sfWebRequest $request)
   {
-    $projeto_id = $request->getParameter('projeto_id');
-    $this->projetoId = $projeto_id;
-    if(!is_numeric($projeto_id) || !ProjetoTable::getInstance()->exists($projeto_id)){
-      $this->forward404("Projeto inexistente");
-    }
+    $this->validateProject($request);
 
     $approved = $request->getParameter('liberado') == 'true'? true : false;
     $comment = $request->getParameter('comentario');
-    $proposta = $this->getWorkingEntity($projeto_id);
-    $proposta->audit($approved, $comment);
+    $proposta = $this->getWorkingEntity($this->projetoId);
+
+    $professor = $this->getUser()->getUsuario()->getProfessor();
+    $proposta->audit($professor, $approved, $comment);
     
     $this->notifyEstudanteOrientador($proposta->getStatus() == Proposta::LIBERADO);
     $this->redirect($this->getModuleName() . "/list");
+  }
+
+  public function executeInfo(sfWebRequest $request)
+  {
+    $this->validateProject($request);
+    $proposta = $this->getWorkingEntity($this->projetoId);
+
+    sfContext::getInstance()->getConfiguration()->loadHelpers(array('Url'));
+    $urlApprove = url_for("@proposta_liberar?projeto_id={$proposta->getProjetoId()}&liberado=true");
+    $urlDisapprove = url_for("@proposta_liberar?projeto_id={$proposta->getProjetoId()}&liberado=false");
+
+    return $this->renderText(json_encode(array(
+        'title' => $proposta->getProjeto()->getTitulo(),
+        'urlApprove' => $urlApprove,
+        'urlDisapprove' => $urlDisapprove
+    )));
+  }
+
+  public function executeComments(sfWebRequest $request)
+  {
+    $this->validateProject($request);
+
+    $comments = ComentarioTable::getInstance()->findByPropostaId($this->projetoId);
+    $arrComments = array();
+    foreach($comments as $com){
+      $arrComments[] = array(
+          'positive' => $com->getLiberado(),
+          'text' => $com->getComentario()
+      );
+    }
+
+    return $this->renderText(json_encode($arrComments));
+  }
+
+  protected function validateProject(sfWebRequest $request){
+    $this->projetoId = $request->getParameter('projeto_id');
+    if(!is_numeric($this->projetoId) || !ProjetoTable::getInstance()->exists($this->projetoId)){
+      $this->forward404("Projeto inexistente");
+    }
   }
 
   protected function saveForm($formData, $formFiles){

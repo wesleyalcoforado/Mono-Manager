@@ -14,6 +14,8 @@ class myUser extends sfGuardSecurityUser
     }else if($this->isEstudante()){
       $this->addCredential('estudante');
     }else if($this->isProfessor()){
+      $this->addCredential('comissao');
+    }else if($this->isProfessor()){
       $this->addCredential('professor');
     }
   }

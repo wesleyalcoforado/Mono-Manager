@@ -37,6 +37,10 @@ function hammerButton(){
   return image_tag('icons/judge.png', array('alt' => "Avaliar proposta", 'title' => "Avaliar proposta"));
 }
 
+function commentsButton(){
+  return image_tag('icons/comments.png', array('alt' => "Visualizar comentários", 'title' => "Visualizar comentários"));
+}
+
 function disapproveButton($enabled = true, $titulo = 'Desaprovar proposta'){
   $img = "icons/thumb_down.png";
   if(!$enabled){
