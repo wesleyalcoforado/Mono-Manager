@@ -8,7 +8,7 @@ function generateMenu(){
   $estudantePage  = link_to("Estudantes", "estudante/index");
   $projetoPage    = link_to("Projetos", "projeto/index");
   $propostaPage   = link_to("Propostas", "proposta/list");
-  $defesaPage     = link_to("Defesas", "default/index");
+  $defesaPage     = link_to("Defesas", "defesa/list");
   $semestrePage   = link_to("Semestres", "semestre/index");
   $sairPage       = link_to("Sair", "sfGuardAuth/signout");
 

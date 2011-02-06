@@ -17,6 +17,11 @@ class Projeto extends BaseProjeto
     return ($proposta != null && $proposta->exists());
   }
 
+  public function hasDefesa(){
+    $defesa = $this->getDefesa();
+    return ($defesa != null && $defesa->exists());
+  }
+
   public function hasPropostaWithAttachedFile(){
     if($this->hasProposta()){
       $proposta = $this->getProposta();

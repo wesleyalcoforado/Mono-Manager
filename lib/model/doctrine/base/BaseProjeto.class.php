@@ -12,24 +12,24 @@
  * @property Estudante $Estudante
  * @property Professor $Professor
  * @property Proposta $Proposta
- * @property Doctrine_Collection $Defesa
+ * @property Defesa $Defesa
  * 
- * @method string              getTitulo()         Returns the current record's "titulo" value
- * @method integer             getEstudanteId()    Returns the current record's "estudante_id" value
- * @method integer             getProfessorId()    Returns the current record's "professor_id" value
- * @method string              getCoorientadores() Returns the current record's "coorientadores" value
- * @method Estudante           getEstudante()      Returns the current record's "Estudante" value
- * @method Professor           getProfessor()      Returns the current record's "Professor" value
- * @method Proposta            getProposta()       Returns the current record's "Proposta" value
- * @method Doctrine_Collection getDefesa()         Returns the current record's "Defesa" collection
- * @method Projeto             setTitulo()         Sets the current record's "titulo" value
- * @method Projeto             setEstudanteId()    Sets the current record's "estudante_id" value
- * @method Projeto             setProfessorId()    Sets the current record's "professor_id" value
- * @method Projeto             setCoorientadores() Sets the current record's "coorientadores" value
- * @method Projeto             setEstudante()      Sets the current record's "Estudante" value
- * @method Projeto             setProfessor()      Sets the current record's "Professor" value
- * @method Projeto             setProposta()       Sets the current record's "Proposta" value
- * @method Projeto             setDefesa()         Sets the current record's "Defesa" collection
+ * @method string    getTitulo()         Returns the current record's "titulo" value
+ * @method integer   getEstudanteId()    Returns the current record's "estudante_id" value
+ * @method integer   getProfessorId()    Returns the current record's "professor_id" value
+ * @method string    getCoorientadores() Returns the current record's "coorientadores" value
+ * @method Estudante getEstudante()      Returns the current record's "Estudante" value
+ * @method Professor getProfessor()      Returns the current record's "Professor" value
+ * @method Proposta  getProposta()       Returns the current record's "Proposta" value
+ * @method Defesa    getDefesa()         Returns the current record's "Defesa" value
+ * @method Projeto   setTitulo()         Sets the current record's "titulo" value
+ * @method Projeto   setEstudanteId()    Sets the current record's "estudante_id" value
+ * @method Projeto   setProfessorId()    Sets the current record's "professor_id" value
+ * @method Projeto   setCoorientadores() Sets the current record's "coorientadores" value
+ * @method Projeto   setEstudante()      Sets the current record's "Estudante" value
+ * @method Projeto   setProfessor()      Sets the current record's "Professor" value
+ * @method Projeto   setProposta()       Sets the current record's "Proposta" value
+ * @method Projeto   setDefesa()         Sets the current record's "Defesa" value
  * 
  * @package    monomanager
  * @subpackage model
@@ -78,8 +78,11 @@ abstract class BaseProjeto extends sfDoctrineRecord
              0 => 'delete',
              )));
 
-        $this->hasMany('Defesa', array(
+        $this->hasOne('Defesa', array(
              'local' => 'id',
-             'foreign' => 'projeto_id'));
+             'foreign' => 'projeto_id',
+             'cascade' => array(
+             0 => 'delete',
+             )));
     }
 }

@@ -5,6 +5,11 @@ class Util {
     return date('Y-m-d H:i:s');
   }
 
+  public static function dateInDBFormat($year, $month, $day){
+    $timestamp = mktime(0, 0, 0, $month, $day, $year);
+    return date('Y-m-d H:i:s', $timestamp);
+  }
+
   public static function getMaxFilesize(){
     $value = ini_get('upload_max_filesize');
     $maxFileSizeInBytes = self::convertBytes($value);

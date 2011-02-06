@@ -1,0 +1,14 @@
+index:
+  credentials: estudante
+
+list:
+  credentials: [[professor, comissao]]
+
+info:
+  credentials: comissao
+
+comments:
+  credentials: comissao
+
+aprovar:
+  credentials: professor

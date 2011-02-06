@@ -102,6 +102,26 @@ class MailFactory {
     return $message;
   }
 
+  public function createMessageDefesaRequisitada(Projeto $projeto){
+    $params = array(
+        'nomeOrientador' => $projeto->getProfessor()->getUsuario()->getFullname(),
+        'nomeEstudante'  => $projeto->getEstudante()->getUsuario()->getFullname(),
+        'tituloProjeto'  => $projeto->getTitulo()
+    );
+
+    $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
+    $mailSender = sfConfig::get('app_mail_sender');
+
+    $subject = 'Mono-Manager - Nova defesa requisitada';
+    $body = $this->action->getPartial('mail/defesaRequisitada', $params);
+
+    $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
+    $message->setTo($mailOrientador);
+    $message->setSender($mailSender);
+
+    return $message;
+  }
+
   protected function createMessage($subject, $body, $to){
     $mailSender = sfConfig::get('app_mail_sender');
 

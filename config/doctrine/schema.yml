@@ -68,6 +68,12 @@ Projeto:
       foreign: projeto_id
       type: one
       cascade: [delete]
+    Defesa:
+      local: id
+      foreign: projeto_id
+      type: one
+      cascade: [delete]
+
 
 Proposta:
   columns:

@@ -26,7 +26,7 @@ foreach($list as $projeto): ?>
             </td>
             <td><?php 
               if($projeto->mayRequestPresentation()){
-                echo link_to(presentationButton(), 'projeto/index'); 
+                echo link_to(presentationButton(), "@defesa?projeto_id={$projeto->getId()}");
               }else{
                 echo presentationButton(false); 
               }
