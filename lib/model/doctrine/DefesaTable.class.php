@@ -7,6 +7,23 @@
  */
 class DefesaTable extends Doctrine_Table
 {
+
+  public function construct(){
+    $this->addNamedQuery('find.all.visible.by.professor',
+      $this->createQuery('d')
+           ->select('d.*')
+           ->where('d.documento is not null')
+           ->andWhere("d.documento != ''")
+    );
+
+    $this->addNamedQuery('find.all.visible.by.comission',
+      $this->createQuery('d')
+           ->select('d.*')
+           ->whereIn('d.status', array(Proposta::LIBERADO, Proposta::APROVADO, Proposta::NAO_LIBERADO))
+    );
+
+  }
+  
     /**
      * Returns an instance of this class.
      *

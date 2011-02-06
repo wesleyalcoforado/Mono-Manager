@@ -26,4 +26,68 @@ class Defesa extends BaseDefesa
       self::NAO_LIBERADO => "Defesa reprovada pela comissão"
   );
 
+    protected $positiveComments;
+    protected $negativeComments;
+    protected $positivePercentage;
+    protected $negativePercentage;
+    protected $countComissao;
+
+    public function audit(Professor $professor, $approved, $comment){
+      $this->addComment($professor, $approved, $comment);
+
+      if($this->canBeAudited()){
+        $positiveDecision = $this->positivePercentage >= $this->negativePercentage;
+
+        $status = $positiveDecision ? Defesa::LIBERADO : Defesa::NAO_LIBERADO;
+        $this->setStatus($status);
+        $this->save();
+      }
+    }
+
+    protected function addComment(Professor $professor, $approved, $text){
+      $alreadyAuditedByThisProfessor = ComentarioTable::getInstance()->alreadyExistsOnDefesa($this, $professor);
+      if(!$alreadyAuditedByThisProfessor){
+        $comment = new Comentario();
+        $comment->setProfessor($professor);
+        $comment->setDefesa($this);
+        $comment->setComentario($text);
+        $comment->setLiberado($approved);
+        $comment->save();
+      }
+    }
+
+    protected function canBeAudited(){
+      $this->calculatePercentages();
+      $quorum = $this->countComissao / 2;
+      $qtyComments = $this->positiveComments + $this->negativeComments;
+
+      return ($qtyComments == $this->countComissao) || ($this->positivePercentage >= $quorum) || ($this->negativePercentage > $quorum);
+    }
+
+    protected function calculatePercentages(){
+      $this->loadComments();
+      $this->countComissao = ProfessorTable::getInstance()->countComissao();
+
+      $this->positivePercentage = 0;
+      $this->negativePercentage = 0;
+
+      if($this->countComissao > 0){
+        $this->positivePercentage = $this->positiveComments / $this->countComissao;
+        $this->negativePercentage = $this->negativeComments / $this->countComissao;
+      }
+    }
+
+    protected function loadComments(){
+      $comments = $this->getComentarios();
+      $this->positiveComments = 0;
+      $this->negativeComments = 0;
+      foreach($comments as $c){
+        if($c->getLiberado()){
+          $this->positiveComments++;
+        }else{
+          $this->negativeComments++;
+        }
+      }
+    }
+
 }

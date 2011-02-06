@@ -30,6 +30,14 @@ class Projeto extends BaseProjeto
     return false;
   }
 
+  public function hasDefesaWithAttachedFile(){
+    if($this->hasDefesa()){
+      $defesa = $this->getDefesa();
+      return file_exists($defesa->getDocumento());
+    }
+    return false;
+  }
+
   public function delete(Doctrine_Connection $conn = null){
     if($this->hasPropostaWithAttachedFile()){
       unlink($this->getProposta()->getDocumento());
@@ -38,7 +46,9 @@ class Projeto extends BaseProjeto
   }
 
   public function getStatus(){
-    if($this->hasPropostaWithAttachedFile()){
+    if($this->hasDefesaWithAttachedFile()){
+      return Defesa::$status[$this->getDefesa()->getStatus()];
+    }elseif($this->hasPropostaWithAttachedFile()){
       return Proposta::$status[$this->getProposta()->getStatus()];
     }else{
       return "Proposta pendente";

@@ -26,4 +26,13 @@ class ComentarioTable extends Doctrine_Table
       return $numComments > 0;
     }
 
+    public function alreadyExistsOnDefesa(Defesa $defesa, Professor $professor){
+      $numComments = $this->createQuery('c')
+              ->where('c.professor_id = ?', $professor->getId())
+              ->andWhere('c.defesa_id = ?', $defesa->getId())
+              ->count();
+
+      return $numComments > 0;
+    }
+
 }
