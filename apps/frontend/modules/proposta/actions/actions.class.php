@@ -7,22 +7,8 @@
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class propostaActions extends monomActions
+class propostaActions extends documentoActions
 {
-
-  public function executeIndex(sfWebRequest $request)
-  {
-    $this->maxFileSize = PropostaForm::getMaxFilesize();
-    $this->validateProject($request);
-    $this->loadForm($this->projetoId);
-
-    if($request->isMethod('post')){
-      $entityName = $this->getEntityClassName();
-      $formData = $request->getParameter($entityName);
-      $formFiles = $request->getFiles();
-      $this->saveForm($formData, $formFiles);
-    }
-  }
 
   public function executeDownload(sfWebRequest $request)
   {
@@ -39,20 +25,6 @@ class propostaActions extends monomActions
     readfile($file);
 
     return sfView::NONE;
-  }
-
-  public function executeList(sfWebRequest $request)
-  {
-    $this->user = $this->getUser();
-    if($this->user->isSuperAdmin()){
-      $this->list = $this->getTable()->findAll();
-    }elseif($this->user->isComissao()){
-      $this->list = $this->getTable()->createNamedQuery('find.all.visible.by.comission')->execute();
-    }elseif($this->user->isProfessor()){
-      $this->list = $this->getTable()->createNamedQuery('find.all.with.attached.documents')->execute();
-    }else{
-      $this->forward404('Você não tem permissão para visualizar esta página');
-    }
   }
 
   public function executeAprovar(sfWebRequest $request)
@@ -108,31 +80,9 @@ class propostaActions extends monomActions
     )));
   }
 
-  public function executeComments(sfWebRequest $request)
-  {
-    $this->validateProject($request);
-
-    $comments = ComentarioTable::getInstance()->findByPropostaId($this->projetoId);
-    $arrComments = array();
-    foreach($comments as $com){
-      $text = trim($com->getComentario());
-
-      if($text){
-        $arrComments[] = array(
-            'positive' => $com->getLiberado(),
-            'text' => $text
-        );
-      }
-    }
-
-    return $this->renderText(json_encode($arrComments));
-  }
-
-  protected function validateProject(sfWebRequest $request){
-    $this->projetoId = $request->getParameter('projeto_id');
-    if(!is_numeric($this->projetoId) || !ProjetoTable::getInstance()->exists($this->projetoId)){
-      $this->forward404("Projeto inexistente");
-    }
+  protected function  getComments() {
+    $proposta = $this->getWorkingEntity($this->projetoId);
+    return ComentarioTable::getInstance()->findByPropostaId($proposta->getId());
   }
 
   protected function saveForm($formData, $formFiles){
@@ -170,68 +120,24 @@ class propostaActions extends monomActions
     return $this->workingEntity;
   }
 
-  public function executeExcluir(sfWebRequest $request){
-    $this->forward404();
-  }
-
-  protected function saveFile($file){
-    $destinationFilename = $this->createFullFilename($file);
-    if(file_exists($destinationFilename)){
-      unlink($destinationFilename);
-    }
-
-    move_uploaded_file($file['tmp_name'], $destinationFilename);
-  }
-
-  protected function createFullFilename($file){
-    $uploadDir = sfConfig::get('sf_upload_dir');
-    $name = 'proposta_[projeto_' . $this->form->getObject()->getProjetoId() . ']';
-    $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
-
-    $nomeArquivo = $uploadDir . '/' . $name . '.' . $extension;
-    return $nomeArquivo;
-  }
-
   protected function notifyOrientador(){
-    $projeto = ProjetoTable::getInstance()->find($this->projetoId);
-
-    $mail = new MailFactory($this);
-    $message = $mail->createMessagePropostaEnviada($projeto);
-
-    $this->getMailer()->send($message);
+    $this->notifyPeople('PropostaEnviada');
   }
 
   protected function notifyComissao(){
-    $projeto = ProjetoTable::getInstance()->find($this->projetoId);
-
-    $mail = new MailFactory($this);
-    $message = $mail->createMessagePropostaAprovada($projeto);
-
-    $this->getMailer()->send($message);
+    $this->notifyPeople('PropostaAprovada');
   }
 
   protected function notifyEstudante(){
-    $projeto = ProjetoTable::getInstance()->find($this->projetoId);
-
-    $mail = new MailFactory($this);
-    $message = $mail->createMessagePropostaReprovada($projeto);
-
-    $this->getMailer()->send($message);
+    $this->notifyPeople('PropostaReprovada');
   }
 
   protected function notifyEstudanteOrientador($approved = true){
-    $projeto = ProjetoTable::getInstance()->find($this->projetoId);
-
-    $mail = new MailFactory($this);
-
     if($approved){
-      $message = $mail->createMessagePropostaLiberada($projeto);
+      $this->notifyPeople('PropostaLiberada');
     }else{
-      $message = $mail->createMessagePropostaNaoLiberada($projeto);
+      $this->notifyPeople('PropostaNaoLiberada');
     }
-
-    $this->getMailer()->send($message);
   }
-
 
 }

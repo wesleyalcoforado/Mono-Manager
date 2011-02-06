@@ -9,7 +9,7 @@ class PropostaTable extends Doctrine_Table
 {
 
   public function construct(){
-    $this->addNamedQuery('find.all.with.attached.documents',
+    $this->addNamedQuery('find.all.visible.by.professor',
       $this->createQuery('p')
            ->select('p.*')
            ->where('p.documento is not null')
