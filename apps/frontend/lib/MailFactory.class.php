@@ -122,6 +122,81 @@ class MailFactory {
     return $message;
   }
 
+  public function createMessageDefesaAprovada(Projeto $projeto){
+    $params = array(
+        'nomeOrientador' => $projeto->getProfessor()->getUsuario()->getFullname(),
+        'nomeEstudante'  => $projeto->getEstudante()->getUsuario()->getFullname(),
+        'tituloProjeto'  => $projeto->getTitulo()
+    );
+
+    $mailComissao = ProfessorTable::getInstance()->findEmailsComissao();
+    $mailSender = sfConfig::get('app_mail_sender');
+
+    $subject = 'Mono-Manager - Nova defesa aprovada';
+    $body = $this->action->getPartial('mail/defesaAprovada', $params);
+
+    $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
+    $message->setTo($mailComissao);
+    $message->setSender($mailSender);
+
+    return $message;
+  }
+
+  public function createMessageDefesaReprovada(Projeto $projeto){
+    $params = array(
+        'nomeOrientador' => $projeto->getProfessor()->getUsuario()->getFullname(),
+        'tituloProjeto'  => $projeto->getTitulo()
+    );
+
+    $mailEstudante = $projeto->getEstudante()->getUsuario()->getEmailAddress();
+    $mailSender = sfConfig::get('app_mail_sender');
+
+    $subject = 'Mono-Manager - Sua defesa foi reprovada';
+    $body = $this->action->getPartial('mail/defesaReprovada', $params);
+
+    $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
+    $message->setTo($mailEstudante);
+    $message->setSender($mailSender);
+
+    return $message;
+  }
+
+
+  public function createMessageDefesaLiberada(Projeto $projeto){
+    $params = array(
+        'nomeEstudante' => $projeto->getEstudante()->getUsuario()->getFullname(),
+        'tituloProjeto'  => $projeto->getTitulo()
+    );
+
+    $mailEstudante = $projeto->getEstudante()->getUsuario()->getEmailAddress();
+    $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
+    $emails = array($mailEstudante, $mailOrientador);
+
+    $subject = 'Mono-Manager - Defesa aprovada pela comissão';
+    $body = $this->action->getPartial('mail/defesaLiberada', $params);
+
+    $message = $this->createMessage($subject, $body, $emails);
+    return $message;
+
+  }
+
+  public function createMessageDefesaNaoLiberada(Projeto $projeto){
+    $params = array(
+        'nomeEstudante' => $projeto->getEstudante()->getUsuario()->getFullname(),
+        'tituloProjeto'  => $projeto->getTitulo()
+    );
+
+    $mailEstudante = $projeto->getEstudante()->getUsuario()->getEmailAddress();
+    $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
+    $emails = array($mailEstudante, $mailOrientador);
+
+    $subject = 'Mono-Manager - Defesa reprovada pela comissão';
+    $body = $this->action->getPartial('mail/defesaNaoLiberada', $params);
+
+    $message = $this->createMessage($subject, $body, $emails);
+    return $message;
+  }
+
   protected function createMessage($subject, $body, $to){
     $mailSender = sfConfig::get('app_mail_sender');
 
