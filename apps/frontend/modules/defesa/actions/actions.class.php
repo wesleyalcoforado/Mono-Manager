@@ -23,6 +23,7 @@ class defesaActions extends documentoActions
       $defesa = $this->form->getObject();
       $defesa->setDocumento($filename);
       $defesa->setDataRequisicao(Util::currentDateInDBFormat());
+      $defesa->setQtdePaginas($formData['qtde_paginas']);
       $defesa->setStatus(Defesa::NAO_ANALISADO);
 
       $dataSugestao = $formData['data_sugestao'];
@@ -37,6 +38,104 @@ class defesaActions extends documentoActions
 
       $this->redirect('projeto/index');
     }
+  }
+
+  public function executeDownload(sfWebRequest $request)
+  {
+    $this->validateProject($request);
+
+    $defesa = $this->getWorkingEntity($this->projetoId);
+    $copiao = $defesa->getDocumento();
+    $final = $defesa->getDocumentoFinal();
+
+    if(!file_exists($copiao)){
+      $this->forward404("Documento inexistente");
+    }
+
+    $file = $copiao;
+    if(file_exists($final)){
+      $file = $final;
+    }
+
+    $this->prepareDownload($file);
+    readfile($file);
+
+    return sfView::NONE;
+  }
+
+  public function executeList(sfWebRequest $request){
+    parent::executeList($request);
+
+    $minYear = SemestreTable::getInstance()->findEarliestYearOrDefault(date('Y'));
+    $rangeYears = range($minYear, date('Y') + 10);
+    $years = array_combine($rangeYears, $rangeYears);
+
+    $widgetData = new sfWidgetFormDate();
+    $widgetData->setOption('format', '%day%%month%%year%');
+    $widgetData->setOption('years', $years);
+    $widgetData->setOption('can_be_empty', false);
+
+    $this->widgetData = $widgetData;
+  }
+
+  public function executeAprovar(sfWebRequest $request)
+  {
+    $this->validateProject($request);
+
+    $aprovado = $request->getParameter('aprovado');
+    $defesa = $this->getWorkingEntity($this->projetoId);
+    if($defesa->getStatus() == Defesa::NAO_ANALISADO){
+      if($aprovado == 'true'){
+        $defesa->setStatus(Defesa::APROVADO);
+        $this->notifyComissao();
+      }else{
+        $defesa->setStatus(Proposta::REPROVADO);
+        $this->notifyEstudante();
+      }
+      $defesa->setDataFeedbackOrientador(Util::currentDateInDBFormat());
+      $defesa->save();
+    }else{
+      $this->setMessage('error', 'A defesa já foi analisada.');
+    }
+    $this->redirect($this->getModuleName() . "/list");
+  }
+
+  public function executeLiberar(sfWebRequest $request)
+  {
+    $this->validateProject($request);
+
+    $approved = $request->getParameter('liberado') == 'true'? true : false;
+    $comment = $request->getParameter('comentario');
+    $defesa = $this->getWorkingEntity($this->projetoId);
+
+    if($approved){
+      $date = $request->getParameter('data_autorizada');
+      $date = Util::dateInDBFormat($date['year'], $date['month'], $date['day']);
+      $defesa->setDataAutorizacao($date);
+      $defesa->save();
+    }
+
+    $professor = $this->getUser()->getUsuario()->getProfessor();
+    $defesa->audit($professor, $approved, $comment);
+
+    $this->notifyEstudanteOrientador($defesa->getStatus() == Defesa::LIBERADO);
+    $this->redirect($this->getModuleName() . "/list");
+  }
+
+  public function executeInfo(sfWebRequest $request)
+  {
+    $this->validateProject($request);
+    $defesa = $this->getWorkingEntity($this->projetoId);
+
+    sfContext::getInstance()->getConfiguration()->loadHelpers(array('Url'));
+    $urlApprove = url_for("@defesa_liberar?projeto_id={$defesa->getProjetoId()}&liberado=true");
+    $urlDisapprove = url_for("@defesa_liberar?projeto_id={$defesa->getProjetoId()}&liberado=false");
+
+    return $this->renderText(json_encode(array(
+        'title' => $defesa->getProjeto()->getTitulo(),
+        'urlApprove' => $urlApprove,
+        'urlDisapprove' => $urlDisapprove
+    )));
   }
 
   //TODO: este método pode ser refatorado para remover duplicação entre proposta e defesa
@@ -64,6 +163,21 @@ class defesaActions extends documentoActions
   protected function notifyOrientador(){
     $this->notifyPeople('DefesaRequisitada');
   }
-  
+
+  protected function notifyComissao(){
+    $this->notifyPeople('DefesaAprovada');
+  }
+
+  protected function notifyEstudante(){
+    $this->notifyPeople('DefesaReprovada');
+  }
+
+  protected function notifyEstudanteOrientador($approved = true){
+    if($approved){
+      $this->notifyPeople('DefesaLiberada');
+    }else{
+      $this->notifyPeople('DefesaNaoLiberada');
+    }
+  }
 
 }
