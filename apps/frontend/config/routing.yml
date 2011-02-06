@@ -26,9 +26,25 @@ download_documento:
   url: /projeto/:projeto_id/proposta/download
   param: {module: proposta, action: download}
 
+download_copiao:
+  url: /projeto/:projeto_id/defesa/download
+  param: {module: defesa, action: download}
+
 defesa:
   url: /projeto/:projeto_id/defesa
   param: {module: defesa, action: index}
+
+defesa_avaliar:
+  url: /projeto/:projeto_id/defesa/aprovar/:aprovado
+  param: {module: defesa, action: aprovar}
+  requirements:
+    aprovado: (true|false)
+
+defesa_liberar:
+  url: /projeto/:projeto_id/defesa/liberar/:liberado
+  param: {module: defesa, action: liberar}
+  requirements:
+    liberado: (true|false)
 
 # generic rules
 # please, remove them by adding more specific rules
