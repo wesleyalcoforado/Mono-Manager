@@ -7,7 +7,6 @@ if(count($list) > 0): ?>
       <th>Orientador</th>
       <th>Título</th>
       <th>Proposta</th>
-      <th>Defesa</th>
       <th>Ações</th>
     </tr>
   </thead>
@@ -24,7 +23,6 @@ if(count($list) > 0): ?>
                 }
           ?>
       </td>
-      <td><?php echo link_to(presentationButton(), 'projeto/index'); ?></td>
       <td><?php echo link_to(deleteButton(), "projeto/excluir?id={$proposta->getProjetoId()}", array('confirm' => 'Você tem certeza de que deseja excluir este registro?')); ?></td>
     </tr>
 <?php

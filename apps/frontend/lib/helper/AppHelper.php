@@ -12,16 +12,20 @@ function attachButton($titulo = 'Anexar proposta'){
   return image_tag('icons/attach.png', array('alt' => $titulo, 'title' => $titulo));
 }
 
-function viewButton(){
-  return image_tag('icons/zoom.png', array('alt' => 'Visualizar proposta', 'title' => 'Visualizar proposta'));
+function viewButton($enabled = true, $title = 'Visualizar proposta'){
+  $img = 'icons/zoom.png';
+  if(!$enabled)
+    $img = 'icons/zoom_grey.png';
+
+  return image_tag($img, array('alt' => $title, 'title' => $title));
 }
 
-function presentationButton($enabled = true){
+function presentationButton($enabled = true, $titulo = 'Solicitar defesa'){
   $img = 'icons/presentation.png';
   if(!$enabled)
     $img = 'icons/presentation_grey.png';
 
-  return image_tag($img, array('alt' => 'Solicitar defesa', 'title' => 'Solicitar defesa'));
+  return image_tag($img, array('alt' => $titulo, 'title' => $titulo));
 }
 
 function approveButton($enabled = true, $titulo = 'Aprovar proposta'){
@@ -55,7 +59,11 @@ function cancelButton(){
 }
 
 function formatDate($date){
-  return date('d/m/Y', strtotime($date));
+  if($date){
+    return date('d/m/Y', strtotime($date));
+  }
+
+  return "-";
 }
 
 function roundedBox($begin = true){

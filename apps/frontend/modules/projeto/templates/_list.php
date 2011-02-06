@@ -26,7 +26,12 @@ foreach($list as $projeto): ?>
             </td>
             <td><?php 
               if($projeto->mayRequestPresentation()){
-                echo link_to(presentationButton(), "@defesa?projeto_id={$projeto->getId()}");
+                if($projeto->hasDefesaWithAttachedFile()){
+                  echo link_to(viewButton(), "@download_copiao?projeto_id={$projeto->getId()}");
+                  echo link_to(presentationButton(true, 'Renovar requisição de defesa'), "@defesa?projeto_id={$projeto->getId()}", array('confirm' => 'Ao renovar a defesa, o processo de requisição de defesa será reiniciado. Deseja continuar?'));
+                }else{
+                  echo link_to(presentationButton(), "@defesa?projeto_id={$projeto->getId()}");
+                }
               }else{
                 echo presentationButton(false); 
               }
