@@ -19,11 +19,11 @@ class Proposta extends BaseProposta
     const NAO_LIBERADO = 4;
 
     static $status = array(
-        self::NAO_ANALISADO => "Não analisada",
-        self::APROVADO => "Aprovado pelo orientador",
-        self::REPROVADO => "Reprovado pelo orientador",
-        self::LIBERADO => "Aprovado pela comissão",
-        self::NAO_LIBERADO => "Reprovado pela comissão"
+        self::NAO_ANALISADO => "Proposta não analisada",
+        self::APROVADO => "Proposta aprovada pelo orientador",
+        self::REPROVADO => "Proposta reprovada pelo orientador",
+        self::LIBERADO => "Proposta aprovada pela comissão",
+        self::NAO_LIBERADO => "Proposta reprovada pela comissão"
     );
 
     protected $positiveComments;

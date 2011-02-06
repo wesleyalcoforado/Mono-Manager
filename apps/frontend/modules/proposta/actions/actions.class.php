@@ -95,7 +95,7 @@ class propostaActions extends documentoActions
       $filename = $this->createFullFilename($file);
       $proposta = $this->form->getObject();
       $proposta->setDocumento($filename);
-      $proposta->setDataSubmissao(date('Y-m-d H:i:s'));
+      $proposta->setDataSubmissao(Util::currentDateInDBFormat());
       $proposta->setStatus(Proposta::NAO_ANALISADO);
       $proposta->save();
       $this->setMessage('notice', 'Proposta anexada com sucesso.');

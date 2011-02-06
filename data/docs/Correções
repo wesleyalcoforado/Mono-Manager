@@ -1,3 +1,5 @@
 implementar caso de uso de defesas
 escrever alguns fixtures pra carregar os dados básicos (admin do sistema, por exemplo, ou usuarios de teste)
 estilizar todos os alerts e buttons com os jquery-ui
+
+colocar um metodo para retornar o status geral do projeto
