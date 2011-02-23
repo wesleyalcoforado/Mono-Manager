@@ -9,12 +9,12 @@
 \contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{11}
 \contentsline {chapter}{\numberline {2}Regulamento de Projeto Final}{12}
 \contentsline {section}{\numberline {2.1}Entidades envolvidas e suas atribui\IeC {\c c}\IeC {\~o}es}{12}
-\contentsline {subsection}{\numberline {2.1.1}Blih blih blih}{13}
-\contentsline {section}{\numberline {2.2}Test 1 2 3 4}{13}
-\contentsline {subsection}{\numberline {2.2.1}Figura}{13}
-\contentsline {subsection}{\numberline {2.2.2}Tabela}{13}
-\contentsline {subsection}{\numberline {2.2.3}Cita\IeC {\c c}\IeC {\~o}es (Refer\IeC {\^e}ncias)}{14}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{15}
-\contentsline {chapter}{Ap\^endice{} A{} -$\mskip -\thinmuskip $-{} Isto \IeC {\'e} um ap\IeC {\^e}ndice}{16}
-\contentsline {section}{\numberline {A.1}Subse\IeC {\c c}\IeC {\~a}o de um ap\IeC {\^e}ncice}{16}
-\contentsline {section}{\numberline {A.2}Outra subse\IeC {\c c}\IeC {\~a}o de um ap\IeC {\^e}ndice}{16}
+\contentsline {section}{\numberline {2.2}Desenvolvimento do projeto}{13}
+\contentsline {subsection}{\numberline {2.2.1}Proposta do projeto}{13}
+\contentsline {subsection}{\numberline {2.2.2}Defesa do projeto}{14}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{16}
+\contentsline {chapter}{Ap\^endice{} A{} -$\mskip -\thinmuskip $-{} Isto \IeC {\'e} um ap\IeC {\^e}ndice}{17}
+\contentsline {section}{\numberline {A.1}Subse\IeC {\c c}\IeC {\~a}o de um ap\IeC {\^e}ncice}{17}
+\contentsline {section}{\numberline {A.2}Outra subse\IeC {\c c}\IeC {\~a}o de um ap\IeC {\^e}ndice}{17}
+\contentsline {chapter}{Ap\^endice{} B{} -$\mskip -\thinmuskip $-{} Formul\IeC {\'a}rios}{18}
+\contentsline {section}{\numberline {B.1}Formul\IeC {\'a}rio de proposta de projeto final}{18}
