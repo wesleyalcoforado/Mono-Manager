@@ -1,0 +1,109 @@
+% Modelo de monografia em LaTeX da UECE
+%
+% Na criação deste modelo foi tomada como base a dissertação de mestrado do
+% Jeandro Bezerra, sem a ajuda dele este trabalho teria sido muito mais
+% difícil. Este modelo utiliza o abnTeX e um pacote (uece.sty) para formatação
+% de alguns anexos necessários da UECE (folha de rosto, CIP, epígrafe, ...).
+%
+% Este documento não clama possuir conformidade de 100\% com as normas de
+% trabalhos da UECE. Consulte os guias oficiais.
+%
+% Autor do modelo: Rudy Matela
+% Data do modelo: 20090920
+% 
+% Autor: Wesley Alcoforado
+% Data: 22/02/2011
+
+\documentclass[pnumabnt,normaltoc,espacoumemeio,capchap]{abnt}		
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{abnt-alf}
+\usepackage{graphicx}
+\usepackage{uece}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Informações gerais do documento
+\autor{Wesley Jefferson Oliveira Alcoforado}
+\autorr{Alcoforado, Wesley Jefferson Oliveira}
+\titulo{Mono-Manager - um gerenciador de trabalhos de conclusão de curso para o curso de Ciências de Computação da UECE}
+\local{Fortaleza, Ceará}
+\cidade{Fortaleza}
+\data{2011}
+\orientador{Mariela Cortés}
+%\coorientador{Beltrano das Tantas e \par Cicrano da Silva}
+\codigocip{A000z}{CDD:000.0}
+
+% Descrição para folha de rosto
+\comentario{
+Monografia submetida à coordenação do curso de Ciências da Computação da Universidade Estadual do
+Ceará, no ano de 2011, como requisito parcial para obtenção do grau de Bacharel em Ciências da Computação.
+}
+
+% Informações institucionais
+\centro{Centro de Ciências e Tecnologia}
+\curso{Graduação em Ciências da Computação}
+\instituicao{Universidade Estadual do Ceará}
+
+% Epígrafe: citação e autor
+\epigrafe{``L'ordinateur obéit à vos ordres, pas à vos intentions.''}
+\autorepigrafe{Anônimo}
+
+% Membros da comissão avaliadora
+\bancaum{Profª. Drª. \ABNTorientadordata\\Universidade Estadual do Ceará - UECE\\Orientador}
+\bancadois{Prof. Dr. Beltrano das Tantas\\Universidade Estadual do Ceará - UECE\\Co-orientador}
+\bancatres{Prof. Me. Cricrano da Silva\\Universidade Estadual do Ceará - UECE\\Co-orientador}
+\bancaquatro{Prof. Dr. Zé Ninguém\\Universidade Estadual do Ceará - UECE}
+
+% Palavras chave
+\pcs{TCC}{Processo}{Informatização}
+\kws{TCC}{Processo}{Informatização}
+
+\begin{document}
+
+\capa
+\folhaderosto
+\makecippage
+\termodeaprovacao
+
+\pretextualchapter{Agradecimentos}
+À minha esposa Raquel por ter me incentivado a escrever minha monografia, me apoiando nos
+momentos em que fraquejei.
+
+Aos amigos de graduação mais próximos pelo apoio mútuo durante toda a jornada na universidade.
+
+Aos professores por terem compartilhado seus conhecimentos conosco.
+\pagebreak
+
+\makeepigrafe
+\tableofcontents
+\listadefiguras
+\listadetabelas
+% \listadesiglas % \sigla{sigla}{Descrição}
+% \listadesimbolos % \simbolo{símbolo}{Descrição}
+
+\begin{resumo}
+\noindent
+Este trabalho tem como objetivo apresentar uma ferramenta que informatiza
+o processo de avaliação de trabalhos de conclusão da graduação em Ciências 
+da Computação da Universidade Estadual do Ceará. Essa ferramenta foi projetada 
+para minimizar a quantidade de documentos impressos e para proporcionar uma 
+visão geral do andamento das atividades. Além disso, ela é capaz de notificar 
+as pessoas envolvidas automaticamente, alertando sobre o cumprimento dos prazos.
+\noindent
+\palavraschave
+\end{resumo}
+\pagebreak
+
+\input{ch1}
+\input{ch2}
+\bibliographystyle{abnt-alf}
+\bibliography{bib}
+\appendix
+\include{cha}
+
+\end{document}
+

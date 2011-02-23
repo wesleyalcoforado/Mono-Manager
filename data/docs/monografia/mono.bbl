@@ -1,0 +1,18 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.53 }
+
+\bibitem[Beltrano et al. 1999]{BEEF:1234}
+\abntrefinfo{Beltrano et al.}{BELTRANO et al.}{1999}
+{BELTRANO, B. et al. Uma proposta para proposta de propostas.
+\emph{Alguma Revista}, VII, 1999.}
+
+\bibitem[Dash et al. 1666]{DEAD:1666}
+\abntrefinfo{Dash et al.}{DASH et al.}{1666}
+{DASH, B. et al. A new proposal for proposing proposals.
+\emph{Some Journal}, v.~42, p. 3--44, jan 1666.}
+
+\end{thebibliography}

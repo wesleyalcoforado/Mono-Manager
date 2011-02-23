@@ -91,7 +91,12 @@ abstract class documentoActions extends monomActions{
     $mail = new MailFactory($this);
     $message = call_user_func(array($mail, "createMessage$message"), $projeto);
 
-    $this->getMailer()->send($message);
+    try{
+      @$this->getMailer()->send($message);
+    }catch(Exception $e){
+      $this->setMessage('error', 'Ocorreu um erro durante o envio de email.');
+    }
+
   }
 
 }
