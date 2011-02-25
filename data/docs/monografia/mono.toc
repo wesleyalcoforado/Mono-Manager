@@ -2,19 +2,33 @@
 \contentsline {chapter}{Lista de Figuras}{}
 \contentsline {chapter}{Lista de Tabelas}{}
 \contentsline {chapter}{Resumo}{}
-\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{10}
-\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{10}
-\contentsline {section}{\numberline {1.2}Objetivo}{10}
-\contentsline {section}{\numberline {1.3}Metodologia}{10}
-\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{11}
-\contentsline {chapter}{\numberline {2}Regulamento de Projeto Final}{12}
-\contentsline {section}{\numberline {2.1}Entidades envolvidas e suas atribui\IeC {\c c}\IeC {\~o}es}{12}
-\contentsline {section}{\numberline {2.2}Desenvolvimento do projeto}{13}
-\contentsline {subsection}{\numberline {2.2.1}Proposta do projeto}{13}
-\contentsline {subsection}{\numberline {2.2.2}Defesa do projeto}{14}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{16}
-\contentsline {chapter}{Ap\^endice{} A{} -$\mskip -\thinmuskip $-{} Isto \IeC {\'e} um ap\IeC {\^e}ndice}{17}
-\contentsline {section}{\numberline {A.1}Subse\IeC {\c c}\IeC {\~a}o de um ap\IeC {\^e}ncice}{17}
-\contentsline {section}{\numberline {A.2}Outra subse\IeC {\c c}\IeC {\~a}o de um ap\IeC {\^e}ndice}{17}
-\contentsline {chapter}{Ap\^endice{} B{} -$\mskip -\thinmuskip $-{} Formul\IeC {\'a}rios}{18}
-\contentsline {section}{\numberline {B.1}Formul\IeC {\'a}rio de proposta de projeto final}{18}
+\contentsline {chapter}{Abstract}{}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{12}
+\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{12}
+\contentsline {section}{\numberline {1.2}Objetivo}{12}
+\contentsline {section}{\numberline {1.3}Metodologia}{12}
+\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{13}
+\contentsline {chapter}{\numberline {2}Regulamento de Projeto Final}{14}
+\contentsline {section}{\numberline {2.1}Entidades envolvidas e suas atribui\IeC {\c c}\IeC {\~o}es}{14}
+\contentsline {section}{\numberline {2.2}Desenvolvimento do projeto}{15}
+\contentsline {subsection}{\numberline {2.2.1}Proposta do projeto}{15}
+\contentsline {subsection}{\numberline {2.2.2}Defesa do projeto}{16}
+\contentsline {subsection}{\numberline {2.2.3}Resumo do fluxo do desenvolvimento do projeto final}{16}
+\contentsline {chapter}{\numberline {3}Processo de desenvolvimento da aplica\IeC {\c c}\IeC {\~a}o}{18}
+\contentsline {section}{\numberline {3.1}Escolha das tecnologias}{18}
+\contentsline {subsection}{\numberline {3.1.1}Linguagem de programa\IeC {\c c}\IeC {\~a}o}{18}
+\contentsline {subsection}{\numberline {3.1.2}Framework}{19}
+\contentsline {subsubsection}{\numberline {3.1.2.1}MVC}{19}
+\contentsline {subsubsection}{\numberline {3.1.2.2}ORM}{20}
+\contentsline {subsubsection}{\numberline {3.1.2.3}Convention over configuration}{20}
+\contentsline {subsection}{\numberline {3.1.3}SGBD}{21}
+\contentsline {subsection}{\numberline {3.1.4}IDE}{21}
+\contentsline {section}{\numberline {3.2}Requisitos da aplica\IeC {\c c}\IeC {\~a}o}{21}
+\contentsline {section}{\numberline {3.3}Arquitetura}{21}
+\contentsline {subsection}{\numberline {3.3.1}Diagrama de classes}{21}
+\contentsline {chapter}{\numberline {4}Utiliza\IeC {\c c}\IeC {\~a}o do sistema}{22}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e trabalhos futuros}{23}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{24}
+\contentsline {chapter}{\numberline {6}Anexos}{25}
+\contentsline {section}{\numberline {6.1}Formul\IeC {\'a}rio de proposta de projeto final}{26}
+\contentsline {section}{\numberline {6.2}Formul\IeC {\'a}rio de solicita\IeC {\c c}\IeC {\~a}o de defesa e banca}{27}

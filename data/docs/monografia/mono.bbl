@@ -5,4 +5,55 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.53 }
 
+\bibitem[Chen 2006]{Chen}
+\abntrefinfo{Chen}{CHEN}{2006}
+{CHEN, N. \emph{Convention over Configuration}. 2006.
+Acesso em 24 de fevereiro de 2011.
+Dispon{\'\i}vel em:
+  $<$\url{http://softwareengineering.vazexqi.com/files/pattern.html}$>$.}
+
+\bibitem[Fowler 2006]{Fowler:2006}
+\abntrefinfo{Fowler}{FOWLER}{2006}
+{FOWLER, M. \emph{Padrões de Arquitetura de Aplicações Corporativas}. São
+  Paulo: Bookman, 2006.}
+
+\bibitem[InfoQ 2009]{InfoQ:Facebook}
+\abntrefinfo{InfoQ}{INFOQ}{2009}
+{INFOQ. \emph{Facebook: Science and the Social Graph}. 2009.
+Acesso em 24 de fevereiro de 2011.
+Dispon{\'\i}vel em:
+  $<$\url{http://www.infoq.com/presentations/Facebook-Software-Stack}$>$.}
+
+\bibitem[Minetto 2007]{Minetto}
+\abntrefinfo{Minetto}{MINETTO}{2007}
+{MINETTO, E.~L. \emph{Frameworks para Desenvolvimento em PHP}. Chapecó - SC:
+  Novatec, 2007.}
+
+\bibitem[PHP.NET 2011]{PHP}
+\abntrefinfo{PHP.NET}{PHP.NET}{2011}
+{PHP.NET. \emph{Manual do PHP}. 2011.
+Acesso em 24 de fevereiro de 2011.
+Dispon{\'\i}vel em: $<$\url{http://www.php.net/manual/pt_BR}$>$.}
+
+\bibitem[Wikipedia 2011]{Wiki:PHP}
+\abntrefinfo{Wikipedia}{WIKIPEDIA}{2011a}
+{WIKIPEDIA. \emph{PHP}. 2011.
+Acesso em 24 de fevereiro de 2011.
+Dispon{\'\i}vel em: $<$\url{http://en.wikipedia.org/wiki/PHP}$>$.}
+
+\bibitem[Wikipedia 2011]{Wikipedia:Arquitetura}
+\abntrefinfo{Wikipedia}{WIKIPEDIA}{2011b}
+{WIKIPEDIA. \emph{Wikipedia:FAQ/Technical - What software is used to run
+  Wikipedia?} 2011.
+Acesso em 24 de fevereiro de 2011.
+Dispon{\'\i}vel em:
+  $<$\url{http://en.wikipedia.org/wiki/Wikipedia:FAQ/Technical#What_software_i%
+s_used_to_run_Wikipedia.3F}$>$.}
+
+\bibitem[Wordpress 2011]{Wordpress}
+\abntrefinfo{Wordpress}{WORDPRESS}{2011}
+{WORDPRESS. \emph{About Wordpress}. 2011.
+Acesso em 24 de fevereiro de 2011.
+Dispon{\'\i}vel em: $<$\url{http://wordpress.org/about/}$>$.}
+
 \end{thebibliography}

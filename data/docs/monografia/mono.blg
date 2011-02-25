@@ -12,44 +12,44 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 1 entry,
+You've used 9 entries,
             6522 wiz_defined-function locations,
-            1165 strings with 9241 characters,
-and the built_in function-call counts, 970 in all, are:
-= -- 191
-> -- 0
+            1209 strings with 10132 characters,
+and the built_in function-call counts, 5984 in all, are:
+= -- 589
+> -- 120
 < -- 0
-+ -- 43
-- -- 0
-* -- 33
-:= -- 175
-add.period$ -- 0
-call.type$ -- 2
-change.case$ -- 3
-chr.to.int$ -- 1
-cite$ -- 0
-duplicate$ -- 4
-empty$ -- 67
-format.name$ -- 0
-if$ -- 234
-int.to.chr$ -- 0
++ -- 84
+- -- 40
+* -- 327
+:= -- 871
+add.period$ -- 36
+call.type$ -- 10
+change.case$ -- 57
+chr.to.int$ -- 8
+cite$ -- 8
+duplicate$ -- 256
+empty$ -- 547
+format.name$ -- 184
+if$ -- 1458
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 11
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 27
+missing$ -- 151
+newline$ -- 52
+num.names$ -- 40
+pop$ -- 207
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 27
 quote$ -- 0
-skip$ -- 110
+skip$ -- 409
 stack$ -- 1
-substring$ -- 46
-swap$ -- 0
+substring$ -- 224
+swap$ -- 100
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 2
+while$ -- 50
 width$ -- 0
-write$ -- 8
+write$ -- 126

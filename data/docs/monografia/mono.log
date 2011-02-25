@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  23 FEB 2011 18:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  24 FEB 2011 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,104 +466,82 @@ Package: lastpage 1994/06/25 v0.1b LaTeX2e package for refs to last page number
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks18
 )
-(/usr/share/texmf-texlive/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2009/02/07 v0.4g Insert pages of external PDF documents (AM)
-
-(/usr/share/texmf-texlive/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2006/07/14 v1.1d eso-pic (RN)
-
-(/usr/share/texmf-texlive/tex/latex/ms/everyshi.sty
-Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-(/usr/share/texmf-texlive/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2009/02/07 v0.4g Pdfpages driver for pdfTeX (AM)
-)
-\AM@pagebox=\box52
-\AM@toc@title=\toks19
-\c@AM@survey=\count103
-\AM@templatesizebox=\box53
-) (./mono.aux
-(./cha.aux))
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+) (./mono.aux (./cha.aux))
 \openout1 = `mono.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 66.
- (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 67.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \big@size=\dimen116
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
+\scratchcounter=\count103
 \scratchdimen=\dimen117
-\scratchbox=\box54
-\nofMPsegments=\count105
-\nofMParguments=\count106
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count107
+\scratchbox=\box52
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count106
 \MPscratchDim=\dimen118
-\MPnumerator=\count108
-\everyMPtoPDFconversion=\toks21
-) ABD: EveryShipout initializing macros
-(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
-
-(/etc/texmf/tex/latex/config/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package color Info: Driver file: pdftex.def on input line 130.
-)
-<fig/uece.pdf, id=1, 153.21964pt x 223.32072pt>
+\MPnumerator=\count107
+\everyMPtoPDFconversion=\toks20
+) <fig/uece.pdf, id=1, 153.21964pt x 223.32072pt>
 File: fig/uece.pdf Graphic file (type pdf)
  <use fig/uece.pdf>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 68
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 69
 .
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 68
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 69
 .
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 68
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 69
 .
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 68
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 69
 .
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig/uece.pdf>] [1] [2] [
@@ -571,33 +549,36 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 83.
  [5]
-(./mono.toc)
+(./mono.toc [6
+
+])
 \tf@toc=\write3
 \openout3 = `mono.toc'.
 
- [6
-
-] (./mono.lof)
+ [7] (./mono.lof)
 \tf@lof=\write4
 \openout4 = `mono.lof'.
 
- [7
+ [8
 
 
 ] (./mono.lot)
 \tf@lot=\write5
 \openout5 = `mono.lot'.
 
- [8
+ [9
 
-] [9
+] [10
+
+
+] [11
 
 
 ] (./ch1.tex
 Cap\'{\i }tulo 1.
-[10
+[12
 
 ]
 Overfull \hbox (9.08609pt too wide) in paragraph at lines 41--44
@@ -605,81 +586,96 @@ Overfull \hbox (9.08609pt too wide) in paragraph at lines 41--44
 a-tui-tas e pos-sui-rem vers[]oes est[]aveis
  []
 
-) (./ch2.tex [11]
+) (./ch2.tex [13]
 Cap\'{\i }tulo 2.
 
-Overfull \hbox (20.06624pt too wide) in paragraph at lines 3--8
-[]\OT1/ptm/m/n/12 O pro-cesso de sub-miss[]ao e avalia[][]ao de pro-je-tos fi-n
-ais no curso de Ci[]encias da Computa[][]ao
- []
-
-
-Overfull \hbox (3.01506pt too wide) in paragraph at lines 10--18
+Overfull \hbox (3.01506pt too wide) in paragraph at lines 11--19
 []\OT1/ptm/m/n/12 O de-sen-vol-vi-mento do pro-jeto fi-nal deve ser de-sem-pe-n
 hado in-di-vi-du-al-mente pelo aluno,
  []
 
-[12
+[14
 
-] [13] <fig/fluxograma_tcc.png, id=53, 1126.56177pt x 1095.38647pt>
+] [15] <fig/fluxograma_tcc.png, id=59, 1125.1447pt x 1147.81764pt>
 File: fig/fluxograma_tcc.png Graphic file (type png)
 
-<use fig/fluxograma_tcc.png>) (./mono.bbl [14] [15 <./fig/fluxograma_tcc.png (P
-NG copy)>]
+<use fig/fluxograma_tcc.png>) (./ch3.tex [16] [17 <./fig/fluxograma_tcc.png (PN
+G copy)>]
+Cap\'{\i }tulo 3.
+[18
 
-LaTeX Warning: Empty `thebibliography' environment on input line 8.
+] <fig/diagrama_mvc.png, id=70, 517.22647pt x 245.15118pt>
+File: fig/diagrama_mvc.png Graphic file (type png)
 
-) [16
+<use fig/diagrama_mvc.png> [19]
+<fig/coc_hibernate.png, id=74, 394.47375pt x 106.3975pt>
+File: fig/coc_hibernate.png Graphic file (type png)
+
+<use fig/coc_hibernate.png>
+Overfull \hbox (68.23253pt too wide) in paragraph at lines 110--111
+[][] 
+ []
+
+<fig/coc_tabela.png, id=75, 160.6pt x 65.24374pt>
+File: fig/coc_tabela.png Graphic file (type png)
+ <use fig/coc_tabela.png>
+[20 <./fig/diagrama_mvc.png (PNG copy)> <./fig/coc_hibernate.png (PNG copy)> <.
+/fig/coc_tabela.png (PNG copy)>]) (./ch4.tex [21]
+Cap\'{\i }tulo 4.
+) (./ch5.tex [22
+
+]
+Cap\'{\i }tulo 5.
+) (./mono.bbl [23
+
+]) [24
 
 ]
 \openout2 = `cha.aux'.
 
  (./cha.tex
-Apendice A.
-) [17
+Cap\'{\i }tulo 6.
+[25
 
 
 ]
-Apendice B.
-[18
+<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=97, 597.23125pt x 845.157
+5pt>
+File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
+ <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [26
 
-
-]
-<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=72, page=1, 597.23125pt x
+ <./requisitos/Formulario_Proposta_Projeto_Final.pdf>]
+<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=117, 597.23125pt x
  845.1575pt>
-File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
- <use requisitos/Formulario_Proposta_Projeto_Final.pdf, page 1>
-File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
+File: requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf Graphic file (typ
+e pdf)
+ <use requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>)
+[27
 
-<use requisitos/Formulario_Proposta_Projeto_Final.pdf, page 1>
-File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
-
-<use requisitos/Formulario_Proposta_Projeto_Final.pdf, page 1>
-File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
-
-<use requisitos/Formulario_Proposta_Projeto_Final.pdf, page 1> [19 <./requisito
-s/Formulario_Proposta_Projeto_Final.pdf>]
+ <./requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>]
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
 +-------------------------------------------------------------------+
 AED: lastpage setting LastPage (./mono.aux (./cha.aux)) ) 
 Here is how much of TeX's memory you used:
- 3294 strings out of 495041
- 45979 string characters out of 1181898
- 111375 words of memory out of 3000000
- 6332 multiletter control sequences out of 15000+50000
- 31570 words of font info for 63 fonts, out of 3000000 for 9000
+ 2840 strings out of 495041
+ 38565 string characters out of 1181898
+ 97086 words of memory out of 3000000
+ 5880 multiletter control sequences out of 15000+50000
+ 32467 words of font info for 66 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 33i,18n,41p,259b,413s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,8n,41p,259b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texl
-ive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/urw/times
-/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/s
-hare/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/f
-onts/type1/urw/times/utmri8a.pfb>
-Output written on mono.pdf (20 pages, 163822 bytes).
+ive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mtt12.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/shar
+e/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fon
+ts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on mono.pdf (28 pages, 244999 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 158 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

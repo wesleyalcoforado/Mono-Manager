@@ -25,7 +25,8 @@
 \usepackage{enumerate}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-\usepackage[final]{pdfpages}
+\usepackage{url}
+
 
 % Informações gerais do documento
 \autor{Wesley Jefferson Oliveira Alcoforado}
@@ -55,13 +56,13 @@ Ceará, no ano de 2011, como requisito parcial para obtenção do grau de Bachar
 
 % Membros da comissão avaliadora
 \bancaum{Profª. Drª. \ABNTorientadordata\\Universidade Estadual do Ceará - UECE\\Orientador}
-\bancadois{Prof. Dr. Beltrano das Tantas\\Universidade Estadual do Ceará - UECE\\Co-orientador}
-\bancatres{Prof. Me. Cricrano da Silva\\Universidade Estadual do Ceará - UECE\\Co-orientador}
-\bancaquatro{Prof. Dr. Zé Ninguém\\Universidade Estadual do Ceará - UECE}
+\bancadois{Prof. Dr. Numero Um\\Universidade Estadual do Ceará - UECE\\Co-orientador}
+\bancatres{Prof. Me. Numero Dois\\Universidade Estadual do Ceará - UECE\\Co-orientador}
+\bancaquatro{Prof. Dr. Numero Tres\\Universidade Estadual do Ceará - UECE}
 
 % Palavras chave
-\pcs{TCC}{Processo}{Informatização}
-\kws{TCC}{Processo}{Informatização}
+\pcs{Gerenciador}{Processo}{Projeto final}
+\kws{Manager}{Process}{Course completion assignment}
 
 \begin{document}
 
@@ -94,21 +95,37 @@ da Computação da Universidade Estadual do Ceará. Essa ferramenta foi projetad
 para minimizar a quantidade de documentos impressos e para proporcionar uma 
 visão geral do andamento das atividades. Além disso, ela é capaz de notificar 
 as pessoas envolvidas automaticamente, alertando sobre o cumprimento dos prazos.
+
 \noindent
 \palavraschave
 \end{resumo}
 \pagebreak
 
+\begin{abstract}
+\noindent
+This work aims to present a manager tool for the process of evaluating
+the course completion assignments of the undergraduating students in
+Computer Science at Ceara's State University. This tool was projected
+to minimize the quantity of printed documents and to provide an overview
+on the progress of activities. Besides, it is capable of notifying
+involved people automatically, making them aware of deadlines.
+
+\noindent
+\keywords
+\end{abstract}
+\pagebreak
+
 \input{ch1}
 \input{ch2}
+\input{ch3}
+\input{ch4}
+\input{ch5}
+
 \bibliographystyle{abnt-alf}
 \bibliography{bib}
-\appendix
-\include{cha}
 
-\chapter{Formulários}
-\section{Formulário de proposta de projeto final}
-\includepdf[pages=1,noautoscale=true,scale=0.75,frame=true]{requisitos/Formulario_Proposta_Projeto_Final.pdf}
+%\appendix
+\include{cha}
 
 \end{document}
 
