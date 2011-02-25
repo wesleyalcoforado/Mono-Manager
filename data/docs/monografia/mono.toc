@@ -22,13 +22,13 @@
 \contentsline {subsubsection}{\numberline {3.1.2.2}ORM}{20}
 \contentsline {subsubsection}{\numberline {3.1.2.3}Convention over configuration}{20}
 \contentsline {subsection}{\numberline {3.1.3}SGBD}{21}
-\contentsline {subsection}{\numberline {3.1.4}IDE}{21}
-\contentsline {section}{\numberline {3.2}Requisitos da aplica\IeC {\c c}\IeC {\~a}o}{21}
-\contentsline {section}{\numberline {3.3}Arquitetura}{21}
-\contentsline {subsection}{\numberline {3.3.1}Diagrama de classes}{21}
-\contentsline {chapter}{\numberline {4}Utiliza\IeC {\c c}\IeC {\~a}o do sistema}{22}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e trabalhos futuros}{23}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{24}
-\contentsline {chapter}{\numberline {6}Anexos}{25}
-\contentsline {section}{\numberline {6.1}Formul\IeC {\'a}rio de proposta de projeto final}{26}
-\contentsline {section}{\numberline {6.2}Formul\IeC {\'a}rio de solicita\IeC {\c c}\IeC {\~a}o de defesa e banca}{27}
+\contentsline {subsection}{\numberline {3.1.4}IDE}{22}
+\contentsline {section}{\numberline {3.2}Requisitos da aplica\IeC {\c c}\IeC {\~a}o}{22}
+\contentsline {section}{\numberline {3.3}Arquitetura}{22}
+\contentsline {subsection}{\numberline {3.3.1}Diagrama de classes}{22}
+\contentsline {chapter}{\numberline {4}Utiliza\IeC {\c c}\IeC {\~a}o do sistema}{23}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e trabalhos futuros}{24}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{25}
+\contentsline {chapter}{\numberline {6}Anexos}{26}
+\contentsline {section}{\numberline {6.1}Formul\IeC {\'a}rio de proposta de projeto final}{27}
+\contentsline {section}{\numberline {6.2}Formul\IeC {\'a}rio de solicita\IeC {\c c}\IeC {\~a}o de defesa e banca}{28}

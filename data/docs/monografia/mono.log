@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  25 FEB 2011 11:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  25 FEB 2011 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -608,7 +608,7 @@ Cap\'{\i }tulo 3.
 File: fig/diagrama_mvc.png Graphic file (type png)
 
 <use fig/diagrama_mvc.png> [19]
-Overfull \hbox (23.01878pt too wide) in paragraph at lines 97--101
+Overfull \hbox (23.01878pt too wide) in paragraph at lines 94--98
 []\OT1/ptm/m/n/12 Atualmente a mai-o-ria das aplica[][]oes []e de-sen-vol-vida 
 uti-li-zando o pa-ra-digma de programa[][]ao
  []
@@ -617,45 +617,45 @@ uti-li-zando o pa-ra-digma de programa[][]ao
 File: fig/coc_hibernate.png Graphic file (type png)
 
 <use fig/coc_hibernate.png>
-Overfull \hbox (68.23253pt too wide) in paragraph at lines 121--122
+Overfull \hbox (68.23253pt too wide) in paragraph at lines 118--119
 [][] 
  []
 
 <fig/coc_tabela.png, id=75, 160.6pt x 65.24374pt>
 File: fig/coc_tabela.png Graphic file (type png)
  <use fig/coc_tabela.png>
-[20 <./fig/diagrama_mvc.png (PNG copy)>]) (./ch4.tex [21 <./fig/coc_hibernate.p
-ng (PNG copy)> <./fig/coc_tabela.png (PNG copy)>]
+[20 <./fig/diagrama_mvc.png (PNG copy)>] [21 <./fig/coc_hibernate.png (PNG copy
+)> <./fig/coc_tabela.png (PNG copy)>]) (./ch4.tex [22]
 Cap\'{\i }tulo 4.
-) (./ch5.tex [22
+) (./ch5.tex [23
 
 ]
 Cap\'{\i }tulo 5.
-) (./mono.bbl [23
+) (./mono.bbl [24
 
-]) [24
+]) [25
 
 ]
 \openout2 = `cha.aux'.
 
  (./cha.tex
 Cap\'{\i }tulo 6.
-[25
+[26
 
 
 ]
-<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=97, 597.23125pt x 845.157
-5pt>
+<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=100, 597.23125pt x 845.15
+75pt>
 File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
- <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [26
+ <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [27
 
  <./requisitos/Formulario_Proposta_Projeto_Final.pdf>]
-<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=117, 597.23125pt x
+<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=120, 597.23125pt x
  845.1575pt>
 File: requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf Graphic file (typ
 e pdf)
  <use requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>)
-[27
+[28
 
  <./requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>]
 +-------------------------------------------------------------------+
@@ -664,13 +664,13 @@ e pdf)
 +-------------------------------------------------------------------+
 AED: lastpage setting LastPage (./mono.aux (./cha.aux)) ) 
 Here is how much of TeX's memory you used:
- 2845 strings out of 495041
- 38662 string characters out of 1181898
- 98154 words of memory out of 3000000
- 5885 multiletter control sequences out of 15000+50000
+ 2850 strings out of 495041
+ 38749 string characters out of 1181898
+ 98205 words of memory out of 3000000
+ 5890 multiletter control sequences out of 15000+50000
  32467 words of font info for 66 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 31i,8n,41p,259b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,8n,41p,259b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texl
 ive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
@@ -678,9 +678,9 @@ mtt12.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/shar
 e/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on mono.pdf (28 pages, 247569 bytes).
+Output written on mono.pdf (29 pages, 250353 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
+ 161 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

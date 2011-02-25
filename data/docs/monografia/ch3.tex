@@ -90,9 +90,6 @@ A camada Controller (ou camada de controle) é a responsável por conectar as ou
 camadas. O controlador recebe a entrada do usuário (capturado pela visão), manipula o 
 modelo e faz com que a visão seja atualizada apropriadamente \cite{Fowler:2006}.
 
-
-
-
 \subsubsection{ORM}
 Atualmente a maioria das aplicações é desenvolvida utilizando o paradigma de programação 
 orientado a objetos e um banco de dados relacional. Essas aplicações precisam carregar
@@ -151,7 +148,27 @@ O padrão de convenção sobre configuração reduz a quantidade de configuraç�
 um conjunto de convenções de nomenclatura que todos os desenvolvedores devem seguir \cite{Chen}.
 
 \subsection{SGBD}
+O PostgreSQL é um SGBD (Sistema de Gerenciamento de Banco de Dados) livre, de código aberto,
+bastante robusto e confiável. Derivou-se do projeto POSTGRES da universidade de Berkley, que 
+iniciou-se em 1986 e foi patrocinado por instituições militares americanas como a DARPA
+ (Agência de Projetos de Pesquisa Avançada para Defesa) e ARO (Departamento de Pesquisa Militar).
+A linguagem de consultas SQL foi inserida quando o nome do projeta era Postgres95, tendo sido
+rebatizado para o nome atual em 1996 para enfatizar a relação do SGBD com o SQL \cite{postgresql}.
+
+Apesar do PostgreSQL ter sido escolhido para o desenvolvimento deste trabalho, outros SGBDs
+podem ser utilizados em seu lugar, devido ao framework Symfony possuir um ORM que abstrai
+a comunicação da aplicação com o banco de dados. Basta configurar a conexão do banco de dados
+no Symfony e avisá-lo qual SGBD estará em uso que o seu ORM se encarregará de fazer a comunicação
+correta com o banco de dados.
+
 \subsection{IDE}
+O NetBeans é um ambiente integrado de desenvolvimento (IDE) gratuito, também de codigo aberto e 
+atualmente patrocinado pela Oracle. Originalmente suportava apenas a linguagem Java, mas atualmente
+consegue trabalhar com diversas linguagem de programação, entre elas o PHP, e além disso possui plugins
+que facilitam a utilização de alguns frameworks, inclusive o Symfony.
+
+Foi escolhido para este trabalho por fornecer um bom suporte ao PHP e ao Symfony, e por possuir fácil
+integração com a ferramenta de depuração Xdebug, específica para PHP.
 
 \section{Requisitos da aplicação}
 
