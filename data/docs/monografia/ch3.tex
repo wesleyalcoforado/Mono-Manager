@@ -172,6 +172,27 @@ integração com a ferramenta de depuração Xdebug, específica para PHP.
 
 \section{Requisitos da aplicação}
 
+\begin{itemize}
+\item[PHP] Deve ser utilizada a versão 5.2.4 ou mais recente (exceto a versão 5.2.9).
+\item[Servidor] Recomenda-se a utilização do servidor Apache versão 2 ou superior, com a extensão
+mod\_rewrite instalada. O projeto não foi testado com outros servidores HTTP.
+\item[SGBD] Recomenda-se PostgreSQL 8.4 como SGBD por ter sido utilizado durante o desenvolvimento da aplicação, mas
+de acordo com a documentação do Doctrine, o ORM do Symfony, qualquer banco de dados suportado pelo PHP através 
+dos drivers PDO pode ser utilizado, já que ele utiliza PDO para se comunicar com o banco de dados.
+A aplicação foi seguramente testada com MySQL Community Edition 5.5.9 e SQLite 3.7.5, podendo estes 
+também serem utilizados sem prejuízo algum ao funcionamento do sistema. Para qualquer que seja o
+banco escolhido, o driver PDO deve estar instalado e configurado no PHP.
+\item[E-mail] É necessária uma conta de email em um servidor que aceite conexões externas via SMTP para
+o envio das mensagens eletrônicas. Alternativamente pode-se utilizar o Sendmail, caso este esteja
+configurado no servidor, ou deixar a cargo da função mail do PHP. Recomenda-se configurar um
+servidor SMTP, especialmente pela facilidade de configuração deste se comparado ao Sendmail. Não 
+é recomendado utilizar a função mail do PHP, pois os emails enviados tendem a ser identificados
+como spam em muitos servidores de email.
+
+
+\end{itemize}
+
+
 
 \section{Arquitetura}
 \subsection{Diagrama de classes}

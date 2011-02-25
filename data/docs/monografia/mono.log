@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  25 FEB 2011 12:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  25 FEB 2011 14:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -625,7 +625,13 @@ Overfull \hbox (68.23253pt too wide) in paragraph at lines 118--119
 File: fig/coc_tabela.png Graphic file (type png)
  <use fig/coc_tabela.png>
 [20 <./fig/diagrama_mvc.png (PNG copy)>] [21 <./fig/coc_hibernate.png (PNG copy
-)> <./fig/coc_tabela.png (PNG copy)>]) (./ch4.tex [22]
+)> <./fig/coc_tabela.png (PNG copy)>]
+Overfull \hbox (10.75845pt too wide) in paragraph at lines 185--191
+\OT1/ptm/m/n/12 Recomenda-se con-fi-gu-rar um ser-vi-dor SMTP, es-pe-ci-al-ment
+e pela fa-ci-li-dade de configura[][]ao
+ []
+
+) (./ch4.tex [22]
 Cap\'{\i }tulo 4.
 ) (./ch5.tex [23
 
@@ -691,7 +697,7 @@ msy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb><
 live/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/ur
 w/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on mono.pdf (29 pages, 259343 bytes).
+Output written on mono.pdf (29 pages, 260712 bytes).
 PDF statistics:
  165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
