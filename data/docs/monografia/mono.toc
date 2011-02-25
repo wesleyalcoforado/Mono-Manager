@@ -1,35 +1,36 @@
 \select@language {brazil}
 \contentsline {chapter}{Lista de Figuras}{}
 \contentsline {chapter}{Lista de Tabelas}{}
+\contentsline {chapter}{Lista de Siglas}{}
 \contentsline {chapter}{Resumo}{}
 \contentsline {chapter}{Abstract}{}
-\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{12}
-\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{12}
-\contentsline {section}{\numberline {1.2}Objetivo}{12}
-\contentsline {section}{\numberline {1.3}Metodologia}{12}
-\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{13}
-\contentsline {chapter}{\numberline {2}Regulamento de Projeto Final}{14}
-\contentsline {section}{\numberline {2.1}Entidades envolvidas e suas atribui\IeC {\c c}\IeC {\~o}es}{14}
-\contentsline {section}{\numberline {2.2}Desenvolvimento do projeto}{15}
-\contentsline {subsection}{\numberline {2.2.1}Proposta do projeto}{15}
-\contentsline {subsection}{\numberline {2.2.2}Defesa do projeto}{16}
-\contentsline {subsection}{\numberline {2.2.3}Resumo do fluxo do desenvolvimento do projeto final}{16}
-\contentsline {chapter}{\numberline {3}Processo de desenvolvimento da aplica\IeC {\c c}\IeC {\~a}o}{18}
-\contentsline {section}{\numberline {3.1}Escolha das tecnologias}{18}
-\contentsline {subsection}{\numberline {3.1.1}Linguagem de programa\IeC {\c c}\IeC {\~a}o}{18}
-\contentsline {subsection}{\numberline {3.1.2}Framework}{19}
-\contentsline {subsubsection}{\numberline {3.1.2.1}MVC}{19}
-\contentsline {subsubsection}{\numberline {3.1.2.2}ORM}{20}
-\contentsline {subsubsection}{\numberline {3.1.2.3}Convention over configuration}{20}
-\contentsline {subsection}{\numberline {3.1.3}SGBD}{21}
-\contentsline {subsection}{\numberline {3.1.4}IDE}{22}
-\contentsline {section}{\numberline {3.2}Requisitos da aplica\IeC {\c c}\IeC {\~a}o}{22}
-\contentsline {section}{\numberline {3.3}Arquitetura}{22}
-\contentsline {subsection}{\numberline {3.3.1}Diagrama de classes}{22}
-\contentsline {chapter}{\numberline {4}Utiliza\IeC {\c c}\IeC {\~a}o do sistema}{23}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e trabalhos futuros}{24}
-\contentsline {section}{\numberline {5.1}Trabalhos futuros}{24}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{25}
-\contentsline {chapter}{\numberline {6}Anexos}{26}
-\contentsline {section}{\numberline {6.1}Formul\IeC {\'a}rio de proposta de projeto final}{27}
-\contentsline {section}{\numberline {6.2}Formul\IeC {\'a}rio de solicita\IeC {\c c}\IeC {\~a}o de defesa e banca}{28}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{13}
+\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{13}
+\contentsline {section}{\numberline {1.2}Objetivo}{13}
+\contentsline {section}{\numberline {1.3}Metodologia}{13}
+\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{14}
+\contentsline {chapter}{\numberline {2}Regulamento de Projeto Final}{15}
+\contentsline {section}{\numberline {2.1}Entidades envolvidas e suas atribui\IeC {\c c}\IeC {\~o}es}{15}
+\contentsline {section}{\numberline {2.2}Desenvolvimento do projeto}{16}
+\contentsline {subsection}{\numberline {2.2.1}Proposta do projeto}{16}
+\contentsline {subsection}{\numberline {2.2.2}Defesa do projeto}{17}
+\contentsline {subsection}{\numberline {2.2.3}Resumo do fluxo do desenvolvimento do projeto final}{17}
+\contentsline {chapter}{\numberline {3}Processo de desenvolvimento da aplica\IeC {\c c}\IeC {\~a}o}{19}
+\contentsline {section}{\numberline {3.1}Escolha das tecnologias}{19}
+\contentsline {subsection}{\numberline {3.1.1}Linguagem de programa\IeC {\c c}\IeC {\~a}o}{19}
+\contentsline {subsection}{\numberline {3.1.2}Framework}{20}
+\contentsline {subsubsection}{\numberline {3.1.2.1}MVC}{20}
+\contentsline {subsubsection}{\numberline {3.1.2.2}ORM}{21}
+\contentsline {subsubsection}{\numberline {3.1.2.3}Convention over configuration}{21}
+\contentsline {subsection}{\numberline {3.1.3}SGBD}{22}
+\contentsline {subsection}{\numberline {3.1.4}IDE}{23}
+\contentsline {section}{\numberline {3.2}Requisitos da aplica\IeC {\c c}\IeC {\~a}o}{23}
+\contentsline {section}{\numberline {3.3}Arquitetura}{23}
+\contentsline {subsection}{\numberline {3.3.1}Diagrama de classes}{23}
+\contentsline {chapter}{\numberline {4}Utiliza\IeC {\c c}\IeC {\~a}o do sistema}{24}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e trabalhos futuros}{25}
+\contentsline {section}{\numberline {5.1}Trabalhos futuros}{25}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{26}
+\contentsline {chapter}{\numberline {6}Anexos}{27}
+\contentsline {section}{\numberline {6.1}Formul\IeC {\'a}rio de proposta de projeto final}{28}
+\contentsline {section}{\numberline {6.2}Formul\IeC {\'a}rio de solicita\IeC {\c c}\IeC {\~a}o de defesa e banca}{29}

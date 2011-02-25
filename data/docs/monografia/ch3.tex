@@ -18,6 +18,7 @@ Neste capítulo discutiremos sobre como o sistema foi modelado e como foi pensad
 esse sistema de notificação de eventos.
 
 \section{Escolha das tecnologias}
+\label{tecnologias}
 \subsection{Linguagem de programação}
 O PHP é uma linguagem de programação interpretada, multiparadigma, de código aberto, e especialmente
 voltada para o desenvolvimento de aplicações para a Web. Possui uma sintaxe que lembra
@@ -64,7 +65,7 @@ qualidades que o coloca entre os melhores frameworks PHP, como:
 \end{enumerate}
 
 \subsubsection{MVC}
-O MVC é um acrônimo para Model-View-Controller, um padrão de projeto que tem como intuito
+O \sigla{MVC}{Model-View-Controller} é um acrônimo para Model-View-Controller, um padrão de projeto que tem como intuito
 separar a lógica de negócio, a interface e os modelos de acesso a dados. Essa separação
 de conceitos tem como propósito evitar que o código fique difícil de manter e auxilia
 significamente no aumento do reuso de código. A Figura ~\ref{fig:diag_mvc} apresenta de maneira
@@ -83,7 +84,7 @@ que contém todos os dados e comportamentos outros que não os utilizados
 pela interface \cite{Fowler:2006}.
 
 A camada View (ou camada de visão) representa a interface da aplicação. No trabalho
-em questão, ela é a parte em HTML. Esta camada não deve possuir nenhuma lógica de negócio,
+em questão, ela é a parte em \sigla{HTML}{HyperText Markup Language}. Esta camada não deve possuir nenhuma lógica de negócio,
 detendo-se apenas à captura e exibição de dados.
 
 A camada Controller (ou camada de controle) é a responsável por conectar as outras duas
@@ -96,7 +97,7 @@ orientado a objetos e um banco de dados relacional. Essas aplicações precisam 
 dados de um banco de dados, criar objetos para representar esses dados em memória,
 executar operações em cima destes objetos e depois salvar de volta as alterações no banco.
 
-Ferramentas de mapeamento objeto-relacional (ou ORM) são frameworks que recuperam e persistem
+Ferramentas de mapeamento objeto-relacional (ou \sigla{ORM}{Object-relational mapping}) são frameworks que recuperam e persistem
 objetos. Seu objetivo é dar suporte à complexa atividade de gerenciar conexões entre
 objetos e um banco de dados relacional. A persistência fica transparente ao desenvolvedor,
 já que ele não precisa se preocupar com os detalhes de implementação. A ponte entre
@@ -127,10 +128,10 @@ uma convenção pré-estabelecida.
 A Figura ~\ref{fig:coc_hibernate} apresenta um arquivo de mapeamento para Hibernate,
 um framework de mapeamento objeto-relacional para Java. O código da Figura ~\ref{fig:coc_hibernate}
 mapeia a classe User com a tabela Users no banco de dados. A tabela Users é descrita 
-na Figura ~\ref{fig:coc_tabela} usando SQL. Os campos da classe User também são mapeados
+na Figura ~\ref{fig:coc_tabela} usando \sigla{SQL}{Structured Query Language}. Os campos da classe User também são mapeados
 para as colunas da tabela Users.
 
-O ato de modificar arquivos de configuração, normalmente em XML, é tedioso e propenso
+O ato de modificar arquivos de configuração, normalmente em \sigla{XML}{eXtensible Markup Language}, é tedioso e propenso
 a erros. A maioria dos problemas de configuração só vai ser detectado em tempo de execução,
 disparando exceções na aplicação, que tendem a diminuir o ritmo do desenvolvimento e 
 consequentemente a produtividade. Mais importante ainda, uma grande parte do
@@ -148,10 +149,10 @@ O padrão de convenção sobre configuração reduz a quantidade de configuraç�
 um conjunto de convenções de nomenclatura que todos os desenvolvedores devem seguir \cite{Chen}.
 
 \subsection{SGBD}
-O PostgreSQL é um SGBD (Sistema de Gerenciamento de Banco de Dados) livre, de código aberto,
+O PostgreSQL é um \sigla{SGBD}{Sistema de Gerenciamento de Banco de Dados} livre, de código aberto,
 bastante robusto e confiável. Derivou-se do projeto POSTGRES da universidade de Berkley, que 
-iniciou-se em 1986 e foi patrocinado por instituições militares americanas como a DARPA
- (Agência de Projetos de Pesquisa Avançada para Defesa) e ARO (Departamento de Pesquisa Militar).
+iniciou-se em 1986 e foi patrocinado por instituições militares americanas como a \sigla{DARPA}{Advanced Research Project Agency}
+ (Agência de Projetos de Pesquisa Avançada para Defesa) e \sigla{ARO}{Army Research Office} (Departamento de Pesquisa Militar).
 A linguagem de consultas SQL foi inserida quando o nome do projeta era Postgres95, tendo sido
 rebatizado para o nome atual em 1996 para enfatizar a relação do SGBD com o SQL \cite{postgresql}.
 
@@ -162,7 +163,7 @@ no Symfony e avisá-lo qual SGBD estará em uso que o seu ORM se encarregará de
 correta com o banco de dados.
 
 \subsection{IDE}
-O NetBeans é um ambiente integrado de desenvolvimento (IDE) gratuito, também de codigo aberto e 
+O NetBeans é um ambiente integrado de desenvolvimento (\sigla{IDE}{Integrated Development Environment}) gratuito, também de codigo aberto e 
 atualmente patrocinado pela Oracle. Originalmente suportava apenas a linguagem Java, mas atualmente
 consegue trabalhar com diversas linguagem de programação, entre elas o PHP, e além disso possui plugins
 que facilitam a utilização de alguns frameworks, inclusive o Symfony.
@@ -175,24 +176,23 @@ integração com a ferramenta de depuração Xdebug, específica para PHP.
 \begin{itemize}
 \item[PHP] Deve ser utilizada a versão 5.2.4 ou mais recente (exceto a versão 5.2.9).
 \item[Servidor] Recomenda-se a utilização do servidor Apache versão 2 ou superior, com a extensão
-mod\_rewrite instalada. O projeto não foi testado com outros servidores HTTP.
+mod\_rewrite instalada. O projeto não foi testado com outros servidores \sigla{HTTP}{Hypertext Transfer Protocol}.
 \item[SGBD] Recomenda-se PostgreSQL 8.4 como SGBD por ter sido utilizado durante o desenvolvimento da aplicação, mas
 de acordo com a documentação do Doctrine, o ORM do Symfony, qualquer banco de dados suportado pelo PHP através 
-dos drivers PDO pode ser utilizado, já que ele utiliza PDO para se comunicar com o banco de dados.
+dos drivers PDO pode ser utilizado, já que ele utiliza \sigla{PDO}{PHP Data Objects} para se comunicar com o banco de dados.
 A aplicação foi seguramente testada com MySQL Community Edition 5.5.9 e SQLite 3.7.5, podendo estes 
 também serem utilizados sem prejuízo algum ao funcionamento do sistema. Para qualquer que seja o
 banco escolhido, o driver PDO deve estar instalado e configurado no PHP.
-\item[E-mail] É necessária uma conta de email em um servidor que aceite conexões externas via SMTP para
+\item[E-mail] É necessária uma conta de email em um servidor que aceite conexões externas via \sigla{SMTP}{Simple Mail Transfer Protocol} para
 o envio das mensagens eletrônicas. Alternativamente pode-se utilizar o Sendmail, caso este esteja
 configurado no servidor, ou deixar a cargo da função mail do PHP. Recomenda-se configurar um
-servidor SMTP, especialmente pela facilidade de configuração deste se comparado ao Sendmail. Não 
+servidor SMTP, especialmente pela facilidade de configura\-ção deste se comparado ao Sendmail. Não 
 é recomendado utilizar a função mail do PHP, pois os emails enviados tendem a ser identificados
 como spam em muitos servidores de email.
-
-
 \end{itemize}
 
-
-
 \section{Arquitetura}
+
 \subsection{Diagrama de classes}
+
+
