@@ -5,6 +5,14 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.53 }
 
+\bibitem[Cabibbo e Carosi 2005]{springerlink}
+\abntrefinfo{Cabibbo e Carosi}{CABIBBO; CAROSI}{2005}
+{CABIBBO, L.; CAROSI, A. Managing inheritance hierarchies in object/relational
+  mapping tools. In:  PASTOR, O.; CUNHA, J. Falcão~e (Ed.). \emph{Advanced
+  Information Systems Engineering}. Springer Berlin / Heidelberg, 2005,
+  (Lecture Notes in Computer Science, v.~3520). p. 93--124.
+Dispon{\'\i}vel em: $<$\url{http://dx.doi.org/10.1007/11431855_11}$>$.}
+
 \bibitem[Chen 2006]{Chen}
 \abntrefinfo{Chen}{CHEN}{2006}
 {CHEN, N. \emph{Convention over Configuration}. 2006.

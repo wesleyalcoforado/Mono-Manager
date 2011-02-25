@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  24 FEB 2011 23:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  25 FEB 2011 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -608,19 +608,24 @@ Cap\'{\i }tulo 3.
 File: fig/diagrama_mvc.png Graphic file (type png)
 
 <use fig/diagrama_mvc.png> [19]
+Overfull \hbox (23.01878pt too wide) in paragraph at lines 97--101
+[]\OT1/ptm/m/n/12 Atualmente a mai-o-ria das aplica[][]oes []e de-sen-vol-vida 
+uti-li-zando o pa-ra-digma de programa[][]ao
+ []
+
 <fig/coc_hibernate.png, id=74, 394.47375pt x 106.3975pt>
 File: fig/coc_hibernate.png Graphic file (type png)
 
 <use fig/coc_hibernate.png>
-Overfull \hbox (68.23253pt too wide) in paragraph at lines 110--111
+Overfull \hbox (68.23253pt too wide) in paragraph at lines 121--122
 [][] 
  []
 
 <fig/coc_tabela.png, id=75, 160.6pt x 65.24374pt>
 File: fig/coc_tabela.png Graphic file (type png)
  <use fig/coc_tabela.png>
-[20 <./fig/diagrama_mvc.png (PNG copy)> <./fig/coc_hibernate.png (PNG copy)> <.
-/fig/coc_tabela.png (PNG copy)>]) (./ch4.tex [21]
+[20 <./fig/diagrama_mvc.png (PNG copy)>]) (./ch4.tex [21 <./fig/coc_hibernate.p
+ng (PNG copy)> <./fig/coc_tabela.png (PNG copy)>]
 Cap\'{\i }tulo 4.
 ) (./ch5.tex [22
 
@@ -659,13 +664,13 @@ e pdf)
 +-------------------------------------------------------------------+
 AED: lastpage setting LastPage (./mono.aux (./cha.aux)) ) 
 Here is how much of TeX's memory you used:
- 2840 strings out of 495041
- 38565 string characters out of 1181898
- 97086 words of memory out of 3000000
- 5880 multiletter control sequences out of 15000+50000
+ 2845 strings out of 495041
+ 38662 string characters out of 1181898
+ 98154 words of memory out of 3000000
+ 5885 multiletter control sequences out of 15000+50000
  32467 words of font info for 66 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 31i,8n,41p,259b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,8n,41p,259b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texl
 ive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
@@ -673,7 +678,7 @@ mtt12.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/shar
 e/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on mono.pdf (28 pages, 244999 bytes).
+Output written on mono.pdf (28 pages, 247569 bytes).
 PDF statistics:
  158 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
