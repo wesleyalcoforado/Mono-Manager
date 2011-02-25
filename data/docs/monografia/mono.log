@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  25 FEB 2011 15:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  25 FEB 2011 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,9 +632,18 @@ Overfull \hbox (68.23253pt too wide) in paragraph at lines 119--120
 File: fig/coc_tabela.png Graphic file (type png)
  <use fig/coc_tabela.png>
 [21 <./fig/diagrama_mvc.png (PNG copy)>] [22 <./fig/coc_hibernate.png (PNG copy
-)> <./fig/coc_tabela.png (PNG copy)>]) (./ch4.tex [23]
+)> <./fig/coc_tabela.png (PNG copy)>] [23]
+<fig/tabela_yaml.png, id=88, 219.82124pt x 236.885pt>
+File: fig/tabela_yaml.png Graphic file (type png)
+
+<use fig/tabela_yaml.png>
+<fig/uml_classes_base.png, id=89, 549.55313pt x 587.19376pt>
+File: fig/uml_classes_base.png Graphic file (type png)
+
+<use fig/uml_classes_base.png> [24 <./fig/tabela_yaml.png (PNG copy)>] [25 <./f
+ig/uml_classes_base.png (PNG copy)>]) (./ch4.tex [26]
 Cap\'{\i }tulo 4.
-) (./ch5.tex [24
+) (./ch5.tex [27
 
 ]
 Cap\'{\i }tulo 5.
@@ -644,58 +653,61 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-) (./mono.bbl [25
+) (./mono.bbl [28
 
 ])
-[26
+[29
 
 ]
 \openout2 = `cha.aux'.
 
  (./cha.tex
 Cap\'{\i }tulo 6.
-[27
+[30
 
 
 ]
-<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=104, 597.23125pt x 845.15
+<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=116, 597.23125pt x 845.15
 75pt>
 File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
- <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [28
+ <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [31
 
  <./requisitos/Formulario_Proposta_Projeto_Final.pdf>]
-<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=124, 597.23125pt x
+<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=136, 597.23125pt x
  845.1575pt>
 File: requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf Graphic file (typ
 e pdf)
  <use requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>)
-[29
+[32
 
  <./requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>]
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
 +-------------------------------------------------------------------+
-AED: lastpage setting LastPage (./mono.aux (./cha.aux)) ) 
+AED: lastpage setting LastPage (./mono.aux (./cha.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2876 strings out of 495041
- 39115 string characters out of 1181898
- 98216 words of memory out of 3000000
- 5908 multiletter control sequences out of 15000+50000
+ 2888 strings out of 495041
+ 39400 string characters out of 1181898
+ 98238 words of memory out of 3000000
+ 5918 multiletter control sequences out of 15000+50000
  34448 words of font info for 69 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  31i,8n,41p,259b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texl
-ive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb><
-/usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-tex
-live/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/ur
-w/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-
-Output written on mono.pdf (30 pages, 261712 bytes).
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmtt12.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.p
+fb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texm
+f-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on mono.pdf (33 pages, 314269 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
+ 180 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

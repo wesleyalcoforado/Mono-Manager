@@ -192,7 +192,53 @@ como spam em muitos servidores de email.
 \end{itemize}
 
 \section{Arquitetura}
+Para aproveitar a funcionalidade de comunicação com diferentes tipos de SGBDs, o ORM
+do Symfony nos permite definir toda a estrutura do banco de dados textualmente, no formato
+\sigla{YAML}{YAML Ain't Markup Language}, que possui maior legibilidade que o SQL.
+A Figura ~\ref{fig:tabela_yaml} apresenta um exemplo de como as tabelas são descritas no Symfony.
+Após a descrição de todas as tabelas, executamos um comando no Symfony que gera o SQL necessário
+para a criação das tabelas de acordo com o SGBD escolhido. Ele também possui um comando
+que gera todas as classes e formulário necessários para que possamos trabalhar com essas tabelas
+que acabamos de definir.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.25\textwidth]{fig/tabela_yaml.png}
+\caption{Descrição de uma tabela no Symfony}
+\label{fig:tabela_yaml}
+\end{figure}
+
+Essa geração automática de código é uma ferramenta extremamente poderosa que o framework nos
+fornece para evitar perder tempo com tarefas triviais. Mas e se já tivermos começado a codificar
+nas classes que ele gerou, e lembrarmos que precisamos de mais um campo na tabela? Será que
+vamos ter todo o código perdido, já que ele vai sobrescrever as classes geradas automaticamente?
+Isso não acontece, pois o Symfony gera duas classes para cada tabela que nós definirmos. Cada classe
+herda de uma classe base abstrata, que é sobrescrita toda vez que pedimos ao Symfony que gere
+as classes de acordo com a especificação. Nós temos que trabalhar em cima dessas classes que
+herdam as classes bases abstratas, pois essas últimas é que o Symfony sempre vai sobrescrever.
+
+Pra ficar mais claro, damos uma olhada no diagrama da Figura ~\ref{fig:diag_classes_base}. Ela
+apresenta todas as classes base que o Symfony gerou automaticamente para a aplicação deste trabalho.
+Para cada classe BaseEntidade, há uma classe Entidade que é criada uma única vez, caso ela ainda não
+exista. É nesta última que colocamos os métodos da nossa lógica de negócios. Tendo isso em mente,
+podemos prosseguir na explicação dos diagramas.
 
 \subsection{Diagrama de classes}
 
+A Figura ~\ref{fig:diag_classes_base} apresenta o diagrama de classes do Mono-Manager. Todas as classes
+herdam direta ou indiretamente da classe sfDoctrineRecord, pertencente ao framework ORM do Symfony. 
+Essa associação não foi explicitada no diagrama para que ele ficasse mais claro. A classe sfDoctrineRecord
+é uma classe abstrata que possui todos os métodos de persistência dos objetos.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1\textwidth]{fig/uml_classes_base.png}
+\caption{Diagrama de classes base}
+\label{fig:diag_classes_base}
+\end{figure}
+
+\subsubsection{Autenticação de usuários}
+Na Figura ~\ref{fig:diag_classes_base} podemos observar a classe sfGuardUser, da qual a classe Usuario extende.
+Ela vem de um plugin para o Symfony de controle de usuários. Aproveitamos esse plugin
+para fazer um bom reuso de código e contar com toda a segurança que o plugin já disponibiliza.
 
