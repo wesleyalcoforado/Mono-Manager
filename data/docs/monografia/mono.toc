@@ -28,6 +28,7 @@
 \contentsline {subsection}{\numberline {3.3.1}Diagrama de classes}{22}
 \contentsline {chapter}{\numberline {4}Utiliza\IeC {\c c}\IeC {\~a}o do sistema}{23}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e trabalhos futuros}{24}
+\contentsline {section}{\numberline {5.1}Trabalhos futuros}{24}
 \contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{25}
 \contentsline {chapter}{\numberline {6}Anexos}{26}
 \contentsline {section}{\numberline {6.1}Formul\IeC {\'a}rio de proposta de projeto final}{27}

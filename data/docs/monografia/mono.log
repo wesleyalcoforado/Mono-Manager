@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  25 FEB 2011 12:22
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  25 FEB 2011 12:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -631,6 +631,18 @@ Cap\'{\i }tulo 4.
 
 ]
 Cap\'{\i }tulo 5.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 22.
+(/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+
+Overfull \hbox (16.75818pt too wide) in paragraph at lines 22--24
+[]\OT1/ptm/m/n/12 Construir um sis-tema de visualiza[][]ao e pes-quisa das mo-n
+o-gra-fias de-fen-di-das, com exporta[][]ao
+ []
+
 ) (./mono.bbl [24
 
 ]) [25
@@ -644,13 +656,13 @@ Cap\'{\i }tulo 6.
 
 
 ]
-<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=100, 597.23125pt x 845.15
+<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=101, 597.23125pt x 845.15
 75pt>
 File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
  <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [27
 
  <./requisitos/Formulario_Proposta_Projeto_Final.pdf>]
-<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=120, 597.23125pt x
+<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=121, 597.23125pt x
  845.1575pt>
 File: requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf Graphic file (typ
 e pdf)
@@ -664,23 +676,24 @@ e pdf)
 +-------------------------------------------------------------------+
 AED: lastpage setting LastPage (./mono.aux (./cha.aux)) ) 
 Here is how much of TeX's memory you used:
- 2850 strings out of 495041
- 38749 string characters out of 1181898
+ 2871 strings out of 495041
+ 39074 string characters out of 1181898
  98205 words of memory out of 3000000
- 5890 multiletter control sequences out of 15000+50000
- 32467 words of font info for 66 fonts, out of 3000000 for 9000
+ 5906 multiletter control sequences out of 15000+50000
+ 34448 words of font info for 69 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  31i,8n,41p,259b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texl
 ive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mtt12.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/shar
-e/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fon
-ts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on mono.pdf (29 pages, 250353 bytes).
+msy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb><
+/usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-tex
+live/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/ur
+w/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on mono.pdf (29 pages, 259343 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
