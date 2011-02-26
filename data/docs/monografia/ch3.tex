@@ -219,9 +219,9 @@ herdam as classes bases abstratas, pois essas últimas é que o Symfony sempre v
 
 Pra ficar mais claro, damos uma olhada no diagrama da Figura ~\ref{fig:diag_classes_base}. Ela
 apresenta todas as classes base que o Symfony gerou automaticamente para a aplicação deste trabalho.
-Para cada classe BaseEntidade, há uma classe Entidade que é criada uma única vez, caso ela ainda não
-exista. É nesta última que colocamos os métodos da nossa lógica de negócios. Tendo isso em mente,
-podemos prosseguir na explicação dos diagramas.
+Para cada classe BaseEntidade, há uma classe Entidade, como exposto na Figura ~\ref{fig:diag_classes_principais}, 
+que é criada uma única vez, caso ela ainda não exista. É nesta última que colocamos os métodos da nossa 
+lógica de negócios. Tendo isso em mente, podemos prosseguir na explicação dos diagramas.
 
 \subsection{Diagrama de classes}
 
@@ -235,6 +235,20 @@ Essa associação não foi explicitada no diagrama para que ele ficasse mais cla
 \includegraphics[width=1\textwidth]{fig/uml_classes_base.png}
 \caption{Diagrama de classes base}
 \label{fig:diag_classes_base}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{fig/uml_classes_principais.png}
+\caption{Diagrama de classes extendidas}
+\label{fig:diag_classes_principais}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{fig/uml_controllers.png}
+\caption{Diagrama de classes da camada de controle}
+\label{fig:diag_controllers}
 \end{figure}
 
 \subsubsection{Autenticação de usuários}
