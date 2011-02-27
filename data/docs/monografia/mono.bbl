@@ -51,6 +51,13 @@ Dispon{\'\i}vel em:
   $<$\url{http://wiki.postgresql.org/wiki/Introdu%C3%A7%C3%A3o_e_Hist%C3%B3ric%
 o}$>$.}
 
+\bibitem[Symfony 2010]{sfguardplugin}
+\abntrefinfo{Symfony}{SYMFONY}{2010}
+{SYMFONY. \emph{Plugins: sfGuardPlugin}. 2010.
+Acesso em 27 de fevereiro de 2011.
+Dispon{\'\i}vel em:
+  $<$\url{http://www.symfony-project.org/plugins/sfGuardPlugin}$>$.}
+
 \bibitem[Wikipedia 2011]{Wiki:PHP}
 \abntrefinfo{Wikipedia}{WIKIPEDIA}{2011a}
 {WIKIPEDIA. \emph{PHP}. 2011.

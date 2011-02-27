@@ -244,6 +244,28 @@ Essa associação não foi explicitada no diagrama para que ele ficasse mais cla
 \label{fig:diag_classes_principais}
 \end{figure}
 
+A Figura ~\ref{fig:diag_classes_principais} apresenta as classes das entidades de trabalho, 
+isto é, aquelas que herdam das classes base. Nelas é que deve ser inserida qualquer lógica associada
+à entidade, pois o framework não escreve nessas classes, a não ser para criá-las pela primeira vez.
+As classes Proposta e Defesa possuem o método audit, que é invocado quando da avaliação, por parte da comissão,
+da proposta ou da solicitação de defesa. Cada vez que um professor integrante da comissão dá seu parecer,
+este método salva as informações do integrante, seu parecer e um possível comentário feito por ele
+sobre a proposta/defesa. Além disso, ele calcula o parecer final dependendo da decisão da maioria 
+da comissão. Essas duas entidades também guardam uma enumeração que indica seu status, que podem ser os
+seguintes:
+
+\begin{itemize}
+\item NAO\_ANALISADO: Proposta/Defesa não analisada
+\item APROVADO: Proposta/Defesa aprovada pelo orientador
+\item REPROVADO: Proposta/Defesa reprovada pelo orientador
+\item LIBERADO: Proposta/Defesa aprovada pela comissão
+\item NAO\_LIBERADO: Proposta/Defesa reprovada pela comissão
+\end{itemize}
+
+A classe Projeto possui alguns métodos de verificação de situação. Os nomes dos métodos são bem 
+autodescritivos e indicam se o projeto possui uma proposta/defesa, se o estudante anexou o documento
+da proposta ou a cópia da monografia na solicitação de defesa, e se o projeto já pode ser defendido.
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/uml_controllers.png}
@@ -251,8 +273,61 @@ Essa associação não foi explicitada no diagrama para que ele ficasse mais cla
 \label{fig:diag_controllers}
 \end{figure}
 
+A Figura ~\ref{fig:diag_controllers} apresenta o diagrama de classes para a camada de controle.
+A classe sfActions pertence ao Symfony e cuida da comunicação entre o navegador e a aplicação. 
+Internamente é ela que instancia as classes necessárias para a execução do framework; decodifica
+a \sigla{URL}{Uniform Resource Locator} da requisição, de forma a determinar qual ação e qual módulo estão 
+sendo requisitados, e se não existirem, exibe uma mensagem de página não encontrada; recebe os
+parâmetros de entrada; chama a ação do módulo requisitado e renderiza a saída. 
+
+Na classe de controle monomActions encontram-se métodos de \sigla{CRUD}{Create, Retrieve, Update e Delete} 
+padronizados, e que são usados pela maior parte dos módulos da aplicação. A classe de controle
+documentoActions contém métodos de controle de upload de arquivos, que são usados nos módulos de 
+proposta e defesa. Dessa forma, foi possível fazer um grande reuso de código.
+
+
 \subsubsection{Autenticação de usuários}
 Na Figura ~\ref{fig:diag_classes_base} podemos observar a classe sfGuardUser, da qual a classe Usuario extende.
-Ela vem de um plugin para o Symfony de controle de usuários. Aproveitamos esse plugin
-para fazer um bom reuso de código e contar com toda a segurança que o plugin já disponibiliza.
+Ela vem de um plugin para o Symfony de controle de usuários, que oferece recursos de segurança
+e autorização em cima dos recursos de segurança oferecidos pelo framework. Aproveitamos esse plugin
+para fazer um bom reuso de código e contar com toda a segurança que o plugin já disponibiliza \cite{sfguardplugin}.
+
+As classes Estudante e Professor possuem um relacionamento de composição com a classe Usuario.
+Inicialmente foi pensado em fazer com que essas classes herdassem da classe Usuario, mas visto
+que existe o usuário administrador que não é nem estudante, nem professor, a modelagem não pôde
+ser feita dessa forma. De qualquer forma, só podem existir estudantes e professores se houver um usuário
+associado a eles.
+
+Na classe Usuario encontram-se os dados mais básicos de cada usuário, como nome, endereço de email e senha.
+Há ainda outras informações que dizem respeito a como a senha é criptografada no banco de dados. 
+O campo algorithm contém o algoritmo utilizado para criptografar a senha, que por padrão é o SHA1. 
+Outros algoritmos podem ser utilizados, como o MD5, mas optou-se por deixar o algoritmo padrão.
+O campo salt é uma string que é concatenada à senha antes da criptografia, para dificultar a a 
+descoberta do valor original.
+
+\subsubsection{Formulários}
+Além de gerar as entidades, o Symfony também possui a funcionalidade de gerar formulários que
+possuem validação própria. Dessa forma, só é necessário ajustar detalhes de aparência ou
+validações mais complexas, como datas que devem preceder umas às outras ou valores que devem 
+estar dentro de um conjunto fechado.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{fig/uml_forms.png}
+\caption{Diagrama de classes dos formulários}
+\label{fig:diag_forms}
+\end{figure}
+
+A Figura ~\ref{fig:diag_forms} apresenta os formulários que foram gerados a partir da descrição 
+do esquema do banco de dados. Todas as classes desse diagrama herdam das suas correspondentes 
+classes base, assim como acontece com as classes da Figura ~\ref{fig:diag_classes_principais}.
+Elas não são apresentadas aqui por efeito de clareza no diagrama. As classes base, por sua vez,
+herdam da classe BaseFormDoctrine, do framework, que possui os métodos básicos de validação e 
+persistência dos formulários. 
+
+O formulário do ANEXO ~\ref{anx:proposta} é representado no sistema pelos formulários de estudante, 
+professor, projeto e proposta. O formulário do ANEXO ~\ref{anx:defesa} é representado no sistema 
+pelos formulários de estudante, professor, projeto e defesa. 
+
+
 

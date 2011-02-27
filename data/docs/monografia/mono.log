@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  26 FEB 2011 00:02
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  27 FEB 2011 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -641,53 +641,57 @@ File: fig/tabela_yaml.png Graphic file (type png)
 File: fig/uml_classes_base.png Graphic file (type png)
 
 <use fig/uml_classes_base.png>
-<fig/uml_classes_principais.png, id=90, 392.21532pt x 173.89969pt>
+<fig/uml_classes_principais.png, id=90, 469.755pt x 202.50656pt>
 File: fig/uml_classes_principais.png Graphic file (type png)
 
-<use fig/uml_classes_principais.png>
-<fig/uml_controllers.png, id=91, 421.575pt x 232.61906pt>
-File: fig/uml_controllers.png Graphic file (type png)
+<use fig/uml_classes_principais.png> [24 <./fig/tabela_yaml.png (PNG copy)>]
+[25 <./fig/uml_classes_base.png (PNG copy)> <./fig/uml_classes_principais.png (
+PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 258.
 
-<use fig/uml_controllers.png> [24 <./fig/tabela_yaml.png (PNG copy)>] [25 <./fi
-g/uml_classes_base.png (PNG copy)> <./fig/uml_classes_principais.png (PNG copy)
->]) (./ch4.tex [26 <./fig/uml_controllers.png (PNG copy)>]
-Cap\'{\i }tulo 4.
-) (./ch5.tex [27
-
-]
-Cap\'{\i }tulo 5.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 22.
-(/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
+ (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-) (./mono.bbl [28
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 258.
 
-])
-[29
+<fig/uml_controllers.png, id=98, 421.575pt x 232.61906pt>
+File: fig/uml_controllers.png Graphic file (type png)
+
+<use fig/uml_controllers.png> [26 <./fig/uml_controllers.png (PNG copy)>]
+<fig/uml_forms.png, id=103, 369.63094pt x 124.96687pt>
+File: fig/uml_forms.png Graphic file (type png)
+ <use fig/uml_forms.png>) (./ch4.tex [27 <./fig/uml_forms.png (PNG copy)>]
+Cap\'{\i }tulo 4.
+) (./ch5.tex [28
+
+]
+Cap\'{\i }tulo 5.
+) (./mono.bbl [29
+
+]) [30
 
 ]
 \openout2 = `cha.aux'.
 
  (./cha.tex
 Cap\'{\i }tulo 6.
-[30
+[31
 
 
 ]
-<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=118, 597.23125pt x 845.15
+<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=122, 597.23125pt x 845.15
 75pt>
 File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
- <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [31
+ <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [32
 
  <./requisitos/Formulario_Proposta_Projeto_Final.pdf>]
-<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=138, 597.23125pt x
+<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=142, 597.23125pt x
  845.1575pt>
 File: requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf Graphic file (typ
 e pdf)
  <use requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>)
-[32
+[33
 
  <./requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>]
 +-------------------------------------------------------------------+
@@ -696,10 +700,10 @@ e pdf)
 +-------------------------------------------------------------------+
 AED: lastpage setting LastPage (./mono.aux (./cha.aux)) ) 
 Here is how much of TeX's memory you used:
- 2900 strings out of 495041
- 39746 string characters out of 1181898
- 98260 words of memory out of 3000000
- 5928 multiletter control sequences out of 15000+50000
+ 2912 strings out of 495041
+ 39972 string characters out of 1181898
+ 98313 words of memory out of 3000000
+ 5939 multiletter control sequences out of 15000+50000
  34448 words of font info for 69 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  31i,8n,41p,259b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -711,9 +715,9 @@ msy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb><
 live/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/ur
 w/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on mono.pdf (33 pages, 337661 bytes).
+Output written on mono.pdf (34 pages, 362324 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
+ 186 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
