@@ -16,42 +16,100 @@ class SemestreForm extends BaseSemestreForm
 
     $minYear = SemestreTable::getInstance()->findEarliestYearOrDefault(date('Y'));
 
-    $rangeYears = range($minYear, date('Y') + 10);
+    $rangeYears = range($minYear - 1, date('Y') + 10);
     $years = array_combine($rangeYears, $rangeYears);
 
-    $this->getWidget('data_inicio')->setOption('format', '%day%%month%%year%');
-    $this->getWidget('data_proposta')->setOption('format', '%day%%month%%year%');
-    $this->getWidget('data_apresentacao')->setOption('format', '%day%%month%%year%');
+    $format = '%day%%month%%year%';
+    $this->getWidget('data_colacao')->setOption('format', $format);
+    $this->getWidget('data_colacao_especial')->setOption('format', $format);
+    $this->getWidget('data_max_proposta')->setOption('format', $format);
+    $this->getWidget('data_max_copiao')->setOption('format', $format);
+    $this->getWidget('data_max_defesa')->setOption('format', $format);
 
-    $this->getWidget('data_inicio')->setOption('years', $years);
-    $this->getWidget('data_proposta')->setOption('years', $years);
-    $this->getWidget('data_apresentacao')->setOption('years', $years);
+    $this->getWidget('data_colacao')->setOption('years', $years);
+    $this->getWidget('data_colacao_especial')->setOption('years', $years);
+    $this->getWidget('data_max_proposta')->setOption('years', $years);
+    $this->getWidget('data_max_copiao')->setOption('years', $years);
+    $this->getWidget('data_max_defesa')->setOption('years', $years);
 
     $this->getWidget('nome')->setAttribute('maxlength', 30);
 
     $this->getValidator('nome')->setOption('required', true);
-    $this->getValidator('data_inicio')->setOption('required', true);
-    $this->getValidator('data_proposta')->setOption('required', true);
-    $this->getValidator('data_apresentacao')->setOption('required', true);
+    $this->getWidget('data_colacao')->setOption('can_be_empty', false);
+    $this->setDefault('data_colacao', time());
 
     $this->validatorSchema->setPostValidator(
       new sfValidatorAnd(
         array(
-          new sfValidatorSchemaCompare('data_inicio', sfValidatorSchemaCompare::LESS_THAN_EQUAL, 'data_proposta',
-            array(),
-            array('invalid' => 'A data de início deve ser anterior à data de proposta.')
-          ),
-          new sfValidatorSchemaCompare('data_proposta', sfValidatorSchemaCompare::LESS_THAN_EQUAL, 'data_apresentacao',
+          new sfValidatorSchemaCompare('data_max_proposta', sfValidatorSchemaCompare::LESS_THAN_EQUAL, 'data_max_copiao',
             array(),
             array('invalid' => 'A data de proposta deve ser anterior à data de apresentação.')
+          ),
+          new sfValidatorSchemaCompare('data_max_copiao', sfValidatorSchemaCompare::LESS_THAN_EQUAL, 'data_max_defesa',
+            array(),
+            array('invalid' => 'A data de proposta deve ser anterior à data de apresentação.')
+          ),
+          new sfValidatorSchemaCompare('data_max_defesa', sfValidatorSchemaCompare::LESS_THAN_EQUAL, 'data_colacao',
+            array(),
+            array('invalid' => 'A data de proposta deve ser anterior à data de apresentação.')
+          ),
+          new sfValidatorSchemaCompare('data_colacao', sfValidatorSchemaCompare::LESS_THAN_EQUAL, 'data_colacao_especial',
+            array(),
+            array('invalid' => 'A data de colação normal deve ser anterior à data de colação especial.')
           )
         )
       )
     );
 
-    $this->widgetSchema['data_inicio']->setLabel('Data de início');
-    $this->widgetSchema['data_proposta']->setLabel('Data de proposta');
-    $this->widgetSchema['data_apresentacao']->setLabel('Data de apresentação');
+    $this->widgetSchema['data_colacao']->setLabel('Colação normal *');
+    $this->widgetSchema['data_colacao_especial']->setLabel('Colação especial');
+    $this->widgetSchema['data_max_proposta']->setLabel('Entrega da proposta');
+    $this->widgetSchema['data_max_copiao']->setLabel('Entrega do copião');
+    $this->widgetSchema['data_max_defesa']->setLabel('Defesa');
 
+  }
+
+  public function bind(array $taintedValues = null, array $taintedFiles = null) {
+    $dataColacao = mktime(0, 0, 0, $taintedValues['data_colacao']['month'], $taintedValues['data_colacao']['day'], $taintedValues['data_colacao']['year']);
+
+    if(!$this->validDate($taintedValues['data_colacao_especial'])){
+      $date = strtotime('+1 month', $dataColacao);
+      $taintedValues['data_colacao_especial'] = $this->makeDate($date);
+    }
+
+    if(!$this->validDate($taintedValues['data_max_proposta'])){
+      $date = strtotime('-3 month', $dataColacao);
+      $taintedValues['data_max_proposta'] = $this->makeDate($date);
+    }
+
+    if(!$this->validDate($taintedValues['data_max_copiao'])){
+      $date = strtotime('-1 month', $dataColacao);
+      $taintedValues['data_max_copiao'] = $this->makeDate($date);
+    }
+
+
+    if(!$this->validDate($taintedValues['data_max_defesa'])){
+      $date = strtotime('-1 week', $dataColacao);
+      $taintedValues['data_max_defesa'] = $this->makeDate($date);
+    }
+
+
+    parent::bind($taintedValues, $taintedFiles);
+  }
+
+  protected function validDate(array $dateArray){
+    return !empty($dateArray['day']) && !empty($dateArray['month']) && !empty($dateArray['year']);
+  }
+
+  protected function makeDate($timestamp){
+    $day = date('j', $timestamp);
+    $month = date('n', $timestamp);
+    $year = date('Y', $timestamp);
+
+    return array(
+        'day' => $day,
+        'month' => $month,
+        'year' => $year
+    );
   }
 }

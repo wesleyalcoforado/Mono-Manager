@@ -105,11 +105,15 @@ Semestre:
   columns:
     nome:
       type: string(30)
-    data_inicio:
+    data_colacao:
       type: date
-    data_proposta:
+    data_colacao_especial:
       type: date
-    data_apresentacao:
+    data_max_proposta:
+      type: date
+    data_max_copiao:
+      type: date
+    data_max_defesa:
       type: date
 
 Comentario:
