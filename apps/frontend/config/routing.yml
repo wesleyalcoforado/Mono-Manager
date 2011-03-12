@@ -46,6 +46,12 @@ defesa_liberar:
   requirements:
     liberado: (true|false)
 
+defesa_concluir:
+  url: /projeto/:projeto_id/defesa/concluir/:concluido
+  param: {module: defesa, action: concluir}
+  requirements:
+    concluido: (true|false)
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:

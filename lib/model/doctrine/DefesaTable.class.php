@@ -19,7 +19,7 @@ class DefesaTable extends Doctrine_Table
     $this->addNamedQuery('find.all.visible.by.comission',
       $this->createQuery('d')
            ->select('d.*')
-           ->whereIn('d.status', array(Proposta::LIBERADO, Proposta::APROVADO, Proposta::NAO_LIBERADO))
+           ->whereIn('d.status', array(Defesa::LIBERADO, Defesa::APROVADO, Defesa::NAO_LIBERADO, Defesa::DEFENDIDO))
     );
 
   }

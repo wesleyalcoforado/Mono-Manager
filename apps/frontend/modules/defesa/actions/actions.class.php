@@ -122,6 +122,21 @@ class defesaActions extends documentoActions
     $this->redirect($this->getModuleName() . "/list");
   }
 
+  public function executeConcluir(sfWebRequest $request)
+  {
+    $this->validateProject($request);
+
+    $finished = $request->getParameter('concluido') == 'true'? true : false;
+    $defesa = $this->getWorkingEntity($this->projetoId);
+
+    if($finished){
+      $defesa->setStatus(Defesa::DEFENDIDO);
+      $defesa->save();
+    }
+
+    $this->redirect($this->getModuleName() . "/list");
+  }
+
   public function executeInfo(sfWebRequest $request)
   {
     $this->validateProject($request);

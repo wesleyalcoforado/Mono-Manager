@@ -142,9 +142,11 @@ if(count($list) > 0): ?>
         </a>
         <?php
         elseif($defesa->getStatus() == Defesa::LIBERADO):
-          echo approveButton(false, "Defesa aprovada");
+          echo link_to(tickButton(), "@defesa_concluir?projeto_id={$defesa->getProjetoId()}&concluido=true", array('confirm' => 'Deseja realmente marcar este projeto como defendido?'));
         elseif($defesa->getStatus() == Defesa::NAO_LIBERADO):
           echo disapproveButton(false, "Defesa reprovada");
+        elseif($defesa->getStatus() == Defesa::DEFENDIDO):
+          echo tickButton(false);
         endif;
       ?>
       </td>

@@ -17,13 +17,15 @@ class Defesa extends BaseDefesa
   const REPROVADO = 2;
   const LIBERADO = 3;
   const NAO_LIBERADO = 4;
+  const DEFENDIDO = 5;
 
   static $status = array(
       self::NAO_ANALISADO => "Defesa não analisada",
       self::APROVADO => "Defesa aprovada pelo orientador",
       self::REPROVADO => "Defesa reprovada pelo orientador",
       self::LIBERADO => "Defesa aprovada pela comissão",
-      self::NAO_LIBERADO => "Defesa reprovada pela comissão"
+      self::NAO_LIBERADO => "Defesa reprovada pela comissão",
+      self::DEFENDIDO => "Projeto defendido"
   );
 
     protected $positiveComments;

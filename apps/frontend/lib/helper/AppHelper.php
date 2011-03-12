@@ -37,6 +37,17 @@ function approveButton($enabled = true, $titulo = 'Aprovar proposta'){
   return image_tag($img, array('alt' => $titulo, 'title' => $titulo));
 }
 
+function tickButton($enabled = true){
+  $img = "icons/tick.png";
+  $title = "Marcar projeto como defendido";
+  if(!$enabled){
+    $img = "icons/tick_grey.png";
+    $title = "Projeto defendido";
+  }
+
+  return image_tag($img, array('alt' => $title, 'title' => $title));
+}
+
 function hammerButton(){
   return image_tag('icons/judge.png', array('alt' => "Avaliar proposta", 'title' => "Avaliar proposta"));
 }
