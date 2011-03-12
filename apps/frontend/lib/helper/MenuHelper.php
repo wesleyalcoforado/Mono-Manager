@@ -10,6 +10,7 @@ function generateMenu(){
   $propostaPage   = link_to("Propostas", "proposta/list");
   $defesaPage     = link_to("Defesas", "defesa/list");
   $semestrePage   = link_to("Semestres", "semestre/index");
+  $relatorioPage   = link_to("Relatórios", "relatorio/index");
   $sairPage       = link_to("Sair", "sfGuardAuth/signout");
 
   $menuItems[] = $inicioPage;
@@ -20,11 +21,13 @@ function generateMenu(){
     $menuItems[] = $semestrePage;
     $menuItems[] = $propostaPage;
     $menuItems[] = $defesaPage;
+    $menuItems[] = $relatorioPage;
   }else if($user->isEstudante()){
     $menuItems[] = $projetoPage;
   }else if($user->isProfessor()){
     $menuItems[] = $propostaPage;
     $menuItems[] = $defesaPage;
+    $menuItems[] = $relatorioPage;
   }
 
   $menuItems[] = $sairPage;
