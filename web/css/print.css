@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#menu, #sfWebDebug {
+  display: none;
+}
+
+h1 {
+  font-size: 14pt;
+}
+
+img {
+  border: none;
+}
+
+ul#icons_table {
+  list-style-type: none;
+}
+
+ul#icons_table li {
+  text-align: center;
+  float: left;
+  margin-left: 30px;
+}
