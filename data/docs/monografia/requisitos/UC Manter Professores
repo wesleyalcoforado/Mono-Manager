@@ -1,0 +1,68 @@
+Caso de Uso Manter Professores
+
+Atores: Administrador
+
+Pre-condições: O administrador deve estar logado no sistema
+
+1. Fluxo básico
+1.1 - O caso de uso se inicia quando o administrador seleciona manter professores no menu do sistema.
+1.2 - Uma vez que o administrador seleciona uma das opções disponíveis (incluir, alterar, excluir, listar):
+      a) Se o administrador selecionar a opção incluir, o caso de uso segue para o sub-fluxo 2 - Incluir Professor.
+      b) Se o administrador selecionar a opção alterar, o caso de uso segue para o sub-fluxo 3 - Alterar Professor.
+      c) Se o administrador selecionar a opção excluir, o caso de uso segue para o sub-fluxo 4 - Excluir Professor.
+      d) Se o administrador selecionar a opção listar, o caso de uso segue para o sub-fluxo 5 - Listar Professores.
+1.3 - O caso de uso se encerra
+
+2. Incluir Professor
+2.1 - Este sub-fluxo se inicia quando o administrador seleciona incluir um novo professor.
+2.2 - O sistema exibe os seguintes campos (os campos com asterisco são obrigatórios):
+      * Nome de usuário
+      * Email
+      * Senha
+      * Confirmação de senha
+      Nome
+      Sobrenome
+      * Instituição
+      * Titulação
+      Experiência
+      Substituto - Campo de escolha única fechada (valores: sim, não)
+      Comissão - Campo de escolha única fechada (valores: sim, não)
+      Ativo - Campo de escolha única fechada (valores: sim, não)
+      Superusuário - Campo de escolha única fechada (valores: sim, não)
+2.3 - O administrador preenche os campos e seleciona a opção salvar
+2.4 - O sistema valida se os campos obrigatórios foram preenchidos (6.1)
+2.5 - O sistema inclui o professor no banco de dados
+2.6 - O caso de uso se encerra
+ 
+3. Alterar Professor
+Pré-condições: O administrador deve ter seleciona um professor para a alteração
+3.1 - Este sub-fluxo se inicia quando o administrador seleciona alterar professor
+3.2 - O sistema exibe os campos preenchidos.
+3.3 - O administrador altera os dados e solicita salvar os dados.
+3.4 - O sistema valida se os campos obrigatórios foram preenchidos (6.1)
+3.5 - O sistema salva as alterações no banco de dados.
+3.6 - O caso de uso se encerra.
+
+4. Excluir Professor
+Pré-condições: O administrador deve ter seleciona um professor para a alteração
+4.1 - Este sub-fluxo se inicia quando o administrador seleciona excluir professor
+4.2 - O sistema solicita que o administrador confirme a exclusão.
+4.3 - O adminstrador confirma a mensagem.
+4.4 - O sistema exclui o professor do banco de dados.
+4.5 - O caso de uso se encerra.
+
+5. Listar Professores
+4.1 - Este sub-fluxo se inicia quando o administrador seleciona listar professores.
+4.2 - O sistema exibe a listagem dos professores, contendo os seguintes campos:
+      a) Nome
+      b) Sobrenome
+      c) Nome de usuário
+      d) Email
+4.3 - O caso de uso se encerra
+
+6. Fluxos alternativos
+6.1 Dados obrigatórios não preenchidos 
+6.1.1 - Este sub-fluxo se inicia no passo 2.4, ou no passo 3.4.
+6.1.2 - O sistema exibe ao lado do campo uma mensagem de que o campo deve ser preenchido e aguarda até que o administrador o preencha.
+6.1.3 - O sub-fluxo segue para o passo 2.2 ou 3.2, dependendo de qual sub-fluxo ele tenha se originado.
+
