@@ -1,0 +1,11 @@
+\newcommand\addrow[2]{#1 &#2\\ }
+
+\newcommand\addheading[2]{#1 &#2\\ \hline}
+\newcommand\tabularhead{\begin{tabular}{lp{12cm}}
+\hline
+}
+
+\newcommand\addmulrow[2]{ \begin{minipage}[t][][t]{2.5cm}#1\end{minipage}% 
+   &\begin{minipage}[t][][t]{12cm}
+    \begin{enumerate} #2   \end{enumerate}
+    \end{minipage}\\ }

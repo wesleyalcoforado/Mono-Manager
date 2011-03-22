@@ -1,5 +1,10 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: mono.aux
+A level-1 auxiliary file: ch1.aux
+A level-1 auxiliary file: ch2.aux
+A level-1 auxiliary file: ch3.aux
+A level-1 auxiliary file: ch4.aux
+A level-1 auxiliary file: ch5.aux
 The style file: abnt-alf.bst
 A level-1 auxiliary file: cha.aux
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
@@ -14,7 +19,7 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 +---------------------------------------------------------+
 You've used 12 entries,
             6522 wiz_defined-function locations,
-            1232 strings with 10736 characters,
+            1237 strings with 10771 characters,
 and the built_in function-call counts, 8393 in all, are:
 = -- 794
 > -- 191

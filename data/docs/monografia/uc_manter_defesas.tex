@@ -1,0 +1,46 @@
+\begin{longtable}{r p{12cm}}
+\hline
+Atores & Estudante, Orientador, Comissão \\ \hline
+Pré-condições & O estudante deve estar logado no sistema e ter selecionado um projeto.\newline
+                O orientador deve estar logado no sistema.\newline
+                A comissão deve estar logada no sistema. \\ \hline
+Fluxo básico &  1. O caso de uso se inicia quando o estudante seleciona a opção Solicitar Defesa para o projeto selecionado. \newline
+                2. O sistema exibe os seguintes campos: \newline
+                \hspace*{1cm} a) Quantidade de páginas da monografia \newline 
+                \hspace*{1cm} b) Data sugerida para realização da defesa  \newline 
+                \hspace*{1cm} c) Copião (arquivo PDF)  \newline 
+                3. O estudante preenche os campos e seleciona a opção Salvar. \newline
+                4. O sistema valida os campos. \newline
+                5. O sistema anexa o copião ao projeto, exibe uma mensagem de sucesso e redireciona o estudante à listagem de projetos. \newline
+                6. O sistema envia um email ao orientador, informando do envio da solicitação de defesa por um de seus orientandos.   \newline
+                7. O orientador seleciona a opção Solicitação de Defesa, do projeto em questão. \newline
+                8. O sistema exibe o copião e solicita ao orientador para que ele selecione uma das opções disponíveis (Aprovar/desaprovar) \newline
+                9. O orientador seleciona a opção aprovar.   \newline
+                10. O sistema envia um email à comissão, informando do envio de uma nova solicitação de defesa e atualiza o status do projeto para "Defesa aprovada pelo orientador". \newline
+                11. A comissão seleciona a opção Solicitação de Defesa, do projeto em questão. \newline
+                12. O sistema exibe os seguintes campos: \newline
+                    \hspace*{1cm} a) Copião (arquivo para download) \newline 
+                    \hspace*{1cm} b) Comentários \newline 
+                    \hspace*{1cm} c) Data autorizada para realização da defesa \newline
+                13. O sistema solicita à comissão para que ela selecione uma das opções disponíveis (Aprovar/Desaprovar) \newline
+                14. A comissão comenta (opcionalmente) na solicitação, preenche a data de realização da defesa e a aprova. \newline
+                15. O sistema envia um email ao orientador e ao estudante, informando de que a solicitação foi aprovada e atualiza o status do projeto para "Defesa aprovada pela comissão".    \newline
+                16. O caso de uso se encerra. \newline
+               \\ \hline
+Fluxos alternativos & Formato e/ou tamanho inválidos \newline
+                        1. O subfluxo se inicia no passo 4 do fluxo básico, quando o sistema detecta que o formato e/ou o tamanho do arquivo são inválidos. \newline
+                        2. O sistema informa ao usuário dos dados inválidos e solicita-o que os corrija. \newline
+                        3. O subfluxo segue para o passo 2 do fluxo básico. \newline
+                    
+                    Desaprovação da proposta \newline
+                        1. O subfluxo se inicia no passo 9 do fluxo básico, quando o usuário for o orientador, ou no passo 13 do fluxo básico, quando o usuário for da comissão. O usuário selecionou a reprovar. \newline
+                        2. O sistema envia um email ao estudante (e ao orientador, caso a proposta tenha sido reprovada pela comissão), informando que sua proposta foi reprovada. \newline
+                        3. O sistema atualiza o status da proposta para "Reprovada pelo orientador" ou "Reprovada pela comissão", dependendo de qual usuário tenha reprovado a proposta. \newline
+                        4. O caso de uso se encerra. \newline
+                    \\ \hline        
+\end{longtable}
+
+
+
+
+

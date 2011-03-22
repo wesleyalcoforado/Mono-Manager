@@ -26,12 +26,16 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 \usepackage{url}
+\usepackage{booktabs}
+\usepackage{monomanager}
+\usepackage{longtable}
+
 
 
 % Informações gerais do documento
 \autor{Wesley Jefferson Oliveira Alcoforado}
 \autorr{Alcoforado, Wesley Jefferson Oliveira}
-\titulo{Mono-Manager - um gerenciador de trabalhos de conclusão de curso para o curso de Ciências de Computação da UECE}
+\titulo{TCC-Manager - um gerenciador de trabalhos de conclusão de curso para o curso de Ciências de Computação da UECE}
 \local{Fortaleza, Ceará}
 \cidade{Fortaleza}
 \data{2011}
@@ -115,16 +119,15 @@ involved people automatically, making them aware of deadlines.
 \end{abstract}
 \pagebreak
 
-\input{ch1}
-\input{ch2}
-\input{ch3}
-\input{ch4}
-\input{ch5}
+\include{ch1}
+\include{ch2}
+\include{ch3}
+\include{ch4}
+\include{ch5}
 
 \bibliographystyle{abnt-alf}
 \bibliography{bib}
 
-%\appendix
 \include{cha}
 
 \end{document}
