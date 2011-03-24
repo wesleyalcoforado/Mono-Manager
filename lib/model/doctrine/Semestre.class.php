@@ -12,4 +12,7 @@
  */
 class Semestre extends BaseSemestre
 {
+  public function __toString(){
+    return $this->getNome();
+  }
 }

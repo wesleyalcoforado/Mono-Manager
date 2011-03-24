@@ -12,4 +12,7 @@
  */
 class Estudante extends BaseEstudante
 {
+  public function __toString(){
+    return $this->getUsuario()->getFullname();
+  }
 }
