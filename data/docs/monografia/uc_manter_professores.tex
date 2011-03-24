@@ -1,0 +1,62 @@
+\begin{longtable}{r p{12cm}}
+\hline
+Atores & Administrador \\ \hline
+Pré-condições & O administrador deve estar logado no sistema.\\
+Fluxo básico &1. O caso de uso se inicia quando o administrador seleciona manter professores no menu do sistema. \newline
+                2. Uma vez que o administrador seleciona uma das opções disponíveis (incluir, alterar, excluir, listar): \newline
+                \hspace*{1cm} a) Se o administrador selecionar a opção incluir, o caso de uso segue para o sub-fluxo 2 - Incluir Professor. \newline 
+                \hspace*{1cm} b) Se o administrador selecionar a opção alterar, o caso de uso segue para o sub-fluxo 3 - Alterar Professor.  \newline 
+                \hspace*{1cm} c) Se o administrador selecionar a opção excluir, o caso de uso segue para o sub-fluxo 4 - Excluir Professor.  \newline 
+                \hspace*{1cm} d) Se o administrador selecionar a opção listar, o caso de uso segue para o sub-fluxo 5 - Listar Professores.  \newline 
+                3. O caso de uso se encerra. \newline \\
+Incluir Professor & 1. Este sub-fluxo se inicia quando o administrador seleciona incluir um novo professor. \newline
+                    2. O sistema exibe os seguintes campos (os campos com asterisco são obrigatórios): \newline
+                    \hspace*{1cm} * Nome de usuário \newline
+                    \hspace*{1cm} * Email \newline
+                    \hspace*{1cm} * Senha \newline
+                    \hspace*{1cm} * Confirmação de senha \newline
+                    \hspace*{1cm} Nome \newline
+                    \hspace*{1cm} Sobrenome \newline
+                    \hspace*{1cm} * Instituição \newline
+                    \hspace*{1cm} * Titulação \newline
+                    \hspace*{1cm} Experiência \newline
+                    \hspace*{1cm} Substituto - Campo de escolha única fechada (valores: sim, não) \newline
+                    \hspace*{1cm} Comissão - Campo de escolha única fechada (valores: sim, não) \newline
+                    \hspace*{1cm} Ativo - Campo de escolha única fechada (valores: sim, não) \newline
+                    \hspace*{1cm} Superusuário - Campo de escolha única fechada (valores: sim, não) \newline
+                    3. O administrador preenche os campos e seleciona a opção salvar. \newline
+                    4. O sistema valida se os campos obrigatórios foram preenchidos. \newline
+                    5. O sistema inclui o professor no banco de dados. \newline
+                    6. O caso de uso se encerra. \newline \\
+Alterar Professor & Pré-condições: O administrador deve ter selecionado um professor para a alteração. \newline
+                    1. Este sub-fluxo se inicia quando o administrador seleciona alterar professor.  \newline       
+                    2. O sistema exibe os campos preenchidos.  \newline
+                    3. O administrador altera os dados e solicita salvar os dados. \newline
+                    4. O sistema valida se os campos obrigatórios foram preenchidos. \newline
+                    5. O sistema salva as alterações no banco de dados. \newline
+                    6. O caso de uso se encerra. \newline \\
+Excluir Professor & Pré-condições: O administrador deve ter seleciona umdo professor para a exclusão. \newline
+                    1. Este sub-fluxo se inicia quando o administrador seleciona excluir professor. \newline
+                    2. O sistema solicita que o administrador confirme a exclusão. \newline
+                    3. O adminstrador confirma a mensagem. \newline
+                    4. O sistema exclui o professor do banco de dados. \newline
+                    5. O caso de uso se encerra. \newline \\
+Listar Professores & 1. Este sub-fluxo se inicia quando o administrador seleciona listar professores. \newline
+                     2. O sistema exibe a listagem dos professores, contendo os seguintes campos:\newline
+                     \hspace*{1cm} a) Nome\newline
+                     \hspace*{1cm} b) Sobrenome\newline
+                     \hspace*{1cm} c) Nome de usuário\newline
+                     \hspace*{1cm} d) Email\newline
+                     3. O caso de uso se encerra.\newline                    
+               \\ \hline
+Fluxos alternativos & Dados obrigatórios não preenchidos  \newline
+                        1. Este sub-fluxo se inicia no passo 4 dos sub-fluxos Incluir Professor e Alterar Professor, quando o usuario não informou todos os campos obrigatórios. \newline
+                        2. O sistema exibe ao lado do campo uma mensagem de que o campo deve ser preenchido e aguarda até que o administrador o preencha. \newline
+                        3. O subfluxo segue para o passo 2 do sub-fluxo do qual ele se originou. \newline
+                    \\ \hline        
+\end{longtable}
+
+
+
+
+
