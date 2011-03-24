@@ -12,11 +12,11 @@
  */
 class Proposta extends BaseProposta
 {
-    const NAO_ANALISADO = 0;
-    const APROVADO = 1;
-    const REPROVADO = 2;
-    const LIBERADO = 3;
-    const NAO_LIBERADO = 4;
+    const NAO_ANALISADO = 100;
+    const APROVADO      = 101;
+    const REPROVADO     = 102;
+    const LIBERADO      = 103;
+    const NAO_LIBERADO  = 104;
 
     static $status = array(
         self::NAO_ANALISADO => "Proposta não analisada",

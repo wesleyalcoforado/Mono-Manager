@@ -12,12 +12,12 @@
  */
 class Defesa extends BaseDefesa
 {
-  const NAO_ANALISADO = 0;
-  const APROVADO = 1;
-  const REPROVADO = 2;
-  const LIBERADO = 3;
-  const NAO_LIBERADO = 4;
-  const DEFENDIDO = 5;
+  const NAO_ANALISADO = 200;
+  const APROVADO      = 201;
+  const REPROVADO     = 202;
+  const LIBERADO      = 203;
+  const NAO_LIBERADO  = 204;
+  const DEFENDIDO     = 205;
 
   static $status = array(
       self::NAO_ANALISADO => "Defesa não analisada",
