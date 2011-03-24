@@ -21,6 +21,18 @@ class relatorioActions extends sfActions
 
   public function executeStatus(sfWebRequest $request)
   {
+    $this->form = new RelatorioStatusForm();
+
+    $generate = $request->hasParameter('gerar');
+    if($generate){
+      $filters = $request->getParameter('relatorio');
+      $estudanteId = $filters['estudante_id'];
+      $professorId = $filters['professor_id'];
+      $semestreId = $filters['semestre_id'];
+      $status = $filters['status'];
+
+      
+    }
   }
 
   public function executeConcluidos(sfWebRequest $request)
