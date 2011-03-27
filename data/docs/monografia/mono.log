@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  24 MAR 2011 12:03
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.2.8)  27 MAR 2011 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -596,47 +596,48 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 \tf@toc=\write3
 \openout3 = `mono.toc'.
 
- [7] (./mono.lof)
+ [7] (./mono.lof [8
+
+
+] [9])
 \tf@lof=\write4
 \openout4 = `mono.lof'.
 
- [8
+ [10] (./mono.lsg)
+\tf@lsg=\write5
+\openout5 = `mono.lsg'.
 
-
-] (./mono.lot)
-\tf@lot=\write5
-\openout5 = `mono.lot'.
-
- [9
-
-] (./mono.lsg)
-\tf@lsg=\write6
-\openout6 = `mono.lsg'.
-
- [10
-
-]
-[11
-
+ [11
 
 ] [12
+
+
+] [13
 
 
 ]
 \openout2 = `ch1.aux'.
 
- (./ch1.tex
+
+(./ch1.tex
 Cap\'{\i }tulo 1.
-[13
+[14
 
 
 ]
-Overfull \hbox (9.08609pt too wide) in paragraph at lines 41--44
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 56.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
+ [15]
+Overfull \hbox (9.08609pt too wide) in paragraph at lines 85--88
 []\OT1/ptm/m/n/12 Estas fer-ra-men-tas fo-ram es-co-lhi-das de-vido a se-rem gr
 a-tui-tas e pos-sui-rem vers[]oes est[]aveis
  []
 
-) [14]
+) [16]
 \openout2 = `ch2.aux'.
 
  (./ch2.tex
@@ -647,33 +648,33 @@ Overfull \hbox (3.01506pt too wide) in paragraph at lines 11--19
 hado in-di-vi-du-al-mente pelo aluno,
  []
 
-[15
+[17
 
 
 
-] [16] <fig/fluxograma_tcc.png, id=62, 1125.1447pt x 1147.81764pt>
+] [18] <fig/fluxograma_tcc.png, id=70, 1125.1447pt x 1147.81764pt>
 File: fig/fluxograma_tcc.png Graphic file (type png)
 
-<use fig/fluxograma_tcc.png>) [17] [18 <./fig/fluxograma_tcc.png (PNG copy)>]
+<use fig/fluxograma_tcc.png>) [19] [20 <./fig/fluxograma_tcc.png (PNG copy)>]
 \openout2 = `ch3.aux'.
 
 
 (./ch3.tex
 Cap\'{\i }tulo 3.
-[19
+[21
 
 
 
-] <fig/diagrama_mvc.png, id=73, 517.22647pt x 245.15118pt>
+] <fig/diagrama_mvc.png, id=80, 517.22647pt x 245.15118pt>
 File: fig/diagrama_mvc.png Graphic file (type png)
 
-<use fig/diagrama_mvc.png> [20]
+<use fig/diagrama_mvc.png> [22]
 Overfull \hbox (23.01878pt too wide) in paragraph at lines 95--99
 []\OT1/ptm/m/n/12 Atualmente a mai-o-ria das aplica[][]oes []e de-sen-vol-vida 
 uti-li-zando o pa-ra-digma de programa[][]ao
  []
 
-<fig/coc_hibernate.png, id=77, 394.47375pt x 106.3975pt>
+<fig/coc_hibernate.png, id=84, 394.47375pt x 106.3975pt>
 File: fig/coc_hibernate.png Graphic file (type png)
 
 <use fig/coc_hibernate.png>
@@ -681,59 +682,230 @@ Overfull \hbox (68.23253pt too wide) in paragraph at lines 119--120
 [][] 
  []
 
-<fig/coc_tabela.png, id=78, 160.6pt x 65.24374pt>
+<fig/coc_tabela.png, id=85, 160.6pt x 65.24374pt>
 File: fig/coc_tabela.png Graphic file (type png)
  <use fig/coc_tabela.png>
-[21 <./fig/diagrama_mvc.png (PNG copy)>] [22 <./fig/coc_hibernate.png (PNG copy
-)> <./fig/coc_tabela.png (PNG copy)>] [23]
-<fig/tabela_yaml.png, id=88, 219.82124pt x 236.885pt>
+[23 <./fig/diagrama_mvc.png (PNG copy)>] [24 <./fig/coc_hibernate.png (PNG copy
+)> <./fig/coc_tabela.png (PNG copy)>] [25]
+<fig/tabela_yaml.png, id=96, 219.82124pt x 236.885pt>
 File: fig/tabela_yaml.png Graphic file (type png)
 
 <use fig/tabela_yaml.png>
-<fig/uml_classes_base.png, id=89, 549.55313pt x 587.19376pt>
+<fig/uml_classes_base.png, id=97, 549.55313pt x 587.19376pt>
 File: fig/uml_classes_base.png Graphic file (type png)
 
 <use fig/uml_classes_base.png>
-<fig/uml_classes_principais.png, id=90, 469.755pt x 202.50656pt>
+<fig/uml_classes_principais.png, id=98, 469.755pt x 202.50656pt>
 File: fig/uml_classes_principais.png Graphic file (type png)
 
-<use fig/uml_classes_principais.png> [24 <./fig/tabela_yaml.png (PNG copy)>]
-[25 <./fig/uml_classes_base.png (PNG copy)> <./fig/uml_classes_principais.png (
-PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 258.
-
- (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 258.
-
-<fig/uml_controllers.png, id=98, 421.575pt x 232.61906pt>
+<use fig/uml_classes_principais.png> [26 <./fig/tabela_yaml.png (PNG copy)>]
+[27 <./fig/uml_classes_base.png (PNG copy)> <./fig/uml_classes_principais.png (
+PNG copy)>] <fig/uml_controllers.png, id=105, 421.575pt x 232.61906pt>
 File: fig/uml_controllers.png Graphic file (type png)
 
-<use fig/uml_controllers.png> [26 <./fig/uml_controllers.png (PNG copy)>]
-<fig/uml_forms.png, id=103, 369.63094pt x 124.96687pt>
+<use fig/uml_controllers.png> [28 <./fig/uml_controllers.png (PNG copy)>]
+<fig/uml_forms.png, id=109, 369.63094pt x 124.96687pt>
 File: fig/uml_forms.png Graphic file (type png)
  <use fig/uml_forms.png>
-[27 <./fig/uml_forms.png (PNG copy)>]) [28]
+[29 <./fig/uml_forms.png (PNG copy)>]) [30]
 \openout2 = `ch4.aux'.
 
  (./ch4.tex
 Cap\'{\i }tulo 4.
-) [29
+<fig/telas/login.png, id=117, 1284.8pt x 803.0pt>
+File: fig/telas/login.png Graphic file (type png)
+ <use fig/telas/login.png>
+<fig/telas/acesso_negado.png, id=118, 1284.8pt x 803.0pt>
+File: fig/telas/acesso_negado.png Graphic file (type png)
+
+<use fig/telas/acesso_negado.png> [31
 
 
 
-]
+] [32 <./fig/telas/login.png (PNG copy)> <./fig/telas/acesso_negado.png (PNG co
+py)>]
+<fig/telas/administrador/crud_professor_insercao.png, id=125, 1284.8pt x 803.0p
+t>
+File: fig/telas/administrador/crud_professor_insercao.png Graphic file (type pn
+g)
+ <use fig/telas/administrador/crud_professor_insercao.png>
+<fig/telas/administrador/crud_professor_listagem_pos_insercao.png, id=126, 1284
+.8pt x 803.0pt>
+File: fig/telas/administrador/crud_professor_listagem_pos_insercao.png Graphic 
+file (type png)
+
+<use fig/telas/administrador/crud_professor_listagem_pos_insercao.png>
+<fig/telas/administrador/crud_professor_remocao.png, id=127, 1284.8pt x 803.0pt
+>
+File: fig/telas/administrador/crud_professor_remocao.png Graphic file (type png
+)
+ <use fig/telas/administrador/crud_professor_remocao.png>
+<fig/telas/administrador/crud_estudante.png, id=128, 1284.8pt x 803.0pt>
+File: fig/telas/administrador/crud_estudante.png Graphic file (type png)
+
+<use fig/telas/administrador/crud_estudante.png>
+<fig/telas/administrador/crud_semestre.png, id=129, 1284.8pt x 803.0pt>
+File: fig/telas/administrador/crud_semestre.png Graphic file (type png)
+
+<use fig/telas/administrador/crud_semestre.png>
+<fig/telas/administrador/crud_semestre_calculo_datas.png, id=130, 1284.8pt x 80
+3.0pt>
+File: fig/telas/administrador/crud_semestre_calculo_datas.png Graphic file (typ
+e png)
+ <use fig/telas/administrador/crud_semestre_calculo_datas.png> [33 <./fig/telas
+/administrador/crud_professor_insercao.png (PNG copy)>] [34 <./fig/telas/admini
+strador/crud_professor_listagem_pos_insercao.png (PNG copy)> <./fig/telas/admin
+istrador/crud_professor_remocao.png (PNG copy)>] [35 <./fig/telas/administrador
+/crud_estudante.png (PNG copy)> <./fig/telas/administrador/crud_semestre.png (P
+NG copy)>]
+<fig/telas/administrador/propostas.png, id=140, 1284.8pt x 803.0pt>
+File: fig/telas/administrador/propostas.png Graphic file (type png)
+
+<use fig/telas/administrador/propostas.png>
+<fig/telas/administrador/defesas.png, id=141, 1284.8pt x 803.0pt>
+File: fig/telas/administrador/defesas.png Graphic file (type png)
+
+<use fig/telas/administrador/defesas.png>
+<fig/telas/administrador/relatorios.png, id=142, 1284.8pt x 803.0pt>
+File: fig/telas/administrador/relatorios.png Graphic file (type png)
+
+<use fig/telas/administrador/relatorios.png> [36 <./fig/telas/administrador/cru
+d_semestre_calculo_datas.png (PNG copy)>] [37 <./fig/telas/administrador/propos
+tas.png (PNG copy)> <./fig/telas/administrador/defesas.png (PNG copy)>]
+<fig/telas/processo/aluno_01_projeto_novo.png, id=150, 1284.8pt x 803.0pt>
+File: fig/telas/processo/aluno_01_projeto_novo.png Graphic file (type png)
+
+<use fig/telas/processo/aluno_01_projeto_novo.png>
+<fig/telas/processo/aluno_02_projeto_cadastrado.png, id=151, 1284.8pt x 803.0pt
+>
+File: fig/telas/processo/aluno_02_projeto_cadastrado.png Graphic file (type png
+)
+ <use fig/telas/processo/aluno_02_projeto_cadastrado.png>
+<fig/telas/processo/aluno_03_anexo_proposta.png, id=152, 1284.8pt x 803.0pt>
+File: fig/telas/processo/aluno_03_anexo_proposta.png Graphic file (type png)
+
+<use fig/telas/processo/aluno_03_anexo_proposta.png>
+<fig/telas/processo/aluno_04_proposta_anexada.png, id=153, 1284.8pt x 803.0pt>
+File: fig/telas/processo/aluno_04_proposta_anexada.png Graphic file (type png)
+
+<use fig/telas/processo/aluno_04_proposta_anexada.png>
+<fig/telas/processo/aluno_05_proposta_aprovada_orientador.png, id=154, 1284.8pt
+ x 803.0pt>
+File: fig/telas/processo/aluno_05_proposta_aprovada_orientador.png Graphic file
+ (type png)
+ <use fig/telas/processo/aluno_05_proposta_aprovada_orientador.png>
+<fig/telas/processo/aluno_06_proposta_aprovada_comissao.png, id=155, 1284.8pt x
+ 803.0pt>
+File: fig/telas/processo/aluno_06_proposta_aprovada_comissao.png Graphic file (
+type png)
+ <use fig/telas/processo/aluno_06_proposta_aprovada_comissao.png>
+<fig/telas/processo/aluno_07_submetendo_defesa.png, id=156, 1284.8pt x 803.0pt>
+File: fig/telas/processo/aluno_07_submetendo_defesa.png Graphic file (type png)
+
+<use fig/telas/processo/aluno_07_submetendo_defesa.png>
+<fig/telas/processo/aluno_08_defesa_nao_analisada.png, id=157, 1284.8pt x 803.0
+pt>
+File: fig/telas/processo/aluno_08_defesa_nao_analisada.png Graphic file (type p
+ng)
+ <use fig/telas/processo/aluno_08_defesa_nao_analisada.png>
+<fig/telas/processo/aluno_09_defesa_analisada_professor.png, id=158, 1284.8pt x
+ 803.0pt>
+File: fig/telas/processo/aluno_09_defesa_analisada_professor.png Graphic file (
+type png)
+ <use fig/telas/processo/aluno_09_defesa_analisada_professor.png>
+<fig/telas/processo/aluno_10_defesa_analisada_comissao.png, id=159, 1284.8pt x 
+803.0pt>
+File: fig/telas/processo/aluno_10_defesa_analisada_comissao.png Graphic file (t
+ype png)
+ <use fig/telas/processo/aluno_10_defesa_analisada_comissao.png>
+<fig/telas/processo/aluno_11_projeto_defendido.png, id=160, 1284.8pt x 803.0pt>
+File: fig/telas/processo/aluno_11_projeto_defendido.png Graphic file (type png)
+
+<use fig/telas/processo/aluno_11_projeto_defendido.png> [38 <./fig/telas/admini
+strador/relatorios.png (PNG copy)>] [39 <./fig/telas/processo/aluno_01_projeto_
+novo.png (PNG copy)> <./fig/telas/processo/aluno_02_projeto_cadastrado.png (PNG
+ copy)>] [40 <./fig/telas/processo/aluno_03_anexo_proposta.png (PNG copy)> <./f
+ig/telas/processo/aluno_04_proposta_anexada.png (PNG copy)>] [41 <./fig/telas/p
+rocesso/aluno_05_proposta_aprovada_orientador.png (PNG copy)> <./fig/telas/proc
+esso/aluno_06_proposta_aprovada_comissao.png (PNG copy)>] [42 <./fig/telas/proc
+esso/aluno_07_submetendo_defesa.png (PNG copy)> <./fig/telas/processo/aluno_08_
+defesa_nao_analisada.png (PNG copy)>] [43 <./fig/telas/processo/aluno_09_defesa
+_analisada_professor.png (PNG copy)> <./fig/telas/processo/aluno_10_defesa_anal
+isada_comissao.png (PNG copy)>]
+
+LaTeX Warning: File `fig/telas/processo/professor_01_aprovacao proposta.png' no
+t found on input line 266.
+
+
+<fig/telas/processo/professor_01_aprovacao proposta.png, id=180, 1284.8pt x 803
+.0pt>
+File: fig/telas/processo/professor_01_aprovacao proposta.png Graphic file (type
+ png)
+ <use fig/telas/processo/professor_01_aprovacao proposta.png>
+<fig/telas/processo/professor_02_prosta_sendo_aprovada.png, id=181, 1284.8pt x 
+803.0pt>
+File: fig/telas/processo/professor_02_prosta_sendo_aprovada.png Graphic file (t
+ype png)
+ <use fig/telas/processo/professor_02_prosta_sendo_aprovada.png>
+<fig/telas/processo/professor_03_proposta_aprovada.png, id=182, 1284.8pt x 803.
+0pt>
+File: fig/telas/processo/professor_03_proposta_aprovada.png Graphic file (type 
+png)
+ <use fig/telas/processo/professor_03_proposta_aprovada.png>
+<fig/telas/processo/professor_04_avaliando_defesa.png, id=183, 1284.8pt x 803.0
+pt>
+File: fig/telas/processo/professor_04_avaliando_defesa.png Graphic file (type p
+ng)
+ <use fig/telas/processo/professor_04_avaliando_defesa.png> [44 <./fig/telas/pr
+ocesso/aluno_11_projeto_defendido.png (PNG copy)>] [45 <./fig/telas/processo/pr
+ofessor_01_aprovacao proposta.png (PNG copy)> <./fig/telas/processo/professor_0
+2_prosta_sendo_aprovada.png (PNG copy)>] [46 <./fig/telas/processo/professor_03
+_proposta_aprovada.png (PNG copy)> <./fig/telas/processo/professor_04_avaliando
+_defesa.png (PNG copy)>]
+<fig/telas/processo/comissao_01_propostas.png, id=193, 1284.8pt x 803.0pt>
+File: fig/telas/processo/comissao_01_propostas.png Graphic file (type png)
+
+<use fig/telas/processo/comissao_01_propostas.png>
+<fig/telas/processo/comissao_02_proposta_sendo_avaliada.png, id=194, 1284.8pt x
+ 803.0pt>
+File: fig/telas/processo/comissao_02_proposta_sendo_avaliada.png Graphic file (
+type png)
+ <use fig/telas/processo/comissao_02_proposta_sendo_avaliada.png>
+<fig/telas/processo/comissao_03_proposta_avaliada.png, id=195, 1284.8pt x 803.0
+pt>
+File: fig/telas/processo/comissao_03_proposta_avaliada.png Graphic file (type p
+ng)
+ <use fig/telas/processo/comissao_03_proposta_avaliada.png>
+<fig/telas/processo/comissao_04_comentarios.png, id=196, 1284.8pt x 803.0pt>
+File: fig/telas/processo/comissao_04_comentarios.png Graphic file (type png)
+
+<use fig/telas/processo/comissao_04_comentarios.png>
+<fig/telas/processo/comissao_05_aprovando_defesa.png, id=197, 1284.8pt x 803.0p
+t>
+File: fig/telas/processo/comissao_05_aprovando_defesa.png Graphic file (type pn
+g)
+ <use fig/telas/processo/comissao_05_aprovando_defesa.png>
+<fig/telas/processo/comissao_06_marcando_projeto_como_defendido.png, id=198, 12
+84.8pt x 803.0pt>
+File: fig/telas/processo/comissao_06_marcando_projeto_como_defendido.png Graphi
+c file (type png)
+
+<use fig/telas/processo/comissao_06_marcando_projeto_como_defendido.png>)
+[47 <./fig/telas/processo/comissao_01_propostas.png (PNG copy)>] [48 <./fig/tel
+as/processo/comissao_02_proposta_sendo_avaliada.png (PNG copy)> <./fig/telas/pr
+ocesso/comissao_03_proposta_avaliada.png (PNG copy)>] [49 <./fig/telas/processo
+/comissao_04_comentarios.png (PNG copy)> <./fig/telas/processo/comissao_05_apro
+vando_defesa.png (PNG copy)>] [50 <./fig/telas/processo/comissao_06_marcando_pr
+ojeto_como_defendido.png (PNG copy)>]
 \openout2 = `ch5.aux'.
 
  (./ch5.tex
 Cap\'{\i }tulo 5.
-) [30
+) [51
 
 
 
-] (./mono.bbl) [31
+] (./mono.bbl) [52
 
 
 ]
@@ -741,7 +913,7 @@ Cap\'{\i }tulo 5.
 
  (./cha.tex
 Cap\'{\i }tulo 6.
-[32
+[53
 
 
 ] (./uc_manter_professores.tex
@@ -753,9 +925,9 @@ Overfull \hbox (1.31581pt too wide) in alignment at lines 1--57
 Underfull \vbox (badness 10000) detected at line 57
  []
 
-[33
+[54
 
-]) [34] (./uc_manter_estudantes.tex
+]) [55] (./uc_manter_estudantes.tex
 Overfull \hbox (1.31581pt too wide) in alignment at lines 1--53
  [] [] 
  []
@@ -764,9 +936,9 @@ Overfull \hbox (1.31581pt too wide) in alignment at lines 1--53
 Underfull \vbox (badness 10000) detected at line 53
  []
 
-[35
+[56
 
-]) [36] (./uc_manter_projetos.tex
+]) [57] (./uc_manter_projetos.tex
 Overfull \hbox (23.1194pt too wide) in alignment at lines 1--54
  [] [] 
  []
@@ -775,9 +947,9 @@ Overfull \hbox (23.1194pt too wide) in alignment at lines 1--54
 Underfull \vbox (badness 10000) detected at line 54
  []
 
-[37
+[58
 
-]) [38] (./uc_manter_propostas.tex
+]) [59] (./uc_manter_propostas.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--27
 
  []
@@ -791,9 +963,9 @@ Overfull \hbox (1.31581pt too wide) in alignment at lines 1--34
 Underfull \vbox (badness 10000) detected at line 34
  []
 
-[39
+[60
 
-]) [40] (./uc_manter_defesas.tex
+]) [61] (./uc_manter_defesas.tex
 Underfull \hbox (badness 10000) in paragraph at lines 30--34
 
  []
@@ -807,25 +979,25 @@ Overfull \hbox (1.31581pt too wide) in alignment at lines 1--41
 Underfull \vbox (badness 10000) detected at line 41
  []
 
-[41
+[62
 
-]) [42]
+]) [63]
 Cap\'{\i }tulo 7.
-[43
+[64
 
 ]
-<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=160, 597.23125pt x 845.15
+<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=258, 597.23125pt x 845.15
 75pt>
 File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
- <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [44
+ <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [65
 
  <./requisitos/Formulario_Proposta_Projeto_Final.pdf>]
-<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=180, 597.23125pt x
+<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=278, 597.23125pt x
  845.1575pt>
 File: requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf Graphic file (typ
 e pdf)
  <use requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>)
-[45
+[66
 
  <./requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>]
 +-------------------------------------------------------------------+
@@ -833,25 +1005,29 @@ e pdf)
 |                  http://abntex.codigolivre.org.br                 |
 +-------------------------------------------------------------------+
 AED: lastpage setting LastPage (./mono.aux (./ch1.aux) (./ch2.aux) (./ch3.aux)
-(./ch4.aux) (./ch5.aux) (./cha.aux)) ) 
+(./ch4.aux) (./ch5.aux) (./cha.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3116 strings out of 495041
- 42485 string characters out of 1181898
- 113669 words of memory out of 3000000
- 6099 multiletter control sequences out of 15000+50000
+ 3321 strings out of 495041
+ 51555 string characters out of 1181898
+ 114178 words of memory out of 3000000
+ 6272 multiletter control sequences out of 15000+50000
  34448 words of font info for 69 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 31i,9n,41p,286b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips
-/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-te
-xlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/ur
-w/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb>
-</usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mono.pdf (46 pages, 384551 bytes).
+ 31i,9n,41p,286b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmtt12.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.p
+fb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texm
+f-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on mono.pdf (67 pages, 1917161 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
+ 325 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

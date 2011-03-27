@@ -25,6 +25,11 @@ Dispon{\'\i}vel em:
 {FOWLER, M. \emph{Padrões de Arquitetura de Aplicações Corporativas}. São
   Paulo: Bookman, 2006.}
 
+\bibitem[Freitas 1997]{Freitas:1997}
+\abntrefinfo{Freitas}{FREITAS}{1997}
+{FREITAS, H. \emph{Informação e decisão: sistemas de apoio e seu impacto}.
+  Porto Alegre: Ortiz, 1997.}
+
 \bibitem[InfoQ 2009]{InfoQ:Facebook}
 \abntrefinfo{InfoQ}{INFOQ}{2009}
 {INFOQ. \emph{Facebook: Science and the Social Graph}. 2009.
@@ -50,6 +55,11 @@ Acesso em 25 de fevereiro de 2011.
 Dispon{\'\i}vel em:
   $<$\url{http://wiki.postgresql.org/wiki/Introdu%C3%A7%C3%A3o_e_Hist%C3%B3ric%
 o}$>$.}
+
+\bibitem[Sommerville 2003]{sommerville:2003}
+\abntrefinfo{Sommerville}{SOMMERVILLE}{2003}
+{SOMMERVILLE, I. \emph{Engenharia de Software}. São Paulo: Addison Wesley,
+  2003.}
 
 \bibitem[Symfony 2010]{sfguardplugin}
 \abntrefinfo{Symfony}{SYMFONY}{2010}
