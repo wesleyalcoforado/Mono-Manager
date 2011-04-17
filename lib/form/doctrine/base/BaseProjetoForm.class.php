@@ -20,6 +20,7 @@ abstract class BaseProjetoForm extends BaseFormDoctrine
       'estudante_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Estudante'), 'add_empty' => false)),
       'professor_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Professor'), 'add_empty' => false)),
       'coorientadores' => new sfWidgetFormInputText(),
+      'tipo_colacao'   => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -28,6 +29,7 @@ abstract class BaseProjetoForm extends BaseFormDoctrine
       'estudante_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Estudante'))),
       'professor_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Professor'))),
       'coorientadores' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'tipo_colacao'   => new sfValidatorInteger(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('projeto[%s]');

@@ -4,7 +4,8 @@
 
   echo $form['titulo']->renderRow()
      . $form['professor_id']->renderRow()
-     . $form['coorientadores']->renderRow();
+     . $form['coorientadores']->renderRow()
+     . $form['tipo_colacao']->renderRow();
   ?>
   <div class="rowElem"><input type="submit" value="Salvar"></div>
 </form>

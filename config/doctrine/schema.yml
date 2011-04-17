@@ -54,6 +54,8 @@ Projeto:
       notnull: true
     coorientadores:
       type: string(255)
+    tipo_colacao:
+      type: integer(1)
   relations:
     Estudante:
       local: estudante_id
@@ -73,7 +75,6 @@ Projeto:
       foreign: projeto_id
       type: one
       cascade: [delete]
-
 
 Proposta:
   columns:

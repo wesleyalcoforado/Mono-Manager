@@ -9,6 +9,7 @@
  * @property integer $estudante_id
  * @property integer $professor_id
  * @property string $coorientadores
+ * @property integer $tipo_colacao
  * @property Estudante $Estudante
  * @property Professor $Professor
  * @property Proposta $Proposta
@@ -18,6 +19,7 @@
  * @method integer   getEstudanteId()    Returns the current record's "estudante_id" value
  * @method integer   getProfessorId()    Returns the current record's "professor_id" value
  * @method string    getCoorientadores() Returns the current record's "coorientadores" value
+ * @method integer   getTipoColacao()    Returns the current record's "tipo_colacao" value
  * @method Estudante getEstudante()      Returns the current record's "Estudante" value
  * @method Professor getProfessor()      Returns the current record's "Professor" value
  * @method Proposta  getProposta()       Returns the current record's "Proposta" value
@@ -26,6 +28,7 @@
  * @method Projeto   setEstudanteId()    Sets the current record's "estudante_id" value
  * @method Projeto   setProfessorId()    Sets the current record's "professor_id" value
  * @method Projeto   setCoorientadores() Sets the current record's "coorientadores" value
+ * @method Projeto   setTipoColacao()    Sets the current record's "tipo_colacao" value
  * @method Projeto   setEstudante()      Sets the current record's "Estudante" value
  * @method Projeto   setProfessor()      Sets the current record's "Professor" value
  * @method Projeto   setProposta()       Sets the current record's "Proposta" value
@@ -57,6 +60,10 @@ abstract class BaseProjeto extends sfDoctrineRecord
         $this->hasColumn('coorientadores', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
+             ));
+        $this->hasColumn('tipo_colacao', 'integer', 1, array(
+             'type' => 'integer',
+             'length' => 1,
              ));
     }
 

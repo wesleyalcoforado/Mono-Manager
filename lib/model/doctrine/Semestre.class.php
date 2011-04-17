@@ -12,6 +12,14 @@
  */
 class Semestre extends BaseSemestre
 {
+  const COLACAO_NORMAL = 1;
+  const COLACAO_ESPECIAL = 2;
+
+  static $tiposColacao = array(
+      self::COLACAO_NORMAL => "Colação normal",
+      self::COLACAO_ESPECIAL => "Colação especial"
+  );
+
   public function __toString(){
     return $this->getNome();
   }
