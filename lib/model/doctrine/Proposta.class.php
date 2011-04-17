@@ -12,6 +12,7 @@
  */
 class Proposta extends BaseProposta
 {
+    const PENDENTE      = 99;
     const NAO_ANALISADO = 100;
     const APROVADO      = 101;
     const REPROVADO     = 102;
@@ -19,6 +20,7 @@ class Proposta extends BaseProposta
     const NAO_LIBERADO  = 104;
 
     static $status = array(
+        self::PENDENTE => "Proposta pendente",
         self::NAO_ANALISADO => "Proposta não analisada",
         self::APROVADO => "Proposta aprovada pelo orientador",
         self::REPROVADO => "Proposta reprovada pelo orientador",

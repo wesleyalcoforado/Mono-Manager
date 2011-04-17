@@ -24,6 +24,7 @@
         <tr>
             <th>Orientador</th>
             <th>Título</th>
+            <th>Semestre</th>
             <th>Proposta</th>
             <th>Defesa</th>
             <th>Status</th>
@@ -36,6 +37,7 @@ foreach($list as $projeto): ?>
         <tr>
             <td><?php echo $projeto->getProfessor()->getUsuario()->getFullname(); ?></td>
             <td><?php echo truncate_text($projeto->getTitulo(), 50); ?></td>
+            <td><?php echo $projeto->getSemestre()->getNome(); ?></td>
             <td><?php 
                   if($projeto->hasPropostaWithAttachedFile()):
                     echo link_to(viewButton(), "@download_documento?projeto_id={$projeto->getId()}");

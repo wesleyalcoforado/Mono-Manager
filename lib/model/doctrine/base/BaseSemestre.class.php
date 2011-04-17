@@ -14,25 +14,28 @@
  * @property date $data_max_proposta_especial
  * @property date $data_max_copiao_especial
  * @property date $data_max_defesa_especial
+ * @property Doctrine_Collection $Projeto
  * 
- * @method string   getNome()                       Returns the current record's "nome" value
- * @method date     getDataColacao()                Returns the current record's "data_colacao" value
- * @method date     getDataMaxProposta()            Returns the current record's "data_max_proposta" value
- * @method date     getDataMaxCopiao()              Returns the current record's "data_max_copiao" value
- * @method date     getDataMaxDefesa()              Returns the current record's "data_max_defesa" value
- * @method date     getDataColacaoEspecial()        Returns the current record's "data_colacao_especial" value
- * @method date     getDataMaxPropostaEspecial()    Returns the current record's "data_max_proposta_especial" value
- * @method date     getDataMaxCopiaoEspecial()      Returns the current record's "data_max_copiao_especial" value
- * @method date     getDataMaxDefesaEspecial()      Returns the current record's "data_max_defesa_especial" value
- * @method Semestre setNome()                       Sets the current record's "nome" value
- * @method Semestre setDataColacao()                Sets the current record's "data_colacao" value
- * @method Semestre setDataMaxProposta()            Sets the current record's "data_max_proposta" value
- * @method Semestre setDataMaxCopiao()              Sets the current record's "data_max_copiao" value
- * @method Semestre setDataMaxDefesa()              Sets the current record's "data_max_defesa" value
- * @method Semestre setDataColacaoEspecial()        Sets the current record's "data_colacao_especial" value
- * @method Semestre setDataMaxPropostaEspecial()    Sets the current record's "data_max_proposta_especial" value
- * @method Semestre setDataMaxCopiaoEspecial()      Sets the current record's "data_max_copiao_especial" value
- * @method Semestre setDataMaxDefesaEspecial()      Sets the current record's "data_max_defesa_especial" value
+ * @method string              getNome()                       Returns the current record's "nome" value
+ * @method date                getDataColacao()                Returns the current record's "data_colacao" value
+ * @method date                getDataMaxProposta()            Returns the current record's "data_max_proposta" value
+ * @method date                getDataMaxCopiao()              Returns the current record's "data_max_copiao" value
+ * @method date                getDataMaxDefesa()              Returns the current record's "data_max_defesa" value
+ * @method date                getDataColacaoEspecial()        Returns the current record's "data_colacao_especial" value
+ * @method date                getDataMaxPropostaEspecial()    Returns the current record's "data_max_proposta_especial" value
+ * @method date                getDataMaxCopiaoEspecial()      Returns the current record's "data_max_copiao_especial" value
+ * @method date                getDataMaxDefesaEspecial()      Returns the current record's "data_max_defesa_especial" value
+ * @method Doctrine_Collection getProjeto()                    Returns the current record's "Projeto" collection
+ * @method Semestre            setNome()                       Sets the current record's "nome" value
+ * @method Semestre            setDataColacao()                Sets the current record's "data_colacao" value
+ * @method Semestre            setDataMaxProposta()            Sets the current record's "data_max_proposta" value
+ * @method Semestre            setDataMaxCopiao()              Sets the current record's "data_max_copiao" value
+ * @method Semestre            setDataMaxDefesa()              Sets the current record's "data_max_defesa" value
+ * @method Semestre            setDataColacaoEspecial()        Sets the current record's "data_colacao_especial" value
+ * @method Semestre            setDataMaxPropostaEspecial()    Sets the current record's "data_max_proposta_especial" value
+ * @method Semestre            setDataMaxCopiaoEspecial()      Sets the current record's "data_max_copiao_especial" value
+ * @method Semestre            setDataMaxDefesaEspecial()      Sets the current record's "data_max_defesa_especial" value
+ * @method Semestre            setProjeto()                    Sets the current record's "Projeto" collection
  * 
  * @package    monomanager
  * @subpackage model
@@ -77,6 +80,8 @@ abstract class BaseSemestre extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        
+        $this->hasMany('Projeto', array(
+             'local' => 'id',
+             'foreign' => 'semestre_id'));
     }
 }

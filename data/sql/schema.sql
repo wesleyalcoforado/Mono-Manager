@@ -2,7 +2,7 @@ CREATE TABLE comentario (id BIGSERIAL, comentario TEXT, liberado BOOLEAN NOT NUL
 CREATE TABLE defesa (id BIGSERIAL, projeto_id BIGINT NOT NULL, status SMALLINT, data_requisicao DATE, data_feedback_orientador DATE, data_feedback_comissao DATE, data_sugestao DATE, data_autorizacao DATE, documento VARCHAR(255), documento_final VARCHAR(255), qtde_paginas BIGINT, PRIMARY KEY(id));
 CREATE TABLE estudante (id BIGINT, telefone VARCHAR(14), PRIMARY KEY(id));
 CREATE TABLE professor (id BIGINT, instituicao VARCHAR(255) NOT NULL, titulacao VARCHAR(255) NOT NULL, experiencia VARCHAR(30), is_substituto BOOLEAN, is_comissao BOOLEAN, PRIMARY KEY(id));
-CREATE TABLE projeto (id BIGSERIAL, titulo VARCHAR(255) NOT NULL, estudante_id BIGINT NOT NULL, professor_id BIGINT NOT NULL, coorientadores VARCHAR(255), tipo_colacao SMALLINT, PRIMARY KEY(id));
+CREATE TABLE projeto (id BIGSERIAL, titulo VARCHAR(255) NOT NULL, estudante_id BIGINT NOT NULL, professor_id BIGINT NOT NULL, coorientadores VARCHAR(255), semestre_id BIGINT NOT NULL, tipo_colacao SMALLINT, PRIMARY KEY(id));
 CREATE TABLE proposta (id BIGSERIAL, projeto_id BIGINT NOT NULL, status SMALLINT, data_submissao DATE, data_feedback_orientador DATE, data_feedback_comissao DATE, documento VARCHAR(255), PRIMARY KEY(id));
 CREATE TABLE semestre (id BIGSERIAL, nome VARCHAR(30), data_colacao DATE, data_max_proposta DATE, data_max_copiao DATE, data_max_defesa DATE, data_colacao_especial DATE, data_max_proposta_especial DATE, data_max_copiao_especial DATE, data_max_defesa_especial DATE, PRIMARY KEY(id));
 CREATE TABLE sf_guard_user (id BIGSERIAL, first_name VARCHAR(255), last_name VARCHAR(255), email_address VARCHAR(255) NOT NULL UNIQUE, username VARCHAR(128) NOT NULL UNIQUE, algorithm VARCHAR(128) DEFAULT 'sha1' NOT NULL, salt VARCHAR(128), password VARCHAR(128), is_active BOOLEAN DEFAULT 'true', is_super_admin BOOLEAN DEFAULT 'false', last_login TIMESTAMP, created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, PRIMARY KEY(id));
@@ -18,6 +18,7 @@ ALTER TABLE comentario ADD CONSTRAINT comentario_proposta_id_proposta_id FOREIGN
 ALTER TABLE comentario ADD CONSTRAINT comentario_professor_id_professor_id FOREIGN KEY (professor_id) REFERENCES professor(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE comentario ADD CONSTRAINT comentario_defesa_id_defesa_id FOREIGN KEY (defesa_id) REFERENCES defesa(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE defesa ADD CONSTRAINT defesa_projeto_id_projeto_id FOREIGN KEY (projeto_id) REFERENCES projeto(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
+ALTER TABLE projeto ADD CONSTRAINT projeto_semestre_id_semestre_id FOREIGN KEY (semestre_id) REFERENCES semestre(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE projeto ADD CONSTRAINT projeto_professor_id_professor_id FOREIGN KEY (professor_id) REFERENCES professor(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE projeto ADD CONSTRAINT projeto_estudante_id_estudante_id FOREIGN KEY (estudante_id) REFERENCES estudante(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE proposta ADD CONSTRAINT proposta_projeto_id_projeto_id FOREIGN KEY (projeto_id) REFERENCES projeto(id) NOT DEFERRABLE INITIALLY IMMEDIATE;

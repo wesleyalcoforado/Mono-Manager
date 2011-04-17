@@ -21,7 +21,6 @@ class relatorioActions extends sfActions
 
   public function executeStatus(sfWebRequest $request)
   {
-    $this->form = new RelatorioStatusForm();
 
     $generate = $request->hasParameter('gerar');
     if($generate){
@@ -31,7 +30,12 @@ class relatorioActions extends sfActions
       $semestreId = $filters['semestre_id'];
       $status = $filters['status'];
 
-      
+      $results = ProjetoTable::getInstance()->generateStatusReport($estudanteId, $professorId, $status, $semestreId);
+      $this->reportRows = $results;
+
+      $this->form = new RelatorioStatusForm($filters);
+    }else{
+      $this->form = new RelatorioStatusForm();
     }
   }
 

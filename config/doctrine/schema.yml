@@ -54,6 +54,9 @@ Projeto:
       notnull: true
     coorientadores:
       type: string(255)
+    semestre_id:
+      type: integer
+      notnull: true
     tipo_colacao:
       type: integer(1)
   relations:
@@ -63,6 +66,10 @@ Projeto:
       foreignType: many
     Professor:
       local: professor_id
+      type: one
+      foreignType: many
+    Semestre:
+      local: semestre_id
       type: one
       foreignType: many
     Proposta:
