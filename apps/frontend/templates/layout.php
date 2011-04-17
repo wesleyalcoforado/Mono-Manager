@@ -22,10 +22,10 @@
   </head>
   <body class="mainLayout">
     <div class="container_24">
-      <div class="grid_7" id="menu">
+      <div class="grid_5" id="menu">
         <?php echo generateMenu(); ?>
       </div>
-      <div class="grid_16" id="content">
+      <div class="grid_19" id="content">
         <?php echo $sf_content ?>
       </div>
     </div>
