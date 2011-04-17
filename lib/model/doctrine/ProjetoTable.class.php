@@ -24,6 +24,19 @@ class ProjetoTable extends Doctrine_Table
            ->leftJoin('p.Proposta pp')
            ->leftJoin('p.Defesa d')
     );
+
+    $this->addNamedQuery('relatorio.defendidos',
+      $this->createQuery('p')
+           ->select('
+             p.*,
+             e.*,
+             s.*,
+             d.*')
+           ->innerJoin('p.Estudante e')
+           ->innerJoin('p.Semestre s')
+           ->innerJoin('p.Defesa d')
+           ->where('d.status = ?', Defesa::DEFENDIDO)
+    );
   }
 
 
@@ -92,4 +105,30 @@ class ProjetoTable extends Doctrine_Table
       }
       return $arrReport;
     }
+
+    public function generateDefendidosReport($semestreId){
+      $query = $this->createNamedQuery('relatorio.defendidos');
+
+      if(ctype_digit($semestreId)){
+        $query->andWhere('s.id = ?', $semestreId);
+      }
+
+      $rows = $query->execute();
+
+      return $this->parseDefendidosReportResults($rows);
+    }
+
+    private function parseDefendidosReportResults($results){
+      $arrReport = array();
+      foreach ($results as $row) {
+        $arrReport[] = array(
+            'matricula' => $row->getEstudante()->getUsuario()->getUsername(),
+            'nomeEstudante' => $row->getEstudante()->getUsuario()->getFullname(),
+            'projeto' => $row->getTitulo(),
+            'semestre' => $row->getSemestre()->getNome()
+        );
+      }
+      return $arrReport;
+    }
+
 }

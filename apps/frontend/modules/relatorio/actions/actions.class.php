@@ -21,16 +21,12 @@ class relatorioActions extends sfActions
 
   public function executeStatus(sfWebRequest $request)
   {
-
     $generate = $request->hasParameter('gerar');
     if($generate){
       $filters = $request->getParameter('relatorio');
-      $estudanteId = $filters['estudante_id'];
-      $professorId = $filters['professor_id'];
       $semestreId = $filters['semestre_id'];
-      $status = $filters['status'];
 
-      $results = ProjetoTable::getInstance()->generateStatusReport($estudanteId, $professorId, $status, $semestreId);
+      $results = ProjetoTable::getInstance()->generateConcluidosReport($semestreId);
       $this->reportRows = $results;
 
       $this->form = new RelatorioStatusForm($filters);
@@ -41,6 +37,18 @@ class relatorioActions extends sfActions
 
   public function executeConcluidos(sfWebRequest $request)
   {
+    $generate = $request->hasParameter('gerar');
+    if($generate){
+      $filters = $request->getParameter('relatorio');
+      $semestreId = $filters['semestre_id'];
+
+      $results = ProjetoTable::getInstance()->generateDefendidosReport($semestreId);
+      $this->reportRows = $results;
+
+      $this->form = new RelatorioDefendidosForm($filters);
+    }else{
+      $this->form = new RelatorioDefendidosForm();
+    }
   }
 
 }
