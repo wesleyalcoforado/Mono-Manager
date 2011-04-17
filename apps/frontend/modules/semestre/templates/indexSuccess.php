@@ -4,10 +4,13 @@ var init = app.init;
 app.init = function(){
   init();
   app.createDatePicker("semestre_data_colacao_day", "semestre_data_colacao_month", "semestre_data_colacao_year");
-  app.createDatePicker("semestre_data_colacao_especial_day", "semestre_data_colacao_especial_month", "semestre_data_colacao_especial_year");
   app.createDatePicker("semestre_data_max_proposta_day", "semestre_data_max_proposta_month", "semestre_data_max_proposta_year");
   app.createDatePicker("semestre_data_max_copiao_day", "semestre_data_max_copiao_month", "semestre_data_max_copiao_year");
   app.createDatePicker("semestre_data_max_defesa_day", "semestre_data_max_defesa_month", "semestre_data_max_defesa_year");
+  app.createDatePicker("semestre_data_colacao_especial_day", "semestre_data_colacao_especial_month", "semestre_data_colacao_especial_year");
+  app.createDatePicker("semestre_data_max_proposta_especial_day", "semestre_data_max_proposta_especial_month", "semestre_data_max_proposta_especial_year");
+  app.createDatePicker("semestre_data_max_copiao_especial_day", "semestre_data_max_copiao_especial_month", "semestre_data_max_copiao_especial_year");
+  app.createDatePicker("semestre_data_max_defesa_especial_day", "semestre_data_max_defesa_especial_month", "semestre_data_max_defesa_especial_year");
 }
 </script>
 

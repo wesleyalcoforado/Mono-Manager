@@ -75,7 +75,12 @@ class defesaActions extends documentoActions
     $widgetData->setOption('years', $years);
     $widgetData->setOption('can_be_empty', false);
 
+    $widgetSemestre = new sfWidgetFormDoctrineChoice(array(
+        'model' => 'Semestre'
+    ));
+
     $this->widgetData = $widgetData;
+    $this->widgetSemestre = $widgetSemestre;
   }
 
   public function executeAprovar(sfWebRequest $request)
@@ -145,11 +150,14 @@ class defesaActions extends documentoActions
     sfContext::getInstance()->getConfiguration()->loadHelpers(array('Url'));
     $urlApprove = url_for("@defesa_liberar?projeto_id={$defesa->getProjetoId()}&liberado=true");
     $urlDisapprove = url_for("@defesa_liberar?projeto_id={$defesa->getProjetoId()}&liberado=false");
+    $urlConclude = url_for("@defesa_concluir?projeto_id={$defesa->getProjetoId()}&concluido=true");
 
     return $this->renderText(json_encode(array(
         'title' => $defesa->getProjeto()->getTitulo(),
         'urlApprove' => $urlApprove,
-        'urlDisapprove' => $urlDisapprove
+        'urlDisapprove' => $urlDisapprove,
+        'urlConclude' => $urlConclude,
+        'semestreId' => $defesa->getProjeto()->getSemestreId()
     )));
   }
 

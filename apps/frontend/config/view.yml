@@ -6,7 +6,7 @@ default:
     content-type: text/html
 
   metas:
-    title:        Mono Manager
+    title:        TCC-Manager
     #description:  symfony project
     #keywords:     symfony, project
     language:     pt-BR

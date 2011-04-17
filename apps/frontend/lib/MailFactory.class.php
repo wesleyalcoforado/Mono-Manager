@@ -17,7 +17,7 @@ class MailFactory {
     $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
     $mailSender = sfConfig::get('app_mail_sender');
 
-    $subject = 'Mono-Manager - Nova proposta enviada';
+    $subject = 'TCC-Manager - Nova proposta enviada';
     $body = $this->action->getPartial('mail/propostaEnviada', $params);
 
     $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
@@ -37,7 +37,7 @@ class MailFactory {
     $mailComissao = ProfessorTable::getInstance()->findEmailsComissao();
     $mailSender = sfConfig::get('app_mail_sender');
 
-    $subject = 'Mono-Manager - Nova proposta aprovada';
+    $subject = 'TCC-Manager - Nova proposta aprovada';
     $body = $this->action->getPartial('mail/propostaAprovada', $params);
 
     $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
@@ -56,7 +56,7 @@ class MailFactory {
     $mailEstudante = $projeto->getEstudante()->getUsuario()->getEmailAddress();
     $mailSender = sfConfig::get('app_mail_sender');
 
-    $subject = 'Mono-Manager - Sua proposta foi reprovada';
+    $subject = 'TCC-Manager - Sua proposta foi reprovada';
     $body = $this->action->getPartial('mail/propostaReprovada', $params);
 
     $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
@@ -77,7 +77,7 @@ class MailFactory {
     $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
     $emails = array($mailEstudante, $mailOrientador);
 
-    $subject = 'Mono-Manager - Proposta aprovada pela comissão';
+    $subject = 'TCC-Manager - Proposta aprovada pela comissão';
     $body = $this->action->getPartial('mail/propostaLiberada', $params);
 
     $message = $this->createMessage($subject, $body, $emails);
@@ -95,7 +95,7 @@ class MailFactory {
     $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
     $emails = array($mailEstudante, $mailOrientador);
 
-    $subject = 'Mono-Manager - Proposta reprovada pela comissão';
+    $subject = 'TCC-Manager - Proposta reprovada pela comissão';
     $body = $this->action->getPartial('mail/propostaNaoLiberada', $params);
 
     $message = $this->createMessage($subject, $body, $emails);
@@ -112,7 +112,7 @@ class MailFactory {
     $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
     $mailSender = sfConfig::get('app_mail_sender');
 
-    $subject = 'Mono-Manager - Nova defesa requisitada';
+    $subject = 'TCC-Manager - Nova defesa requisitada';
     $body = $this->action->getPartial('mail/defesaRequisitada', $params);
 
     $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
@@ -132,7 +132,7 @@ class MailFactory {
     $mailComissao = ProfessorTable::getInstance()->findEmailsComissao();
     $mailSender = sfConfig::get('app_mail_sender');
 
-    $subject = 'Mono-Manager - Nova defesa aprovada';
+    $subject = 'TCC-Manager - Nova defesa aprovada';
     $body = $this->action->getPartial('mail/defesaAprovada', $params);
 
     $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
@@ -151,7 +151,7 @@ class MailFactory {
     $mailEstudante = $projeto->getEstudante()->getUsuario()->getEmailAddress();
     $mailSender = sfConfig::get('app_mail_sender');
 
-    $subject = 'Mono-Manager - Sua defesa foi reprovada';
+    $subject = 'TCC-Manager - Sua defesa foi reprovada';
     $body = $this->action->getPartial('mail/defesaReprovada', $params);
 
     $message = new Swift_Message($subject, $body, 'text/html', 'utf-8');
@@ -172,7 +172,7 @@ class MailFactory {
     $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
     $emails = array($mailEstudante, $mailOrientador);
 
-    $subject = 'Mono-Manager - Defesa aprovada pela comissão';
+    $subject = 'TCC-Manager - Defesa aprovada pela comissão';
     $body = $this->action->getPartial('mail/defesaLiberada', $params);
 
     $message = $this->createMessage($subject, $body, $emails);
@@ -190,7 +190,7 @@ class MailFactory {
     $mailOrientador = $projeto->getProfessor()->getUsuario()->getEmailAddress();
     $emails = array($mailEstudante, $mailOrientador);
 
-    $subject = 'Mono-Manager - Defesa reprovada pela comissão';
+    $subject = 'TCC-Manager - Defesa reprovada pela comissão';
     $body = $this->action->getPartial('mail/defesaNaoLiberada', $params);
 
     $message = $this->createMessage($subject, $body, $emails);

@@ -1,2 +1,2 @@
 all:
-  credentials: comissao
+  credentials: [[professor, comissao]]

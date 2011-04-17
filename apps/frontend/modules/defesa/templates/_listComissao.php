@@ -11,6 +11,11 @@ if(count($list) > 0): ?>
     $("#cancel_audition").click(function(){
       $("#divForm").slideUp();
     });
+
+    $("#cancel_conclusion").click(function(){
+      $("#divConcluir").slideUp();
+    });
+
   }
   
   function audit(projeto_id){
@@ -88,11 +93,35 @@ if(count($list) > 0): ?>
       }
     });
   }
+
+  function conclude(projeto_id){
+    $.ajax({
+      type: 'POST',
+      url: '<?php echo url_for('defesa/info'); ?>',
+      data: 'projeto_id=' + projeto_id,
+      dataType: 'json',
+      success: function(json){
+        fillConcludeForm(json.title, json.urlConclude, json.semestreId);
+        $("#divConcluir").slideDown();
+      }
+    });
+  }
+
+  function fillConcludeForm(projectTitle, urlConclude, semestreId){
+    $("#projeto_conclusao_titulo").val(projectTitle);
+    $("#semestre_id").val(semestreId);
+
+    $("#conclude_button").click(function(){
+      if(confirm("Você tem certeza que deseja aprovar esta defesa?\nATENÇÃO: Verifique se o semestre de conclusão está correto\nantes de continuar esta operação.")){
+        $("#frmConcluir").attr("action", urlConclude).submit();
+      }
+    });
+  }
+
 </script>
 
 <div id="divForm" style="display: none">
   <form method="post" id="frmLiberar" action="">
-    <input type="hidden" name="proposta_id">
     <label>Título: </label> <input type="text" id="projeto_titulo" readonly><br/>
     <label for="data_autorizada">Data autorizada:</label>  <?php echo $widgetData->render('data_autorizada', ESC_RAW); ?><br/>
     <label for="comentario">Comentário:</label>
@@ -105,6 +134,19 @@ if(count($list) > 0): ?>
   </form>
   <br/><br/>
 </div>
+
+<div id="divConcluir" style="display: none">
+  <form method="post" id="frmConcluir" action="">
+    <label>Título: </label> <input type="text" id="projeto_conclusao_titulo" readonly><br/>
+    <label for="semestre_id">Semestre de conclusão:</label>  <?php echo $widgetSemestre->render('semestre_id', ESC_RAW); ?><br/>
+    <div align="center">
+      <button type="button" id="conclude_button"><?php echo approveButton(true, ''); ?> Concluir</button>
+      <button type="button" id="cancel_conclusion"><?php echo cancelButton(); ?> Cancelar</button>
+    </div>
+  </form>
+  <br/><br/>
+</div>
+
 
 <div id="comments" style="display:none" title="Comentários">
 </div>
@@ -141,8 +183,11 @@ if(count($list) > 0): ?>
            <?php echo hammerButton(); ?>
         </a>
         <?php
-        elseif($defesa->getStatus() == Defesa::LIBERADO):
-          echo link_to(tickButton(), "@defesa_concluir?projeto_id={$defesa->getProjetoId()}&concluido=true", array('confirm' => 'Deseja realmente marcar este projeto como defendido?'));
+        elseif($defesa->getStatus() == Defesa::LIBERADO): ?>
+        <a href="#" onclick="conclude(<?php echo $defesa->getProjetoId()?>)">
+           <?php echo tickButton(); ?>
+        </a>
+        <?php
         elseif($defesa->getStatus() == Defesa::NAO_LIBERADO):
           echo disapproveButton(false, "Defesa reprovada");
         elseif($defesa->getStatus() == Defesa::DEFENDIDO):

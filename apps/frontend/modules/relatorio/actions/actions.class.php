@@ -24,9 +24,12 @@ class relatorioActions extends sfActions
     $generate = $request->hasParameter('gerar');
     if($generate){
       $filters = $request->getParameter('relatorio');
+      $matriculaEstudante = $filters['estudante_id'];
+      $professorId = $filters['professor_id'];
+      $status = $filters['status'];
       $semestreId = $filters['semestre_id'];
 
-      $results = ProjetoTable::getInstance()->generateConcluidosReport($semestreId);
+      $results = ProjetoTable::getInstance()->generateStatusReport($matriculaEstudante, $professorId, $status, $semestreId);
       $this->reportRows = $results;
 
       $this->form = new RelatorioStatusForm($filters);
