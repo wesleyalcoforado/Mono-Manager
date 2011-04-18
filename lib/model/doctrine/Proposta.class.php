@@ -92,5 +92,28 @@ class Proposta extends BaseProposta
       }
     }
 
+    public function isDelayed($now = null){
+      extract(Semestre::getTimestamps($this->getProjeto()));
+      if($now == null){
+        $now = time();
+      }
+      return ($now > $dataProposta);
+    }
+
+    public function responsibleForDelay($now = null){
+      if($now == null){
+        $now = time();
+      }
+      
+      if($this->isDelayed($now)){
+        if($this->getStatus() == self::NAO_ANALISADO){
+          return Usuario::PROFESSOR;
+        }else if($this->getStatus() == self::APROVADO){
+          return Usuario::COMISSAO;
+        }
+      }
+
+      return '';
+    }
 
 }

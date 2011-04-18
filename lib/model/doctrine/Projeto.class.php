@@ -63,4 +63,134 @@ class Projeto extends BaseProjeto
     return false;
   }
 
+  public static function timeInAdvance(){
+    return strtotime("now +2 week");
+  }
+
+  /**
+   * Calcula se o projeto está atrasando. Avisa com antecedência de 2 semanas.
+   */
+  public function isDelaying(){
+    $time = self::timeInAdvance();
+    return $this->isDelayedByThisTime($time);
+  }
+
+  public function isDelayed(){
+    $time = time(); //now
+    return $this->isDelayedByThisTime($time);
+  }
+
+  private function isDelayedByThisTime($now){
+    extract(Semestre::getTimestamps($this));
+
+    $propostaIsDelayedBecauseOfEstudante = $this->propostaIsDelayedBecauseOfEstudante($dataProposta, $now);
+    $copiaoIsDelayedBecauseOfEstudante = $this->copiaoIsDelayedBecauseOfEstudante($dataCopiao, $now);
+
+    $propostaIsDelayedBecauseOfSomeoneElse = $this->propostaIsDelayedBecauseOfSomeoneElse($dataProposta, $now);
+    $copiaoIsDelayedBecauseOfSomeoneElse = $this->copiaoIsDelayedBecauseOfSomeoneElse($dataCopiao, $now);
+
+    return $propostaIsDelayedBecauseOfEstudante || $copiaoIsDelayedBecauseOfEstudante ||
+           $propostaIsDelayedBecauseOfSomeoneElse || $copiaoIsDelayedBecauseOfSomeoneElse;
+  }
+
+  private function propostaIsDelayedBecauseOfEstudante($dataProposta, $now){
+    return !$this->isReproved() && !$this->isConcluded() && !$this->hasProposta() && $now > $dataProposta;
+  }
+
+  private function copiaoIsDelayedBecauseOfEstudante($dataCopiao, $now){
+    return !$this->isReproved() && !$this->isConcluded() && !$this->hasDefesa() && $now > $dataCopiao;
+  }
+
+  private function propostaIsDelayedBecauseOfSomeoneElse($dataProposta, $now){
+    return !$this->isReproved() && 
+           !$this->isConcluded() &&
+            $this->hasPropostaWithAttachedFile() &&
+            ($this->getProposta()->getStatus() == Proposta::NAO_ANALISADO || $this->getProposta()->getStatus() == Proposta::APROVADO) &&
+            $now > $dataProposta;
+  }
+
+  private function copiaoIsDelayedBecauseOfSomeoneElse($dataCopiao, $now){
+    return !$this->isReproved() && 
+           !$this->isConcluded() &&
+            $this->hasDefesaWithAttachedFile() &&
+            ($this->getDefesa()->getStatus() == Defesa::NAO_ANALISADO || $this->getDefesa()->getStatus() == Defesa::APROVADO) &&
+            $now > $dataCopiao;
+  }
+
+  private function isConcluded(){
+    return $this->hasDefesa() && $this->getDefesa()->getStatus() == Defesa::DEFENDIDO;
+  }
+
+  private function isReproved(){
+    $propostaReprovada = $this->hasProposta() &&
+                         ($this->getProposta()->getStatus() == Proposta::REPROVADO ||
+                          $this->getProposta()->getStatus() == Proposta::NAO_LIBERADO);
+
+    $defesaReprovada = $this->hasDefesa() &&
+                       ($this->getDefesa()->getStatus() == Defesa::REPROVADO ||
+                        $this->getDefesa()->getStatus() == Defesa::NAO_LIBERADO);
+
+    return $propostaReprovada || $defesaReprovada;
+  }
+
+  public function responsibleForDelay($now = null){
+    extract(Semestre::getTimestamps($this));
+
+    if($now == null){
+      $now = time();
+    }
+
+    $propostaIsDelayedBecauseOfEstudante = $this->propostaIsDelayedBecauseOfEstudante($dataProposta, $now);
+    $copiaoIsDelayedBecauseOfEstudante = $this->copiaoIsDelayedBecauseOfEstudante($dataCopiao, $now);
+
+    $propostaIsDelayedBecauseOfSomeoneElse = $this->propostaIsDelayedBecauseOfSomeoneElse($dataProposta, $now);
+    $copiaoIsDelayedBecauseOfSomeoneElse = $this->copiaoIsDelayedBecauseOfSomeoneElse($dataCopiao, $now);
+
+    if($propostaIsDelayedBecauseOfEstudante){
+      return Usuario::ESTUDANTE;
+    }else if($propostaIsDelayedBecauseOfSomeoneElse){
+      return $this->getProposta()->responsibleForDelay($now);
+    }else if($copiaoIsDelayedBecauseOfEstudante){
+      return Usuario::ESTUDANTE;
+    }else if($copiaoIsDelayedBecauseOfSomeoneElse){
+      return $this->getDefesa()->responsibleForDelay($now);
+    }
+
+  }
+
+  public function reasonForDelay($now = null){
+    extract(Semestre::getTimestamps($this));
+
+    if($now == null){
+      $now = time();
+    }
+
+    $responsible = $this->responsibleForDelay($now);
+
+    $reason = '';
+    if($responsible == Usuario::ESTUDANTE){
+      if($this->propostaIsDelayedBecauseOfEstudante($dataProposta, $now)){
+        $reason = "Estudante não submeteu a proposta";
+      }else if($this->copiaoIsDelayedBecauseOfEstudante($dataCopiao, $now)){
+        $reason = "Estudante não requisitou a defesa";
+      }
+    }else if($responsible == Usuario::PROFESSOR){
+      if($this->propostaIsDelayedBecauseOfSomeoneElse($dataProposta, $now)){
+        $reason = "Orientador não avaliou a proposta";
+      }else if($this->copiaoIsDelayedBecauseOfSomeoneElse($dataCopiao, $now)){
+        $reason = "Orientador não avaliou o pedido de defesa";
+      }
+    }else if($responsible == Usuario::COMISSAO){
+      if($this->propostaIsDelayedBecauseOfSomeoneElse($dataProposta, $now)){
+        $reason = "Comissão não avaliou a proposta";
+      }else if($this->copiaoIsDelayedBecauseOfSomeoneElse($dataCopiao, $now)){
+        $reason = "Comissão não avaliou o pedido de defesa";
+      }
+    }
+
+    return $reason;
+  }
+
+
+
 }

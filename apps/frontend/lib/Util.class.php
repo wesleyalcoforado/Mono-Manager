@@ -1,6 +1,17 @@
 <?php
 
 class Util {
+
+  /**
+   * @param String $dbdate String que represente uma data no formato yyyy-mm-dd; se a hora for informada, ela é removida automaticamente.
+   */
+  public static function DBDateToTimestamp($dbdate){
+    list($datepart, ) = preg_split('/ /', $dbdate);
+    list($year, $month, $day) = preg_split('/-/', $datepart);
+
+    return mktime(0, 0, 0, $month, $day, $year);
+  }
+
   public static function currentDateInDBFormat(){
     return date('Y-m-d H:i:s');
   }

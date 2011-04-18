@@ -26,7 +26,7 @@ if(count($list) > 0): ?>
         if($defesa->getStatus() == Defesa::NAO_ANALISADO):
           echo link_to(approveButton(), "@defesa_avaliar?projeto_id={$defesa->getProjetoId()}&aprovado=true", array('confirm' => 'Você tem certeza que deseja aprovar esta defesa?'));
           echo link_to(disapproveButton(), "@defesa_avaliar?projeto_id={$defesa->getProjetoId()}&aprovado=false", array('confirm' => 'Você tem certeza que deseja reprovar esta defesa?'));
-        elseif($defesa->getStatus() == Defesa::APROVADO || $defesa->getStatus() == Defesa::LIBERADO):
+        elseif($defesa->getStatus() == Defesa::APROVADO || $defesa->getStatus() == Defesa::LIBERADO || $defesa->getStatus() == Defesa::DEFENDIDO):
           echo approveButton(false, "Defesa aprovada");
         elseif($defesa->getStatus() == Defesa::REPROVADO || $defesa->getStatus() == Defesa::NAO_LIBERADO):
           echo disapproveButton(false, "Defesa reprovada");

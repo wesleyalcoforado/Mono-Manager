@@ -130,5 +130,6 @@ class ProjetoTable extends Doctrine_Table
       }
       return $arrReport;
     }
+    
 
 }

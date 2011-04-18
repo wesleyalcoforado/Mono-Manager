@@ -26,7 +26,8 @@ abstract class documentoActions extends monomActions{
     }elseif($this->user->isComissao()){
       $this->list = $this->getTable()->createNamedQuery('find.all.visible.by.comission')->execute();
     }elseif($this->user->isProfessor()){
-      $this->list = $this->getTable()->createNamedQuery('find.all.visible.by.professor')->execute();
+      $userId = $this->user->getUsuario()->getId();
+      $this->list = $this->getTable()->createNamedQuery('find.all.visible.by.professor')->execute(array(':professor_id' => $userId));
     }else{
       $this->forward404('Você não tem permissão para visualizar esta página');
     }

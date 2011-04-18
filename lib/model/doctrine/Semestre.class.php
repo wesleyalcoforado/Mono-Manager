@@ -23,4 +23,35 @@ class Semestre extends BaseSemestre
   public function __toString(){
     return $this->getNome();
   }
+
+  public static function getTimestamps(Projeto $projeto){
+    $semestre = $projeto->getSemestre();
+    $tipoColacao = $projeto->getTipoColacao();
+
+    if($tipoColacao == self::COLACAO_NORMAL){
+      $dataProposta = $semestre->getDataMaxProposta();
+      $dataCopiao = $semestre->getDataMaxProposta();
+      $dataDefesa = $semestre->getDataMaxDefesa();
+      $dataColacao = $semestre->getDataColacao();
+    }else{
+      $dataProposta = $semestre->getDataMaxPropostaEspecial();
+      $dataCopiao = $semestre->getDataMaxPropostaEspecial();
+      $dataDefesa = $semestre->getDataMaxDefesaEspecial();
+      $dataColacao = $semestre->getDataColacaoEspecial();
+    }
+
+    $dataProposta = Util::DBDateToTimestamp($dataProposta);
+    $dataCopiao = Util::DBDateToTimestamp($dataCopiao);
+    $dataDefesa = Util::DBDateToTimestamp($dataDefesa);
+    $dataColacao = Util::DBDateToTimestamp($dataColacao);
+
+    $timestamps = array(
+        'dataProposta' => $dataProposta,
+        'dataCopiao' => $dataCopiao,
+        'dataDefesa' => $dataDefesa,
+        'dataColacao' => $dataColacao
+    );
+
+    return $timestamps;
+  }
 }

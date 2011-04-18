@@ -14,6 +14,7 @@ class PropostaTable extends Doctrine_Table
            ->select('p.*')
            ->where('p.documento is not null')
            ->andWhere("p.documento != ''")
+           ->andWhere('p.Projeto.professor_id = :professor_id')
     );
 
     $this->addNamedQuery('find.all.visible.by.comission',

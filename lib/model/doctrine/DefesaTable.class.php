@@ -14,6 +14,7 @@ class DefesaTable extends Doctrine_Table
            ->select('d.*')
            ->where('d.documento is not null')
            ->andWhere("d.documento != ''")
+           ->andWhere('d.Projeto.professor_id = :professor_id')
     );
 
     $this->addNamedQuery('find.all.visible.by.comission',

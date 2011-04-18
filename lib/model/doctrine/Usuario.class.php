@@ -12,6 +12,11 @@
  */
 class Usuario extends BaseUsuario
 {
+  const ESTUDANTE = 'estudante';
+  const PROFESSOR = 'professor';
+  const COMISSAO = 'comissao';
+  const ADMIN = 'admin';
+
   public function getFullname(){
     return $this->getFirstName() . " " . $this->getLastName();
   }
