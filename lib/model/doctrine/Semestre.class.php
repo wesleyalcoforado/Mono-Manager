@@ -30,12 +30,12 @@ class Semestre extends BaseSemestre
 
     if($tipoColacao == self::COLACAO_NORMAL){
       $dataProposta = $semestre->getDataMaxProposta();
-      $dataCopiao = $semestre->getDataMaxProposta();
+      $dataCopiao = $semestre->getDataMaxCopiao();
       $dataDefesa = $semestre->getDataMaxDefesa();
       $dataColacao = $semestre->getDataColacao();
     }else{
       $dataProposta = $semestre->getDataMaxPropostaEspecial();
-      $dataCopiao = $semestre->getDataMaxPropostaEspecial();
+      $dataCopiao = $semestre->getDataMaxCopiaoEspecial();
       $dataDefesa = $semestre->getDataMaxDefesaEspecial();
       $dataColacao = $semestre->getDataColacaoEspecial();
     }

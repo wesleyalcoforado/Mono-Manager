@@ -71,8 +71,12 @@ class Projeto extends BaseProjeto
    * Calcula se o projeto está atrasando. Avisa com antecedência de 2 semanas.
    */
   public function isDelaying(){
-    $time = self::timeInAdvance();
-    return $this->isDelayedByThisTime($time);
+    if(!$this->isDelayed()){
+      $time = self::timeInAdvance();
+      return $this->isDelayedByThisTime($time);
+    }
+
+    return false;
   }
 
   public function isDelayed(){
