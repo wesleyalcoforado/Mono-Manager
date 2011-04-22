@@ -20,6 +20,26 @@ Acesso em 24 de fevereiro de 2011.
 Dispon{\'\i}vel em:
   $<$\url{http://softwareengineering.vazexqi.com/files/pattern.html}$>$.}
 
+\bibitem[Codd 1990]{Codd:1990:RMD:77708}
+\abntrefinfo{Codd}{CODD}{1990}
+{CODD, E.~F. \emph{The relational model for database management: version 2}.
+  Boston, MA, USA: Addison-Wesley Longman Publishing Co., Inc., 1990.
+ISBN 0-201-14192-2.}
+
+\bibitem[Doctrine 2011]{doctrine}
+\abntrefinfo{Doctrine}{DOCTRINE}{2011}
+{DOCTRINE. \emph{PHP Object Persistence Libraries and More}. 2011.
+Acesso em 21 de abril de 2011.
+Dispon{\'\i}vel em: $<$\url{http://www.doctrine-project.org/}$>$.}
+
+\bibitem[{Eastlake 3rd} e Jones 2001]{rfc3174}
+\abntrefinfo{{Eastlake 3rd} e Jones}{{Eastlake 3rd}; JONES}{2001}
+{{Eastlake 3rd}, D.; JONES, P. \emph{{US Secure Hash Algorithm 1 (SHA1)}}.
+  IETF, 2001.
+RFC 3174 (Informational).
+ (Request for Comments, 3174). Updated by RFC 4634.
+Dispon{\'\i}vel em: $<$http://www.ietf.org/rfc/rfc3174.txt$>$.}
+
 \bibitem[Fowler 2006]{Fowler:2006}
 \abntrefinfo{Fowler}{FOWLER}{2006}
 {FOWLER, M. \emph{Padrões de Arquitetura de Aplicações Corporativas}. São
@@ -37,10 +57,24 @@ Acesso em 24 de fevereiro de 2011.
 Dispon{\'\i}vel em:
   $<$\url{http://www.infoq.com/presentations/Facebook-Software-Stack}$>$.}
 
+\bibitem[Korson e McGregor 1990]{Korson:1990:UOU:83880.84459}
+\abntrefinfo{Korson e McGregor}{KORSON; MCGREGOR}{1990}
+{KORSON, T.; MCGREGOR, J.~D. Understanding object-oriented: a unifying
+  paradigm.
+\emph{Commun. ACM}, ACM, New York, NY, USA, v.~33, p. 40--60, September 1990.
+ISSN 0001-0782.
+Dispon{\'\i}vel em: $<$http://doi.acm.org/10.1145/83880.84459$>$.}
+
 \bibitem[Minetto 2007]{Minetto}
 \abntrefinfo{Minetto}{MINETTO}{2007}
 {MINETTO, E.~L. \emph{Frameworks para Desenvolvimento em PHP}. Chapecó - SC:
   Novatec, 2007.}
+
+\bibitem[NetBeans 2011]{netbeans}
+\abntrefinfo{NetBeans}{NETBEANS}{2011}
+{NETBEANS. \emph{NetBeans IDE}. 2011.
+Acesso em 21 de abril de 2011.
+Dispon{\'\i}vel em: $<$\url{http://netbeans.org}$>$.}
 
 \bibitem[PHP.NET 2011]{PHP}
 \abntrefinfo{PHP.NET}{PHP.NET}{2011}
@@ -56,10 +90,24 @@ Dispon{\'\i}vel em:
   $<$\url{http://wiki.postgresql.org/wiki/Introdu%C3%A7%C3%A3o_e_Hist%C3%B3ric%
 o}$>$.}
 
+\bibitem[Rivest 1992]{rfc1321}
+\abntrefinfo{Rivest}{RIVEST}{1992}
+{RIVEST, R. \emph{{The MD5 Message-Digest Algorithm}}. IETF, 1992.
+RFC 1321 (Informational).
+ (Request for Comments, 1321). Updated by RFC 6151.
+Dispon{\'\i}vel em: $<$http://www.ietf.org/rfc/rfc1321.txt$>$.}
+
 \bibitem[Sommerville 2003]{sommerville:2003}
 \abntrefinfo{Sommerville}{SOMMERVILLE}{2003}
 {SOMMERVILLE, I. \emph{Engenharia de Software}. São Paulo: Addison Wesley,
   2003.}
+
+\bibitem[Stonebraker e Rowe 1986]{Stonebraker:1986:DP:16856.16888}
+\abntrefinfo{Stonebraker e Rowe}{STONEBRAKER; ROWE}{1986}
+{STONEBRAKER, M.; ROWE, L.~A. The design of postgres.
+\emph{SIGMOD Rec.}, ACM, New York, NY, USA, v.~15, p. 340--355, June 1986.
+ISSN 0163-5808.
+Dispon{\'\i}vel em: $<$http://doi.acm.org/10.1145/16856.16888$>$.}
 
 \bibitem[Symfony 2010]{sfguardplugin}
 \abntrefinfo{Symfony}{SYMFONY}{2010}
@@ -67,6 +115,12 @@ o}$>$.}
 Acesso em 27 de fevereiro de 2011.
 Dispon{\'\i}vel em:
   $<$\url{http://www.symfony-project.org/plugins/sfGuardPlugin}$>$.}
+
+\bibitem[Symfony 2011]{symfony:about}
+\abntrefinfo{Symfony}{SYMFONY}{2011}
+{SYMFONY. \emph{About Symfony}. 2011.
+Acesso em 21 de abril de 2011.
+Dispon{\'\i}vel em: $<$\url{http://www.symfony-project.org/about}$>$.}
 
 \bibitem[Wikipedia 2011]{Wiki:PHP}
 \abntrefinfo{Wikipedia}{WIKIPEDIA}{2011a}

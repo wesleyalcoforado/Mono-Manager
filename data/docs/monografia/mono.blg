@@ -10,6 +10,10 @@ A level-1 auxiliary file: cha.aux
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: abnt-options.bib
 Database file #2: bib.bib
+Warning--string name "setembro" is undefined
+--line 189 of file bib.bib
+Warning--string name "abril" is undefined
+--line 203 of file bib.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 +---------------------------------------------------------+
 | Estilo bibliografico abnt-alf.bst versao 1.53           |
@@ -17,44 +21,45 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 14 entries,
+You've used 22 entries,
             6522 wiz_defined-function locations,
-            1248 strings with 10955 characters,
-and the built_in function-call counts, 9615 in all, are:
-= -- 880
-> -- 221
-< -- 3
-+ -- 119
-- -- 72
-* -- 563
-:= -- 1360
-add.period$ -- 59
-call.type$ -- 15
-change.case$ -- 96
-chr.to.int$ -- 16
-cite$ -- 13
-duplicate$ -- 445
-empty$ -- 876
-format.name$ -- 338
-if$ -- 2347
+            1310 strings with 12162 characters,
+and the built_in function-call counts, 15648 in all, are:
+= -- 1379
+> -- 394
+< -- 9
++ -- 182
+- -- 127
+* -- 970
+:= -- 2161
+add.period$ -- 102
+call.type$ -- 23
+change.case$ -- 165
+chr.to.int$ -- 30
+cite$ -- 21
+duplicate$ -- 751
+empty$ -- 1391
+format.name$ -- 594
+if$ -- 3812
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 243
-newline$ -- 77
-num.names$ -- 66
-pop$ -- 328
+missing$ -- 392
+newline$ -- 128
+num.names$ -- 106
+pop$ -- 511
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 70
 quote$ -- 0
-skip$ -- 607
+skip$ -- 929
 stack$ -- 1
-substring$ -- 352
-swap$ -- 184
-text.length$ -- 2
+substring$ -- 581
+swap$ -- 334
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1
 warning$ -- 0
-while$ -- 83
+while$ -- 137
 width$ -- 0
-write$ -- 203
+write$ -- 339
+(There were 2 warnings)

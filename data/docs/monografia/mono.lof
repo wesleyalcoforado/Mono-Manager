@@ -1,42 +1,38 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Fluxograma do desenvolvimento do projeto final}}{20}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Arquitetura MVC}}{23}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Defini\IeC {\c c}\IeC {\~a}o de um mapeamento no Hibernate}}{24}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Tabela Users no banco de dados}}{24}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Descri\IeC {\c c}\IeC {\~a}o de uma tabela no Symfony}}{26}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de classes base}}{27}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama de classes extendidas}}{27}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagrama de classes da camada de controle}}{28}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagrama de classes dos formul\IeC {\'a}rios}}{29}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Tela de acesso ao sistema}}{32}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Tela de acesso negado}}{32}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Tela de cadastro de professores}}{33}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Tela de cadastro de professores ap\IeC {\'o}s a inser\IeC {\c c}\IeC {\~a}o de um professor}}{34}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Confirma\IeC {\c c}\IeC {\~a}o de remo\IeC {\c c}\IeC {\~a}o de um professor}}{34}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Tela de cadastro de estudantes}}{35}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Tela de cadastro de semestres}}{35}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Tela de cadastro de semestres ap\IeC {\'o}s o cadastro de um novo item}}{36}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Tela de visualiza\IeC {\c c}\IeC {\~a}o de propostas no perfil do administrador}}{37}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Tela de visualiza\IeC {\c c}\IeC {\~a}o de defesas no perfil do administrador}}{37}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Tela de consulta de relat\IeC {\'o}rios}}{38}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Tela de cadastro de projetos}}{39}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a inser\IeC {\c c}\IeC {\~a}o de novo item}}{39}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Tela de anexo de propostas}}{40}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a anexa\IeC {\c c}\IeC {\~a}o de uma proposta}}{40}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a aprova\IeC {\c c}\IeC {\~a}o do orientador}}{41}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a aprova\IeC {\c c}\IeC {\~a}o da comiss\IeC {\~a}o}}{41}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Tela de solicita\IeC {\c c}\IeC {\~a}o de defesa}}{42}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a solicita\IeC {\c c}\IeC {\~a}o de defesa}}{42}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a aprova\IeC {\c c}\IeC {\~a}o do orientador}}{43}
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a aprova\IeC {\c c}\IeC {\~a}o da comiss\IeC {\~a}o}}{43}
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a comiss\IeC {\~a}o ter indicado que a defesa foi concluida}}{44}
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Tela de listagem de propostas submetidas pelos orientandos}}{45}
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Proposta sendo aprovada pelo orientador}}{45}
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Tela de listagem de propostas ap\IeC {\'o}s o orientador ter aprovado uma proposta}}{46}
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Tela de listagem de requisi\IeC {\c c}\IeC {\~o}es de defesa submetidas pelos orientandos}}{46}
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Tela de listagem de propostas no perfil da comiss\IeC {\~a}o}}{47}
-\contentsline {figure}{\numberline {4.28}{\ignorespaces Proposta sendo avaliada pela comiss\IeC {\~a}o}}{48}
-\contentsline {figure}{\numberline {4.29}{\ignorespaces Tela de listagem de propostas ap\IeC {\'o}s a comiss\IeC {\~a}o ter avaliado positivamente uma proposta}}{48}
-\contentsline {figure}{\numberline {4.30}{\ignorespaces Tela de listagem de requisi\IeC {\c c}\IeC {\~o}es de defesa submetidas pelos orientandos}}{49}
-\contentsline {figure}{\numberline {4.31}{\ignorespaces Tela de listagem de requisi\IeC {\c c}\IeC {\~o}es de defesa no perfil da comiss\IeC {\~a}o}}{49}
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Comiss\IeC {\~a}o marcando projeto como defendido}}{50}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Fluxograma do desenvolvimento do projeto final}}{21}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Arquitetura MVC}}{24}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Defini\IeC {\c c}\IeC {\~a}o de um mapeamento no Hibernate}}{25}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Tabela Users no banco de dados}}{25}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Descri\IeC {\c c}\IeC {\~a}o de uma tabela no Symfony}}{28}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de classes base}}{30}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama de classes extendidas}}{30}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagrama de classes da camada de controle}}{31}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagrama de classes dos formul\IeC {\'a}rios}}{32}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tela de acesso ao sistema}}{34}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Tela de cadastro de professores}}{35}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Tela de cadastro de professores ap\IeC {\'o}s a inser\IeC {\c c}\IeC {\~a}o de um professor}}{35}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Confirma\IeC {\c c}\IeC {\~a}o de remo\IeC {\c c}\IeC {\~a}o de um professor}}{36}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Tela de cadastro de estudantes}}{37}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Tela de cadastro de semestres ap\IeC {\'o}s o cadastro de um novo item}}{37}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Tela de visualiza\IeC {\c c}\IeC {\~a}o de propostas no perfil do administrador}}{38}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Tela de visualiza\IeC {\c c}\IeC {\~a}o de defesas no perfil do administrador}}{38}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Tela de consulta de relat\IeC {\'o}rios}}{39}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Tela de cadastro de projetos}}{40}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Tela de anexo de propostas}}{40}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a anexa\IeC {\c c}\IeC {\~a}o de uma proposta}}{41}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a aprova\IeC {\c c}\IeC {\~a}o do orientador}}{41}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a aprova\IeC {\c c}\IeC {\~a}o da comiss\IeC {\~a}o}}{42}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Tela de solicita\IeC {\c c}\IeC {\~a}o de defesa}}{42}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a solicita\IeC {\c c}\IeC {\~a}o de defesa}}{43}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a aprova\IeC {\c c}\IeC {\~a}o do orientador}}{43}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a aprova\IeC {\c c}\IeC {\~a}o da comiss\IeC {\~a}o}}{44}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Tela de cadastro de projetos ap\IeC {\'o}s a comiss\IeC {\~a}o ter indicado que a defesa foi concluida}}{44}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Tela de listagem de propostas submetidas pelos orientandos}}{45}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Proposta sendo aprovada pelo orientador}}{45}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Tela de listagem de propostas ap\IeC {\'o}s o orientador ter aprovado uma proposta}}{46}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Tela de listagem de requisi\IeC {\c c}\IeC {\~o}es de defesa submetidas pelos orientandos}}{46}
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Tela de listagem de propostas no perfil da comiss\IeC {\~a}o}}{47}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Proposta sendo avaliada pela comiss\IeC {\~a}o}}{48}
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Tela de listagem de requisi\IeC {\c c}\IeC {\~o}es de defesa submetidas pelos orientandos}}{48}
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Tela de listagem de requisi\IeC {\c c}\IeC {\~o}es de defesa no perfil da comiss\IeC {\~a}o}}{49}
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Comiss\IeC {\~a}o marcando projeto como defendido}}{49}

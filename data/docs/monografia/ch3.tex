@@ -17,8 +17,16 @@ Neste capítulo discutiremos sobre como o sistema foi modelado, assim como sobre
 estratégias delineadas para a notificação de eventos.
 
 \section{Escolha das tecnologias}
-A seguir são apresentadas as tecnologias escolhidas como parte da plataforma de 
-desenvolvimento do sistema.
+Para a construção da aplicação foi utilizada a linguagem de programação \sigla{PHP}{PHP: Hypertext Preprocessor}, na 
+sua versão 5.3.3 em conjunto com o framework Symfony 1.4.2. Como IDE, foi utilizado 
+o NetBeans 6.9, um framework para desenvolvimento e testes com PHP. O 
+banco de dados escolhido foi o PostgreSQL versão 8.4.
+
+Estas ferramentas foram escolhidas devido a serem gratuitas e possuirem versões 
+estáveis para Linux, que é a plataforma onde se pretende implantar a versão 
+final da aplicação. 
+
+A seguir são apresentados mais detalhes sobre as tecnologias escolhidas.
 
 \label{tecnologias}
 \subsection{Linguagem de programação}
@@ -47,7 +55,7 @@ framework não tem dificuldades para entender o código de outras pessoas, pois 
 a seguirem as mesmas convenções. Dessa forma o programador que não conhece a aplicação pode se
 manter apenas no entendimento da lógica de negócio, sem se perder na arquitetura da aplicação.
 
-Para a aplicação desenvolvida neste trabalho, o framework escolhido foi o Symfony. O Symfony é um 
+Para a aplicação desenvolvida neste trabalho, o framework escolhido foi o Symfony \cite{symfony:about}. O Symfony é um 
 framework que possui alta aceitação na comunidade PHP, boa documentação, é patrocinado pela 
 empresa francesa Sensio Labs, que garante suporte técnico a longo prazo, e tem várias outras 
 qualidades que o coloca entre os melhores frameworks PHP, como:
@@ -65,7 +73,7 @@ qualidades que o coloca entre os melhores frameworks PHP, como:
 \end{enumerate}
 
 \subsubsection{MVC}
-O \sigla{MVC}{Model-View-Controller} é um acrônimo para Model-View-Controller, um padrão de projeto que tem como intuito
+O \sigla{MVC}{Model-View-Controller} \cite{Fowler:2006} é um acrônimo para Model-View-Controller, um padrão de projeto que tem como intuito
 separar a lógica de negócio, a interface e os modelos de acesso a dados. Essa separação
 de conceitos tem como propósito evitar que o código fique difícil de manter e auxilia
 significamente no aumento do reuso de código. A Figura ~\ref{fig:diag_mvc} apresenta de maneira
@@ -81,24 +89,25 @@ geral a estrutura desse tipo de arquitetura.
 O modelo de acesso a dados é representado pela camada Model (ou camada de modelo). O modelo 
 é um objeto que representa alguma informação sobre o domínio. É um objeto não-visual 
 que contém todos os dados e comportamentos outros que não os utilizados 
-pela interface \cite{Fowler:2006}.
+pela interface.
 
 A camada View (ou camada de visão) representa a interface da aplicação. No trabalho
-em questão, ela é a parte em \sigla{HTML}{HyperText Markup Language}. Esta camada não deve possuir nenhuma lógica de negócio,
+em questão, envolve o código \sigla{HTML}{HyperText Markup Language}. Esta camada não deve possuir nenhuma lógica de negócio,
 detendo-se apenas à captura e exibição de dados.
 
 A camada Controller (ou camada de controle) é a responsável por conectar as outras duas
 camadas. O controlador recebe a entrada do usuário (capturado pela visão), manipula o 
 modelo e faz com que a visão seja atualizada apropriadamente \cite{Fowler:2006}.
 
-\subsubsection{ORM}
-Atualmente a maioria das aplicações é desenvolvida utilizando o paradigma de programação 
-orientado a objetos apoiada por um banco de dados relacional. Essas aplicações precisam carregar
-dados de um banco de dados, criar objetos para representar esses dados em memória,
-executar operações em cima destes objetos e depois salvar de volta as alterações no banco.
+\subsubsection{Mapeamento objeto-relacional}
+Atualmente a maioria das aplicações é desenvolvida utilizando o paradigma de programa\-ção 
+orientado a objetos \cite{Korson:1990:UOU:83880.84459} apoiada por um banco de dados relacional \cite{Codd:1990:RMD:77708}.
+Essas aplicações precisam recuperar dados de um banco de dados relacional, criar objetos para representar esses dados em memória,
+executar operações em cima destes objetos e depois armazenar novamente os dados no banco relacional.
 
-Ferramentas de mapeamento objeto-relacional (ou \sigla{ORM}{Object-relational mapping}) são frameworks que recuperam e persistem
-objetos. Seu objetivo é dar suporte à complexa atividade de gerenciar conexões entre
+Ferramentas de mapeamento objeto-relacional (ou \sigla{ORM}{Object-relational mapping}) são frameworks 
+responsáveis pela recuperação e persistência dos objetos. Seu objetivo é dar suporte à
+complexa atividade de gerenciar conexões entre
 objetos e um banco de dados relacional. A persistência fica transparente ao desenvolvedor,
 já que ele não precisa se preocupar com os detalhes de implementação. A ponte entre
 objetos e seus relacionamentos é realizada pela ferramenta ORM segundo a especificação 
@@ -148,10 +157,10 @@ um conjunto de convenções de nomenclatura que todos os desenvolvedores devem s
 
 \subsection{SGBD}
 O PostgreSQL é um \sigla{SGBD}{Sistema de Gerenciamento de Banco de Dados} livre, de código aberto,
-bastante robusto e confiável. Derivou-se do projeto POSTGRES da universidade de Berkley, que 
+bastante robusto e confiável. Derivou-se do projeto POSTGRES da universidade de Berkley \cite{Stonebraker:1986:DP:16856.16888}, que 
 iniciou-se em 1986 e foi patrocinado por instituições militares americanas como a \sigla{DARPA}{Advanced Research Project Agency}
  (Agência de Projetos de Pesquisa Avançada para Defesa) e \sigla{ARO}{Army Research Office} (Departamento de Pesquisa Militar).
-A linguagem de consultas SQL foi inserida quando o nome do projeta era Postgres95, tendo sido
+A linguagem de consultas SQL foi inserida quando o nome do projeto era Postgres95, tendo sido
 rebatizado para o nome atual em 1996 para enfatizar a relação do SGBD com o SQL \cite{postgresql}.
 
 Apesar do PostgreSQL ter sido escolhido para o desenvolvimento deste trabalho, outros SGBDs
@@ -161,37 +170,80 @@ no Symfony e avisá-lo qual SGBD estará em uso que o seu ORM se encarregará de
 correta com o banco de dados.
 
 \subsection{IDE}
-O NetBeans é um ambiente integrado de desenvolvimento (\sigla{IDE}{Integrated Development Environment}) gratuito, também de codigo aberto e 
+O NetBeans \cite{netbeans} é um ambiente integrado de desenvolvimento 
+(\sigla{IDE}{Integrated Development Environment}) gratuito, também de código aberto e 
 atualmente patrocinado pela Oracle. Originalmente suportava apenas a linguagem Java, mas atualmente
 consegue trabalhar com diversas linguagem de programação, entre elas o PHP, e além disso possui plugins
 que facilitam a utilização de alguns frameworks, inclusive o Symfony.
 
-Foi escolhido para este trabalho por fornecer um bom suporte ao PHP e ao Symfony, e por possuir fácil
+O NetBeans foi escolhido para este trabalho por fornecer um bom suporte ao PHP e ao Symfony, e por possuir fácil
 integração com a ferramenta de depuração Xdebug, específica para PHP.
 
 \subsection{Outros requisitos de plataforma}
 Para que a aplicação funcione corretamente, é necessário que o servidor onde ela será 
 atenda a alguns pré-requisitos. São eles:
 
-\begin{itemize}
-\item[PHP] Deve ser utilizada a versão 5.2.4 ou mais recente (exceto a versão 5.2.9).
-\item[Servidor] Recomenda-se a utilização do servidor Apache versão 2 ou superior, com a extensão
+\newcounter{itemcounter}
+\begin{list}
+{\usecounter{itemcounter}}
+\item PHP: Deve ser utilizada a versão 5.2.4 ou mais recente (exceto a versão 5.2.9).
+\item Servidor: Recomenda-se a utilização do servidor Apache versão 2 ou superior, com a extensão
 mod\_rewrite instalada. O projeto não foi testado com outros servidores \sigla{HTTP}{Hypertext Transfer Protocol}.
-\item[SGBD] Recomenda-se PostgreSQL 8.4 como SGBD por ter sido utilizado durante o desenvolvimento da aplicação, mas
-de acordo com a documentação do Doctrine, o ORM do Symfony, qualquer banco de dados suportado pelo PHP através 
+\item SGBD: Recomenda-se PostgreSQL 8.4 como SGBD por ter sido utilizado durante o desenvolvimento da aplicação, mas
+de acordo com a documentação do Doctrine \cite{doctrine}, o ORM do Symfony, qualquer banco de dados suportado pelo PHP através 
 dos drivers PDO pode ser utilizado, já que ele utiliza \sigla{PDO}{PHP Data Objects} para se comunicar com o banco de dados.
 A aplicação foi seguramente testada com MySQL Community Edition 5.5.9 e SQLite 3.7.5, podendo estes 
 também serem utilizados sem prejuízo algum ao funcionamento do sistema. Para qualquer que seja o
 banco escolhido, o driver PDO deve estar instalado e configurado no PHP.
-\item[E-mail] É necessária uma conta de email em um servidor que aceite conexões externas via \sigla{SMTP}{Simple Mail Transfer Protocol} para
+\item E-mail: É necessária uma conta de email em um servidor que aceite conexões externas via \sigla{SMTP}{Simple Mail Transfer Protocol} para
 o envio das mensagens eletrônicas. Alternativamente pode-se utilizar o Sendmail, caso este esteja
 configurado no servidor, ou deixar a cargo da função mail do PHP. Recomenda-se configurar um
 servidor SMTP, especialmente pela facilidade de configura\-ção deste se comparado ao Sendmail. Não 
 é recomendado utilizar a função mail do PHP, pois os emails enviados tendem a ser identificados
 como spam em muitos servidores de email.
-\end{itemize}
+\end{list}
 
-\section{Casos de uso e especificação de requisitos do sistema}
+\section{Análise e projeto da ferramenta TCC-Manager}
+Nesta seção descrevemos como foi feita a análise e projeto da ferramenta. Iniciamos falando sobre
+os casos de uso, que descrevem os requisitos levantados junto aos professores ligado à Comissão de
+Projeto Final e à coordenação. As subseções seguintes ilustram como foi feita a modelagem, levando
+sempre em consideração as facilidades que o framework disponibiliza.
+
+\subsection{Casos de uso}
+Para a execução deste projeto, foram escritos os casos de uso de uma forma básica, de maneira a não
+tomar muito tempo que seria usado na codificação. A seguir uma breve descrição sobre cada casos de uso.
+
+\subsubsection{Caso de uso Manter Professores}
+Este caso de uso descreve um cadastro de professores. Os professores podem ser identificados
+como participantes da comissão ou administradores do sistema. O administrador do sistema
+escolhe um nome de usuário para o professor que pode ser, por exemplo, seu primeiro nome.
+O caso de uso também oferece ao administrador desativar contas de professores, para que estes
+fiquem sem acesso ao sistema.
+
+\subsubsection{Caso de uso Manter Estudantes}
+Este caso de uso é similar ao Manter Professores. A diferença aqui fica quanto ao nome de usuário
+que é substituido pela matrícula do estudante. Assim como para os professores, o admnistrador
+também pode ativar ou desativar contas.
+
+\subsubsection{Caso de uso Manter Projetos}
+O estudante atua neste caso de uso cadastrando o seu projeto final. São solicitadas apenas as informações
+iniciais, como o orientador e o título do projeto. Ele é a porta de entrada para o envio da proposta
+e as solicitações de defesa.
+
+\subsubsection{Caso de uso Manter Propostas}
+Neste caso de uso, o estudante, o orientador e a comissão atuam de forma a seguir o fluxo do envio
+de uma proposta de projeto final. O estudante submete sua proposta, que é analisada pelo orientador
+e em seguida pela comissão. Quando as análises indicam que a proposta é aceita, o estudante pode então
+solicitar a defesa de seu TCC.
+
+\subsubsection{Caso de uso Manter Defesas}
+Após a submissão da proposta ter sido aceita, o estudante solicita a defesa de seu projeto final.
+Este caso de uso descreve este fluxo, requisitando que o aluno anexe um copião, que é então analisado
+pelo orientador e pela comissão. Ao final deste fluxo, o aluno já deve estar com a defesa concluida.
+
+Todos estes casos de uso encontram-se detalhados no Apêndice ~\ref{app:casos_de_uso}.
+
+\subsection{Definição do banco de dados e geração automática de código}
 Para aproveitar a funcionalidade de comunicação com diferentes tipos de SGBDs, o ORM
 do Symfony nos permite definir toda a estrutura do banco de dados textualmente, no formato
 \sigla{YAML}{YAML Ain't Markup Language}, que possui maior legibilidade que o SQL.
@@ -217,8 +269,8 @@ herda de uma classe base abstrata, que é sobrescrita toda vez que pedimos ao Sy
 as classes de acordo com a especificação. Nós temos que trabalhar em cima dessas classes que
 herdam as classes bases abstratas, pois essas últimas é que o Symfony sempre vai sobrescrever.
 
-Pra ficar mais claro, damos uma olhada no diagrama da Figura ~\ref{fig:diag_classes_base}. Ela
-apresenta todas as classes base que o Symfony gerou automaticamente para a aplicação deste trabalho.
+A Figura ~\ref{fig:diag_classes_base} apresenta todas as classes base que o Symfony gerou automaticamente
+para a aplicação deste trabalho.
 Para cada classe BaseEntidade, há uma classe Entidade, como exposto na Figura ~\ref{fig:diag_classes_principais}, 
 que é criada uma única vez, caso ela ainda não exista. É nesta última que colocamos os métodos da nossa 
 lógica de negócios. Tendo isso em mente, podemos prosseguir na explicação dos diagramas.
@@ -300,8 +352,8 @@ associado a eles.
 
 Na classe Usuario encontram-se os dados mais básicos de cada usuário, como nome, endereço de email e senha.
 Há ainda outras informações que dizem respeito a como a senha é criptografada no banco de dados. 
-O campo algorithm contém o algoritmo utilizado para criptografar a senha, que por padrão é o SHA1. 
-Outros algoritmos podem ser utilizados, como o MD5, mas optou-se por deixar o algoritmo padrão.
+O campo algorithm contém o algoritmo utilizado para criptografar a senha, que por padrão é o SHA1 \cite{rfc3174}. 
+Outros algoritmos podem ser utilizados, como o MD5 \cite{rfc1321}, mas optou-se por deixar o algoritmo padrão.
 O campo salt é uma string que é concatenada à senha antes da criptografia, para dificultar a a 
 descoberta do valor original.
 
@@ -329,6 +381,3 @@ O formulário do Anexo ~\ref{anx:proposta} é representado no sistema pelos form
 professor, projeto e proposta. O formulário do Anexo ~\ref{anx:defesa} é representado no sistema 
 pelos formulários de estudante, professor, projeto e defesa. 
 
-\subsubsection{Casos de uso}
-Para a execução deste projeto, foram escritos os casos de uso de uma forma básica, de maneira a não
-tomar muito tempo que seria usado na codificação. Os casos de uso encontram-se listados no Apêndice ~\ref{app:casos_de_uso}.
