@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="184"/>
+	<parameter name="aluno" class="java.lang.String"/>
+	<parameter name="titulo" class="java.lang.String"/>
+	<parameter name="orientador" class="java.lang.String"/>
+	<parameter name="examinador1" class="java.lang.String"/>
+	<parameter name="examinador2" class="java.lang.String"/>
+	<parameter name="examinador3" class="java.lang.String"/>
+	<parameter name="media" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="51" height="79"/>
+				<imageExpression class="java.lang.String"><![CDATA["./uece_logo.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="51" y="15" width="504" height="57"/>
+				<textElement>
+					<font size="11"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDADE ESTADUAL DO CEARÁ
+Centro de Ciências e Tecnologia
+Coordenação do Curso de Ciências da  Computação
+Av. Paranjana, 1700, Campus do Itaperi, Fortaleza, Ceará]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="82" width="555" height="1"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="544" splitType="Stretch">
+			<staticText>
+				<reportElement x="85" y="11" width="372" height="14"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATA DA APRESENTAÇÃO E DEFESA DE PROJETO FINAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="56" width="555" height="15"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Aluno(a): " + $P{aluno}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="71" width="555" height="15"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Título: " + $P{titulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="86" width="555" height="15"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Orientador: " + $P{orientador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="120" width="555" height="15"/>
+				<textElement>
+					<font size="12"/>
+					<paragraph leftIndent="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["1º Examinador:" + $P{examinador1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="106" width="128" height="14"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Banca Examinadora:]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="0" y="135" width="555" height="15"/>
+				<textElement>
+					<font size="12"/>
+					<paragraph leftIndent="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["2º Examinador:" + $P{examinador2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="150" width="555" height="15"/>
+				<textElement>
+					<font size="12"/>
+					<paragraph leftIndent="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["3º Examinador:" + $P{examinador3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="178" width="555" height="85"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["A Defesa da referida monografia de Projeto Final ocorreu no dia  de  de 2011  às h, tendo sido o aluno submetido à sabatina pela banca examinadora. Finalmente, a mesma reuniu-se em separado e concluiu por considerar o candidato "+$P{aluno}+" em virtude da sua monografia e sua defesa pública alcançarem média "+$P{media}+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="268" width="555" height="30"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Eu, que presidi a banca assino a presente ata, juntamente com os demais membros e dou fé.]]></text>
+			</staticText>
+			<textField pattern="&apos;Fortaleza, &apos; dd &apos;de&apos; MMMMM &apos;de&apos; yyyy">
+				<reportElement positionType="Float" x="0" y="315" width="250" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="381" width="401" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["1º Examinador: "+$P{examinador1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="419" width="401" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["2º Examinador: " + $P{examinador2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="458" width="401" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["3º Examinador: " + $P{examinador3}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
