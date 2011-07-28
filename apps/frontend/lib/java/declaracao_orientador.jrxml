@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="professor" class="java.lang.String"/>
+	<parameter name="aluno" class="java.lang.String"/>
+	<parameter name="titulo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="51" height="79"/>
+				<imageExpression class="java.lang.String"><![CDATA["./uece_logo.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="51" y="15" width="504" height="57"/>
+				<textElement>
+					<font size="11"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDADE ESTADUAL DO CEARÁ
+Centro de Ciências e Tecnologia
+Coordenação do Curso de Ciências da  Computação
+Av. Paranjana, 1700, Campus do Itaperi, Fortaleza, Ceará]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="82" width="555" height="1"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="544" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="555" height="14"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECLARAÇÃO]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="0" y="59" width="555" height="146"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Declaramos que o(a) professor(a) "+$P{professor}+" orientou e presidiu a Banca Examinadora da Monografia de Projeto Final do(a) aluno(a) "+$P{aluno}+" intitulada "+$P{titulo}+", dentro dos preceitos instituídos pela Universidade Estadual do Ceará, objetivando o preenchimento dos requisitos para titulação de Bacharel em Ciência da Computação."]]></textFieldExpression>
+			</textField>
+			<textField pattern="&apos;Fortaleza, &apos; dd &apos;de&apos; MMMMM &apos;de&apos; yyyy">
+				<reportElement positionType="Float" x="0" y="237" width="250" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="303" width="401" height="47"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Profa. Mariela Inés Cortés\nCoordenadora do Curso de Ciência da Computação - UECE"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
