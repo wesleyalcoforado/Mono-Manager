@@ -18,10 +18,14 @@ class SemestreTable extends Doctrine_Table
   }
 
   public function findEarliestYearOrDefault($default){
-    $query = $this->createQuery()->select("min(to_char(data_max_proposta, 'YYYY')) as minYear")->fetchOne();
+    $query = $this->createQuery()->select("min(data_max_proposta) as minYear")->fetchOne();
     $minYear = $query['minYear'];
 
-    if(empty($minYear)){
+
+    if(!empty($minYear)){
+        $minYearTimestamp = Util::DBDateToTimestamp($minYear);
+        $minYear = date('Y', $minYearTimestamp);
+    }else{
       $minYear = $default;
     }
 
