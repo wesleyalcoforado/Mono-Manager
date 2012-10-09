@@ -66,44 +66,49 @@ class relatorioActions extends sfActions
 
     $pdf->addPage();
 
-    $html = '<h1>HTML Example</h1>
-Some special characters: &lt; € &euro; &#8364; &amp; è &egrave; &copy; &gt; \\slash \\\\double-slash \\\\\\triple-slash
-<h2>List</h2>
-List example:
-<ol>
-    <li><img src="../images/logo_example.png" alt="test alt attribute" width="30" height="30" border="0" /> test image</li>
-    <li><b>bold text</b></li>
-    <li><i>italic text</i></li>
-    <li><u>underlined text</u></li>
-    <li><b>b<i>bi<u>biu</u>bi</i>b</b></li>
-    <li><a href="http://www.tecnick.com" dir="ltr">link to http://www.tecnick.com</a></li>
-    <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<br />Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
-    <li>SUBLIST
-        <ol>
-            <li>row one
-                <ul>
-                    <li>sublist</li>
-                </ul>
-            </li>
-            <li>row two</li>
-        </ol>
-    </li>
-    <li><b>T</b>E<i>S</i><u>T</u> <del>line through</del></li>
-    <li><font size="+3">font + 3</font></li>
-    <li><small>small text</small> normal <small>small text</small> normal <sub>subscript</sub> normal <sup>superscript</sup> normal</li>
-</ol>
-<dl>
-    <dt>Coffee</dt>
-    <dd>Black hot drink</dd>
-    <dt>Milk</dt>
-    <dd>White cold drink</dd>
-</dl>
-<div style="text-align:center">IMAGES<br />
-<img src="../images/logo_example.png" alt="test alt attribute" width="100" height="100" border="0" /><img src="../images/tiger.ai" alt="test alt attribute" width="100" height="100" border="0" /><img src="../images/logo_example.jpg" alt="test alt attribute" width="100" height="100" border="0" />
-</div>';
+    $html = '
+    <div align="center">
+        <table width="700">
+            <tr>
+                <td><img src="images/logo_uece.png" height="100" /></td>
+                <td>UNIVERSIDADE ESTADUAL DO CEARÁ<br/>
+                    Centro de Ciências e Tecnologia<br/>
+                    Coordenação do Curso de Ciências da  Computação<br/>
+                    Av. Paranjana, 1700, Campus do Itaperi, Fortaleza, Ceará</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h3 align="center">ATA DA APRESENTAÇÃO E DEFESA DE PROJETO FINAL</h3>
+                        Aluno(a): <br/>
+                        Título:. <br/>
+                        <br/>
+                        Orientador: Prof.( a). <br/>
+                        <br/>
+                        Banca Examinadora:
+                        <ul>
+                            <li>1º Examinador: Prof. </li>
+                            <li>2º Examinador: Prof. </li>
+                            <li>3º Examinador: Prof. </li>
+                        </ul>
+                        <p align="justify">A Defesa da referida monografia de Projeto Final ocorreu no dia  de  de 2011  às h, tendo sido o aluno submetido à sabatina pela banca examinadora. Finalmente, a mesma reuniu-se em separado e concluiu por considerar o candidato______________ em virtude da sua monografia e sua defesa pública alcançarem média ______.</p>  
+                        
+                        <p align="justify">Eu, que presidi a banca assino a presente ata, juntamente com os demais membros e dou fé.</p>
+                        Fortaleza,   de   de  2011       
+                        
+                        <br/><br/><br/><br/>
+                        <table width="600">
+                            <tr><td style="border-top: 1px solid #000000; padding-bottom: 40px;">1º Examinador: Prof</td></tr>
+                            <tr><td style="border-top: 1px solid #000000; padding-bottom: 40px;">2º Examinador: Prof</td></tr>
+                            <tr><td style="border-top: 1px solid #000000;">3º Examinador: Prof</td></tr>
+                        </table> 
+                </td>
+            </tr>
+        </table>
+    </div> 
+    ';
 
     $pdf->writeHTML($html, true, false, true, false, '');
-    $pdf->Output('example_006.pdf', 'I');
+    $pdf->Output('ata.pdf', 'I');
 
     throw new sfStopException();
   }
