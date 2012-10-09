@@ -125,31 +125,31 @@ class relatorioActions extends sfActions
     $pdf->SetFontSize(10);
     $pageSize = $pdf->getPageWidth() - 30;
     //Cabeçalho
-		$pdf->cell($pageSize * 0.8, 10, 'Tópico', 1, 0, 'C');
-		$pdf->cell($pageSize * 0.2, 10, 'Avaliação (0 - 10)', 1, 0, 'C');
-		$pdf->Ln();
+    $pdf->cell($pageSize * 0.8, 10, 'Tópico', 1, 0, 'C');
+    $pdf->cell($pageSize * 0.2, 10, 'Avaliação (0 - 10)', 1, 0, 'C');
+    $pdf->Ln();
 
-		$pdf->cell($pageSize * 0.8, 10, 'Projeto e organização do trabalho (fundamentação, metodologia e relevância)', 1, 0);
-		$pdf->cell($pageSize * 0.2, 10, '', 1);
-		$pdf->Ln();
+    $pdf->cell($pageSize * 0.8, 10, 'Projeto e organização do trabalho (fundamentação, metodologia e relevância)', 1, 0);
+    $pdf->cell($pageSize * 0.2, 10, '', 1);
+    $pdf->Ln();
 
-		$pdf->cell($pageSize * 0.8, 10, 'Avaliação do trabalho escrito (correção, clareza e objetividade)', 1, 0);
-		$pdf->cell($pageSize * 0.2, 10, '', 1);
-		$pdf->Ln();
+    $pdf->cell($pageSize * 0.8, 10, 'Avaliação do trabalho escrito (correção, clareza e objetividade)', 1, 0);
+    $pdf->cell($pageSize * 0.2, 10, '', 1);
+    $pdf->Ln();
 
-		$pdf->cell($pageSize * 0.8, 10, 'Apresentação oral (segurança e tempo - 30 min)', 1, 0);
-		$pdf->cell($pageSize * 0.2, 10, '', 1);
-		$pdf->Ln();
+    $pdf->cell($pageSize * 0.8, 10, 'Apresentação oral (segurança e tempo - 30 min)', 1, 0);
+    $pdf->cell($pageSize * 0.2, 10, '', 1);
+    $pdf->Ln();
 
-		$pdf->cell($pageSize * 0.8, 10, 'Nota final (Média aritmética)', 1, 0, 'R');
-		$pdf->cell($pageSize * 0.2, 10, '', 1);
-		$pdf->Ln();
+    $pdf->cell($pageSize * 0.8, 10, 'Nota final (Média aritmética)', 1, 0, 'R');
+    $pdf->cell($pageSize * 0.2, 10, '', 1);
+    $pdf->Ln(15);
 
     $pdf->SetFontSize(12);
     $pdf->cell(0,0,'Comentários:', 0, 2);
     $pdf->Ln();
     for($i=0; $i<10; $i++){
-    	$pdf->cell($pageSize,8,'', 'T', 2);
+      $pdf->cell($pageSize,8,'', 'T', 2);
     }
 
     $pdf->Ln(5);
@@ -195,8 +195,8 @@ class relatorioActions extends sfActions
   }
 
   private function getCurrentDateString(){
-		setlocale(LC_TIME, 'pt_BR');
-		return strftime('Fortaleza, %d de %B de %Y');
+    setlocale(LC_TIME, 'pt_BR.utf8');
+    return strftime('Fortaleza, %d de %B de %Y');
   }
 
 }
