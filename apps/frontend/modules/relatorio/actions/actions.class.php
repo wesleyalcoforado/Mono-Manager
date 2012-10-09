@@ -56,61 +56,141 @@ class relatorioActions extends sfActions
 
   public function executeAta(sfWebRequest $request)
   {
+    $pdf = $this->createBaseDocument('ATA DA APRESENTAÇÃO E DEFESA DE PROJETO FINAL');
+
+    $pdf->SetY(70);
+    $pdf->cell(0,0,'Aluno(a):', 0, 2);
+    $pdf->cell(0,0,'Título:', 0, 2);
+    $pdf->Ln('');
+    $pdf->cell(0,0,'Orientador: Prof.(a)', 0, 2);
+    $pdf->Ln('');
+    $pdf->cell(0,0,'Banca Examinadora:', 0, 2);
+    $pdf->SetX(25);
+    $pdf->cell(0,0,'1º Examinador: Prof.', 0, 2);
+    $pdf->cell(0,0,'2º Examinador: Prof.', 0, 2);
+    $pdf->cell(0,0,'3º Examinador: Prof.', 0, 2);
+
+    $pdf->Ln(10);
+    $pdf->writeHTML('<span style="text-align:justify;">Defesa da referida monografia de Projeto Final ocorreu no dia  de  de 2011  às h, tendo sido o aluno submetido à sabatina pela banca examinadora. Finalmente, a mesma reuniu-se em separado e concluiu por considerar o candidato ______________ em virtude da sua monografia e sua defesa pública alcançarem média ______.</span>');
+
+    $pdf->Ln(5);
+    $pdf->cell(0,0,'Eu, que presidi a banca assino a presente ata, juntamente com os demais membros e dou fé.', 0, 2);
+    $pdf->Ln();
+    $pdf->cell(0,0,'Fortaleza, DD de MMM de YYYY', 0, 2);
+    $pdf->Ln(20);
+
+    $pdf->cell(120,0,'1º Examinador: Prof.', 'T', 2);
+    $pdf->Ln(10);
+    $pdf->cell(120,0,'2º Examinador: Prof.', 'T', 2);
+    $pdf->Ln(10);
+    $pdf->cell(120,0,'3º Examinador: Prof.', 'T', 2);
+
+    $pdf->Output('ata.pdf', 'I');
+
+    throw new sfStopException();
+  }
+
+  public function executeDeclaracao(sfWebRequest $request)
+  {
+    $pdf = $this->createBaseDocument('DECLARAÇÃO');
+
+    $pdf->SetY(70);
+    $pdf->writeHTML('<span style="text-align:justify;">Declaramos que o(a) professor(a) Mmmm Sssss orientou e presidiu a Banca Examinadora da Monografia de Projeto Final do(a) aluno(a) Xxxxx Yyyyy intitulada Titulo, dentro dos preceitos instituídos pela Universidade Estadual do Ceará, objetivando o preenchimento dos requisitos para titulação de Bacharel em Ciência da Computação.</span>');
+
+    $pdf->Ln(5);
+    $pdf->cell(0,0,'Fortaleza, DD de MMM de YYYY', 0, 2);
+    $pdf->Ln(20);
+
+    $pdf->cell(120,0,'Profa. Mariela Inés Cortés', 'T', 2);
+    $pdf->cell(0,0,'Coordenadora do Curso de Ciência da Computação - UECE', 0, 2);
+
+    $pdf->Output('declaracao.pdf', 'I');
+
+    throw new sfStopException();
+  }
+
+  public function executeFicha(sfWebRequest $request)
+  {
+    $pdf = $this->createBaseDocument('FICHA DE AVALIAÇÃO DE PROJETO FINAL');
+
+    $pdf->SetY(70);
+    $pdf->cell(0,0,'Examinador: Prof.', 0, 2);
+    $pdf->Ln();
+    $pdf->cell(0,0,'Aluno:', 0, 2);
+    $pdf->Ln();
+    $pdf->cell(0,0,'Título:', 0, 2);
+
+    //Tabela
+    $pdf->SetFontSize(10);
+    $pageSize = $pdf->getPageWidth() - 30;
+    //Cabeçalho
+		$pdf->cell($pageSize * 0.8, 0, 'Tópico', 1, 0, 'C');
+		$pdf->cell($pageSize * 0.2, 0, 'Avaliação (0 - 10)', 1, 0, 'C');
+		$pdf->Ln();
+
+		$pdf->cell($pageSize * 0.8, 0, 'Projeto e organização do trabalho (fundamentação, metodologia e relevância)', 1, 0);
+		$pdf->cell($pageSize * 0.2, 0, '', 1);
+		$pdf->Ln();
+
+		$pdf->cell($pageSize * 0.8, 0, 'Avaliação do trabalho escrito (correção, clareza e objetividade)', 1, 0);
+		$pdf->cell($pageSize * 0.2, 0, '', 1);
+		$pdf->Ln();
+
+		$pdf->cell($pageSize * 0.8, 0, 'Apresentação oral (segurança e tempo - 30 min)', 1, 0);
+		$pdf->cell($pageSize * 0.2, 0, '', 1);
+		$pdf->Ln();
+
+		$pdf->cell($pageSize * 0.8, 0, 'Nota final (Média aritmética)', 1, 0, 'R');
+		$pdf->cell($pageSize * 0.2, 0, '', 1);
+		$pdf->Ln();
+
+    $pdf->SetFontSize(12);
+    $pdf->cell(0,0,'Comentários:', 0, 2);
+    for($i=0; $i<10; $i++){
+    	$pdf->cell($pageSize,0,'', 'T', 2);
+    	$pdf->Ln();
+    }
+
+    $pdf->Ln(5);
+    $pdf->cell(0,0,'Fortaleza, DD de MMM de YYYY', 0, 2);
+    $pdf->Ln(20);
+
+    $pdf->cell(120,0,'Examinador Prof.', 'T', 2);
+
+    $pdf->Output('ficha.pdf', 'I');
+
+    throw new sfStopException();
+  }
+
+  private function createBaseDocument($mainTitle) {
 
     $config = sfTCPDFPluginConfigHandler::loadConfig();
     $pdf = new sfTCPDF();
 
     $pdf->SetCreator(PDF_CREATOR);
     $pdf->SetAuthor('TCC-MANAGER');
-    $pdf->SetTitle('Ata de apresentação de projeto final');
+    $pdf->SetTitle($mainTitle);
+
+    $pdf->SetPrintHeader(false);
+    $pdf->SetPrintFooter(false);
+    $pdf->SetMargins(15, 15, 15, true);
 
     $pdf->addPage();
+    $logo = 'images/logo_uece.png';
+    $pdf->Image($logo, 15, 15, 20);
+    $pdf->SetFont('helvetica', '', 11);
+    $pdf->writeHTMLCell(0, 0, 40, 20, 'UNIVERSIDADE ESTADUAL DO CEARÁ<br/>Centro de Ciências e Tecnologia<br/>Coordenação do Curso de Ciências da Computação<br/>Av. Paranjana, 1700, Campus do Itaperi, Fortaleza, Ceará');
 
-    $html = '
-    <div align="center">
-        <table width="700">
-            <tr>
-                <td><img src="images/logo_uece.png" height="100" /></td>
-                <td>UNIVERSIDADE ESTADUAL DO CEARÁ<br/>
-                    Centro de Ciências e Tecnologia<br/>
-                    Coordenação do Curso de Ciências da  Computação<br/>
-                    Av. Paranjana, 1700, Campus do Itaperi, Fortaleza, Ceará</td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <h3 align="center">ATA DA APRESENTAÇÃO E DEFESA DE PROJETO FINAL</h3>
-                        Aluno(a): <br/>
-                        Título:. <br/>
-                        <br/>
-                        Orientador: Prof.( a). <br/>
-                        <br/>
-                        Banca Examinadora:
-                        <ul>
-                            <li>1º Examinador: Prof. </li>
-                            <li>2º Examinador: Prof. </li>
-                            <li>3º Examinador: Prof. </li>
-                        </ul>
-                        <p align="justify">A Defesa da referida monografia de Projeto Final ocorreu no dia  de  de 2011  às h, tendo sido o aluno submetido à sabatina pela banca examinadora. Finalmente, a mesma reuniu-se em separado e concluiu por considerar o candidato______________ em virtude da sua monografia e sua defesa pública alcançarem média ______.</p>  
-                        
-                        <p align="justify">Eu, que presidi a banca assino a presente ata, juntamente com os demais membros e dou fé.</p>
-                        Fortaleza,   de   de  2011       
-                        
-                        <br/><br/><br/><br/>
-                        <table width="600">
-                            <tr><td style="border-top: 1px solid #000000; padding-bottom: 40px;">1º Examinador: Prof</td></tr>
-                            <tr><td style="border-top: 1px solid #000000; padding-bottom: 40px;">2º Examinador: Prof</td></tr>
-                            <tr><td style="border-top: 1px solid #000000;">3º Examinador: Prof</td></tr>
-                        </table> 
-                </td>
-            </tr>
-        </table>
-    </div> 
-    ';
+    $pdf->Line(15, 47, $pdf->getPageWidth() - 15, 47);
+    $pdf->Rect(5, 5, $pdf->getPageWidth() - 10, $pdf->getPageHeight() - 10);
 
-    $pdf->writeHTML($html, true, false, true, false, '');
-    $pdf->Output('ata.pdf', 'I');
+    $pdf->SetY(50);
+    $pdf->SetFont('helvetica', 'b', 12);
+    $pdf->cell(0,0,$mainTitle, 0, 1, 'C');
 
-    throw new sfStopException();
+    $pdf->SetFont('helvetica', '', 12);
+
+    return $pdf;
   }
 
 }
