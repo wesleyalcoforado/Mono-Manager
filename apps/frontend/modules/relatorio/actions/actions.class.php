@@ -76,7 +76,7 @@ class relatorioActions extends sfActions
     $pdf->Ln(5);
     $pdf->cell(0,0,'Eu, que presidi a banca assino a presente ata, juntamente com os demais membros e dou fé.', 0, 2);
     $pdf->Ln();
-    $pdf->cell(0,0,'Fortaleza, DD de MMM de YYYY', 0, 2);
+    $pdf->cell(0,0,$this->getCurrentDateString(), 0, 2);
     $pdf->Ln(20);
 
     $pdf->cell(120,0,'1º Examinador: Prof.', 'T', 2);
@@ -97,8 +97,8 @@ class relatorioActions extends sfActions
     $pdf->SetY(70);
     $pdf->writeHTML('<span style="text-align:justify;">Declaramos que o(a) professor(a) Mmmm Sssss orientou e presidiu a Banca Examinadora da Monografia de Projeto Final do(a) aluno(a) Xxxxx Yyyyy intitulada Titulo, dentro dos preceitos instituídos pela Universidade Estadual do Ceará, objetivando o preenchimento dos requisitos para titulação de Bacharel em Ciência da Computação.</span>');
 
-    $pdf->Ln(5);
-    $pdf->cell(0,0,'Fortaleza, DD de MMM de YYYY', 0, 2);
+    $pdf->Ln(20);
+    $pdf->cell(0,0,$this->getCurrentDateString(), 0, 2);
     $pdf->Ln(20);
 
     $pdf->cell(120,0,'Profa. Mariela Inés Cortés', 'T', 2);
@@ -113,47 +113,48 @@ class relatorioActions extends sfActions
   {
     $pdf = $this->createBaseDocument('FICHA DE AVALIAÇÃO DE PROJETO FINAL');
 
-    $pdf->SetY(70);
+    $pdf->SetY(60);
     $pdf->cell(0,0,'Examinador: Prof.', 0, 2);
     $pdf->Ln();
     $pdf->cell(0,0,'Aluno:', 0, 2);
     $pdf->Ln();
     $pdf->cell(0,0,'Título:', 0, 2);
+    $pdf->Ln();
 
     //Tabela
     $pdf->SetFontSize(10);
     $pageSize = $pdf->getPageWidth() - 30;
     //Cabeçalho
-		$pdf->cell($pageSize * 0.8, 0, 'Tópico', 1, 0, 'C');
-		$pdf->cell($pageSize * 0.2, 0, 'Avaliação (0 - 10)', 1, 0, 'C');
+		$pdf->cell($pageSize * 0.8, 10, 'Tópico', 1, 0, 'C');
+		$pdf->cell($pageSize * 0.2, 10, 'Avaliação (0 - 10)', 1, 0, 'C');
 		$pdf->Ln();
 
-		$pdf->cell($pageSize * 0.8, 0, 'Projeto e organização do trabalho (fundamentação, metodologia e relevância)', 1, 0);
-		$pdf->cell($pageSize * 0.2, 0, '', 1);
+		$pdf->cell($pageSize * 0.8, 10, 'Projeto e organização do trabalho (fundamentação, metodologia e relevância)', 1, 0);
+		$pdf->cell($pageSize * 0.2, 10, '', 1);
 		$pdf->Ln();
 
-		$pdf->cell($pageSize * 0.8, 0, 'Avaliação do trabalho escrito (correção, clareza e objetividade)', 1, 0);
-		$pdf->cell($pageSize * 0.2, 0, '', 1);
+		$pdf->cell($pageSize * 0.8, 10, 'Avaliação do trabalho escrito (correção, clareza e objetividade)', 1, 0);
+		$pdf->cell($pageSize * 0.2, 10, '', 1);
 		$pdf->Ln();
 
-		$pdf->cell($pageSize * 0.8, 0, 'Apresentação oral (segurança e tempo - 30 min)', 1, 0);
-		$pdf->cell($pageSize * 0.2, 0, '', 1);
+		$pdf->cell($pageSize * 0.8, 10, 'Apresentação oral (segurança e tempo - 30 min)', 1, 0);
+		$pdf->cell($pageSize * 0.2, 10, '', 1);
 		$pdf->Ln();
 
-		$pdf->cell($pageSize * 0.8, 0, 'Nota final (Média aritmética)', 1, 0, 'R');
-		$pdf->cell($pageSize * 0.2, 0, '', 1);
+		$pdf->cell($pageSize * 0.8, 10, 'Nota final (Média aritmética)', 1, 0, 'R');
+		$pdf->cell($pageSize * 0.2, 10, '', 1);
 		$pdf->Ln();
 
     $pdf->SetFontSize(12);
     $pdf->cell(0,0,'Comentários:', 0, 2);
+    $pdf->Ln();
     for($i=0; $i<10; $i++){
-    	$pdf->cell($pageSize,0,'', 'T', 2);
-    	$pdf->Ln();
+    	$pdf->cell($pageSize,8,'', 'T', 2);
     }
 
     $pdf->Ln(5);
-    $pdf->cell(0,0,'Fortaleza, DD de MMM de YYYY', 0, 2);
-    $pdf->Ln(20);
+    $pdf->cell(0,0,$this->getCurrentDateString(), 0, 2);
+    $pdf->Ln(15);
 
     $pdf->cell(120,0,'Examinador Prof.', 'T', 2);
 
@@ -191,6 +192,11 @@ class relatorioActions extends sfActions
     $pdf->SetFont('helvetica', '', 12);
 
     return $pdf;
+  }
+
+  private function getCurrentDateString(){
+		setlocale(LC_TIME, 'pt_BR');
+		return strftime('Fortaleza, %d de %B de %Y');
   }
 
 }
