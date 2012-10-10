@@ -56,39 +56,54 @@ class relatorioActions extends sfActions
 
   public function executeAta(sfWebRequest $request)
   {
+		$projetoId = $request->getParameter('id');
+		$projeto = ProjetoTable::getInstance()->find($projetoId);
+		
+		$aluno = $projeto->getEstudante()->getUsuario()->getFullName();
+		$titulo = $projeto->getTitulo();
+		$orientador = $projeto->getProfessor()->getUsuario()->getFullName();
+		$nota = 9.7;
+		$data = date();
+		$hora = "12:30";
+		$examinadores = array("Fulano de tal", "Cicrano Silva", "Beltrano José");
+		
+		$this->generateAta($aluno, $titulo, $orientador, $nota, $data, $hora, $examinadores);
+  }
+	
+	private function generateAta($aluno, $titulo, $orientador, $nota, $data, $hora, $examinadores = array()){
     $pdf = $this->createBaseDocument('ATA DA APRESENTAÇÃO E DEFESA DE PROJETO FINAL');
 
     $pdf->SetY(70);
-    $pdf->cell(0,0,'Aluno(a):', 0, 2);
-    $pdf->cell(0,0,'Título:', 0, 2);
+    $pdf->cell(0,0,'Aluno(a): ' . $aluno, 0, 2);
+    $pdf->cell(0,0,'Título: ' . $titulo, 0, 2);
     $pdf->Ln('');
-    $pdf->cell(0,0,'Orientador: Prof.(a)', 0, 2);
+    $pdf->cell(0,0,'Orientador: Prof.(a) ' . $orientador, 0, 2);
     $pdf->Ln('');
     $pdf->cell(0,0,'Banca Examinadora:', 0, 2);
     $pdf->SetX(25);
-    $pdf->cell(0,0,'1º Examinador: Prof.', 0, 2);
-    $pdf->cell(0,0,'2º Examinador: Prof.', 0, 2);
-    $pdf->cell(0,0,'3º Examinador: Prof.', 0, 2);
+		for($i=0; $i<count($examinadores); $i++){
+	    $pdf->cell(0,0, ($i+1) . 'º Examinador: Prof. ' . $examinadores[$i], 0, 2);
+		}
 
     $pdf->Ln(10);
-    $pdf->writeHTML('<span style="text-align:justify;">Defesa da referida monografia de Projeto Final ocorreu no dia  de  de 2011  às h, tendo sido o aluno submetido à sabatina pela banca examinadora. Finalmente, a mesma reuniu-se em separado e concluiu por considerar o candidato ______________ em virtude da sua monografia e sua defesa pública alcançarem média ______.</span>');
+		$formattedDate = $this->formatDate($data);
+    $pdf->writeHTML("<span style='text-align:justify;'>Defesa da referida monografia de Projeto Final ocorreu no dia  $formattedDate às $hora h, tendo sido o aluno submetido à sabatina pela banca examinadora. Finalmente, a mesma reuniu-se em separado e concluiu por considerar o candidato $aluno em virtude da sua monografia e sua defesa pública alcançarem média $nota.</span>");
 
     $pdf->Ln(5);
     $pdf->cell(0,0,'Eu, que presidi a banca assino a presente ata, juntamente com os demais membros e dou fé.', 0, 2);
     $pdf->Ln();
     $pdf->cell(0,0,$this->getCurrentDateString(), 0, 2);
-    $pdf->Ln(20);
-
-    $pdf->cell(120,0,'1º Examinador: Prof.', 'T', 2);
     $pdf->Ln(10);
-    $pdf->cell(120,0,'2º Examinador: Prof.', 'T', 2);
-    $pdf->Ln(10);
-    $pdf->cell(120,0,'3º Examinador: Prof.', 'T', 2);
 
+		for($i=0; $i<count($examinadores); $i++){
+			$pdf->Ln(10);
+	    $pdf->cell(120,0, ($i+1) . 'º Examinador: Prof. ' . $examinadores[$i], 'T', 2);
+		}
+		
     $pdf->Output('ata.pdf', 'I');
 
-    throw new sfStopException();
-  }
+    throw new sfStopException();			
+	}
 
   public function executeDeclaracao(sfWebRequest $request)
   {
@@ -198,5 +213,10 @@ class relatorioActions extends sfActions
     setlocale(LC_TIME, 'pt_BR.utf8');
     return strftime('Fortaleza, %d de %B de %Y');
   }
+	
+	private function formatDate($date){
+		setlocale(LC_TIME, 'pt_BR.utf8');
+    return strftime('%d de %B de %Y', $date);
+	}
 
 }
