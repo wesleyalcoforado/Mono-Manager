@@ -63,7 +63,7 @@ class relatorioActions extends sfActions
 		$titulo = $projeto->getTitulo();
 		$orientador = $projeto->getProfessor()->getUsuario()->getFullName();
 		$nota = 9.7;
-		$data = date();
+		$data = time();
 		$hora = "12:30";
 		$examinadores = array("Fulano de tal", "Cicrano Silva", "Beltrano José");
 		
