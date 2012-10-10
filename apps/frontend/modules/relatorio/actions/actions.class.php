@@ -82,7 +82,7 @@ class relatorioActions extends sfActions
 		$this->generateDeclaracao($orientador, $aluno, $titulo);
   }	
 	
-  public function executeDeclaracaoOrientador(sfWebRequest $request)
+  public function executeDeclaracaoBanca(sfWebRequest $request)
   {
 		$projetoId = $request->getParameter('id');
 		$projeto = ProjetoTable::getInstance()->find($projetoId);

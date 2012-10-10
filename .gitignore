@@ -1,3 +1,5 @@
 cache/*
 log/*
 web/uploads/*
+
+.DS_Store
