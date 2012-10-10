@@ -70,6 +70,42 @@ class relatorioActions extends sfActions
 		$this->generateAta($aluno, $titulo, $orientador, $nota, $data, $hora, $examinadores);
   }
 	
+  public function executeDeclaracaoOrientador(sfWebRequest $request)
+  {
+		$projetoId = $request->getParameter('id');
+		$projeto = ProjetoTable::getInstance()->find($projetoId);
+		
+		$aluno = $projeto->getEstudante()->getUsuario()->getFullName();
+		$titulo = $projeto->getTitulo();
+		$orientador = $projeto->getProfessor()->getUsuario()->getFullName();
+		
+		$this->generateDeclaracao($orientador, $aluno, $titulo);
+  }	
+	
+  public function executeDeclaracaoOrientador(sfWebRequest $request)
+  {
+		$projetoId = $request->getParameter('id');
+		$projeto = ProjetoTable::getInstance()->find($projetoId);
+		
+		$aluno = $projeto->getEstudante()->getUsuario()->getFullName();
+		$titulo = $projeto->getTitulo();
+		$professor = 'Fulano de tal';
+		
+		$this->generateDeclaracao($professor, $aluno, $titulo);
+  }		
+	
+  public function executeFicha(sfWebRequest $request)
+  {
+		$projetoId = $request->getParameter('id');
+		$projeto = ProjetoTable::getInstance()->find($projetoId);
+		
+		$aluno = $projeto->getEstudante()->getUsuario()->getFullName();
+		$titulo = $projeto->getTitulo();
+		$professor = 'Fulano de tal';
+		
+		$this->generateFicha($professor, $aluno, $titulo, 1);
+  }	
+	
 	private function generateAta($aluno, $titulo, $orientador, $nota, $data, $hora, $examinadores = array()){
     $pdf = $this->createBaseDocument('ATA DA APRESENTAÇÃO E DEFESA DE PROJETO FINAL');
 
@@ -103,14 +139,22 @@ class relatorioActions extends sfActions
     $pdf->Output('ata.pdf', 'I');
 
     throw new sfStopException();			
-	}
-
-  public function executeDeclaracao(sfWebRequest $request)
-  {
+	}	
+	
+	/**
+	* Gera o documento da declaracao
+	* $tipoTexto: 0 para gerar declaração de orientador e 1 para banca 
+	*/
+	private function generateDeclaracao($professor, $aluno, $titulo, $tipoTexto = 0){
     $pdf = $this->createBaseDocument('DECLARAÇÃO');
 
     $pdf->SetY(70);
-    $pdf->writeHTML('<span style="text-align:justify;">Declaramos que o(a) professor(a) Mmmm Sssss orientou e presidiu a Banca Examinadora da Monografia de Projeto Final do(a) aluno(a) Xxxxx Yyyyy intitulada Titulo, dentro dos preceitos instituídos pela Universidade Estadual do Ceará, objetivando o preenchimento dos requisitos para titulação de Bacharel em Ciência da Computação.</span>');
+		
+		if($tipoTexto){
+	    $pdf->writeHTML("<span style='text-align:justify;'>Declaramos que o(a) professor(a) $professor orientou e presidiu a Banca Examinadora da Monografia de Projeto Final do(a) aluno(a) $aluno intitulada $titulo, dentro dos preceitos instituídos pela Universidade Estadual do Ceará, objetivando o preenchimento dos requisitos para titulação de Bacharel em Ciência da Computação.</span>");
+		}else{
+	    $pdf->writeHTML("<span style='text-align:justify;'>Declaramos que o(a) professor(a) $professor participou como membro da Banca Examinadora da Monografia de Projeto Final do(a) aluno(a) $aluno intitulada $titulo, dentro dos preceitos instituídos pela Universidade Estadual do Ceará, objetivando o preenchimento dos requisitos para titulação de Bacharel em Ciência da Computação.</span>");			
+		}
 
     $pdf->Ln(20);
     $pdf->cell(0,0,$this->getCurrentDateString(), 0, 2);
@@ -121,19 +165,18 @@ class relatorioActions extends sfActions
 
     $pdf->Output('declaracao.pdf', 'I');
 
-    throw new sfStopException();
-  }
+    throw new sfStopException();		
+	}
 
-  public function executeFicha(sfWebRequest $request)
-  {
+  private function generateFicha($professor, $aluno, $titulo){
     $pdf = $this->createBaseDocument('FICHA DE AVALIAÇÃO DE PROJETO FINAL');
 
     $pdf->SetY(60);
-    $pdf->cell(0,0,'Examinador: Prof.', 0, 2);
+    $pdf->cell(0,0,'Examinador: Prof. ' . $professor, 0, 2);
     $pdf->Ln();
-    $pdf->cell(0,0,'Aluno:', 0, 2);
+    $pdf->cell(0,0,'Aluno: '.$aluno, 0, 2);
     $pdf->Ln();
-    $pdf->cell(0,0,'Título:', 0, 2);
+    $pdf->cell(0,0,'Título: '.$titulo, 0, 2);
     $pdf->Ln();
 
     //Tabela
@@ -171,12 +214,14 @@ class relatorioActions extends sfActions
     $pdf->cell(0,0,$this->getCurrentDateString(), 0, 2);
     $pdf->Ln(15);
 
-    $pdf->cell(120,0,'Examinador Prof.', 'T', 2);
+    $pdf->cell(120,0,'Examinador Prof. ' . $professor, 'T', 2);
 
     $pdf->Output('ficha.pdf', 'I');
 
-    throw new sfStopException();
+    throw new sfStopException();  	
   }
+
+
 
   private function createBaseDocument($mainTitle) {
 
