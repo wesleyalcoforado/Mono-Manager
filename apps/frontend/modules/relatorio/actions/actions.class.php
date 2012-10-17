@@ -115,19 +115,19 @@ class relatorioActions extends sfActions
     $generate = $request->hasParameter('gerar');
     if($generate){
       if($tipoDocumento == 'ata'){
-        return executeAta($request);
+        return $this->executeAta($request);
       }elseif ($tipoDocumento == 'banca') {
-        return executeDeclaracaoBanca($request);
+        return $this->executeDeclaracaoBanca($request);
       }elseif ($tipoDocumento == 'ficha') {
-        return executeFicha($request);
+        return $this->executeFicha($request);
       }
     }else{
       if($tipoDocumento == 'ata'){
-        $this->form = ParametrosAtaForm();
+        $this->form = new ParametrosAtaForm();
       }elseif ($tipoDocumento == 'banca') {
-        $this->form = ParametrosFichaForm();
+        $this->form = new ParametrosFichaForm();
       }elseif ($tipoDocumento == 'ficha') {
-        $this->form = ParametrosFichaForm();
+        $this->form = new ParametrosFichaForm();
       }
     }
   }
@@ -147,7 +147,7 @@ class relatorioActions extends sfActions
 		$nota = $fields['nota'];
 		$data = $fields['data'];
 		$hora = $fields['hora'];
-		$examinadores = split("\n", $fields['examinadores']);
+		$examinadores = preg_split("/\n/", $fields['examinadores']);
 		
 		$this->generateAta($aluno, $titulo, $orientador, $nota, $data, $hora, $examinadores);
   }
