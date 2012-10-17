@@ -55,7 +55,7 @@ class ProjetoTable extends Doctrine_Table
     }
 
     public function generateDocumentosReport($matriculaEstudante, $professorId, $semestreId){
-      return $this->generateStatusReport($matriculaEstudante, $professorId, null, $semestreId)
+      return $this->generateStatusReport($matriculaEstudante, $professorId, null, $semestreId);
     }
 
     public function generateStatusReport($matriculaEstudante, $professorId, $status, $semestreId){
