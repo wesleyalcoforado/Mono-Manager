@@ -107,26 +107,26 @@ class relatorioActions extends sfActions
     $this->tipoDocumentoLegivel = $tiposLegivel[array_search($tipoDocumento, $tipos)];
 
     $idProjeto = $request->getParameter('id');
-    if(!ProjetoTable::getInstance()->find($projetoId)){
+    if(!ProjetoTable::getInstance()->find($idProjeto)){
       $this->forward404("Projeto inválido");
     }
     $this->idProjeto = $idProjeto;
 
     $generate = $request->hasParameter('gerar');
     if($generate){
-      if($tipo == 'ata'){
+      if($tipoDocumento == 'ata'){
         return executeAta($request);
-      }elseif ($tipo == 'banca') {
+      }elseif ($tipoDocumento == 'banca') {
         return executeDeclaracaoBanca($request);
-      }elseif ($tipo == 'ficha') {
+      }elseif ($tipoDocumento == 'ficha') {
         return executeFicha($request);
       }
     }else{
-      if($tipo == 'ata'){
+      if($tipoDocumento == 'ata'){
         $this->form = ParametrosAtaForm();
-      }elseif ($tipo == 'banca') {
+      }elseif ($tipoDocumento == 'banca') {
         $this->form = ParametrosFichaForm();
-      }elseif ($tipo == 'ficha') {
+      }elseif ($tipoDocumento == 'ficha') {
         $this->form = ParametrosFichaForm();
       }
     }
