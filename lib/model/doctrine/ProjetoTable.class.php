@@ -103,7 +103,7 @@ class ProjetoTable extends Doctrine_Table
             'nomeEstudante' => $row->getEstudante()->getUsuario()->getFullname(),
             'nomeProfessor' => $row->getProfessor()->getUsuario()->getFullname(),
             'projeto' => $row->getTitulo(),
-            'projeto_id' => $row->getProjetoId(),
+            'projeto_id' => $row->getId(),
             'status' => $status,
             'semestre' => $row->getSemestre()->getNome()
         );
