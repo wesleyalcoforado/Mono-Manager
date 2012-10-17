@@ -108,7 +108,7 @@ class relatorioActions extends sfActions
 
     $idProjeto = $request->getParameter('id');
     if(!ProjetoTable::getInstance()->find($projetoId)){
-      $this->forward404("Tipo de documento inválido");
+      $this->forward404("Projeto inválido");
     }
     $this->idProjeto = $idProjeto;
 
