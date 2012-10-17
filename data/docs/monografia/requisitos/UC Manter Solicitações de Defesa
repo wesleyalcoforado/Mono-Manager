@@ -1,0 +1,44 @@
+Caso de uso Manter Solicitações de Defesa
+
+Atores: Estudante, Orientador, Comissão
+
+Pré-condições: 
+- O estudante deve estar logado no sistema e ter selecionado um projeto
+- O orientador deve estar logado no sistema
+- A comissão deve estar logada no sistema
+
+1. Fluxo básico
+1.1 - O caso de uso se inicia quando o estudante seleciona a opção Solicitar Defesa para o projeto selecionado.
+1.2 - O sistema exibe os seguintes campos:
+        a) Quantidade de páginas da monografia
+        b) Data sugerida para realização da defesa
+        c) Copião (arquivo PDF)
+1.3 - O estudante preenche os campos e seleciona a opção Salvar.
+1.4 - O sistema valida os campos.
+1.5 - O sistema anexa o copião ao projeto, exibe uma mensagem de sucesso e redireciona o estudante à listagem de projetos.
+1.6 - O sistema envia um email ao orientador, informando do envio da solicitação de defesa por um de seus orientandos. 
+1.7 - O orientador seleciona a opção Solicitação de Defesa, do projeto em questão.
+1.8 - O sistema exibe o copião e solicita ao orientador para que ele selecione uma das opções disponíveis (Aprovar/desaprovar)
+1.9 - O orientador seleciona a opção aprovar.
+1.10 - O sistema envia um email à comissão, informando do envio de uma nova solicitação de defesa e atualiza o status do projeto para "Defesa aprovada pelo orientador".
+1.11 - A comissão seleciona a opção Solicitação de Defesa, do projeto em questão.
+1.12 - O sistema exibe os seguintes campos
+        a) Copião (arquivo para download)
+        b) Comentários
+        c) Data autorizada para realização da defesa
+1.13 - O sistema solicita à comissão para que ela selecione uma das opções disponíveis (Aprovar/Desaprovar)
+1.14 - A comissão comenta (opcionalmente) na solicitação, preenche a data de realização da defesa e a aprova.
+1.15 - O sistema envia um email ao orientador e ao estudante, informando de que a solicitação foi aprovada e atualiza o status do projeto para "Defesa aprovada pela comissão".
+1.16 - O caso de uso se encerra. 
+
+2. Fluxos alternativos
+2.1 Formato e/ou tamanho inválidos
+2.1.1 - O subfluxo se inicia no passo 4 do fluxo básico, quando o sistema detecta que o formato e/ou o tamanho do arquivo são inválidos.
+2.1.2 - O sistema informa ao usuário dos dados inválidos e solicita-o que os corrija.
+2.1.3 - O subfluxo segue para o passo 2 do fluxo básico.
+
+2.2 Desaprovação da proposta
+2.1.1 - O subfluxo se inicia no passo 9 do fluxo básico, quando o usuário for o orientador, ou no passo 14 do fluxo básico, quando o usuário for da comissão. O usuário selecionou a reprovar.
+2.1.2 - O sistema envia um email ao estudante (e ao orientador, caso a solicitação tenha sido reprovada pela comissão), informando que sua solicitação foi reprovada.
+2.1.3 - O sistema atualiza o status do projeto para "Defesa reprovada pelo orientador" ou "Defesa reprovada pela comissão", dependendo de qual usuário tenha reprovado a proposta.
+2.1.3 - O caso de uso se encerra.

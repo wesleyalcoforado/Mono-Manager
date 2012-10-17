@@ -54,6 +54,10 @@ class ProjetoTable extends Doctrine_Table
       return $this->find($id) != null;
     }
 
+    public function generateDocumentosReport($matriculaEstudante, $professorId, $semestreId){
+      return $this->generateStatusReport($matriculaEstudante, $professorId, null, $semestreId)
+    }
+
     public function generateStatusReport($matriculaEstudante, $professorId, $status, $semestreId){
       $query = $this->createNamedQuery('relatorio.status');
 
@@ -99,6 +103,7 @@ class ProjetoTable extends Doctrine_Table
             'nomeEstudante' => $row->getEstudante()->getUsuario()->getFullname(),
             'nomeProfessor' => $row->getProfessor()->getUsuario()->getFullname(),
             'projeto' => $row->getTitulo(),
+            'projeto_id' => $row->getProjetoId(),
             'status' => $status,
             'semestre' => $row->getSemestre()->getNome()
         );

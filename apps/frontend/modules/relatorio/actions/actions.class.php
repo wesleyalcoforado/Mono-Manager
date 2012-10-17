@@ -53,8 +53,87 @@ class relatorioActions extends sfActions
       $this->form = new RelatorioDefendidosForm();
     }
   }
+	
+  public function executeDocumentos(sfWebRequest $request)
+  {
+    $tipos = $this->getTipos();
+    $tiposLegivel = $this->getTipos(true);
 
-  public function executeAta(sfWebRequest $request)
+    $tipoDocumento = $request->getParameter('tipo');
+    if(!in_array($tipoDocumento, $tipos)){
+      $this->forward404("Tipo de documento inválido");
+    }
+
+    $this->tipoDocumento = $tipoDocumento;
+    $this->tipoDocumentoLegivel = $tiposLegivel[array_search($tipoDocumento, $tipos)];
+
+    $generate = $request->hasParameter('gerar');
+    if($generate){
+      $filters = $request->getParameter('relatorio');
+      $matriculaEstudante = $filters['estudante_id'];
+      $professorId = $filters['professor_id'];
+      $semestreId = $filters['semestre_id'];
+
+      $results = ProjetoTable::getInstance()->generateDocumentosReport($matriculaEstudante, $professorId, $semestreId);
+      $this->reportRows = $results;
+
+      $this->form = new RelatorioDocumentosForm($filters);
+    }else{
+      $this->form = new RelatorioDocumentosForm();
+    }
+  }
+
+  private function getTipos($legivel = false){
+    if($legivel){
+      return array('ata da apresentação e defesa de projeto final',
+                                'declaração de orientação',
+                                'declaração de participação em banca',
+                                'ficha de avaliação de projeto final' );
+    }
+    return array('ata', 'orientador', 'banca', 'ficha');
+  }
+
+
+  public function executeParametrosdocumento(sfWebRequest $request){
+    $tipos = $this->getTipos();
+    $tiposLegivel = $this->getTipos(true);
+
+    $tipoDocumento = $request->getParameter('tipo');
+    if(!in_array($tipoDocumento, $tipos) || $tipoDocumento == 'orientador'){
+      $this->forward404("Tipo de documento inválido");
+    }
+
+    $this->tipoDocumento = $tipoDocumento;
+    $this->tipoDocumentoLegivel = $tiposLegivel[array_search($tipoDocumento, $tipos)];
+
+    $idProjeto = $request->getParameter('id');
+    if(!ProjetoTable::getInstance()->find($projetoId)){
+      $this->forward404("Tipo de documento inválido");
+    }
+    $this->idProjeto = $idProjeto;
+
+    $generate = $request->hasParameter('gerar');
+    if($generate){
+      if($tipo == 'ata'){
+        return executeAta($request);
+      }elseif ($tipo == 'banca') {
+        return executeDeclaracaoBanca($request);
+      }elseif ($tipo == 'ficha') {
+        return executeFicha($request);
+      }
+    }else{
+      if($tipo == 'ata'){
+        $this->form = ParametrosAtaForm();
+      }elseif ($tipo == 'banca') {
+        $this->form = ParametrosFichaForm();
+      }elseif ($tipo == 'ficha') {
+        $this->form = ParametrosFichaForm();
+      }
+    }
+  }
+	
+
+  private function executeAta(sfWebRequest $request)
   {
 		$projetoId = $request->getParameter('id');
 		$projeto = ProjetoTable::getInstance()->find($projetoId);
@@ -62,10 +141,13 @@ class relatorioActions extends sfActions
 		$aluno = $projeto->getEstudante()->getUsuario()->getFullName();
 		$titulo = $projeto->getTitulo();
 		$orientador = $projeto->getProfessor()->getUsuario()->getFullName();
-		$nota = 9.7;
-		$data = time();
-		$hora = "12:30";
-		$examinadores = array("Fulano de tal", "Cicrano Silva", "Beltrano José");
+		
+		$fields = $request->getParameter('relatorio');		
+		
+		$nota = $fields['nota'];
+		$data = $fields['data'];
+		$hora = $fields['hora'];
+		$examinadores = split("\n", $fields['examinadores']);
 		
 		$this->generateAta($aluno, $titulo, $orientador, $nota, $data, $hora, $examinadores);
   }
@@ -82,28 +164,32 @@ class relatorioActions extends sfActions
 		$this->generateDeclaracao($orientador, $aluno, $titulo);
   }	
 	
-  public function executeDeclaracaoBanca(sfWebRequest $request)
+  private function executeDeclaracaoBanca(sfWebRequest $request)
   {
 		$projetoId = $request->getParameter('id');
 		$projeto = ProjetoTable::getInstance()->find($projetoId);
 		
 		$aluno = $projeto->getEstudante()->getUsuario()->getFullName();
 		$titulo = $projeto->getTitulo();
-		$professor = 'Fulano de tal';
+		
+		$fields = $request->getParameter('relatorio');		
+		$professor = $fields["professor"];
 		
 		$this->generateDeclaracao($professor, $aluno, $titulo);
   }		
 	
-  public function executeFicha(sfWebRequest $request)
+  private function executeFicha(sfWebRequest $request)
   {
 		$projetoId = $request->getParameter('id');
 		$projeto = ProjetoTable::getInstance()->find($projetoId);
 		
 		$aluno = $projeto->getEstudante()->getUsuario()->getFullName();
 		$titulo = $projeto->getTitulo();
-		$professor = 'Fulano de tal';
+
+		$fields = $request->getParameter('relatorio');		
+		$professor = $fields["professor"];
 		
-		$this->generateFicha($professor, $aluno, $titulo, 1);
+		$this->generateFicha($professor, $aluno, $titulo);
   }	
 	
 	private function generateAta($aluno, $titulo, $orientador, $nota, $data, $hora, $examinadores = array()){
@@ -122,7 +208,7 @@ class relatorioActions extends sfActions
 		}
 
     $pdf->Ln(10);
-		$formattedDate = $this->formatDate($data);
+		$formattedDate = $data; //$this->formatDate($data);
     $pdf->writeHTML("<span style='text-align:justify;'>Defesa da referida monografia de Projeto Final ocorreu no dia  $formattedDate às $hora h, tendo sido o aluno submetido à sabatina pela banca examinadora. Finalmente, a mesma reuniu-se em separado e concluiu por considerar o candidato $aluno em virtude da sua monografia e sua defesa pública alcançarem média $nota.</span>");
 
     $pdf->Ln(5);
