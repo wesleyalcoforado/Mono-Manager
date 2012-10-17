@@ -1,6 +1,6 @@
 <h1>Relatórios</h1>
 
-<table class="icons_table">
+<table id="icons_table">
 	<tr>
 	  <td>
 			<?php echo link_to(image_tag('icons/project_status') . "<br/>Status dos projetos", 'relatorio/status'); ?>
