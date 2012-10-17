@@ -35,7 +35,7 @@ if(count($reportRows) > 0):
       <?php if($tipo == 'orientador'): ?>
 			<td><?php echo link_to('Gerar documento', 'relatorio/declaracaoOrientador?id=' . $row['projeto_id']); ?></td>
       <?php else: ?>
-      <td><?php echo link_to('Gerar documento', 'relatotio/parametrosdocumento?tipo=' . $tipo . '&id='. $row['projeto_id']); ?></td>
+				<td><?php echo link_to('Gerar documento', 'relatorio/parametrosdocumento?tipo=' . $tipoDocumento . '&id='. $row['projeto_id']); ?></td>
       <?php endif; ?>
     </tr>
 <?php
