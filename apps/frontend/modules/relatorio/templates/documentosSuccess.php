@@ -33,7 +33,7 @@ if(count($reportRows) > 0):
       <td><?php echo $row['projeto']; ?></td>
       <td><?php echo $row['semestre']; ?></td>
       <?php if($tipo == 'orientador'): ?>
-      <td><?php echo link_to('Gerar documento', 'relatorio/declaracaoOrientador?id=' . $row['projeto_id']);</td>
+			<td><?php echo link_to('Gerar documento', 'relatorio/declaracaoOrientador?id=' . $row['projeto_id']); ?></td>
       <?php else: ?>
       <td><?php echo link_to('Gerar documento', 'relatotio/parametrosdocumento?tipo=' . $tipo . '&id='. $row['projeto_id']); ?></td>
       <?php endif; ?>
