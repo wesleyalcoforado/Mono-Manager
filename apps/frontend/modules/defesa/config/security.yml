@@ -12,6 +12,6 @@ comments:
 
 aprovar:
   credentials: professor
-	
+
 documentofinal:
-	credentials: estudante
+  credentials: estudante

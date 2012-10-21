@@ -53,8 +53,8 @@ defesa_concluir:
     concluido: (true|false)
 
 documento_final:
-	url: /projeto/:projeto_id
-	param: {module: defesa, action: documentofinal}
+  url: /documentofinal/:projeto_id
+  param: {module: defesa, action: documentofinal}
 
 # generic rules
 # please, remove them by adding more specific rules
