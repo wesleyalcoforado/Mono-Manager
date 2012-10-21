@@ -169,7 +169,8 @@ class defesaActions extends documentoActions
 		
 		if($request->isMethod('post')){
       $formData = $request->getParameter('documento');
-      $formFiles = $request->getFiles();			
+      $formFiles = $request->getFiles();	
+			$formFiles = $formFiles['documento'];		
 			
 			$this->form->bind($formData, $formFiles);
 			if($this->form->isValid()){

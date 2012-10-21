@@ -196,6 +196,22 @@ class MailFactory {
     $message = $this->createMessage($subject, $body, $emails);
     return $message;
   }
+  
+  public function createMessageNovoUsuario($nome, $login, $senha, $email){
+    $params = array(
+        'nomeEstudante' => $nome,
+        'login'  => $login,
+        'senha' => $senha
+    );
+
+    $emails = array($email);
+
+    $subject = 'TCC-Manager - Novo usuário';
+    $body = $this->action->getPartial('mail/novoUsuario', $params);
+
+    $message = $this->createMessage($subject, $body, $emails);
+    return $message;
+  }  
 
   protected function createMessage($subject, $body, $to){
     $mailSender = sfConfig::get('app_mail_sender');

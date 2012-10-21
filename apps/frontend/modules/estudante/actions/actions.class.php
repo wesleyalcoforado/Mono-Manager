@@ -14,5 +14,27 @@ class estudanteActions extends monomActions
   protected function getFormClassName() {
     return "UsuarioEstudanteForm";
   }  
+  
+  protected function saveForm($formData, $formFiles){
+    parent::saveForm($formData, $formFiles);
+    if($this->form->isValid()){
+      //se o ID esta vazio, o usuario é novo, notificá-lo da criação
+      if(empty($formData['id'])){
+        $usuario = $formData['username'];
+        $senha = $formData['password'];
+        $nome = $formData['first_name'] . ' ' . $formData['last_name'];
+        $email = $formData['email_address'];
+        
+        $mail = new MailFactory($this);
+        $message = $mail->createMessageNovoUsuario($nome, $usuario, $senha, $email);
+        
+        try{
+          @$this->getMailer()->send($message);
+        }catch(Exception $e){
+          $this->setMessage('error', 'Ocorreu um erro durante o envio de email.');
+        }        
+      }
+    }
+  }
 
 }
