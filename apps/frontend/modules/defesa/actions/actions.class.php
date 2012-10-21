@@ -39,7 +39,7 @@ class defesaActions extends documentoActions
       $this->redirect('projeto/index');
     }
   }
-
+	
   public function executeDownload(sfWebRequest $request)
   {
     $this->validateProject($request);
@@ -160,6 +160,32 @@ class defesaActions extends documentoActions
         'semestreId' => $defesa->getProjeto()->getSemestreId()
     )));
   }
+	
+	public function executeDocumentofinal(sfWebRequest $request)
+	{
+		$this->form = new DocumentoFinalForm();
+		$this->validateProject($request);
+		$this->maxFileSize = Util::getMaxFilesize(); 
+		
+		if($request->isMethod('post')){
+      $formData = $request->getParameter('documento');
+      $formFiles = $request->getFiles();			
+			
+			$this->form->bind($formData, $formFiles);
+			if($this->form->isValid()){
+	      $file = $formFiles['documento_final'];
+	      $this->saveFile($file);
+	      $filename = $this->createFullFilename($file);
+				
+				$defesa = DefesaTable::getInstance()->findByProjetoId($this->projetoId);
+				$defesa->setDocumentoFinal($filename);
+				$defesa->save();
+				
+	      $this->setMessage('notice', 'Documento final adicionado com sucesso.');
+	      $this->redirect('projeto/index');				
+			}
+		}
+	}
 
   //TODO: este método pode ser refatorado para remover duplicação entre proposta e defesa
   protected function  getComments() {

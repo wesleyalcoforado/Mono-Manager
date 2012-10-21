@@ -88,6 +88,7 @@ foreach($list as $projeto): ?>
                   </div>
                   <?php
                   echo link_to(presentationButton(true, 'Renovar requisição de defesa'), "@defesa?projeto_id={$projeto->getId()}", array('confirm' => 'Ao renovar a defesa, o processo de requisição de defesa será reiniciado. Deseja continuar?'));
+									echo link_to(finalDocumentButton(), "@documento_final?projeto_id={$projeto->getId()}");
                 else:
                   echo link_to(presentationButton(), "@defesa?projeto_id={$projeto->getId()}");
                 endif;

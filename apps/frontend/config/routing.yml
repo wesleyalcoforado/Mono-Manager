@@ -52,6 +52,10 @@ defesa_concluir:
   requirements:
     concluido: (true|false)
 
+documento_final:
+	url: /projeto/:projeto_id
+	param: {module: defesa, action: documentofinal}
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:

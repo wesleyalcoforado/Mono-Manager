@@ -28,6 +28,10 @@ function presentationButton($enabled = true, $titulo = 'Solicitar defesa'){
   return image_tag($img, array('alt' => $titulo, 'title' => $titulo));
 }
 
+function finalDocumentButton(){
+  return image_tag('icons/pdf.png', array('alt' => 'Enviar documento final', 'title' => 'Enviar documento final'));
+}
+
 function approveButton($enabled = true, $titulo = 'Aprovar proposta'){
   $img = "icons/thumb_up.png";
   if(!$enabled){
