@@ -176,7 +176,7 @@ class defesaActions extends documentoActions
 			if($this->form->isValid()){
 	      $file = $formFiles['documento_final'];
 	      $this->saveFile($file);
-	      $filename = $this->createFullFilename($file);
+	      $filename = $this->createDocumentoFinalFilename($file);
 				
 				$defesa = DefesaTable::getInstance()->findByProjetoId($this->projetoId);
 				$defesa->setDocumentoFinal($filename);
@@ -186,6 +186,16 @@ class defesaActions extends documentoActions
 	      $this->redirect('projeto/index');				
 			}
 		}
+	}
+	
+	private function createDocumentoFinalFilename($file){
+		$uploadDir = sfConfig::get('sf_upload_dir');
+		
+    $name = 'documento_final_[projeto_' . $this->projetoId . ']';
+    $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+
+    $nomeArquivo = $uploadDir . '/' . $name . '.' . $extension;
+    return $nomeArquivo;		
 	}
 
   //TODO: este método pode ser refatorado para remover duplicação entre proposta e defesa
