@@ -175,8 +175,7 @@ class defesaActions extends documentoActions
 			$this->form->bind($formData, $formFiles);
 			if($this->form->isValid()){
 	      $file = $formFiles['documento_final'];
-	      $this->saveFile($file);
-	      $filename = $this->createDocumentoFinalFilename($file);
+	      $filename = $this->saveFile($file);
 				
 				$defesa = DefesaTable::getInstance()->findByProjetoId($this->projetoId);
 				$defesa->setDocumentoFinal($filename);
@@ -188,13 +187,20 @@ class defesaActions extends documentoActions
 		}
 	}
 	
-	private function createDocumentoFinalFilename($file){
+	private function saveDocumentoFinal($file){
 		$uploadDir = sfConfig::get('sf_upload_dir');
 		
     $name = 'documento_final_[projeto_' . $this->projetoId . ']';
     $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
 
     $nomeArquivo = $uploadDir . '/' . $name . '.' . $extension;
+		
+    if(file_exists($nomeArquivo)){
+      unlink($nomeArquivo);
+    }
+
+    move_uploaded_file($file['tmp_name'], $nomeArquivo);		
+		
     return $nomeArquivo;		
 	}
 
