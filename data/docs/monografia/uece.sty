@@ -154,10 +154,10 @@ Palavras-Chave: \ABNTpcumdata, \ABNTpcdoisdata, \ABNTpctresdata
 			\ABNTautorrdata.
 
 			\hspace{0.4cm}
-			\ABNTtitulodata\ / \ABNTautordata. -- \ABNTcidadedata, \ABNTdatadata.
+			\ABNTtitulodata\ / \ABNTautordata. -- \ABNTdatadata.
 
 			\hspace{0.4cm}
-			\pageref{LastPage}p.;il.
+			\pageref{LastPage}p.;il. color, enc.; 30 cm.
 
 			\uececipdata
 
@@ -170,14 +170,16 @@ Palavras-Chave: \ABNTpcumdata, \ABNTpcdoisdata, \ABNTpctresdata
 
 
 \gdef\uececipdata{
+
+
+	\hspace{0.4cm}
+	Monografia (Graduação) - \ABNTinstituicaodata, \ABNTcentrodata, \ABNTcursodata, \ABNTcidadedata, \ABNTdatadata.
+
 	\hspace{0.4cm}
 	Orientador: \ABNTorientadordata
 
 	\hspace{0.4cm}
-	Monografia (\ABNTcursodata) - \ABNTinstituicaodata, \ABNTcentrodata.
-   
-	\hspace{0.4cm}
-	$1$. \ABNTpcumdata\ $2$. \ABNTpcdoisdata\ $3$. \ABNTpctresdata\ I. \ABNTinstituicaodata, \ABNTcentrodata.
+	$1$. \ABNTpcumdata\ $2$. \ABNTpcdoisdata\ $3$. \ABNTpctresdata\ I. Título.
 
 }
 
@@ -220,10 +222,10 @@ Palavras-Chave: \ABNTpcumdata, \ABNTpcdoisdata, \ABNTpctresdata
       \leavevmode \normalsize\ABNTtocchapterfont
       \advance\leftskip\@tempdima
       \hskip -\leftskip
-      #1\nobreak\dotfill \nobreak%
+      \MakeUppercase{#1}\nobreak\dotfill \nobreak%
       \ifthenelse{\boolean{ABNTpagenumstyle}}
          {%
-          \hb@xt@\@pnumwidth{\hss 
+          \hb@xt@\@pnumwidth{\hss
             \ifthenelse{\not\equal{#2}{}}{{\normalfont p.\thinspace#2}}{}}\par
          }
          {%
@@ -389,7 +391,7 @@ Palavras-Chave: \ABNTpcumdata, \ABNTpcdoisdata, \ABNTpctresdata
 	\begin{minipage}{.4\textwidth}
 		\par
 		\textit{
-			\ABNTepigrafedata \\ 
+			\ABNTepigrafedata \\
 			\bfseries \ABNTautorepigrafedata
 		}
 	\end{minipage}

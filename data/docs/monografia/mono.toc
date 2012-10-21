@@ -1,58 +1,46 @@
 \select@language {brazil}
-\contentsline {chapter}{Lista de Figuras}{}
-\contentsline {chapter}{Lista de Siglas}{}
-\contentsline {chapter}{Resumo}{}
-\contentsline {chapter}{Abstract}{}
-\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{15}
-\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{15}
-\contentsline {section}{\numberline {1.2}Objetivo}{16}
-\contentsline {subsection}{\numberline {1.2.1}Objetivos espec\IeC {\'\i }ficos}{16}
-\contentsline {section}{\numberline {1.3}Metodologia}{16}
-\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{17}
-\contentsline {chapter}{\numberline {2}Regulamento de Projeto Final}{18}
-\contentsline {section}{\numberline {2.1}Entidades envolvidas e suas atribui\IeC {\c c}\IeC {\~o}es}{18}
-\contentsline {section}{\numberline {2.2}Desenvolvimento do projeto}{19}
-\contentsline {subsection}{\numberline {2.2.1}Proposta do projeto}{19}
-\contentsline {subsection}{\numberline {2.2.2}Defesa do projeto}{20}
-\contentsline {subsection}{\numberline {2.2.3}Resumo do fluxo do desenvolvimento do projeto final}{20}
-\contentsline {chapter}{\numberline {3}Processo de desenvolvimento da aplica\IeC {\c c}\IeC {\~a}o}{22}
-\contentsline {section}{\numberline {3.1}Escolha das tecnologias}{22}
-\contentsline {subsection}{\numberline {3.1.1}Linguagem de programa\IeC {\c c}\IeC {\~a}o}{22}
-\contentsline {subsection}{\numberline {3.1.2}Framework}{23}
-\contentsline {subsubsection}{\numberline {3.1.2.1}MVC}{24}
-\contentsline {subsubsection}{\numberline {3.1.2.2}Mapeamento objeto-relacional}{24}
-\contentsline {subsubsection}{\numberline {3.1.2.3}\emph {Convention over configuration}}{25}
+\contentsline {chapter}{\numberline {1}INTRODU\IeC {\c C}\IeC {\~A}O}{14}
+\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{14}
+\contentsline {section}{\numberline {1.2}Objetivo}{15}
+\contentsline {subsection}{\numberline {1.2.1}Objetivos espec\IeC {\'\i }ficos}{15}
+\contentsline {section}{\numberline {1.3}Metodologia}{15}
+\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{16}
+\contentsline {chapter}{\numberline {2}REGULAMENTO DE PROJETO FINAL}{17}
+\contentsline {section}{\numberline {2.1}Entidades envolvidas e suas atribui\IeC {\c c}\IeC {\~o}es}{17}
+\contentsline {section}{\numberline {2.2}Desenvolvimento do projeto}{18}
+\contentsline {subsection}{\numberline {2.2.1}Proposta do projeto}{18}
+\contentsline {subsection}{\numberline {2.2.2}Defesa do projeto}{19}
+\contentsline {subsection}{\numberline {2.2.3}Resumo do fluxo do desenvolvimento do projeto final}{19}
+\contentsline {chapter}{\numberline {3}PROCESSO DE DESENVOLVIMENTO DA APLICA\IeC {\c C}\IeC {\~A}O}{21}
+\contentsline {section}{\numberline {3.1}Escolha das tecnologias}{21}
+\contentsline {subsection}{\numberline {3.1.1}Linguagem de programa\IeC {\c c}\IeC {\~a}o}{21}
+\contentsline {subsection}{\numberline {3.1.2}Framework}{22}
+\contentsline {subsubsection}{\numberline {3.1.2.1}MVC}{23}
+\contentsline {subsubsection}{\numberline {3.1.2.2}Mapeamento objeto-relacional}{23}
+\contentsline {subsubsection}{\numberline {3.1.2.3}\emph {Convention over configuration}}{24}
 \contentsline {subsection}{\numberline {3.1.3}SGBD}{25}
-\contentsline {subsection}{\numberline {3.1.4}IDE}{26}
-\contentsline {subsection}{\numberline {3.1.5}Outros requisitos de plataforma}{26}
-\contentsline {section}{\numberline {3.2}An\IeC {\'a}lise e projeto da ferramenta TCC-Manager}{27}
-\contentsline {subsection}{\numberline {3.2.1}Casos de uso}{27}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Caso de uso Manter Professores}{27}
-\contentsline {subsubsection}{\numberline {3.2.1.2}Caso de uso Manter Estudantes}{27}
+\contentsline {subsection}{\numberline {3.1.4}IDE}{25}
+\contentsline {subsection}{\numberline {3.1.5}Outros requisitos de plataforma}{25}
+\contentsline {section}{\numberline {3.2}An\IeC {\'a}lise e projeto da ferramenta TCC-Manager}{26}
+\contentsline {subsection}{\numberline {3.2.1}Casos de uso}{26}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Caso de uso Manter Professores}{26}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Caso de uso Manter Estudantes}{26}
 \contentsline {subsubsection}{\numberline {3.2.1.3}Caso de uso Manter Projetos}{27}
-\contentsline {subsubsection}{\numberline {3.2.1.4}Caso de uso Manter Propostas}{28}
-\contentsline {subsubsection}{\numberline {3.2.1.5}Caso de uso Manter Defesas}{28}
-\contentsline {subsection}{\numberline {3.2.2}Defini\IeC {\c c}\IeC {\~a}o do banco de dados e gera\IeC {\c c}\IeC {\~a}o autom\IeC {\'a}tica de c\IeC {\'o}digo}{28}
-\contentsline {subsection}{\numberline {3.2.3}Diagrama de classes}{29}
-\contentsline {subsubsection}{\numberline {3.2.3.1}Autentica\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios}{31}
-\contentsline {subsubsection}{\numberline {3.2.3.2}Formul\IeC {\'a}rios}{32}
-\contentsline {chapter}{\numberline {4}Utiliza\IeC {\c c}\IeC {\~a}o do sistema}{33}
-\contentsline {section}{\numberline {4.1}Utiliza\IeC {\c c}\IeC {\~a}o do sistema}{33}
-\contentsline {subsection}{\numberline {4.1.1}Telas em comum entre todos os perfis}{33}
+\contentsline {subsubsection}{\numberline {3.2.1.4}Caso de uso Manter Propostas}{27}
+\contentsline {subsubsection}{\numberline {3.2.1.5}Caso de uso Manter Defesas}{27}
+\contentsline {subsection}{\numberline {3.2.2}Defini\IeC {\c c}\IeC {\~a}o do banco de dados e gera\IeC {\c c}\IeC {\~a}o autom\IeC {\'a}tica de c\IeC {\'o}digo}{27}
+\contentsline {subsection}{\numberline {3.2.3}Diagrama de classes}{28}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Autentica\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios}{30}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Formul\IeC {\'a}rios}{31}
+\contentsline {chapter}{\numberline {4}UTILIZA\IeC {\c C}\IeC {\~A}O DO SISTEMA}{32}
+\contentsline {section}{\numberline {4.1}Utiliza\IeC {\c c}\IeC {\~a}o do sistema}{32}
+\contentsline {subsection}{\numberline {4.1.1}Telas em comum entre todos os perfis}{32}
 \contentsline {subsection}{\numberline {4.1.2}Perfil de administrador}{33}
-\contentsline {subsection}{\numberline {4.1.3}Perfil de estudante}{36}
-\contentsline {subsection}{\numberline {4.1.4}Perfil de professor (orientador)}{39}
-\contentsline {subsection}{\numberline {4.1.5}Perfil de comiss\IeC {\~a}o}{39}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e trabalhos futuros}{50}
+\contentsline {subsection}{\numberline {4.1.3}Perfil de estudante}{35}
+\contentsline {subsection}{\numberline {4.1.4}Perfil de professor (orientador)}{38}
+\contentsline {subsection}{\numberline {4.1.5}Perfil de comiss\IeC {\~a}o}{44}
+\contentsline {chapter}{\numberline {5}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{50}
 \contentsline {section}{\numberline {5.1}Trabalhos futuros}{50}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{51}
-\contentsline {chapter}{\numberline {6}Ap\IeC {\^e}ndice}{53}
-\contentsline {section}{\numberline {6.1}Casos de uso}{54}
-\contentsline {subsection}{\numberline {6.1.1}Manter Professores}{54}
-\contentsline {subsection}{\numberline {6.1.2}Manter Estudantes}{56}
-\contentsline {subsection}{\numberline {6.1.3}Manter Projetos}{58}
-\contentsline {subsection}{\numberline {6.1.4}Manter Propostas}{60}
-\contentsline {subsection}{\numberline {6.1.5}Manter Defesas}{62}
-\contentsline {chapter}{\numberline {7}Anexos}{64}
-\contentsline {section}{\numberline {7.1}Formul\IeC {\'a}rio de proposta de projeto final}{65}
-\contentsline {section}{\numberline {7.2}Formul\IeC {\'a}rio de solicita\IeC {\c c}\IeC {\~a}o de defesa e banca}{66}
+\contentsline {chapter}{Refer\^encias}{51}
+\contentsline {chapter}{AP\IeC {\^E}NDICE}{53}
+\contentsline {chapter}{ANEXOS}{65}

@@ -1,19 +1,29 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.4)  21 APR 2011 23:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  21 OCT 2012 18:26
 entering extended mode
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **mono.tex
 (./mono.tex
-LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, portuguese, loaded.
-(/usr/share/texmf/tex/latex/abntex/abnt.cls
-(/usr/share/texmf/tex/latex/abntex/cvs-id.def)
-Document Class: abnt 2006/09/09 v1.32 Classe abnt (NBR6024, NBR6027, NBR6028, N
-BR14724)
-(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/abnt.cls
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/cvs-id.def)
+Document Class: abnt 2004/11/02 v1.27.2.1 Classe abnt (NBR6024, NBR6027, NBR602
+8, NBR14724)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count79
 \calc@Bcount=\count80
@@ -26,8 +36,8 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count81
 \calc@Cskip=\skip43
 )
-(/usr/share/texmf-texlive/tex/latex/tools/multicol.sty
-Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count82
 \mult@box=\box26
 \multicol@leftmargin=\dimen104
@@ -72,144 +82,64 @@ Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
 \multicolundershoot=\dimen111
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
+\multicol@sort@counter=\count90
 )
-(/usr/share/texmf/tex/latex/abntex/abntex-abrev.sty
-(/usr/share/texmf/tex/latex/abntex/cvs-id.def)
-Package: abntex-abrev 2005/11/14 v1.4 Abreviacoes
-
-(/usr/share/texmf/tex/latex/abntex/nbr10522-1988.def
-(/usr/share/texmf/tex/latex/abntex/cvs-id.def)
-File: nbr10522-1988.def 2003/10/13 v1.2 Abreviacoes bibliograficas (NBR10522:19
-88)
-)
-(/usr/share/texmf/tex/latex/abntex/abntex-abrev-pt_BR.def
-(/usr/share/texmf/tex/latex/abntex/cvs-id.def)
-File: abntex-abrev-pt_BR.def 2005/11/14 v1.3 definicao de abntex-abrev, traduca
-o de termos en_US/pt_BR
-))
-(/usr/share/texmf/tex/latex/abntex/abntex-text.sty
-(/usr/share/texmf/tex/latex/abntex/cvs-id.def)
-Package: abntex-text 2005/11/14 v1.1 abnTeX text replacements
-
-(/usr/share/texmf/tex/latex/abntex/abntex-text-pt_BR.def
-(/usr/share/texmf/tex/latex/abntex/cvs-id.def)
-File: abntex-text-pt_BR.def 2005/12/21 v1.2 Definicao de nomes em Portugues/Bra
-sil (pt_BR)
-))
-(/usr/share/texmf/tex/latex/abntex/abntex-default-design.sty
-(/usr/share/texmf/tex/latex/abntex/cvs-id.def)
-Package: abntex-default-design 2005/06/22 v1.2 Definicoes de design padrao do a
-bntex
-
-(/usr/share/texmf-texlive/tex/latex/ltxmisc/relsize.sty
-Package: relsize 2003/07/04 ver 3.1
-
-
-Package relsize Warning: Failed to get list of font sizes.
-(relsize)                Falling back to old definition. on input line 81.
-
-)
-\ABNTanapindent=\skip46
-\ABNTsignwidth=\skip47
-\ABNTsignthickness=\skip48
-\ABNTsignskip=\skip49
-) (/usr/share/texmf/tex/latex/abntex/nbr6027-1989.def)
-(/usr/share/texmf/tex/latex/abntex/nbr14724-2001.def)
-(/usr/share/texmf-texlive/tex/latex/base/report.cls
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/size12.clo
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count90
-\c@chapter=\count91
-\c@section=\count92
-\c@subsection=\count93
-\c@subsubsection=\count94
-\c@paragraph=\count95
-\c@subparagraph=\count96
-\c@figure=\count97
-\c@table=\count98
-\abovecaptionskip=\skip50
-\belowcaptionskip=\skip51
+\c@part=\count91
+\c@chapter=\count92
+\c@section=\count93
+\c@subsection=\count94
+\c@subsubsection=\count95
+\c@paragraph=\count96
+\c@subparagraph=\count97
+\c@figure=\count98
+\c@table=\count99
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
 \bibindent=\dimen112
 )
-(/usr/share/texmf-texlive/tex/latex/setspace/setspace.sty
-Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
-
-Package: `setspace' 6.7 <2000/12/01>
-) (/usr/share/texmf-texlive/tex/latex/psnfss/mathptmx.sty
-Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
-\symbold=\mathgroup4
-\symitalic=\mathgroup5
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
-LaTeX Info: Redefining \hbar on input line 50.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
-Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+\ABNTanapindent=\skip48
+\ABNTsignwidth=\skip49
+\ABNTsignthickness=\skip50
+\ABNTsignskip=\skip51
 
-(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks14
-))
-(/usr/share/texmf-texlive/tex/latex/tools/indentfirst.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ))
-(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
-Package: babel 2008/07/06 v3.8l The Babel package
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/08 v3.8m The Babel package
 
-(/usr/share/texmf-texlive/tex/generic/babel/portuges.ldf
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-(/usr/share/texmf-texlive/tex/generic/babel/babel.def
-File: babel.def 2008/07/06 v3.8l Babel common definitions
-\babel@savecnt=\count99
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count100
 \U@D=\dimen113
 )
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 ))
-(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 
-(/usr/share/texmf-texlive/tex/latex/base/utf8.def
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texmf-texlive/tex/latex/base/t1enc.dfu
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -359,7 +289,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texmf-texlive/tex/latex/base/ot1enc.dfu
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -390,7 +320,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texmf-texlive/tex/latex/base/omsenc.dfu
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -414,62 +344,98 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texmf/tex/latex/abntex/abnt-alf.sty
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/abnt-alf.sty
 Package: abnt-alf 2002/06/24
 
-(/usr/share/texmf/tex/latex/abntex/abntcite.sty
-(/usr/share/texmf/tex/latex/abntex/cvs-id.def)
-Package: abntcite 2006/04/25 v1.30 Chamadas de referencias no texto (NBR10520, 
-NBR10522)
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/abntcite.sty
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/cvs-id.def)
+Package: abntcite 2003/10/13 v1.26 Chamadas de referencias no texto (NBR10520)
+
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/abntex-abrev.sty
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/cvs-id.def)
+Package: abntex-abrev 2003/10/13 v1.3 Abreviacoes
+
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/nbr10522-1988.def
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/cvs-id.def)
+File: nbr10522-1988.def 2003/10/13 v1.2 Abreviacoes bibliograficas (NBR10522:19
+88)
+)
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/abntex-abrev-pt_BR.def
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/cvs-id.def)
+File: abntex-abrev-pt_BR.def 2003/10/13 v1.2 definicao de abntex-abrev, traduca
+o de termos en_US/pt_BR
+))
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/nbr10520-2002.def
+(/usr/local/texlive/2012/texmf/tex/latex/abntex/cvs-id.def)
+File: nbr10520-2002.def 2003/10/13 v1.2 Definicoes para abntcite (NBR10520:2002
+)
+)
 \minimumbiblabelwidth=\skip52
 \ABCIauxlen=\skip53
-\c@ABCIaux=\count100
-\c@ABCImax=\count101
+\c@ABCIaux=\count101
+\c@ABCImax=\count102
 
-(/usr/share/texmf/tex/latex/abntex/nbr10520-2002.def
-(/usr/share/texmf/tex/latex/abntex/cvs-id.def)
-File: nbr10520-2002.def 2006/04/25 v1.4 Definicoes para abntcite (NBR10520:2002
-)
-)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2011/09/21 ver 4.0
+
+Examine \normalsize starts \@setfontsize size may be \@xiipt. 
+Examine \small starts \@setfontsize size may be \@xipt. 
+Examine \footnotesize starts \@setfontsize size may be \@xpt. 
+Examine \large starts \@setfontsize size may be \@xivpt. 
+Examine \Large starts \@setfontsize size may be \@xviipt. 
+Examine \LARGE starts \@setfontsize size may be \@xxpt. 
+Examine \scriptsize starts \@setfontsize size may be \@viiipt. 
+Examine \tiny starts \@setfontsize size may be \@vipt. 
+Examine \huge starts \@setfontsize size may be \@xxvpt. 
+Examine \Huge starts \@setfontsize size may be \@xxvpt. )
 \biblabelsep=\skip54
-LaTeX Info: Redefining \newblock on input line 466.
-LaTeX Info: Redefining \cite on input line 493.
-\ABCItoken=\toks17
+LaTeX Info: Redefining \newblock on input line 562.
+LaTeX Info: Redefining \cite on input line 589.
+\ABCItoken=\toks16
 ))
-(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/etc/texmf/tex/latex/config/graphics.cfg
-File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
-\Gread@gobject=\count102
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count103
 ))
 \Gin@req@height=\dimen114
 \Gin@req@width=\dimen115
-) (./uece.sty
-(/usr/share/texmf-texlive/tex/latex/lastpage/lastpage.sty
-Package: lastpage 1994/06/25 v0.1b LaTeX2e package for refs to last page number
- (JPG)
-))
-(/usr/share/texmf-texlive/tex/latex/tools/enumerate.sty
+)
+(./uece.sty (/usr/local/texlive/2012/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2011/09/01 v1.2k Refers to last page's name (HMM; JPG)
+)) (/usr/local/texlive/2012/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks18
 )
-(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(/usr/share/texmf-texlive/tex/latex/booktabs/booktabs.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen116
 \lightrulewidth=\dimen117
@@ -481,244 +447,302 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen123
 \cmidrulekern=\dimen124
 \defaultaddspace=\dimen125
-\@cmidla=\count103
-\@cmidlb=\count104
+\@cmidla=\count104
+\@cmidlb=\count105
 \@aboverulesep=\dimen126
 \@belowrulesep=\dimen127
-\@thisruleclass=\count105
-\@lastruleclass=\count106
+\@thisruleclass=\count106
+\@lastruleclass=\count107
 \@thisrulewidth=\dimen128
-) (./monomanager.sty)
-(/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
+)
+(./monomanager.sty)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip55
 \LTright=\skip56
 \LTpre=\skip57
 \LTpost=\skip58
-\LTchunksize=\count107
+\LTchunksize=\count108
 \LTcapwidth=\dimen129
 \LT@head=\box52
 \LT@firsthead=\box53
 \LT@foot=\box54
 \LT@lastfoot=\box55
-\LT@cols=\count108
-\LT@rows=\count109
-\c@LT@tables=\count110
-\c@LT@chunks=\count111
+\LT@cols=\count109
+\LT@rows=\count110
+\c@LT@tables=\count111
+\c@LT@chunks=\count112
 \LT@p@ftn=\toks19
-) (./mono.aux (./ch1.aux) (./ch2.aux) (./ch3.aux) (./ch4.aux) (./ch5.aux) (./ch
-a.aux))
+) (./mono.aux
+(./ch1.aux) (./ch2.aux) (./ch3.aux) (./ch4.aux) (./ch5.aux) (./cha.aux))
 \openout1 = `mono.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
 
-(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-\big@size=\dimen130
-
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count112
-\scratchdimen=\dimen131
+\scratchcounter=\count113
+\scratchdimen=\dimen130
 \scratchbox=\box56
-\nofMPsegments=\count113
-\nofMParguments=\count114
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count115
-\MPscratchDim=\dimen132
-\MPnumerator=\count116
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen131
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks21
-) <fig/uece.pdf, id=1, 153.21964pt x 223.32072pt>
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             macros/latex/contrib/pageslts/ 
+(lastpage)             or
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
+(lastpage)             ! on input line 73.
+
+<fig/uece.pdf, id=1, 153.21964pt x 223.32072pt>
 File: fig/uece.pdf Graphic file (type pdf)
  <use fig/uece.pdf>
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 73
-.
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 73
-.
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 73
-.
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 73
-.
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
+Package pdftex.def Info: fig/uece.pdf used on input line 75.
+(pdftex.def)             Requested size: 71.13188pt x 103.67609pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 75.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 75.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 75.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 75.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig/uece.pdf>] [1] [2] [
-3] [4
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./fig/u
+ece.pdf>]
+Underfull \hbox (badness 1655) in paragraph at lines 76--76
+[]\OT1/cmr/m/n/12 Monografia sub-me-tida ^^Ra co-or-dena^^Xc~ao do
+ []
 
-]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 87.
- [5]
-(./mono.toc [6
+[1]
+Underfull \vbox (badness 2119) detected at line 77
+ []
+
+[2]
+Underfull \hbox (badness 1655) in paragraph at lines 78--78
+[]\OT1/cmr/m/n/12 Monografia sub-me-tida ^^Ra co-or-dena^^Xc~ao do
+ []
+
+[3] [4
+
+] [5] [6
+
+
+] [7
+
+
+] (./mono.lof [8
+
+] [9])
+\tf@lof=\write3
+\openout3 = `mono.lof'.
+
+ [10] (./mono.lsg)
+\tf@lsg=\write4
+\openout4 = `mono.lsg'.
+
+ [11
+
+] (./mono.toc
+[12
 
 ])
-\tf@toc=\write3
-\openout3 = `mono.toc'.
+\tf@toc=\write5
+\openout5 = `mono.toc'.
 
- [7] [8] (./mono.lof [9
-
-
-] [10])
-\tf@lof=\write4
-\openout4 = `mono.lof'.
-
- [11] (./mono.lsg)
-\tf@lsg=\write5
-\openout5 = `mono.lsg'.
-
- [12
-
-] [13
-
-
-]
-[14
-
-
-]
+ [13]
 \openout2 = `ch1.aux'.
 
  (./ch1.tex
 Cap\'{\i }tulo 1.
-[15
+[14
+
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 48.
- (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
- [16]) [17]
+ [15]
+Overfull \hbox (0.63489pt too wide) in paragraph at lines 83--91
+[]\OT1/cmr/m/n/12 Al^^Sem deste cap^^S^^Ptulo in-tro-dut^^Sorio, o pre-sente tr
+a-ba-lho con-siste em mais 4 cap^^S^^Ptulos.
+ []
+
+) [16]
 \openout2 = `ch2.aux'.
 
-
-(./ch2.tex
+ (./ch2.tex
 Cap\'{\i }tulo 2.
-
-Overfull \hbox (3.01506pt too wide) in paragraph at lines 11--19
-[]\OT1/ptm/m/n/12 O de-sen-vol-vi-mento do pro-jeto fi-nal deve ser de-sem-pe-n
-hado in-di-vi-du-al-mente pelo aluno,
- []
-
-[18
+[17
 
 
 
-] [19] <fig/fluxograma_tcc.png, id=73, 1125.1447pt x 1147.81764pt>
+] [18] <fig/fluxograma_tcc.png, id=73, 1125.1447pt x 1147.81764pt>
 File: fig/fluxograma_tcc.png Graphic file (type png)
 
-<use fig/fluxograma_tcc.png>) [20] [21 <./fig/fluxograma_tcc.png (PNG copy)>]
+<use fig/fluxograma_tcc.png>
+Package pdftex.def Info: fig/fluxograma_tcc.png used on input line 122.
+(pdftex.def)             Requested size: 455.24411pt x 464.40823pt.
+) [19] [20 <./fig/fluxograma_tcc.png>]
 \openout2 = `ch3.aux'.
 
-
-(./ch3.tex
+ (./ch3.tex
 Cap\'{\i }tulo 3.
 
-Overfull \hbox (9.08609pt too wide) in paragraph at lines 25--28
-[]\OT1/ptm/m/n/12 Estas fer-ra-men-tas fo-ram es-co-lhi-das de-vido a se-rem gr
-a-tui-tas e pos-sui-rem vers[]oes est[]aveis
+Overfull \hbox (0.49759pt too wide) in paragraph at lines 33--38
+[]\OT1/cmr/m/n/12 O PHP ^^Se uma lin-gua-gem de pro-grama^^Xc~ao in-ter-pre-tad
+a, mul-ti-pa-ra-digma, de c^^Sodigo
  []
 
-[22
+[21
 
 
 
-] [23] <fig/diagrama_mvc.png, id=86, 517.22647pt x 245.15118pt>
+] [22] <fig/diagrama_mvc.png, id=86, 517.22647pt x 245.15118pt>
 File: fig/diagrama_mvc.png Graphic file (type png)
 
 <use fig/diagrama_mvc.png>
-Overfull \hbox (0.30215pt too wide) in paragraph at lines 108--115
-[]\OT1/ptm/m/n/12 Ferramentas de ma-pe-a-mento objeto-relacional (ou []ORM) s[]
-ao fra-meworks res-pons[]aveis
- []
-
-[24 <./fig/diagrama_mvc.png (PNG copy)>]
-<fig/coc_hibernate.png, id=91, 394.47375pt x 106.3975pt>
+Package pdftex.def Info: fig/diagrama_mvc.png used on input line 84.
+(pdftex.def)             Requested size: 227.62206pt x 107.88554pt.
+ [23 <./fig/diagrama_mvc.png>]
+<fig/coc_hibernate.png, id=90, 394.47375pt x 106.3975pt>
 File: fig/coc_hibernate.png Graphic file (type png)
 
 <use fig/coc_hibernate.png>
+Package pdftex.def Info: fig/coc_hibernate.png used on input line 128.
+(pdftex.def)             Requested size: 295.85458pt x 79.79791pt.
+
 Overfull \hbox (68.23253pt too wide) in paragraph at lines 128--129
 [][] 
  []
 
-<fig/coc_tabela.png, id=92, 160.6pt x 65.24374pt>
+<fig/coc_tabela.png, id=91, 160.6pt x 65.24374pt>
 File: fig/coc_tabela.png Graphic file (type png)
  <use fig/coc_tabela.png>
-[25 <./fig/coc_hibernate.png (PNG copy)> <./fig/coc_tabela.png (PNG copy)>]
-\c@itemcounter=\count117
+Package pdftex.def Info: fig/coc_tabela.png used on input line 132.
+(pdftex.def)             Requested size: 120.44969pt x 48.93268pt.
 
-[26] [27] <fig/tabela_yaml.png, id=102, 219.82124pt x 236.885pt>
+[24 <./fig/coc_hibernate.png> <./fig/coc_tabela.png>]
+\c@itemcounter=\count119
+ [25] [26]
+<fig/tabela_yaml.png, id=102, 219.82124pt x 236.885pt>
 File: fig/tabela_yaml.png Graphic file (type png)
 
-<use fig/tabela_yaml.png> [28 <./fig/tabela_yaml.png (PNG copy)>]
+<use fig/tabela_yaml.png>
+Package pdftex.def Info: fig/tabela_yaml.png used on input line 258.
+(pdftex.def)             Requested size: 113.81102pt x 122.64233pt.
+ [27]
 <fig/uml_classes_base.png, id=106, 549.55313pt x 587.19376pt>
 File: fig/uml_classes_base.png Graphic file (type png)
 
 <use fig/uml_classes_base.png>
+Package pdftex.def Info: fig/uml_classes_base.png used on input line 287.
+(pdftex.def)             Requested size: 455.24411pt x 486.43887pt.
+
 <fig/uml_classes_principais.png, id=107, 469.755pt x 202.50656pt>
 File: fig/uml_classes_principais.png Graphic file (type png)
 
 <use fig/uml_classes_principais.png>
-<fig/uml_controllers.png, id=108, 421.575pt x 232.61906pt>
+Package pdftex.def Info: fig/uml_classes_principais.png used on input line 294.
+
+(pdftex.def)             Requested size: 318.66948pt x 137.37508pt.
+ [28 <./fig/tabela_yaml.png>] [29 <./fig/uml_classes_base.png> <./fig/uml_class
+es_principais.png>]
+<fig/uml_controllers.png, id=114, 421.575pt x 232.61906pt>
 File: fig/uml_controllers.png Graphic file (type png)
 
-<use fig/uml_controllers.png> [29] [30 <./fig/uml_classes_base.png (PNG copy)> 
-<./fig/uml_classes_principais.png (PNG copy)>] [31 <./fig/uml_controllers.png (
-PNG copy)>] <fig/uml_forms.png, id=119, 369.63094pt x 124.96687pt>
+<use fig/uml_controllers.png>
+Package pdftex.def Info: fig/uml_controllers.png used on input line 323.
+(pdftex.def)             Requested size: 318.66948pt x 175.84105pt.
+ [30 <./fig/uml_controllers.png>]
+<fig/uml_forms.png, id=119, 369.63094pt x 124.96687pt>
 File: fig/uml_forms.png Graphic file (type png)
-
-<use fig/uml_forms.png>) [32 <./fig/uml_forms.png (PNG copy)>]
+ <use fig/uml_forms.png>
+Package pdftex.def Info: fig/uml_forms.png used on input line 368.
+(pdftex.def)             Requested size: 227.62206pt x 76.95618pt.
+) [31 <./fig/uml_forms.png>]
 \openout2 = `ch4.aux'.
 
  (./ch4.tex
 Cap\'{\i }tulo 4.
-\c@itemcounter1=\count118
+\c@itemcounter1=\count120
 <fig/telas/login.png, id=123, 1284.8pt x 803.0pt>
 File: fig/telas/login.png Graphic file (type png)
  <use fig/telas/login.png>
-[33
+Package pdftex.def Info: fig/telas/login.png used on input line 35.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
+[32
 
 
 
@@ -728,155 +752,256 @@ t>
 File: fig/telas/administrador/crud_professor_insercao.png Graphic file (type pn
 g)
  <use fig/telas/administrador/crud_professor_insercao.png>
+Package pdftex.def Info: fig/telas/administrador/crud_professor_insercao.png us
+ed on input line 70.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/administrador/crud_professor_listagem_pos_insercao.png, id=128, 1284
 .8pt x 803.0pt>
 File: fig/telas/administrador/crud_professor_listagem_pos_insercao.png Graphic 
 file (type png)
 
 <use fig/telas/administrador/crud_professor_listagem_pos_insercao.png>
+Package pdftex.def Info: fig/telas/administrador/crud_professor_listagem_pos_in
+sercao.png used on input line 77.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/administrador/crud_professor_remocao.png, id=129, 1284.8pt x 803.0pt
 >
 File: fig/telas/administrador/crud_professor_remocao.png Graphic file (type png
 )
- <use fig/telas/administrador/crud_professor_remocao.png> [34 <./fig/telas/logi
-n.png (PNG copy)>] [35 <./fig/telas/administrador/crud_professor_insercao.png (
-PNG copy)> <./fig/telas/administrador/crud_professor_listagem_pos_insercao.png 
-(PNG copy)>]
+ <use fig/telas/administrador/crud_professor_remocao.png>
+Package pdftex.def Info: fig/telas/administrador/crud_professor_remocao.png use
+d on input line 84.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+ [33 <./fig/telas/login.png>] [34 <./fig/telas/administrador/crud_professor_ins
+ercao.png> <./fig/telas/administrador/crud_professor_listagem_pos_insercao.png>
+]
 <fig/telas/administrador/crud_estudante.png, id=136, 1284.8pt x 803.0pt>
 File: fig/telas/administrador/crud_estudante.png Graphic file (type png)
 
 <use fig/telas/administrador/crud_estudante.png>
+Package pdftex.def Info: fig/telas/administrador/crud_estudante.png used on inp
+ut line 108.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/administrador/crud_semestre_calculo_datas.png, id=137, 1284.8pt x 80
 3.0pt>
 File: fig/telas/administrador/crud_semestre_calculo_datas.png Graphic file (typ
 e png)
  <use fig/telas/administrador/crud_semestre_calculo_datas.png>
+Package pdftex.def Info: fig/telas/administrador/crud_semestre_calculo_datas.pn
+g used on input line 122.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/administrador/propostas.png, id=138, 1284.8pt x 803.0pt>
 File: fig/telas/administrador/propostas.png Graphic file (type png)
 
 <use fig/telas/administrador/propostas.png>
+Package pdftex.def Info: fig/telas/administrador/propostas.png used on input li
+ne 129.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/administrador/defesas.png, id=139, 1284.8pt x 803.0pt>
 File: fig/telas/administrador/defesas.png Graphic file (type png)
 
 <use fig/telas/administrador/defesas.png>
+Package pdftex.def Info: fig/telas/administrador/defesas.png used on input line
+ 137.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/administrador/relatorios.png, id=140, 1284.8pt x 803.0pt>
 File: fig/telas/administrador/relatorios.png Graphic file (type png)
 
-<use fig/telas/administrador/relatorios.png> [36 <./fig/telas/administrador/cru
-d_professor_remocao.png (PNG copy)>] [37 <./fig/telas/administrador/crud_estuda
-nte.png (PNG copy)> <./fig/telas/administrador/crud_semestre_calculo_datas.png 
-(PNG copy)>]
-<fig/telas/processo/aluno_02_projeto_cadastrado.png, id=148, 1284.8pt x 803.0pt
+<use fig/telas/administrador/relatorios.png>
+Package pdftex.def Info: fig/telas/administrador/relatorios.png used on input l
+ine 144.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+ [35 <./fig/telas/administrador/crud_professor_remocao.png>] [36 <./fig/telas/a
+dministrador/crud_estudante.png> <./fig/telas/administrador/crud_semestre_calcu
+lo_datas.png>] [37 <./fig/telas/administrador/propostas.png> <./fig/telas/admin
+istrador/defesas.png>]
+<fig/telas/processo/aluno_02_projeto_cadastrado.png, id=151, 1284.8pt x 803.0pt
 >
 File: fig/telas/processo/aluno_02_projeto_cadastrado.png Graphic file (type png
 )
- <use fig/telas/processo/aluno_02_projeto_cadastrado.png> [38 <./fig/telas/admi
-nistrador/propostas.png (PNG copy)> <./fig/telas/administrador/defesas.png (PNG
- copy)>]
+ <use fig/telas/processo/aluno_02_projeto_cadastrado.png>
+Package pdftex.def Info: fig/telas/processo/aluno_02_projeto_cadastrado.png use
+d on input line 186.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/aluno_03_anexo_proposta.png, id=152, 1284.8pt x 803.0pt>
 File: fig/telas/processo/aluno_03_anexo_proposta.png Graphic file (type png)
 
 <use fig/telas/processo/aluno_03_anexo_proposta.png>
+Package pdftex.def Info: fig/telas/processo/aluno_03_anexo_proposta.png used on
+ input line 193.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/aluno_04_proposta_anexada.png, id=153, 1284.8pt x 803.0pt>
 File: fig/telas/processo/aluno_04_proposta_anexada.png Graphic file (type png)
 
 <use fig/telas/processo/aluno_04_proposta_anexada.png>
+Package pdftex.def Info: fig/telas/processo/aluno_04_proposta_anexada.png used 
+on input line 200.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/aluno_05_proposta_aprovada_orientador.png, id=154, 1284.8pt
  x 803.0pt>
 File: fig/telas/processo/aluno_05_proposta_aprovada_orientador.png Graphic file
  (type png)
  <use fig/telas/processo/aluno_05_proposta_aprovada_orientador.png>
+Package pdftex.def Info: fig/telas/processo/aluno_05_proposta_aprovada_orientad
+or.png used on input line 207.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/aluno_06_proposta_aprovada_comissao.png, id=155, 1284.8pt x
  803.0pt>
 File: fig/telas/processo/aluno_06_proposta_aprovada_comissao.png Graphic file (
 type png)
  <use fig/telas/processo/aluno_06_proposta_aprovada_comissao.png>
+Package pdftex.def Info: fig/telas/processo/aluno_06_proposta_aprovada_comissao
+.png used on input line 214.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/aluno_07_submetendo_defesa.png, id=156, 1284.8pt x 803.0pt>
 File: fig/telas/processo/aluno_07_submetendo_defesa.png Graphic file (type png)
 
 <use fig/telas/processo/aluno_07_submetendo_defesa.png>
+Package pdftex.def Info: fig/telas/processo/aluno_07_submetendo_defesa.png used
+ on input line 221.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/aluno_08_defesa_nao_analisada.png, id=157, 1284.8pt x 803.0
 pt>
 File: fig/telas/processo/aluno_08_defesa_nao_analisada.png Graphic file (type p
 ng)
  <use fig/telas/processo/aluno_08_defesa_nao_analisada.png>
+Package pdftex.def Info: fig/telas/processo/aluno_08_defesa_nao_analisada.png u
+sed on input line 228.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/aluno_09_defesa_analisada_professor.png, id=158, 1284.8pt x
  803.0pt>
 File: fig/telas/processo/aluno_09_defesa_analisada_professor.png Graphic file (
 type png)
  <use fig/telas/processo/aluno_09_defesa_analisada_professor.png>
+Package pdftex.def Info: fig/telas/processo/aluno_09_defesa_analisada_professor
+.png used on input line 235.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/aluno_10_defesa_analisada_comissao.png, id=159, 1284.8pt x 
 803.0pt>
 File: fig/telas/processo/aluno_10_defesa_analisada_comissao.png Graphic file (t
 ype png)
  <use fig/telas/processo/aluno_10_defesa_analisada_comissao.png>
+Package pdftex.def Info: fig/telas/processo/aluno_10_defesa_analisada_comissao.
+png used on input line 242.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/aluno_11_projeto_defendido.png, id=160, 1284.8pt x 803.0pt>
 File: fig/telas/processo/aluno_11_projeto_defendido.png Graphic file (type png)
 
 <use fig/telas/processo/aluno_11_projeto_defendido.png>
-<fig/telas/processo/professor_01_aprovacao_proposta.png, id=161, 1284.8pt x 803
+Package pdftex.def Info: fig/telas/processo/aluno_11_projeto_defendido.png used
+ on input line 249.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+ [38 <./fig/telas/administrador/relatorios.png>] [39 <./fig/telas/processo/alun
+o_02_projeto_cadastrado.png> <./fig/telas/processo/aluno_03_anexo_proposta.png>
+] [40 <./fig/telas/processo/aluno_04_proposta_anexada.png> <./fig/telas/process
+o/aluno_05_proposta_aprovada_orientador.png>] [41 <./fig/telas/processo/aluno_0
+6_proposta_aprovada_comissao.png> <./fig/telas/processo/aluno_07_submetendo_def
+esa.png>] [42 <./fig/telas/processo/aluno_08_defesa_nao_analisada.png> <./fig/t
+elas/processo/aluno_09_defesa_analisada_professor.png>] [43 <./fig/telas/proces
+so/aluno_10_defesa_analisada_comissao.png> <./fig/telas/processo/aluno_11_proje
+to_defendido.png>]
+<fig/telas/processo/professor_01_aprovacao_proposta.png, id=180, 1284.8pt x 803
 .0pt>
 File: fig/telas/processo/professor_01_aprovacao_proposta.png Graphic file (type
  png)
  <use fig/telas/processo/professor_01_aprovacao_proposta.png>
-<fig/telas/processo/professor_02_prosta_sendo_aprovada.png, id=162, 1284.8pt x 
+Package pdftex.def Info: fig/telas/processo/professor_01_aprovacao_proposta.png
+ used on input line 272.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
+<fig/telas/processo/professor_02_prosta_sendo_aprovada.png, id=181, 1284.8pt x 
 803.0pt>
 File: fig/telas/processo/professor_02_prosta_sendo_aprovada.png Graphic file (t
 ype png)
  <use fig/telas/processo/professor_02_prosta_sendo_aprovada.png>
-<fig/telas/processo/professor_03_proposta_aprovada.png, id=163, 1284.8pt x 803.
+Package pdftex.def Info: fig/telas/processo/professor_02_prosta_sendo_aprovada.
+png used on input line 279.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
+<fig/telas/processo/professor_03_proposta_aprovada.png, id=182, 1284.8pt x 803.
 0pt>
 File: fig/telas/processo/professor_03_proposta_aprovada.png Graphic file (type 
 png)
  <use fig/telas/processo/professor_03_proposta_aprovada.png>
-<fig/telas/processo/professor_04_avaliando_defesa.png, id=164, 1284.8pt x 803.0
+Package pdftex.def Info: fig/telas/processo/professor_03_proposta_aprovada.png 
+used on input line 286.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
+<fig/telas/processo/professor_04_avaliando_defesa.png, id=183, 1284.8pt x 803.0
 pt>
 File: fig/telas/processo/professor_04_avaliando_defesa.png Graphic file (type p
 ng)
- <use fig/telas/processo/professor_04_avaliando_defesa.png> [39 <./fig/telas/ad
-ministrador/relatorios.png (PNG copy)>] [40 <./fig/telas/processo/aluno_02_proj
-eto_cadastrado.png (PNG copy)> <./fig/telas/processo/aluno_03_anexo_proposta.pn
-g (PNG copy)>] [41 <./fig/telas/processo/aluno_04_proposta_anexada.png (PNG cop
-y)> <./fig/telas/processo/aluno_05_proposta_aprovada_orientador.png (PNG copy)>
-] [42 <./fig/telas/processo/aluno_06_proposta_aprovada_comissao.png (PNG copy)>
- <./fig/telas/processo/aluno_07_submetendo_defesa.png (PNG copy)>] [43 <./fig/t
-elas/processo/aluno_08_defesa_nao_analisada.png (PNG copy)> <./fig/telas/proces
-so/aluno_09_defesa_analisada_professor.png (PNG copy)>] [44 <./fig/telas/proces
-so/aluno_10_defesa_analisada_comissao.png (PNG copy)> <./fig/telas/processo/alu
-no_11_projeto_defendido.png (PNG copy)>] [45 <./fig/telas/processo/professor_01
-_aprovacao_proposta.png (PNG copy)> <./fig/telas/processo/professor_02_prosta_s
-endo_aprovada.png (PNG copy)>] [46 <./fig/telas/processo/professor_03_proposta_
-aprovada.png (PNG copy)> <./fig/telas/processo/professor_04_avaliando_defesa.pn
-g (PNG copy)>]
+ <use fig/telas/processo/professor_04_avaliando_defesa.png>
+Package pdftex.def Info: fig/telas/processo/professor_04_avaliando_defesa.png u
+sed on input line 293.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+ [44 <./fig/telas/processo/professor_01_aprovacao_proposta.png>] [45 <./fig/tel
+as/processo/professor_02_prosta_sendo_aprovada.png> <./fig/telas/processo/profe
+ssor_03_proposta_aprovada.png>]
 <fig/telas/processo/comissao_01_propostas.png, id=190, 1284.8pt x 803.0pt>
 File: fig/telas/processo/comissao_01_propostas.png Graphic file (type png)
 
 <use fig/telas/processo/comissao_01_propostas.png>
+Package pdftex.def Info: fig/telas/processo/comissao_01_propostas.png used on i
+nput line 328.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/comissao_02_proposta_sendo_avaliada.png, id=191, 1284.8pt x
  803.0pt>
 File: fig/telas/processo/comissao_02_proposta_sendo_avaliada.png Graphic file (
 type png)
  <use fig/telas/processo/comissao_02_proposta_sendo_avaliada.png>
+Package pdftex.def Info: fig/telas/processo/comissao_02_proposta_sendo_avaliada
+.png used on input line 335.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/comissao_04_comentarios.png, id=192, 1284.8pt x 803.0pt>
 File: fig/telas/processo/comissao_04_comentarios.png Graphic file (type png)
 
 <use fig/telas/processo/comissao_04_comentarios.png>
+Package pdftex.def Info: fig/telas/processo/comissao_04_comentarios.png used on
+ input line 349.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/comissao_05_aprovando_defesa.png, id=193, 1284.8pt x 803.0p
 t>
 File: fig/telas/processo/comissao_05_aprovando_defesa.png Graphic file (type pn
 g)
  <use fig/telas/processo/comissao_05_aprovando_defesa.png>
+Package pdftex.def Info: fig/telas/processo/comissao_05_aprovando_defesa.png us
+ed on input line 356.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+
 <fig/telas/processo/comissao_06_marcando_projeto_como_defendido.png, id=194, 12
 84.8pt x 803.0pt>
 File: fig/telas/processo/comissao_06_marcando_projeto_como_defendido.png Graphi
 c file (type png)
 
-<use fig/telas/processo/comissao_06_marcando_projeto_como_defendido.png>)
-[47 <./fig/telas/processo/comissao_01_propostas.png (PNG copy)>] [48 <./fig/tel
-as/processo/comissao_02_proposta_sendo_avaliada.png (PNG copy)> <./fig/telas/pr
-ocesso/comissao_04_comentarios.png (PNG copy)>] [49 <./fig/telas/processo/comis
-sao_05_aprovando_defesa.png (PNG copy)> <./fig/telas/processo/comissao_06_marca
-ndo_projeto_como_defendido.png (PNG copy)>]
+<use fig/telas/processo/comissao_06_marcando_projeto_como_defendido.png>
+Package pdftex.def Info: fig/telas/processo/comissao_06_marcando_projeto_como_d
+efendido.png used on input line 363.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+)
+[46 <./fig/telas/processo/professor_04_avaliando_defesa.png>] [47 <./fig/telas/
+processo/comissao_01_propostas.png> <./fig/telas/processo/comissao_02_proposta_
+sendo_avaliada.png>] [48 <./fig/telas/processo/comissao_04_comentarios.png> <./
+fig/telas/processo/comissao_05_aprovando_defesa.png>] [49 <./fig/telas/processo
+/comissao_06_marcando_projeto_como_defendido.png>]
 \openout2 = `ch5.aux'.
 
  (./ch5.tex
@@ -892,12 +1017,14 @@ Cap\'{\i }tulo 5.
 \openout2 = `cha.aux'.
 
  (./cha.tex
-Cap\'{\i }tulo 6.
-[53
-
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+ [53
 
 ] (./uc_manter_professores.tex
-Overfull \hbox (1.31581pt too wide) in alignment at lines 1--57
+Overfull \hbox (8.39629pt too wide) in alignment at lines 1--57
  [] [] 
  []
 
@@ -907,8 +1034,8 @@ Underfull \vbox (badness 10000) detected at line 57
 
 [54
 
-]) [55] (./uc_manter_estudantes.tex
-Overfull \hbox (1.31581pt too wide) in alignment at lines 1--53
+] [55]) [56] (./uc_manter_estudantes.tex
+Overfull \hbox (8.39629pt too wide) in alignment at lines 1--53
  [] [] 
  []
 
@@ -916,10 +1043,10 @@ Overfull \hbox (1.31581pt too wide) in alignment at lines 1--53
 Underfull \vbox (badness 10000) detected at line 53
  []
 
-[56
+[57
 
-]) [57] (./uc_manter_projetos.tex
-Overfull \hbox (23.1194pt too wide) in alignment at lines 1--54
+]) [58] (./uc_manter_projetos.tex
+Overfull \hbox (29.77245pt too wide) in alignment at lines 1--54
  [] [] 
  []
 
@@ -927,15 +1054,15 @@ Overfull \hbox (23.1194pt too wide) in alignment at lines 1--54
 Underfull \vbox (badness 10000) detected at line 54
  []
 
-[58
+[59
 
-]) [59] (./uc_manter_propostas.tex
+]) [60] (./uc_manter_propostas.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--27
 
  []
 
 
-Overfull \hbox (1.31581pt too wide) in alignment at lines 1--34
+Overfull \hbox (8.39629pt too wide) in alignment at lines 1--34
  [] [] 
  []
 
@@ -943,15 +1070,15 @@ Overfull \hbox (1.31581pt too wide) in alignment at lines 1--34
 Underfull \vbox (badness 10000) detected at line 34
  []
 
-[60
+[61
 
-]) [61] (./uc_manter_defesas.tex
+]) [62] (./uc_manter_defesas.tex
 Underfull \hbox (badness 10000) in paragraph at lines 30--34
 
  []
 
 
-Overfull \hbox (1.31581pt too wide) in alignment at lines 1--41
+Overfull \hbox (8.39629pt too wide) in alignment at lines 1--41
  [] [] 
  []
 
@@ -959,55 +1086,63 @@ Overfull \hbox (1.31581pt too wide) in alignment at lines 1--41
 Underfull \vbox (badness 10000) detected at line 41
  []
 
-[62
+[63
 
-]) [63]
-Cap\'{\i }tulo 7.
-[64
-
-]
-<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=254, 597.23125pt x 845.15
+]) [64] [65]
+<requisitos/Formulario_Proposta_Projeto_Final.pdf, id=262, 597.23125pt x 845.15
 75pt>
 File: requisitos/Formulario_Proposta_Projeto_Final.pdf Graphic file (type pdf)
- <use requisitos/Formulario_Proposta_Projeto_Final.pdf> [65
+ <use requisitos/Formulario_Proposta_Projeto_Final.pdf>
+Package pdftex.def Info: requisitos/Formulario_Proposta_Projeto_Final.pdf used 
+on input line 58.
+(pdftex.def)             Requested size: 358.3415pt x 507.09842pt.
+ [66
+
 
  <./requisitos/Formulario_Proposta_Projeto_Final.pdf>]
-<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=274, 597.23125pt x
+<requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf, id=283, 597.23125pt x
  845.1575pt>
 File: requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf Graphic file (typ
 e pdf)
- <use requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>)
-[66
+ <use requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>
+Package pdftex.def Info: requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pd
+f used on input line 66.
+(pdftex.def)             Requested size: 358.3415pt x 507.09842pt.
+)
+[67
 
  <./requisitos/Formulario_Solicitacao_Defesa_e_Banca_v1.pdf>]
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
 +-------------------------------------------------------------------+
-AED: lastpage setting LastPage (./mono.aux (./ch1.aux) (./ch2.aux) (./ch3.aux)
-(./ch4.aux) (./ch5.aux) (./cha.aux))
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+AED: lastpage setting LastPage
+(./mono.aux (./ch1.aux) (./ch2.aux) (./ch3.aux) (./ch4.aux) (./ch5.aux)
+(./cha.aux)) ) 
 Here is how much of TeX's memory you used:
- 3345 strings out of 495041
- 51643 string characters out of 1181898
- 114633 words of memory out of 3000000
- 6300 multiletter control sequences out of 15000+50000
- 34448 words of font info for 69 fonts, out of 3000000 for 9000
- 30 hyphenation exceptions out of 8191
- 31i,9n,41p,286b,341s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmtt12.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.p
-fb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texm
-f-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type
-1/urw/times/utmri8a.pfb>
-Output written on mono.pdf (67 pages, 1757535 bytes).
+ 3721 strings out of 493488
+ 58627 string characters out of 3141326
+ 127700 words of memory out of 3000000
+ 6812 multiletter control sequences out of 15000+200000
+ 12132 words of font info for 42 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 38i,8n,27p,286b,337s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbxti10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmcsc10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.
+pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
+fb>
+Output written on mono.pdf (68 pages, 1605268 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

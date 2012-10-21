@@ -1,4 +1,5 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: mono.aux
 A level-1 auxiliary file: ch1.aux
 A level-1 auxiliary file: ch2.aux
@@ -7,59 +8,68 @@ A level-1 auxiliary file: ch4.aux
 A level-1 auxiliary file: ch5.aux
 The style file: abnt-alf.bst
 A level-1 auxiliary file: cha.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Database file #1: abnt-options.bib
-Database file #2: bib.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bib.bib
 Warning--string name "setembro" is undefined
 --line 189 of file bib.bib
 Warning--string name "abril" is undefined
 --line 203 of file bib.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 +---------------------------------------------------------+
-| Estilo bibliografico abnt-alf.bst versao 1.53           |
-| Implementa a NBR6023, NBR10520 e NBR10523               |
-| Em caso de duvidas ou problemas com este estilo procure |
+| Estilo bibliográfico abnt-alf.bst versão 1.45.2.1           |
+| Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 22 entries,
-            6522 wiz_defined-function locations,
-            1310 strings with 12162 characters,
-and the built_in function-call counts, 15648 in all, are:
-= -- 1379
+You've used 21 entries,
+            6480 wiz_defined-function locations,
+            1300 strings with 11979 characters,
+and the built_in function-call counts, 14963 in all, are:
+= -- 1355
 > -- 394
 < -- 9
-+ -- 182
++ -- 186
 - -- 127
-* -- 970
-:= -- 2161
+* -- 968
+:= -- 2134
 add.period$ -- 102
-call.type$ -- 23
-change.case$ -- 165
-chr.to.int$ -- 30
+call.type$ -- 21
+change.case$ -- 151
+chr.to.int$ -- 29
 cite$ -- 21
-duplicate$ -- 751
-empty$ -- 1391
+duplicate$ -- 695
+empty$ -- 1285
 format.name$ -- 594
-if$ -- 3812
+if$ -- 3625
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 392
-newline$ -- 128
+missing$ -- 355
+newline$ -- 117
 num.names$ -- 106
-pop$ -- 511
+pop$ -- 462
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 67
 quote$ -- 0
-skip$ -- 929
+skip$ -- 838
 stack$ -- 1
-substring$ -- 581
-swap$ -- 334
+substring$ -- 534
+swap$ -- 304
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1
 warning$ -- 0
-while$ -- 137
+while$ -- 135
 width$ -- 0
 write$ -- 339
 (There were 2 warnings)

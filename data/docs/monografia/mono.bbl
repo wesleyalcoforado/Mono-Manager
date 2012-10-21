@@ -3,7 +3,7 @@
 \setlength{\labelsep}{0pt}\begin{thebibliography}{}
 \providecommand{\abntrefinfo}[3]{}
 \providecommand{\abntbstabout}[1]{}
-\abntbstabout{1.53 }
+\abntbstabout{1.45.2.1 }
 
 \bibitem[Cabibbo e Carosi 2005]{springerlink}
 \abntrefinfo{Cabibbo e Carosi}{CABIBBO; CAROSI}{2005}
@@ -16,9 +16,9 @@ Dispon{\'\i}vel em: $<$\url{http://dx.doi.org/10.1007/11431855_11}$>$.}
 \bibitem[Chen 2006]{Chen}
 \abntrefinfo{Chen}{CHEN}{2006}
 {CHEN, N. \emph{Convention over Configuration}. 2006.
-Acesso em 24 de fevereiro de 2011.
 Dispon{\'\i}vel em:
-  $<$\url{http://softwareengineering.vazexqi.com/files/pattern.html}$>$.}
+  $<$\url{http://softwareengineering.vazexqi.com/files/pattern.html}$>$. Acesso
+  em: 24 de fevereiro de 2011.}
 
 \bibitem[Codd 1990]{Codd:1990:RMD:77708}
 \abntrefinfo{Codd}{CODD}{1990}
@@ -29,8 +29,8 @@ ISBN 0-201-14192-2.}
 \bibitem[Doctrine 2011]{doctrine}
 \abntrefinfo{Doctrine}{DOCTRINE}{2011}
 {DOCTRINE. \emph{PHP Object Persistence Libraries and More}. 2011.
-Acesso em 21 de abril de 2011.
-Dispon{\'\i}vel em: $<$\url{http://www.doctrine-project.org/}$>$.}
+Dispon{\'\i}vel em: $<$\url{http://www.doctrine-project.org/}$>$. Acesso em: 21
+  de abril de 2011.}
 
 \bibitem[{Eastlake 3rd} e Jones 2001]{rfc3174}
 \abntrefinfo{{Eastlake 3rd} e Jones}{{Eastlake 3rd}; JONES}{2001}
@@ -53,9 +53,9 @@ Dispon{\'\i}vel em: $<$http://www.ietf.org/rfc/rfc3174.txt$>$.}
 \bibitem[InfoQ 2009]{InfoQ:Facebook}
 \abntrefinfo{InfoQ}{INFOQ}{2009}
 {INFOQ. \emph{Facebook: Science and the Social Graph}. 2009.
-Acesso em 24 de fevereiro de 2011.
 Dispon{\'\i}vel em:
-  $<$\url{http://www.infoq.com/presentations/Facebook-Software-Stack}$>$.}
+  $<$\url{http://www.infoq.com/presentations/Facebook-Software-Stack}$>$.
+  Acesso em: 24 de fevereiro de 2011.}
 
 \bibitem[Korson e McGregor 1990]{Korson:1990:UOU:83880.84459}
 \abntrefinfo{Korson e McGregor}{KORSON; MCGREGOR}{1990}
@@ -73,22 +73,21 @@ Dispon{\'\i}vel em: $<$http://doi.acm.org/10.1145/83880.84459$>$.}
 \bibitem[NetBeans 2011]{netbeans}
 \abntrefinfo{NetBeans}{NETBEANS}{2011}
 {NETBEANS. \emph{NetBeans IDE}. 2011.
-Acesso em 21 de abril de 2011.
-Dispon{\'\i}vel em: $<$\url{http://netbeans.org}$>$.}
+Dispon{\'\i}vel em: $<$\url{http://netbeans.org}$>$. Acesso em: 21 de abril de
+  2011.}
 
 \bibitem[PHP.NET 2011]{PHP}
 \abntrefinfo{PHP.NET}{PHP.NET}{2011}
 {PHP.NET. \emph{Manual do PHP}. 2011.
-Acesso em 24 de fevereiro de 2011.
-Dispon{\'\i}vel em: $<$\url{http://www.php.net/manual/pt_BR}$>$.}
+Dispon{\'\i}vel em: $<$\url{http://www.php.net/manual/pt_BR}$>$. Acesso em: 24
+  de fevereiro de 2011.}
 
 \bibitem[PostgreSQL 2003]{postgresql}
 \abntrefinfo{PostgreSQL}{POSTGRESQL}{2003}
 {POSTGRESQL. \emph{Introdução e Histórico}. 2003.
-Acesso em 25 de fevereiro de 2011.
 Dispon{\'\i}vel em:
-  $<$\url{http://wiki.postgresql.org/wiki/Introdu%C3%A7%C3%A3o_e_Hist%C3%B3ric%
-o}$>$.}
+  $<$\url{http://wiki.postgresql.org/wiki/Introdu%C3%A7%C3%A3o_e_Hist%C3%B3rico}$>$.
+  Acesso em: 25 de fevereiro de 2011.}
 
 \bibitem[Rivest 1992]{rfc1321}
 \abntrefinfo{Rivest}{RIVEST}{1992}
@@ -112,35 +111,34 @@ Dispon{\'\i}vel em: $<$http://doi.acm.org/10.1145/16856.16888$>$.}
 \bibitem[Symfony 2010]{sfguardplugin}
 \abntrefinfo{Symfony}{SYMFONY}{2010}
 {SYMFONY. \emph{Plugins: sfGuardPlugin}. 2010.
-Acesso em 27 de fevereiro de 2011.
 Dispon{\'\i}vel em:
-  $<$\url{http://www.symfony-project.org/plugins/sfGuardPlugin}$>$.}
+  $<$\url{http://www.symfony-project.org/plugins/sfGuardPlugin}$>$. Acesso em:
+  27 de fevereiro de 2011.}
 
 \bibitem[Symfony 2011]{symfony:about}
 \abntrefinfo{Symfony}{SYMFONY}{2011}
 {SYMFONY. \emph{About Symfony}. 2011.
-Acesso em 21 de abril de 2011.
-Dispon{\'\i}vel em: $<$\url{http://www.symfony-project.org/about}$>$.}
+Dispon{\'\i}vel em: $<$\url{http://www.symfony-project.org/about}$>$. Acesso
+  em: 21 de abril de 2011.}
 
 \bibitem[Wikipedia 2011]{Wiki:PHP}
 \abntrefinfo{Wikipedia}{WIKIPEDIA}{2011a}
 {WIKIPEDIA. \emph{PHP}. 2011.
-Acesso em 24 de fevereiro de 2011.
-Dispon{\'\i}vel em: $<$\url{http://en.wikipedia.org/wiki/PHP}$>$.}
+Dispon{\'\i}vel em: $<$\url{http://en.wikipedia.org/wiki/PHP}$>$. Acesso em: 24
+  de fevereiro de 2011.}
 
 \bibitem[Wikipedia 2011]{Wikipedia:Arquitetura}
 \abntrefinfo{Wikipedia}{WIKIPEDIA}{2011b}
 {WIKIPEDIA. \emph{Wikipedia:FAQ/Technical - What software is used to run
   Wikipedia?} 2011.
-Acesso em 24 de fevereiro de 2011.
 Dispon{\'\i}vel em:
-  $<$\url{http://en.wikipedia.org/wiki/Wikipedia:FAQ/Technical#What_software_i%
-s_used_to_run_Wikipedia.3F}$>$.}
+  $<$\url{http://en.wikipedia.org/wiki/Wikipedia:FAQ/Technical#What_software_is_used_to_run_Wikipedia.3F}$>$.
+  Acesso em: 24 de fevereiro de 2011.}
 
 \bibitem[Wordpress 2011]{Wordpress}
 \abntrefinfo{Wordpress}{WORDPRESS}{2011}
 {WORDPRESS. \emph{About Wordpress}. 2011.
-Acesso em 24 de fevereiro de 2011.
-Dispon{\'\i}vel em: $<$\url{http://wordpress.org/about/}$>$.}
+Dispon{\'\i}vel em: $<$\url{http://wordpress.org/about/}$>$. Acesso em: 24 de
+  fevereiro de 2011.}
 
 \end{thebibliography}
