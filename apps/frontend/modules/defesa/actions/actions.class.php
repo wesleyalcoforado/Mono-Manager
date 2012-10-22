@@ -175,9 +175,9 @@ class defesaActions extends documentoActions
 			$this->form->bind($formData, $formFiles);
 			if($this->form->isValid()){
 	      $file = $formFiles['documento_final'];
-	      $filename = $this->saveFile($file);
+	      $filename = $this->saveDocumentoFinal($file);
 				
-				$defesa = DefesaTable::getInstance()->findByProjetoId($this->projetoId);
+				$defesa = DefesaTable::getInstance()->findOneByProjetoId($this->projetoId);
 				$defesa->setDocumentoFinal($filename);
 				$defesa->save();
 				
