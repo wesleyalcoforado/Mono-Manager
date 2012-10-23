@@ -241,6 +241,15 @@ Palavras-Chave: \ABNTpcumdata, \ABNTpcdoisdata, \ABNTpctresdata
 \renewcommand*\l@subsubsection{\@dottedtocline{3}{0em}{4.1em}}
 
 
+\let\stdl@section\l@section
+\renewcommand*{\l@section}[2]{%
+  \stdl@section{\MakeUppercase{#1}}{\MakeUppercase{#2}}}
+
+\let\stdl@subsection\l@subsection
+\renewcommand*{\l@subsection}[2]{%
+  \stdl@subsection{\bfseries{#1}}{\bfseries{#2}}}
+
+
 % Cria um comando auxiliar para montagem da lista de figuras
 \newcommand{\figfillnum}[1]{%
   {\hspace{1em}\normalfont\dotfill}\nobreak
