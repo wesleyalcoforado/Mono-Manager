@@ -16,7 +16,7 @@ class estudanteActions extends monomActions
   }  
   
   protected function saveForm($formData, $formFiles){
-    parent::saveForm($formData, $formFiles);
+    $this->form->bind($formData, $formFiles);
     if($this->form->isValid()){
       //se o ID esta vazio, o usuario é novo, notificá-lo da criação
       if(empty($formData['id'])){
@@ -34,6 +34,9 @@ class estudanteActions extends monomActions
           $this->setMessage('error', 'Ocorreu um erro durante o envio de email.');
         }        
       }
+      $this->form->save();
+      $this->form = $this->createForm();
+      $this->setMessage('notice', 'Dados salvos com sucesso.');
     }
   }
 
