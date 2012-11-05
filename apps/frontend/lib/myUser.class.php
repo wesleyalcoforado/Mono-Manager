@@ -9,13 +9,15 @@ class myUser extends sfGuardSecurityUser
   }
 
   protected function configCredentialsAccordingToUserType(){
-    if($this->isSuperAdmin()){
+    $perfil = $this->getUsuario()->getPerfil();
+    
+    if($perfil == Usuario::ADMINISTRADOR){
       $this->addCredential('admin');
-    }else if($this->isEstudante()){
+    }else if($perfil == Usuario::ESTUDANTE){
       $this->addCredential('estudante');
-    }else if($this->isComissao()){
+    }else if($perfil == Usuario::COMISSAO){
       $this->addCredential('comissao');
-    }else if($this->isProfessor()){
+    }else if($perfil == Usuario::PROFESSOR){
       $this->addCredential('professor');
     }
   }

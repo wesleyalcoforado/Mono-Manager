@@ -56,7 +56,7 @@ class defaultActions extends sfActions
   public function executePerfil(sfWebRequest $request)
   {
     $perfil = $request->getParameter("perfil");
-    $user = $this->getUser();
+    $user = $this->getUser()->getUsuario();
     $user->setPerfil($perfil);
     
     $this->redirect("index");
