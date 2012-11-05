@@ -14,17 +14,20 @@ function generateMenu(){
   $sairPage       = link_to("Sair", "sfGuardAuth/signout");
 
   $menuItems[] = $inicioPage;
+  
+  
+  $perfil = $user->getPerfil();
 
-  if($user->isSuperAdmin()){
+  if($perfil == Usuario::ADMIN){
     $menuItems[] = $professorPage;
     $menuItems[] = $estudantePage;
     $menuItems[] = $semestrePage;
     $menuItems[] = $propostaPage;
     $menuItems[] = $defesaPage;
     $menuItems[] = $relatorioPage;
-  }else if($user->isEstudante()){
+  }else if($perfil == Usuario::ESTUDANTE){
     $menuItems[] = $projetoPage;
-  }else if($user->isProfessor()){
+  }else if($perfil == Usuario::PROFESSOR || $perfil == Usuario::COMISSAO){
     $menuItems[] = $propostaPage;
     $menuItems[] = $defesaPage;
     $menuItems[] = $relatorioPage;
@@ -38,4 +41,26 @@ function generateMenu(){
   }
 
   return content_tag('ul', implode('', $arrListItems));
+}
+
+function comboPerfis(){
+  $user = sfContext::getInstance()->getUser();
+  $perfis = array();
+  
+  if($user->isSuperAdmin()){
+    $perfis[] = link_to("Administrador", "default/perfil", array("perfil" => Usuario::ADMINISTRADOR));
+  }
+  
+  if($user->isProfessor()){
+    $perfis[] = link_to("Professor", "default/perfil", array("perfil" => Usuario::PROFESSOR));
+  }
+  
+  if($user->isComissao()){
+    $perfis[] = link_to("Comissão", "default/perfil", array("perfil" => Usuario::COMISSAO));
+  }  
+  
+  if(count($perfis) > 1){
+    return implode(" | ", $perfis);
+  }
+
 }

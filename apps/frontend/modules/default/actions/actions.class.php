@@ -52,4 +52,13 @@ class defaultActions extends sfActions
 
     return $projects;
   }
+  
+  public function executePerfil(sfWebRequest $request)
+  {
+    $perfil = $request->getParameter("perfil");
+    $user = $this->getUser();
+    $user->setPerfil($perfil);
+    
+    $this->redirect("index");
+  }
 }

@@ -24,6 +24,9 @@
     <div class="container_24">
       <div class="grid_5" id="menu">
         <?php echo generateMenu(); ?>
+        <div class="perfis">
+          <?php echo comboPerfis(); ?>
+        </div>
       </div>
       <div class="grid_19" id="content">
         <?php echo $sf_content ?>

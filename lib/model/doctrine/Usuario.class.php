@@ -47,5 +47,32 @@ class Usuario extends BaseUsuario
     }
     return false;
   }
+  
+  public function getPerfil(){
+    $perfil = $user->getAttribute("perfil");
+    if(!$perfil){
+      if($user->isSuperAdmin()){
+        $perfil = Usuario::ADMIN;
+      }else if($user->isEstudante()){
+        $perfil = Usuario::ESTUDANTE;
+      }else if($user->isComissao()){
+        $perfil = Usuario::COMISSAO;
+      }else if($user->isProfessor()){
+        $perfil = Usuario::PROFESSOR;
+      }
+    }
+    return $perfil;
+  }
+  
+  
+  public function setPerfil($perfil){
+    if($perfil == Usuario::ADMIN && $this->isSuperAdmin()){
+      $user->setAttribute("perfil", Usuario::ADMIN);
+    }else if($perfil == Usuario::PROFESSOR && $this->isProfessor()){
+      $user->setAttribute("perfil", Usuario::PROFESSOR);
+    }else if($perfil == Usuario::COMISSAO && $this->isComissao()){
+      $user->setAttribute("perfil", Usuario::COMISSAO);
+    }
+  }
 
 }
