@@ -49,15 +49,15 @@ class Usuario extends BaseUsuario
   }
   
   public function getPerfil(){
-    $perfil = $user->getAttribute("perfil");
+    $perfil = $this->getAttribute("perfil");
     if(!$perfil){
-      if($user->isSuperAdmin()){
+      if($this->isSuperAdmin()){
         $perfil = Usuario::ADMIN;
-      }else if($user->isEstudante()){
+      }else if($this->isEstudante()){
         $perfil = Usuario::ESTUDANTE;
-      }else if($user->isComissao()){
+      }else if($this->isComissao()){
         $perfil = Usuario::COMISSAO;
-      }else if($user->isProfessor()){
+      }else if($this->isProfessor()){
         $perfil = Usuario::PROFESSOR;
       }
     }
