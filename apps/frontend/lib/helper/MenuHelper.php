@@ -16,7 +16,7 @@ function generateMenu(){
   $menuItems[] = $inicioPage;
   
   
-  $perfil = $user->getPerfil();
+  $perfil = $user->getUsuario()->getPerfil();
 
   if($perfil == Usuario::ADMIN){
     $menuItems[] = $professorPage;
@@ -44,7 +44,7 @@ function generateMenu(){
 }
 
 function comboPerfis(){
-  $user = sfContext::getInstance()->getUser();
+  $user = sfContext::getInstance()->getUser()->getUsuario();
   $perfis = array();
   
   if($user->isSuperAdmin()){
